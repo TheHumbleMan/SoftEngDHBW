@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldung</title>
+    <link rel="stylesheet" href="../assets/style.css?v=3">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <h1>Anmeldung</h1>
+        </div>
+        
+        <form class="login-form" method="POST" action="/auth/login">
+            <h2 class="login-title">Wer sind Sie?</h2>
+            
+            <% if (error) { %>
+                <div class="error-message">
+                    <% if (error === 'required') { %>
+                        Bitte wählen Sie Student oder Dualer Partner.
+                    <% } else if (error === 'invalid') { %>
+                        Die ausgewählte Rolle ist ungültig.
+                    <% } else if (error === 'session') { %>
+                        Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.
+                    <% } else if (error === 'access') { %>
+                        Sie haben keine Berechtigung für diese Seite.
+                    <% } else { %>
+                        Ein Fehler ist aufgetreten.
+                    <% } %>
+                </div>
+            <% } %>
+
+            <% if (success === 'logout') { %>
+                <div class="success-message">
+                    Sie wurden erfolgreich abgemeldet.
+                </div>
+            <% } %>
+            
+            <div class="role-selection">
+                <button type="submit" name="role" value="student" class="login-button">Student</button>
+                <button type="submit" name="role" value="partner" class="login-button" style="margin-top: 12px;">Dualer Partner</button>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>

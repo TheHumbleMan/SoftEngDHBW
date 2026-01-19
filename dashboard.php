@@ -31,7 +31,7 @@ if ($_POST['logout'] ?? false) {
         <!-- Header -->
         <div class="header">
             <div>
-                <h1>Dashboard</h1>
+                <h1>Dashboard - DHBW</h1>
                 <p>Willkommen, <?php echo htmlspecialchars($userRole); ?>!</p>
             </div>
             <div class="nav-links">
@@ -45,13 +45,13 @@ if ($_POST['logout'] ?? false) {
         <div class="quick-actions">
             <h3>Schnellzugriff</h3>
             <?php if ($isStudent): ?>
-            <div class="action-buttons">
+            <div class="action-buttons-layout">
                 <a href="test1_panel.php" class="action-btn">
                     Test1
                 </a>
             </div>
             <?php else: ?>
-            <div class="action-buttons">
+            <div class="action-buttons-layout">
                 <a href="test2_panel.php" class="action-btn">
                     Test2
                 </a>

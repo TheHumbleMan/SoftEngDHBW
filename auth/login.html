@@ -12,37 +12,113 @@
             <h1>Anmeldung</h1>
         </div>
         
-        <form class="login-form" method="POST" action="/auth/login">
-            <h2 class="login-title">Wer sind Sie?</h2>
-            
-            <% if (error) { %>
-                <div class="error-message">
-                    <% if (error === 'required') { %>
-                        Bitte wählen Sie Student oder Dualer Partner.
-                    <% } else if (error === 'invalid') { %>
-                        Die ausgewählte Rolle ist ungültig.
-                    <% } else if (error === 'session') { %>
-                        Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.
-                    <% } else if (error === 'access') { %>
-                        Sie haben keine Berechtigung für diese Seite.
-                    <% } else { %>
-                        Ein Fehler ist aufgetreten.
-                    <% } %>
-                </div>
-            <% } %>
+        <form class="login-form" method="POST" action="/auth/login" id="loginForm">
+            <!-- Schritt 1: Rolle auswählen -->
+            <div id="roleSelectionStep">
+                <h2 class="login-title">Schritt 1: Wer sind Sie?</h2>
+                
+                <% if (error) { %>
+                    <div class="error-message">
+                        <% if (error === 'required') { %>
+                            Bitte wählen Sie Student oder Dualer Partner.
+                        <% } else if (error === 'invalid') { %>
+                            Die ausgewählte Rolle ist ungültig.
+                        <% } else if (error === 'course-required') { %>
+                            Bitte wählen Sie einen Kurs aus.
+                        <% } else if (error === 'session') { %>
+                            Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.
+                        <% } else if (error === 'access') { %>
+                            Sie haben keine Berechtigung für diese Seite.
+                        <% } else { %>
+                            Ein Fehler ist aufgetreten.
+                        <% } %>
+                    </div>
+                <% } %>
 
-            <% if (success === 'logout') { %>
-                <div class="success-message">
-                    Sie wurden erfolgreich abgemeldet.
+                <% if (success === 'logout') { %>
+                    <div class="success-message">
+                        Sie wurden erfolgreich abgemeldet.
+                    </div>
+                <% } %>
+                
+                <div class="role-selection">
+                    <button type="button" class="login-button" onclick="selectRole('student')">Student</button>
+                    <button type="button" class="login-button" style="margin-top: 12px;" onclick="selectRole('partner')">Dualer Partner</button>
                 </div>
-            <% } %>
-            
-            <div class="role-selection">
-                <button type="submit" name="role" value="student" class="login-button">Student</button>
-                <button type="submit" name="role" value="partner" class="login-button" style="margin-top: 12px;">Dualer Partner</button>
             </div>
-        </form>
 
+            <!-- Schritt 2: Kurs auswählen -->
+            <div id="courseSelectionStep" style="display: none;">
+                <h2 class="login-title">Schritt 2: Wählen Sie Ihren Kurs</h2>
+                
+                <div class="course-selection">
+                    <label for="courseSelect">Kurs:</label>
+                    <select id="courseSelect" name="course" required>
+                        <option value="">-- Kurs auswählen --</option>
+                    </select>
+                </div>
+                
+                <div class="button-group" style="margin-top: 20px;">
+                    <button type="button" class="login-button" onclick="backToRole()" style="background-color: #999;">Zurück</button>
+                    <button type="submit" class="login-button" style="margin-left: 12px;">Anmelden</button>
+                </div>
+            </div>
+
+            <input type="hidden" id="roleInput" name="role" value="">
+        </form>
     </div>
+
+    <script>
+        const courses = {
+            'FN': <%- JSON.stringify(fnCourses || []) %>,
+            'RV': <%- JSON.stringify(rvCourses || []) %>
+        };
+
+        function selectRole(role) {
+            document.getElementById('roleInput').value = role;
+            document.getElementById('roleSelectionStep').style.display = 'none';
+            document.getElementById('courseSelectionStep').style.display = 'block';
+            
+            // Kurse laden
+            const courseSelect = document.getElementById('courseSelect');
+            courseSelect.innerHTML = '<option value="">-- Kurs auswählen --</option>';
+            
+            // FN Kurse
+            const fnOptgroup = document.createElement('optgroup');
+            fnOptgroup.label = 'Technische Fakultät Friedrichshafen';
+            courses['FN'].forEach(course => {
+                const option = document.createElement('option');
+                option.value = 'FN-' + course;
+                option.textContent = course;
+                fnOptgroup.appendChild(option);
+            });
+            courseSelect.appendChild(fnOptgroup);
+            
+            // RV Kurse
+            const rvOptgroup = document.createElement('optgroup');
+            rvOptgroup.label = 'Wirtschaftliche Fakultät Ravensburg';
+            courses['RV'].forEach(course => {
+                const option = document.createElement('option');
+                option.value = 'RV-' + course;
+                option.textContent = course;
+                rvOptgroup.appendChild(option);
+            });
+            courseSelect.appendChild(rvOptgroup);
+        }
+
+        function backToRole() {
+            document.getElementById('roleInput').value = '';
+            document.getElementById('courseSelect').value = '';
+            document.getElementById('courseSelectionStep').style.display = 'none';
+            document.getElementById('roleSelectionStep').style.display = 'block';
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            if (!document.getElementById('courseSelect').value) {
+                e.preventDefault();
+                alert('Bitte wählen Sie einen Kurs aus.');
+            }
+        });
+    </script>
 </body>
 </html>

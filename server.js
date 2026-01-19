@@ -2,12 +2,25 @@ import express from 'express';
 import session from 'express-session';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import fs from 'fs';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Basic paths
 const VIEWS_ROOT = __dirname; // We keep view files alongside original structure
 const SESSION_TIMEOUT_SECONDS = Number(process.env.SESSION_TIMEOUT_SECONDS || 3600);
+
+// Kursdaten laden
+let fnCourses = [];
+let rvCourses = [];
+try {
+    const fnData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/kurse_fn.json'), 'utf8'));
+    fnCourses = fnData.courses || [];
+    const rvData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/kurse_rv.json'), 'utf8'));
+    rvCourses = rvData.courses || [];
+} catch (err) {
+    console.error('Fehler beim Laden der Kursdaten:', err);
+}
 
 // Express setup
 const app = express();
@@ -61,7 +74,9 @@ function getCurrentUserFromSession(req) {
     return {
         id: req.session.userId,
         username: req.session.username,
-        role: req.session.role
+        role: req.session.role,
+        faculty: req.session.faculty,
+        course: req.session.course
     };
 }
 
@@ -76,17 +91,32 @@ app.get('/', async (req, res) => {
 app.get('/auth/login', async (req, res) => {
     res.render('auth/login.html', {
         error: req.query.error,
-        success: req.query.success
+        success: req.query.success,
+        fnCourses,
+        rvCourses
     });
 });
 
 app.post('/auth/login', async (req, res) => {
     const roleInput = (req.body.role || '').toLowerCase();
+    const course = (req.body.course || '').trim();
+    
     const allowedRoles = ['student', 'partner'];
     if (!roleInput) {
         return res.redirect('/auth/login?error=required');
     }
     if (!allowedRoles.includes(roleInput)) {
+        return res.redirect('/auth/login?error=invalid');
+    }
+    
+    // Kursauswahl validieren
+    if (!course) {
+        return res.redirect('/auth/login?error=course-required');
+    }
+    
+    // Extrahiere Fakultät und Kurscode
+    const [faculty, courseCode] = course.split('-');
+    if (!['FN', 'RV'].includes(faculty)) {
         return res.redirect('/auth/login?error=invalid');
     }
 
@@ -99,6 +129,8 @@ app.post('/auth/login', async (req, res) => {
     req.session.role = mappedRole;
     req.session.loginTime = Date.now();
     req.session.sessionTimeout = SESSION_TIMEOUT_SECONDS;
+    req.session.faculty = faculty;
+    req.session.course = courseCode;
 
     return res.redirect('/dashboard');
 });
@@ -112,9 +144,25 @@ app.get('/auth/logout', (req, res) => {
 // Dashboard
 app.get('/dashboard', requireLogin, async (req, res) => {
     const currentUser = getCurrentUserFromSession(req);
+    
+    // Fakultätsadresse basierend auf der Auswahl
+    const facultyInfo = {
+        'FN': {
+            name: 'Technische Fakultät',
+            address: 'Fallenbrunnen 2, 88045 Friedrichshafen'
+        },
+        'RV': {
+            name: 'Wirtschaftliche Fakultät',
+            address: 'Marienplatz 2, 88212 Ravensburg'
+        }
+    };
+    
+    const faculty = facultyInfo[currentUser?.faculty] || null;
+    
     res.render('dashboard.html', {
         currentUser,
-        isAdmin: currentUser?.role === 'admin'
+        isAdmin: currentUser?.role === 'admin',
+        faculty
     });
 });
 

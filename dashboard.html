@@ -20,6 +20,14 @@
             </div>
         </div>
 
+        <% if (faculty) { %>
+        <div class="faculty-info" style="background-color: #f5f5f5; padding: 15px; margin: 20px 0; border-radius: 5px; border-left: 4px solid #007bff;">
+            <h3 style="margin-top: 0;"><%= faculty.name %></h3>
+            <p style="margin: 5px 0;"><strong>Adresse:</strong> <%= faculty.address %></p>
+            <p style="margin: 5px 0;"><strong>Kurs:</strong> <%= currentUser.course %></p>
+        </div>
+        <% } %>
+
         <div class="quick-actions">
             <h3>Schnellzugriff</h3>
             <div class="action-buttons-layout">

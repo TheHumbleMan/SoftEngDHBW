@@ -42,8 +42,12 @@
                 <% } %>
                 
                 <div class="role-selection">
-                    <button type="button" class="login-button" onclick="selectRole('student')">Student</button>
-                    <button type="button" class="login-button" style="margin-top: 12px;" onclick="selectRole('partner')">Dualer Partner</button>
+                    <div class="role-option">
+                        <button type="button" class="role-button student-btn" onclick="selectRole('student')">Student</button>
+                    </div>
+                    <div class="role-option" style="margin-top: 12px;">
+                        <button type="button" class="role-button partner-btn" onclick="selectRole('partner')">Dualer Partner</button>
+                    </div>
                 </div>
             </div>
 
@@ -59,8 +63,8 @@
                 </div>
                 
                 <div class="button-group" style="margin-top: 20px;">
-                    <button type="button" class="login-button" onclick="backToRole()" style="background-color: #999;">Zurück</button>
-                    <button type="submit" class="login-button" style="margin-left: 12px;">Anmelden</button>
+                    <button type="button" class="action-btn" onclick="backToRole()">Zurück</button>
+                    <button type="submit" class="card-button" style="margin-left: 12px;">Anmelden</button>
                 </div>
             </div>
 

@@ -29,10 +29,11 @@ h1 { margin-bottom: 30px; font-size: 2em; }
 
 /*Container Design */
 .container, .dashboard-container, .admin-container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 20px;
 }
+
 
 .container {
     max-width: 800px;
@@ -41,6 +42,16 @@ h1 { margin-bottom: 30px; font-size: 2em; }
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     text-align: center;
 }
+.dashboard-header {
+    text-align: center;
+    width: 100%;
+    max-width: 1600px;
+    padding: 5px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important; 
+}
+
+
 
 .login-container {
     max-width: 400px;
@@ -49,6 +60,15 @@ h1 { margin-bottom: 30px; font-size: 2em; }
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+.dashboard-tile {
+    background: var(--container_white);
+    text-align: center;
+
+}
+
+.dashboard-tile:hover {
+    border-color: var(--dhbw_red);
 }
 
 /*Flexible container for navigation elements*/
@@ -59,8 +79,8 @@ h1 { margin-bottom: 30px; font-size: 2em; }
     flex-wrap: wrap;
 }
 
-/* Header */
-.header {
+/* dashboard Header */
+.dashboard-header {
     background: var(--container_white);
     padding: 20px;
     border-radius: 10px;
@@ -130,7 +150,8 @@ h1 { margin-bottom: 30px; font-size: 2em; }
 /* Cards & Grids */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* kann man theoretisch mit 600px deutlich größer machen*/
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
 }
 
@@ -142,13 +163,43 @@ h1 { margin-bottom: 30px; font-size: 2em; }
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+.dashboard-grid.detail-mode {
+    /* 2 Spalten, linke hat 70%, rest hat 1 Fraction = 30%*/
+    grid-template-columns: 70% 1fr;
+}
+
+/* Bei Klick auf Kachel, ist die Große*/
+.dashboard-card.active {
+    grid-column: 1 / 2;     /* nimmt linke reihe */
+    grid-row: 1 / span 5;  /* nimmt höhe von 5 reihen*/
+    min-height: 80vh;       
+    cursor: default;
+    background: #fff;
+    border: 2px solid #e0001b; 
+}
+
+
+.detail-content {
+    display: none;
+}
+/* Wenn aktiv -> Inhalt zeigen */
+.dashboard-card.active .detail-content {
+    display: block;
+}
+
+/* beschreibt ihm detailmode die anderen tiles, werden kleiner und durchsichtiger*/
+.dashboard-grid.detail-mode .dashboard-card:not(.active) {
+    opacity: 0.4;
+    transform: scale(0.95);
+}
+
 .dashboard-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-.card-title { font-size: 24px; margin-bottom: 15px; color: var(--dhbw_red); }
-.card-description { color: var(--dhbw_dark_grey); margin-bottom: 20px; line-height: 1.5; }
+.card-title { font-size: 30px; margin-bottom: 15px; color: var(--dhbw_red); }
+.card-description { font-size: 15px; color: var(--dhbw_dark_grey); margin-bottom: 20px; line-height: 1.5; }
 
 
 

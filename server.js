@@ -46,6 +46,8 @@ app.use(session({
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/logs', express.static(path.join(__dirname, 'logs')));
+// Ordner kann jetzt auch gefunden werden
+app.use('/scripts', express.static(path.join(__dirname, 'scripts')));
 // No user persistence required; session keeps the lightweight role info.
 
 function requireLogin(req, res, next) {

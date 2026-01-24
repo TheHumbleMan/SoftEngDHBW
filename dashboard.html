@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/script.js" defer></script>
+    <!--<script src="assets/script.js" defer></script> -->
+    <script src="scripts/dashboard.js" defer></script> 
 </head>
 <body>
     <div class="dashboard-container">
-        <div class="header">
-            <div>
+        <div class="dashboard-header">
                 <h1>Dashboard - DHBW</h1>
-                <p>Willkommen</p>
+                <% if (faculty) { %>
+                    <div class="faculty-info">
+                        <h3><%= faculty.name %></h3>
+                        <p><strong>Adresse:</strong> <%= faculty.address %></p>
+                        <p><strong>Kurs:</strong> <%= currentUser.course %></p>
+                    </div>
+                <% } %>
             </div>
+            <!--
             <div class="nav-links">
                 <a href="/dashboard" class="nav-link">Dashboard</a>
                 <a href="/auth/logout" class="nav-link logout">Abmelden</a>
             </div>
-        </div>
+        </div> -->
 
-        <% if (faculty) { %>
-        <div class="faculty-info" style="background-color: #f5f5f5; padding: 15px; margin: 20px 0; border-radius: 5px; border-left: 4px solid #007bff;">
-            <h3 style="margin-top: 0;"><%= faculty.name %></h3>
-            <p style="margin: 5px 0;"><strong>Adresse:</strong> <%= faculty.address %></p>
-            <p style="margin: 5px 0;"><strong>Kurs:</strong> <%= currentUser.course %></p>
-        </div>
-        <% } %>
 
+        <!--
         <div class="quick-actions">
             <h3>Schnellzugriff</h3>
             <div class="action-buttons-layout">
@@ -39,35 +40,105 @@
                 <a href="kacheln/partner.html" class="action-btn">Partner Bereich</a>
                 <% } %>
             </div>
-        </div>
+        </div> -->
 
         <div class="dashboard-grid">
             <!-- Dummy Kachel - für alle sichtbar -->
-            <div class="dashboard-card dummy-tile">
+           <!-- <div class="dashboard-card dummy-tile">
                 <div class="card-icon">DUMMY</div>
                 <h2 class="card-title">Dummy Kachel</h2>
                 <p class="card-description">Dies ist eine Dummy-Kachel, die als Vorlage für neue Kacheln dient.</p>
                 <a href="kacheln/dummy.html" class="card-button">Zur Dummy-HTML Datei</a>
-            </div>
+            </div> -->
 
             <!-- Studenten Kachel - nur für Studenten sichtbar -->
             <% if (currentUser && currentUser.role === 'user') { %>
-            <div class="dashboard-card student-tile">
-                <div class="card-icon">Student</div>
-                <h2 class="card-title">Dummy Kachel Studenten</h2>
-                <p class="card-description">Zugang zu Vorlesungen, Prüfungen und Notenspiegel.</p>
-                <a href="kacheln/student.html" class="card-button">Zum Studenten Portal</a>
-            </div>
+            <button class="dashboard-card">
+                <h2 class="card-title">Stundenplan</h2>
+                <p class="card-description">Zugang zu Vorlesungen und anderen Terminen</p>
+                <div class="detail-content">
+                    <p>detail-content Text test!</p>
+                </div>
+            </button>
+
+            <button class="dashboard-card">
+                <h2 class="card-title">Kantine</h2>
+                <p class="card-description">Das Menü von der Seezeit-Kantine</p>
+                <div class="detail-content">
+                    <p>detail-content Text test!</p>
+                </div>
+            </button>
+
+            <button class="dashboard-card">
+                <h2 class="card-title">Dokumente</h2>
+                <p class="card-description">Auflistung wichtiger Dokumente</p>
+                <div class="detail-content">
+                    <p>detail-content Text test!</p>
+                </div>
+            </button>
+
+            <button class="dashboard-card">
+                <h2 class="card-title">Ansprechpartner</h2>
+                <p class="card-description">Auflistung wichtiger Ansprechpartner der DHBW</p>
+                <div class="detail-content">
+                    <p>detail-content Text test!</p>
+                </div>
+            </button>
+
+            <button class="dashboard-card">
+                <h2 class="card-title">Routenplanung</h2>
+                <p class="card-description">Routenplaner, finde heraus welchen Bus du wann nehmen musst!</p>
+                <div class="detail-content">
+                    <p>detail-content Text test!</p>
+                </div>
+            </button>
+
+            <button class="dashboard-card">
+                <h2 class="card-title">Termine</h2>
+                <p class="card-description">Hier werden alle Termine aufgelistet,
+                     die nicht im Stundenplan enthalten sind</p>
+                <div class="detail-content">
+                    <p>detail-content Text test!</p>
+                </div>
+            </button>
+
+
             <% } %>
 
             <!-- Partner Kachel - nur für Duale Partner sichtbar -->
             <% if (currentUser && currentUser.role === 'admin') { %>
-            <div class="dashboard-card partner-tile">
-                <div class="card-icon">DP</div>
-                <h2 class="card-title">Partner Bereich</h2>
-                <p class="card-description">Dummy Kachel Dualer Partner</p>
-                <a href="kacheln/partner.html" class="card-button">Zum Partner Portal</a>
-            </div>
+                
+            <button class="dashboard-card">
+                <h2 class="card-title">Dualer Partner stuff</h2>
+                <p class="card-description">cooles dualer partner zeug</p>
+                <div class="detail-content">
+                    <p>detail-content Text test!</p>
+                </div>
+            </button>
+
+            <button class="dashboard-card">
+                <h2 class="card-title">Dualer Partner stuff</h2>
+                <p class="card-description">cooles dualer partner zeug</p>
+                <div class="detail-content">
+                    <p>detail-content Text test!</p>
+                </div>
+            </button>
+
+            <button class="dashboard-card">
+                <h2 class="card-title">Dualer Partner stuff</h2>
+                <p class="card-description">cooles dualer partner zeug</p>
+                <div class="detail-content">
+                    <p>detail-content Text test!</p>
+                </div>
+            </button>
+
+            <button class="dashboard-card">
+                <h2 class="card-title">Dualer Partner stuff</h2>
+                <p class="card-description">cooles dualer partner zeug</p>
+                <div class="detail-content">
+                    <p>detail-content Text test!</p>
+                </div>
+            </button>
             <% } %>
         </div>
     </div>

@@ -165,12 +165,12 @@ h1 { margin-bottom: 30px; font-size: 2em; }
 }
 .dashboard-grid.detail-mode {
     /* 2 Spalten, linke hat 70%, rest hat 1 Fraction = 30%*/
-    grid-template-columns: 70% 1fr;
+    grid-template-columns: 1fr 70%;
 }
 
 /* Bei Klick auf Kachel, ist die Große*/
 .dashboard-card.active {
-    grid-column: 1 / 2;     /* nimmt linke reihe */
+    grid-column: 2 / span 1;     /* nimmt linke reihe */
     grid-row: 1 / span 5;  /* nimmt höhe von 5 reihen*/
     min-height: 80vh;       
     cursor: default;

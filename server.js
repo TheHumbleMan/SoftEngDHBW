@@ -45,8 +45,6 @@ app.use(session({
 }));
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
-app.use('/logs', express.static(path.join(__dirname, 'logs')));
-// Ordner kann jetzt auch gefunden werden
 app.use('/scripts', express.static(path.join(__dirname, 'scripts')));
 // No user persistence required; session keeps the lightweight role info.
 
@@ -64,8 +62,8 @@ function requireLogin(req, res, next) {
     next();
 }
 
-function requireAdmin(req, res, next) {
-    if (!req.session.authenticated || req.session.role !== 'admin') {
+function requirePartner(req, res, next) {
+    if (!req.session.authenticated || req.session.role !== 'partner') {
         return res.redirect('/auth/login?error=access');
     }
     next();
@@ -123,7 +121,7 @@ app.post('/auth/login', async (req, res) => {
     }
 
     const friendlyName = roleInput === 'partner' ? 'Dualer Partner' : 'Student';
-    const mappedRole = roleInput === 'partner' ? 'admin' : 'user';
+    const mappedRole = roleInput === 'partner' ? 'partner' : 'student';
 
     req.session.authenticated = true;
     req.session.userId = roleInput; // simple identifier for this lightweight flow
@@ -163,7 +161,7 @@ app.get('/dashboard', requireLogin, async (req, res) => {
     
     res.render('dashboard.html', {
         currentUser,
-        isAdmin: currentUser?.role === 'admin',
+        isPartner: currentUser?.role === 'partner',
         faculty
     });
 });
@@ -181,22 +179,9 @@ app.get('/debug-session', requireLogin, async (req, res) => {
     });
 });
 
-// User management
-// Benutzerverwaltungs-Routen entfernt, da keine Benutzer-Persistenz mehr genutzt wird.
-
-// Pi-hole admin convenience redirect
-app.get(['/admin', '/admin/index.lp', '/admin/index.php'], requireAdmin, (req, res) => {
-    // Default with trailing slash to avoid nginx 404s on relative assets
-    const target = process.env.PIHOLE_URL || 'http://127.0.0.1/admin/';
-    res.redirect(target);
-});
-
 // Static fallback for html files
 app.get('/dashboard.html', (req, res) => res.redirect('/dashboard'));
-app.get('/management/:page.html', (req, res, next) => {
-    const target = `/management/${req.params.page}`;
-    res.redirect(target);
-});
+
 app.get('/auth/:page.html', (req, res, next) => {
     res.redirect(`/auth/${req.params.page}`);
 });

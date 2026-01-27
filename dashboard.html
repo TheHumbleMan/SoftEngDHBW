@@ -19,6 +19,7 @@
                         <p><strong>Kurs:</strong> <%= currentUser.course %></p>
                     </div>
                 <% } %>
+                <a href="/auth/logout" class="logout-btn">Abmelden</a>
             </div>
             <!--
             <div class="nav-links">
@@ -33,10 +34,10 @@
             <h3>Schnellzugriff</h3>
             <div class="action-buttons-layout">
                 <a href="kacheln/dummy.html" class="action-btn">Dummy Kachel</a>
-                <% if (currentUser && currentUser.role === 'user') { %>
+                <% if (currentUser && currentUser.role === 'student') { %>
                 <a href="kacheln/student.html" class="action-btn">Studenten Bereich</a>
                 <% } %>
-                <% if (currentUser && currentUser.role === 'admin') { %>
+                <% if (currentUser && currentUser.role === 'partner') { %>
                 <a href="kacheln/partner.html" class="action-btn">Partner Bereich</a>
                 <% } %>
             </div>
@@ -52,7 +53,7 @@
             </div> -->
 
             <!-- Studenten Kachel - nur für Studenten sichtbar -->
-            <% if (currentUser && currentUser.role === 'user') { %>
+            <% if (currentUser && currentUser.role === 'student') { %>
             <button class="dashboard-card">
                 <h2 class="card-title">Stundenplan</h2>
                 <p class="card-description">Zugang zu Vorlesungen und anderen Terminen</p>
@@ -106,7 +107,7 @@
             <% } %>
 
             <!-- Partner Kachel - nur für Duale Partner sichtbar -->
-            <% if (currentUser && currentUser.role === 'admin') { %>
+            <% if (currentUser && currentUser.role === 'partner') { %>
 
 
             <button class="dashboard-card">

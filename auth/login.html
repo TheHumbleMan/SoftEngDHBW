@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anmeldung</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
     <link rel="stylesheet" href="../assets/style.css?v=3">
 </head>
 <body>
@@ -12,34 +17,12 @@
             <h1>Anmeldung</h1>
         </div>
         
-        <form class="login-form" method="POST" action="/auth/login" id="loginForm">
+        <form class="login-form" id="loginForm">
             <!-- Schritt 1: Rolle auswählen -->
             <div id="roleSelectionStep">
                 <h2 class="login-title">Schritt 1: Wer sind Sie?</h2>
                 
-                <% if (error) { %>
-                    <div class="error-message">
-                        <% if (error === 'required') { %>
-                            Bitte wählen Sie Student oder Dualer Partner.
-                        <% } else if (error === 'invalid') { %>
-                            Die ausgewählte Rolle ist ungültig.
-                        <% } else if (error === 'course-required') { %>
-                            Bitte wählen Sie einen Kurs aus.
-                        <% } else if (error === 'session') { %>
-                            Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.
-                        <% } else if (error === 'access') { %>
-                            Sie haben keine Berechtigung für diese Seite.
-                        <% } else { %>
-                            Ein Fehler ist aufgetreten.
-                        <% } %>
-                    </div>
-                <% } %>
-
-                <% if (success === 'logout') { %>
-                    <div class="success-message">
-                        Sie wurden erfolgreich abgemeldet.
-                    </div>
-                <% } %>
+                <div id="messageContainer"></div>
                 
                 <div class="role-selection">
                     <div class="role-option">
@@ -73,12 +56,35 @@
     </div>
 
     <script>
-        const courses = {
-            'FN': <%- JSON.stringify(fnCourses || []) %>,
-            'RV': <%- JSON.stringify(rvCourses || []) %>
-        };
+        let courses = { 'FN': [], 'RV': [] };
+
+        // Kursdaten beim Laden abrufen
+        async function loadCourses() {
+            try {
+                const [fnResponse, rvResponse] = await Promise.all([
+                    fetch('/data/kurse_fn.json'),
+                    fetch('/data/kurse_rv.json')
+                ]);
+                const fnData = await fnResponse.json();
+                const rvData = await rvResponse.json();
+                courses.FN = fnData.courses || [];
+                courses.RV = rvData.courses || [];
+            } catch (error) {
+                console.error('Fehler beim Laden der Kursdaten:', error);
+            }
+        }
+
+        function showMessage(message, type = 'error') {
+            const container = document.getElementById('messageContainer');
+            container.innerHTML = `<div class="${type}-message">${message}</div>`;
+        }
+
+        function clearMessage() {
+            document.getElementById('messageContainer').innerHTML = '';
+        }
 
         function selectRole(role) {
+            clearMessage();
             document.getElementById('roleInput').value = role;
             document.getElementById('roleSelectionStep').style.display = 'none';
             document.getElementById('courseSelectionStep').style.display = 'block';
@@ -111,16 +117,78 @@
         }
 
         function backToRole() {
+            clearMessage();
             document.getElementById('roleInput').value = '';
             document.getElementById('courseSelect').value = '';
             document.getElementById('courseSelectionStep').style.display = 'none';
             document.getElementById('roleSelectionStep').style.display = 'block';
         }
 
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            if (!document.getElementById('courseSelect').value) {
-                e.preventDefault();
-                alert('Bitte wählen Sie einen Kurs aus.');
+        // Form Submit mit fetch() API
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const course = document.getElementById('courseSelect').value;
+            const role = document.getElementById('roleInput').value;
+            
+            if (!course) {
+                showMessage('Bitte wählen Sie einen Kurs aus.');
+                return;
+            }
+
+            // Loading-State anzeigen
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Anmeldung läuft...';
+
+            try {
+                const response = await fetch('/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ role, course })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Erfolg - zum Dashboard weiterleiten
+                    window.location.href = data.redirect;
+                } else {
+                    // Fehler anzeigen
+                    showMessage(data.message || 'Ein Fehler ist aufgetreten.');
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
+            } catch (error) {
+                console.error('Login-Fehler:', error);
+                showMessage('Netzwerkfehler. Bitte versuchen Sie es erneut.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }
+        });
+
+        // URL-Parameter für Erfolgs-/Fehlermeldungen prüfen
+        window.addEventListener('DOMContentLoaded', () => {
+            loadCourses();
+            
+            const params = new URLSearchParams(window.location.search);
+            const error = params.get('error');
+            const success = params.get('success');
+
+            if (success === 'logout') {
+                showMessage('Sie wurden erfolgreich abgemeldet.', 'success');
+            } else if (error) {
+                const errorMessages = {
+                    'required': 'Bitte wählen Sie Student oder Dualer Partner.',
+                    'invalid': 'Die ausgewählte Rolle ist ungültig.',
+                    'course-required': 'Bitte wählen Sie einen Kurs aus.',
+                    'session': 'Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.',
+                    'access': 'Sie haben keine Berechtigung für diese Seite.'
+                };
+                showMessage(errorMessages[error] || 'Ein Fehler ist aufgetreten.');
             }
         });
     </script>

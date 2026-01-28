@@ -23,11 +23,38 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isActive) {
                 grid.classList.add('detail-mode');
                 card.classList.add('active');
-                beispieltext = card.querySelector(".detail-content");
-                if (beispieltext) { 
-                    beispieltext.innerText = "hier etwas dynamisch generiertes";
-                }
                 
+                // Hole den Detail-Content-Bereich der Karte
+                const detailContent = card.querySelector(".detail-content");
+                if (detailContent) { 
+                    // Hole die URL des zu ladenden Inhalts aus dem data-content Attribut
+                    const contentUrl = card.getAttribute('data-content');
+                    if (contentUrl) {
+                        // Lade den HTML-Inhalt von der angegebenen URL
+                        fetch(contentUrl)
+                            .then(response => {
+                                // Prüfe ob die Anfrage erfolgreich war
+                                if (!response.ok) throw new Error('Fehler beim Laden');
+                                return response.text();
+                            })
+                            .then(html => {
+                                // Parse die HTML-Antwort in ein DOM-Objekt
+                                const parser = new DOMParser();
+                                const doc = parser.parseFromString(html, 'text/html');
+                                // Extrahiere den Inhalt vom <main> Tag oder wenn nicht vorhanden vom <body> Tag
+                                const mainContent = doc.querySelector('main') || doc.body;
+                                 // Setze den extrahierten Inhalt in den Detail-Bereich
+                                detailContent.innerHTML = mainContent.innerHTML;
+                            })
+                            .catch(err => {
+                                // Bei einem Fehler, zeige eine Fehlermeldung an
+                                console.error('Fehler beim Laden:', err);
+                                detailContent.innerHTML = '<p>Inhalt konnte nicht geladen werden.</p>';
+                            });
+                    } else {
+                        detailContent.innerText = "hier etwas dynamisch generiertes";
+                    }
+                }
                 // Nach oben scrollen, damit man den Anfang sieht
                 card.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }

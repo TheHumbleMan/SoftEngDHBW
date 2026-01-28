@@ -106,17 +106,9 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Define currentUser as a JavaScript object from EJS
-            const currentUser = {
-                username: '<%= currentUser ? currentUser.username : "" %>',
-                role: '<%= currentUser ? currentUser.role : "" %>'
-            };
-            
-            console.log('Dashboard geladen für Benutzer: ' + currentUser.username);
-            if (currentUser && currentUser.role) {
-                console.log('Benutzerrolle: ' + currentUser.role);
-            }
+        document.addEventListener('DOMContentLoaded', () => {
+            window.sessionStorage.setItem('kurs', '<%= currentUser ? currentUser.course : "" %>')
+            //schreibt den Ausgewählten Kurs in den sessionStorage dass man von überall aus darauf zugreifen kann
         });
     </script>
 </body>

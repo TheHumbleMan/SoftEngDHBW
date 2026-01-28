@@ -48,6 +48,7 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'favicon')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/scripts', express.static(path.join(__dirname, 'scripts')));
+app.use('/data', express.static(path.join(__dirname, 'data')));
 app.use('/favicon', express.static(path.join(__dirname, 'favicon')));
 
 // No user persistence required; session keeps the lightweight role info.
@@ -95,9 +96,7 @@ app.get('/', async (req, res) => {
 app.get('/auth/login', async (req, res) => {
     res.render('auth/login.html', {
         error: req.query.error,
-        success: req.query.success,
-        fnCourses,
-        rvCourses
+        success: req.query.success
     });
 });
 
@@ -106,22 +105,24 @@ app.post('/auth/login', async (req, res) => {
     const course = (req.body.course || '').trim();
     
     const allowedRoles = ['student', 'partner'];
+    
+    // Fehlerbehandlung
     if (!roleInput) {
-        return res.redirect('/auth/login?error=required');
+        return res.status(400).json({ success: false, error: 'required', message: 'Bitte wählen Sie Student oder Dualer Partner.' });
     }
     if (!allowedRoles.includes(roleInput)) {
-        return res.redirect('/auth/login?error=invalid');
+        return res.status(400).json({ success: false, error: 'invalid', message: 'Die ausgewählte Rolle ist ungültig.' });
     }
     
     // Kursauswahl validieren
     if (!course) {
-        return res.redirect('/auth/login?error=course-required');
+        return res.status(400).json({ success: false, error: 'course-required', message: 'Bitte wählen Sie einen Kurs aus.' });
     }
     
     // Extrahiere Fakultät und Kurscode
     const [faculty, courseCode] = course.split('-');
     if (!['FN', 'RV'].includes(faculty)) {
-        return res.redirect('/auth/login?error=invalid');
+        return res.status(400).json({ success: false, error: 'invalid', message: 'Ungültige Fakultät.' });
     }
 
     const friendlyName = roleInput === 'partner' ? 'Dualer Partner' : 'Student';
@@ -136,7 +137,7 @@ app.post('/auth/login', async (req, res) => {
     req.session.faculty = faculty;
     req.session.course = courseCode;
 
-    return res.redirect('/dashboard');
+    return res.json({ success: true, redirect: '/dashboard' });
 });
 
 app.get('/auth/logout', (req, res) => {

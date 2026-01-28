@@ -44,8 +44,12 @@ app.use(session({
     }
 }));
 
+// Static files - Favicon must be BEFORE other routes to ensure /favicon.ico is served
+app.use(express.static(path.join(__dirname, 'favicon')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/scripts', express.static(path.join(__dirname, 'scripts')));
+app.use('/favicon', express.static(path.join(__dirname, 'favicon')));
+
 // No user persistence required; session keeps the lightweight role info.
 
 function requireLogin(req, res, next) {

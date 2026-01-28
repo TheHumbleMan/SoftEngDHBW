@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isActive) {
                 grid.classList.add('detail-mode');
                 card.classList.add('active');
+                
                 beispieltext = card.querySelector(".detail-content");
                 if (beispieltext) { 
                     beispieltext.innerText = "hier etwas dynamisch generiertes";
                 }
-                
                 // Nach oben scrollen, damit man den Anfang sieht
                 card.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }

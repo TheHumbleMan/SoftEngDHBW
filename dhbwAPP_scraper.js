@@ -38,7 +38,7 @@ INFO:
     Format: Beliebiger Text
 */
 
-const sessionCourse = "TIT24";
+const sessionCourse = "TIT24"; //TODO; entfernen nach merge mit main
 
 //Hier wird der ausgewählte Kurs ausgelesen und die URL zusammengesetzt
 //const sessionCourse = window.sessionStorage.getItem('kurs');
@@ -62,10 +62,10 @@ await page.goto(url, {
     waitUntil: "networkidle2"
 });
 
-    page.on('console', msg => {
-        // msg.text() enthält den Text, der im Browser geloggt wurde
-        console.log('BROWSER LOG:', msg.text());
-    });
+//Leitet alle console.logs aus der puppeteer seite an die Node Konsole weiter
+page.on('console', msg => {
+    console.log('BROWSER LOG:', msg.text());
+});
 
 // wartet dass die Terminzeiten gerendert sind
 await page.waitForSelector(".flex-grow.text-zinc-300.truncate");

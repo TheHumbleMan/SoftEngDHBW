@@ -38,11 +38,11 @@ INFO:
     Format: Beliebiger Text
 */
 
-const sessionCourse = "TIT24"; //TODO; entfernen nach merge mit main
+//const sessionCourse = "TIT24"; //Manuelles Setzen des Kurses zum Solo-Testen
 
 //Hier wird der ausgewählte Kurs ausgelesen und die URL zusammengesetzt
-//const sessionCourse = window.sessionStorage.getItem('kurs');
-//console.log("Ausgelesener Kurs aus Session: " + sessionCourse);
+const sessionCourse = window.sessionStorage.getItem('kurs');
+console.log("Ausgelesener Kurs aus Session: " + sessionCourse);
 
 //Standort Präfix bestimmen Friedrichshafen (FN) oder Ravensburg (RV)
 let Kurs = "";
@@ -94,12 +94,6 @@ const scrapingResult = await page.evaluate(() => {
 
             //Holt sich den Namen des Termins
             const name = appointment.querySelector(".text-zinc-300.select-none")?.innerText.trim() || "Termin ohne Name";
-
-            //DEPRECATED: Holt sich das Datum des Termins (wird aktuell nicht genutzt da im Header des Tages enthalten)
-            //Datum des Termins
-            //const dateIcon = appointment.querySelector(".tabler-icon-calendar-event");
-            //const dateElement = dateIcon ? dateIcon.nextElementSibling : null;
-            //const date = dateElement?.innerText.trim() || "Datum nicht vorhanden";
 
             //Uhrzeiten des Termins
             const timeIcon = appointment.querySelector(".tabler-icon-clock-hour-8");

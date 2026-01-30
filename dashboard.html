@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
     <link rel="stylesheet" href="assets/style.css">
-    <script src="scripts/dashboard.js" defer></script> 
+    <script src="scripts/dashboard.js" defer></script>
 </head>
 <body>
     <div class="dashboard-container">
@@ -104,12 +104,5 @@
             <% } %>
         </div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            window.sessionStorage.setItem('kurs', '<%= currentUser ? currentUser.course : "" %>')
-            //schreibt den Ausgewählten Kurs in den sessionStorage dass man von überall aus darauf zugreifen kann
-        });
-    </script>
 </body>
 </html>

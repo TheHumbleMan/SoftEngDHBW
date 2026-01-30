@@ -3,6 +3,8 @@ import session from 'express-session';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
+import { scrapeDhbwApp } from './scripts/dhbwAPP_scraper.js';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -138,6 +140,16 @@ app.post('/auth/login', async (req, res) => {
     req.session.faculty = faculty;
     req.session.course = courseCode;
 
+    // Scraper automatisch nach Login starten (non-blocking)
+    scrapeDhbwApp({
+        sessionCourse: courseCode,
+        outputDir: path.join(__dirname, 'data/timetables')
+    }).then(result => {
+        console.log('Scraping nach Login abgeschlossen:', result.kurs);
+    }).catch(err => {
+        console.error('Scraping nach Login fehlgeschlagen:', err.message);
+    });
+
     return res.json({ success: true, redirect: '/dashboard' });
 });
 
@@ -202,6 +214,32 @@ app.get('/kacheln/student.html', requireLogin, (req, res) => {
 
 app.get('/kacheln/partner.html', requireLogin, (req, res) => {
     res.render('kacheln/partner.html');
+});
+
+app.get('/scrape-dhbw', requireLogin, async (req, res) => {
+    try {
+        console.log("/scrape-dhbw aufgerufen", {
+            query: req.query,
+            sessionCourse: req.session?.course,
+            user: req.session?.username
+        });
+        const sessionCourse = (req.query?.course || req.session?.course || '').trim();
+        if (!sessionCourse) {
+            return res.status(400).json({
+                success: false,
+                error: 'course-missing',
+                message: 'Kein Kurs vorhanden. SessionStorage ist im Server nicht verfügbar. Übergib den Kurs aus dem Browser (Query) oder nutze die Session.'
+            });
+        }
+        await scrapeDhbwApp({
+            sessionCourse,
+            outputDir: path.join(__dirname, 'data/timetables')
+        });
+        res.json({ success: true, message: 'Scraping completed' });
+    } catch (err) {
+        console.error('Scraping error:', err);
+        res.status(500).json({ success: false, error: err.message });
+    }
 });
 
 const PORT = process.env.PORT || 3000;

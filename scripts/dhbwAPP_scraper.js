@@ -113,7 +113,7 @@ export const scrapeDhbwApp = async ({ sessionCourse, writeFile = true, outputDir
                     const name = appointment.querySelector(".text-zinc-300.select-none")?.innerText.trim() || "Termin ohne Name";
 
                     //Uhrzeiten des Termins
-                    const timeIcon = appointment.querySelector(".tabler-icon-clock-hour-8");
+                    const timeIcon = appointment.querySelectorAll("[class*='tabler-icon-clock-hour-']")[0];
                     const timeElement = timeIcon ? timeIcon.nextElementSibling : null;
                     const time = timeElement?.innerText.trim() || "Zeit nicht vorhanden";
                     let startTime = "Startzeit nicht verfügbar";

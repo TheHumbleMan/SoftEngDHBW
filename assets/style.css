@@ -191,6 +191,12 @@ h1 { margin-bottom: 30px; font-size: 2em; }
     display: block;
 }
 
+/*Wenn aktiv -> Description und Title verstecken */
+.dashboard-card.active .card-description,
+.dashboard-card.active .card-title {
+    display: none;
+}
+
 /* beschreibt ihm detailmode die anderen tiles, werden kleiner und durchsichtiger*/
 .dashboard-grid.detail-mode .dashboard-card:not(.active) {
     opacity: 0.4;

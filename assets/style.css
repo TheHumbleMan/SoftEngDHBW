@@ -189,6 +189,8 @@ h1 { margin-bottom: 30px; font-size: 2em; }
 /* Wenn aktiv -> Inhalt zeigen */
 .dashboard-card.active .detail-content {
     display: block;
+    overflow: auto;
+    height: 100%;
 }
 
 /*Wenn aktiv -> Description und Title verstecken */
@@ -209,8 +211,8 @@ h1 { margin-bottom: 30px; font-size: 2em; }
 }
 
 .card-title { font-size: 30px; margin-bottom: 15px; color: var(--dhbw_red); }
+.active-card-title { font-size: 30px; color: var(--dhbw_red); height:5%; margin:0}
 .card-description { font-size: 15px; color: var(--dhbw_dark_grey); margin-bottom: 20px; line-height: 1.5; }
-
 
 
 /* Quick Actions */

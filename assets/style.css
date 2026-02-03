@@ -211,7 +211,7 @@ h1 { margin-bottom: 30px; font-size: 2em; }
 }
 
 .card-title { font-size: 30px; margin-bottom: 15px; color: var(--dhbw_red); }
-.active-card-title { font-size: 30px; color: var(--dhbw_red); height:5%; margin:0}
+.active-card-title { font-size: 30px; color: var(--dhbw_red); margin:0}
 .card-description { font-size: 15px; color: var(--dhbw_dark_grey); margin-bottom: 20px; line-height: 1.5; }
 
 
@@ -289,6 +289,48 @@ h1 { margin-bottom: 30px; font-size: 2em; }
     line-height: 1.4;
 }
 
+/* Timetable Styles */
+.timetable {
+    width: 100%;
+    height: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.timetable table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+.timetable th, td {
+        border: 1px solid #999;
+        padding: 8px;
+        text-align: center;
+        height:1%;
+    }
+
+.timetable th {
+        background-color: #eee;
+    }
+
+.timetable td.course {
+        background-color: #cce5ff;
+    }
+
+.timetable td.time {
+        font-weight: bold;
+        width: 200px;
+    }
+
+.timetableNavBar {
+    display: grid;
+    align-items: center;
+    grid-template-columns:
+    auto 1fr auto;
+    height: 5%
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

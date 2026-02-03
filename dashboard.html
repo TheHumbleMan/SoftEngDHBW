@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
     <link rel="stylesheet" href="assets/style.css">
-    <script src="scripts/dashboard.js" defer></script>
+    <script type="module" src="scripts/dashboard.js" defer></script>
 </head>
 <body>
     <div class="dashboard-container">
@@ -30,7 +30,7 @@
 
             <!-- Studenten Kachel - nur für Studenten sichtbar -->
             <% if (currentUser && currentUser.role === 'student') { %>
-            <button class="dashboard-card" data-content="kacheln/timetable.html">
+            <button id=timetable class="dashboard-card" data-content="kacheln/timetable.html">
                 <h2 class="card-title">Stundenplan</h2>
                 <p class="card-description">Zugang zu Vorlesungen und anderen Terminen</p>
                 <div class="detail-content">

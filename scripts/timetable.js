@@ -25,6 +25,20 @@ backWeekButton.addEventListener("click", () => {
 });
 }
 
+//Lädt die Kursinformation aus der Session API
+async function loadCourse() {
+    const res = await fetch('/api/session');
+    if (!res.ok) return null; // Fehler oder nicht eingeloggt
+
+    const session = await res.json();
+
+    if (!session.authenticated || !session.course) {
+        return null;
+    }
+
+    return `${session.faculty}-${session.course}` //FN-TIT24
+}
+
 //Umrechnen der Zeit in Minuten für einfache Stundenplan Logik
 function timeToMinutes(timeStr) {
     const [hours, minutes] = timeStr.split('.').map(Number);
@@ -83,22 +97,22 @@ function addDays(date, days) {
 }
 
 //Logik für wenn man die Nächste Woche anzeigen will
-function showNextWeek(){
+async function showNextWeek(){
     lastMonday = new Date(selectedMonday);
     selectedMonday = new Date(nextMonday);
     nextMonday = addWeeks(selectedMonday, 1);
-    renderSelectedWeek();
+    renderSelectedWeek(await loadCourse());
 }
 
 //Logik für wenn man die letzte Woche anzeigen will (weiter zurück als die aktuelle Woche geht nicht)
-function showPreviousWeek(){
+async function showPreviousWeek(){
     nextMonday = new Date(selectedMonday);
     selectedMonday = new Date(lastMonday);
     lastMonday = addWeeks(selectedMonday, -1);
     if (lastMonday < getCurrentMonday()){
         lastMonday = new Date(selectedMonday);
     }
-    renderSelectedWeek();
+    renderSelectedWeek(await loadCourse());
 }
 
 //Erstellt die Basis HTML Struktur des Stundenplans für eine Woche
@@ -193,13 +207,13 @@ export function initDates() {
     console.log("Initialisiere Datums");
 }
 
-export async function renderSelectedWeek() {
+export async function renderSelectedWeek(course) {
     const timetableContainer = document.getElementById("timetable-container");
     timetableContainer.innerHTML = createEmptyTimetableHTML();
     console.log("Rendere Stundenplan");
     
     //Alle Tage aus der JSON in Variable speichern
-    allDays = await fetchTimetableData("FN-TIT24");
+    allDays = await fetchTimetableData(course);
     
     //Spezifische Tage der ausgesuchten Woche finden
     const monday = findDayData(allDays, selectedMonday);

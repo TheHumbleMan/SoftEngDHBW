@@ -153,6 +153,20 @@ app.post('/auth/login', async (req, res) => {
     return res.json({ success: true, redirect: '/dashboard' });
 });
 
+app.get('/api/session', (req, res) => {
+    if (!req.session.authenticated) {
+        return res.status(401).json({ authenticated: false });
+    }
+
+    res.json({
+        authenticated: true,
+        username: req.session.username,
+        role: req.session.role,
+        faculty: req.session.faculty,
+        course: req.session.course
+    });
+});
+
 app.get('/auth/logout', (req, res) => {
     req.session.destroy(() => {
         res.redirect('/auth/login?success=logout');

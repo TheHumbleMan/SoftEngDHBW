@@ -52,7 +52,10 @@ app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/scripts', express.static(path.join(__dirname, 'scripts')));
 app.use('/data', express.static(path.join(__dirname, 'data')));
 app.use('/favicon', express.static(path.join(__dirname, 'favicon')));
-app.use('/pics', express.static(path.join(__dirname, 'pics')));
+app.use('/pics', express.static(path.join(__dirname, 'pics'), {
+    maxAge: '1d',
+    immutable: true
+}));
 
 // No user persistence required; session keeps the lightweight role info.
 

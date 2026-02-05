@@ -46,12 +46,13 @@ app.use(session({
     }
 }));
 
-// Static files - Favicon must be BEFORE other routes to ensure /favicon.ico is served
-app.use(express.static(path.join(__dirname, 'favicon')));
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/scripts', express.static(path.join(__dirname, 'scripts')));
 app.use('/data', express.static(path.join(__dirname, 'data')));
-app.use('/favicon', express.static(path.join(__dirname, 'favicon')));
+app.use('/favicon', express.static(path.join(__dirname, 'favicon'), {
+    maxAge: '1d',
+    immutable: true
+}));
 app.use('/pics', express.static(path.join(__dirname, 'pics'), {
     maxAge: '1d',
     immutable: true

@@ -1,3 +1,16 @@
+async function loadCourse() {
+    const res = await fetch('/api/session');
+    if (!res.ok) return null; // Fehler oder nicht eingeloggt
+
+    const session = await res.json();
+
+    if (!session.authenticated || !session.course) {
+        return null;
+    }
+
+    return `${session.faculty}-${session.course}` //FN-TIT24
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     
     const grid = document.querySelector('.dashboard-grid');
@@ -15,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // merkt sich tile das active ist
             const isActive = card.classList.contains('active');
 
+            // wenn card schon active ist, nichts tun
+            if (isActive) {
+                return;}
+
             // macht alle unactive,
             cards.forEach(c => c.classList.remove('active'));
             grid.classList.remove('detail-mode');
@@ -24,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 grid.classList.add('detail-mode');
                 card.classList.add('active');
                 
-                // Hole den Detail-Content-Bereich der Karte
+                // Hole den Detail-Content-Bereich der aktiven Karte
                 const detailContent = card.querySelector(".detail-content");
                 if (detailContent) { 
                     // Hole die URL des zu ladenden Inhalts aus dem data-content Attribut
@@ -45,6 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
                                 const mainContent = doc.querySelector('main') || doc.body;
                                  // Setze den extrahierten Inhalt in den Detail-Bereich
                                 detailContent.innerHTML = mainContent.innerHTML;
+                                //ausführen des stundenplan scripts
+                                if (contentUrl === "kacheln/timetable.html") {
+                                    import("./timetable.js").then(async module => {
+                                        module.initDates();
+                                        module.renderSelectedWeek(await loadCourse());
+                                    });
+                                }
                             })
                             .catch(err => {
                                 // Bei einem Fehler, zeige eine Fehlermeldung an

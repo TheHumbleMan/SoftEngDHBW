@@ -176,7 +176,7 @@ h1 { margin-bottom: 30px; font-size: 2em; }
 .dashboard-card.active {
     grid-column: 2 / span 1;     /* nimmt linke reihe */
     grid-row: 1 / span 5;  /* nimmt höhe von 5 reihen*/
-    min-height: 80vh;       
+    min-height: 80vh;
     cursor: default;
     background: #fff;
     border: 2px solid #e0001b; 
@@ -189,6 +189,14 @@ h1 { margin-bottom: 30px; font-size: 2em; }
 /* Wenn aktiv -> Inhalt zeigen */
 .dashboard-card.active .detail-content {
     display: block;
+    overflow: auto;
+    height: 100%;
+}
+
+/*Wenn aktiv -> Description und Title verstecken */
+.dashboard-card.active .card-description,
+.dashboard-card.active .card-title {
+    display: none;
 }
 
 /* beschreibt ihm detailmode die anderen tiles, werden kleiner und durchsichtiger*/
@@ -203,8 +211,8 @@ h1 { margin-bottom: 30px; font-size: 2em; }
 }
 
 .card-title { font-size: 30px; margin-bottom: 15px; color: var(--dhbw_red); }
+.active-card-title { font-size: 30px; color: var(--dhbw_red); margin:0}
 .card-description { font-size: 15px; color: var(--dhbw_dark_grey); margin-bottom: 20px; line-height: 1.5; }
-
 
 
 /* Quick Actions */
@@ -281,6 +289,95 @@ h1 { margin-bottom: 30px; font-size: 2em; }
     line-height: 1.4;
 }
 
+/* Timetable Styles */
+.timetable {
+    width: 100%;
+    height: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.timetable table {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+.timetable th, td {
+        border: 1px solid #999;
+        padding: 0;
+        text-align: center;
+        height:1%;
+    }
+
+.timetable th {
+        background-color: #eee;
+    }
+
+.timetable td.course {
+        background-color: #cce5ff;
+    }
+
+.timetable td.time {
+        font-weight: bold;
+        width: 200px;
+    }
+
+.timetableNavBar {
+    display: grid;
+    align-items: center;
+    grid-template-columns:
+    auto 1fr auto;
+    height: 5%
+}
+
+
+td.timetableCell{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+td.innerTimetableCell{
+    position: absolute;
+    height: 100%;
+}
+
+td.timetableCell .singleApp{
+    position: absolute;
+    top: 0;
+    left: 3%;
+    width: 94%;
+    height: 100%;
+    background-color: var(--dhbw_red);
+}
+
+td.timetableCell .doubleApp {
+    position: absolute;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    background-color: var(--dhbw_red);
+}
+
+td.timetableCell .tripleApp {
+    position: absolute;
+    top: 0;
+    width: 28%;
+    height: 100%;
+    background-color: var(--dhbw_red);
+}
+
+/*
+td.timetableCell .innerTimetableCell {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}*/
 
 /* Responsive Design */
 @media (max-width: 768px) {

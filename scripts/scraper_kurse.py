@@ -191,7 +191,7 @@ def main():
         for site, courses in all_courses.items():
             # filename = f"data/kurse_{site.lower()}.txt"
             # save_to_txt(courses, filename)
-            filename_json = f"data/kurse_{site.lower()}.json"
+            filename_json = f"../data/kurse_{site.lower()}.json"
             save_to_json(courses, filename_json, site)
         
         # Speichere kombinierte Liste

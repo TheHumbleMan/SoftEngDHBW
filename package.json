@@ -1,7 +1,7 @@
 {
-  "name": "web-engineering",
+  "name": "software-engineering",
   "version": "1.0.0",
-  "description": "Smart Home System web interface",
+  "description": "DHBW App for Students and Dual Partners",
   "main": "server.js",
   "type": "module",
   "scripts": {

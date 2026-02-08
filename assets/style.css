@@ -351,7 +351,7 @@ td.timetableCell .singleApp{
     left: 3%;
     width: 94%;
     height: 100%;
-    background-color: red;
+    background-color: var(--dhbw_red);
 }
 
 td.timetableCell .doubleApp {
@@ -359,7 +359,7 @@ td.timetableCell .doubleApp {
     top: 0;
     width: 45%;
     height: 100%;
-    background-color: green;
+    background-color: var(--dhbw_red);
 }
 
 td.timetableCell .tripleApp {
@@ -367,7 +367,7 @@ td.timetableCell .tripleApp {
     top: 0;
     width: 28%;
     height: 100%;
-    background-color: blue;
+    background-color: var(--dhbw_red);
 }
 
 /*

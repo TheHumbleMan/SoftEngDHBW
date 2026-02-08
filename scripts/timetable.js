@@ -7,19 +7,6 @@ const startHour = 8;
 const endHour = 19;
 const stepMinutes = 15;
 const slotsPerHour = 60 / stepMinutes;
-const quarterHours = [];
-
-
-
-/*
-//Zuordnung Wochentag zu Tageskürzel
-const dayMap= {
-    "Montag": "mon",
-    "Dienstag": "tue",
-    "Mittwoch": "wed",
-    "Donnerstag": "thu",
-    "Freitag": "fri"
-};*/
 
 //Die Buttons müssen nach dem auswählen einer anderen kachel und wieder zurückkommen neu gemacht werden
 function bindWeekButtons() {
@@ -52,34 +39,6 @@ function timeToMinutes(timeStr) {
     const [hours, minutes] = timeStr.split('.').map(Number);
     return hours * 60 + minutes;
 }
-/*
-//Setzt einen Termin eines Tages in den Stundenplan
-function placeAppointment(dayKey, appointment) {
-    const startMin = timeToMinutes(appointment.startTime);
-    const endMin   = timeToMinutes(appointment.endTime);
-    const cells = [...document.querySelectorAll(`td[data-day="${dayKey}"]`)]
-    .filter(td => td.dataset.time);
-
-    const slots = cells.filter(td => {
-    const m = timeToMinutes(td.dataset.time);
-    return m >= startMin && m < endMin;
-    });
-
-    if (slots.length === 0) return;
-
-    const first = slots[0];
-    first.textContent = appointment.name;
-    first.classList.add("course");
-    first.rowSpan = slots.length;
-
-    if (appointment.location) {
-    first.title = appointment.location;
-    }
-
-    slots.slice(1).forEach(td => td.remove());
-
-    console.log(`\n\n`)
-}*/
 
 //Berechnet das Datums des Montags der aktuellen Woche
 function getCurrentMonday(){
@@ -186,7 +145,6 @@ function fetchTimetableData(course) {
     .then(r => r.json())
     .then(days => {
         dayArray = days;
-        console.log("Fetched timetable data:", dayArray);
         return dayArray;
     })
     .catch(err => {
@@ -208,14 +166,11 @@ export function initDates() {
     lastMonday = new Date(currentMonday);
     nextMonday = addWeeks(selectedMonday, 1);
     bindWeekButtons()
-
-    console.log("Initialisiere Datums");
 }
 
 export async function renderSelectedWeek(course) {
     const timetableContainer = document.getElementById("timetable-container");
     timetableContainer.innerHTML = createEmptyTimetableHTML();
-    console.log("Rendere Stundenplan");
     
     //Alle Tage aus der JSON in Variable speichern
     allDays = await fetchTimetableData(course);
@@ -228,33 +183,15 @@ export async function renderSelectedWeek(course) {
         const friday = findDayData(allDays, addDays(selectedMonday, 4));
 
         //Termine der spezifischen Tage in den Stundenplan setzen
-        if (monday) {
-            //monday.appointments.forEach(app => placeAppointment("mon", app));
-            //overlapFinder(monday.appointments);
-            //cellFormatter("mon");
-            //appointmentAdder(monday.appointments, "mon");
+        if (monday) {renderDayAppointments("mon", monday.appointments);}
 
-            renderDayAppointments("mon", monday.appointments);
-        }
-        if (tuesday) {
-            //tuesday.appointments.forEach(app => placeAppointment("tue", app));
-            //overlapFinder(tuesday.appointments);
-            //cellFormatter("tue");
-            //appointmentAdder(tuesday.appointments, "tue");
-        }
-        if (wednesday) {
-            //wednesday.appointments.forEach(app => placeAppointment("wed", app));
-            //overlapFinder(wednesday.appointments);
-        }
-        if (thursday) {
-            //thursday.appointments.forEach(app => placeAppointment("thu", app));
-            //overlapFinder(thursday.appointments);
-        }
-        if (friday) {
-            //friday.appointments.forEach(app => placeAppointment("fri", app));
-            //overlapFinder(friday.appointments);
-        }
-        console.log("Stundenplan gerendert für Woche ab:", formatDate(selectedMonday));
+        if (tuesday) {renderDayAppointments("tue", tuesday.appointments);}
+
+        if (wednesday) {renderDayAppointments("wed", wednesday.appointments);}
+
+        if (thursday) {renderDayAppointments("thu", thursday.appointments);}
+
+        if (friday) {renderDayAppointments("fri", friday.appointments);}
 
     } else{
         timetableContainer.innerHTML = "ein spannender inhalt";
@@ -262,131 +199,12 @@ export async function renderSelectedWeek(course) {
 }
 
 //---------------------------Sandbox----------------------------------------------------------
-/*
+
 function timeToQuarterIndex(timeStr) {
     const [hours, minutes] = timeStr.split(".").map(Number);
     let trueHours = hours - startHour;
     return trueHours * 4 + Math.floor(minutes / 15);
-}*/
-/*
-//Schreibt in quarterhours für jeden 15min Slot ob 1, 2 oder 3 termine gleichzeitig passieren
-function overlapFinder(appointments){
-    // erstellt das objekt indem pro viertelstunde die anzahl an parallelen terminen gespeichert wird
-    // slots sind 0,2,3,4,5,6..., und stellen jeweils eine viertelstunde dar
-    let minute = 0;
-    for (let i = 0; i < (slotsPerHour*(endHour-startHour)); i++) {
-        quarterHours[i] = 0;
-    }
-    //console.log("OverlapFinder: Viertelstundenarray erstellt: " + JSON.stringify(quarterHours));
-
-    //schreibt für jeden slot rein wiveiele termine laufen
-    const baseMinutes = timeToMinutes(String(startHour).padStart(2, '0') + ".00");
-    appointments.forEach(appointment => {
-        const startTimeIndex = (timeToMinutes(appointment.startTime) - baseMinutes) / 15;
-        const endTimeIndex = (timeToMinutes(appointment.endTime) - baseMinutes) / 15;
-
-        for (let i = startTimeIndex; i < endTimeIndex; i++) {
-            quarterHours[i]++;
-        }
-    });
-
-    //Für alle zeiten die mehr als 1 haben: suche die appointments, zähle sie, und schreib in den bereich von anfang des ersten bis ende des letzten die anzahl
-    for (let i = 0; i<quarterHours.length; i++){
-        if (quarterHours[i]>1){
-            
-        }
-    }
-
-    //console.log("ViertelStundenListe mit angabe wieviele Termine pro block: " + JSON.stringify(quarterHours))
-}*/
-
-/*
-//Fügt in die 15min Slots je nach parallelen Terminen 1, 2 oder 3 Slots ein
-function cellFormatter(dayKey){
-    //console.log("CellFormatter wurde für den tag aufgerufen: " + dayKey);
-    const cells = document.querySelectorAll(`td.timetableCell[data-day='${dayKey}']`);
-    
-    //console.log("Zellen: ");
-    //console.log(cells);
-
-    const cellOptions = []
-    //kein Termin Blocker
-    cellOptions[0] = `<div class="blocker"></div>`;
-    //Ein termin, 2 Spacer
-    cellOptions[1] = `<div class="singleApp"></div>`;
-    //Zwei termine, 3 Spacer
-    cellOptions[2] = `  <div class="doubleApp" style="left:3%"></div>
-                        <div class="doubleApp" style="left:48%"></div>`;
-    //Drei termine, 4 Spacer
-    cellOptions[3] = `  <div class="tripleApp" style="left:3%></div>
-                        <div class="tripleApp" style="left:34%></div>
-                        <div class="tripleApp" style="left:67%></div>`;
-
-    const cellsArray = Array.from(cells);
-
-    //console.log("Starte For schleife");
-    for (let i = 0; i < quarterHours.length; i++) {
-        const optionIndex = quarterHours[i];
-        if (optionIndex >= 0 && optionIndex < cellOptions.length) {
-            //console.log("Zelle " + i + " wird mit dem cellOption index " + optionIndex + " befüllt");
-            cells[i].firstElementChild.innerHTML = cellOptions[optionIndex];
-        } else {
-            //console.log("Zelle " + i + " wird leergelassen");
-            cells[i].firstElementChild.innerHTML = "";
-        }
-    }
 }
-*/
-
-/*Setzt Die Termine in den Stundenplan:
-check ob 1,2,3 Termine: über quarterhours bei der app.StartTime
-falls 1: fülle innerHTML
-falls 2: check ob der erste Slot belegt ist, wenn ja dann schreib in den zweiten, sonst in den ersten
-falls 3: ditto zu fall 2
-*/
-/*
-function appointmentAdder(appointments, dayKey){
-    console.log("appointmentAdder aufgerufen für " + dayKey);
-
-        const timetableCells = Array.from(document.querySelectorAll(`td.timetableCell[data-day='${dayKey}']`));
-        console.log("timetableCells:");
-        console.log(timetableCells);
-    
-    appointments.forEach(app =>{
-        console.log("forEach aufgerufen für" + app.name);
-        const startIndex = timeToQuarterIndex(app.startTime);
-        console.log("Startindex: " + startIndex);
-        const endIndex = timeToQuarterIndex(app.endTime);
-        console.log("Endindex: " + endIndex);
-
-        const durationSlots = endIndex - startIndex;
-        console.log("Durationslots: " + durationSlots);
-
-        const cellHeight = timetableCells[0].offsetHeight;
-        console.log("Cellheight: " + cellHeight);
-
-        const startCell = timetableCells[startIndex].querySelector(`.singleApp`);
-        console.log("Startzelle : ");
-        console.log(startCell);
-
-        if(timetableCells[startIndex].querySelector(".singleApp")){
-            console.log("Logik für einen Termin wird gemacht")
-            //Logik für nur einen Termin
-            let singleCell = timetableCells[startIndex].querySelector(".singleApp");
-            singleCell.innerHTML = app.name;
-            singleCell.style.height = `${durationSlots * cellHeight}px`;
-
-        }else if (timetableCells[startIndex].querySelector(".doubleApp")){
-            //Logik für zwei parallele termine
-        }else {
-            //Logik für drei parallele termine
-        }
-
-        }
-    )
-}*/
-
-//----------------------------- Sandbox 2
 
 function maxSimultaneousOverlaps(target, appointments) {
     const slots = {};
@@ -426,22 +244,101 @@ function renderSingle(dayKey, app){
     const timetableCell = document.querySelector(`td.timetableCell[data-day="${dayKey}"][data-time="${app.startTime}"]`);
     const innerTimetableCell = timetableCell.querySelector('.innerTimetableCell');
     const cellHeight = timetableCell.offsetHeight;
-    const appointmentHeight = (timeToMinutes(app.endTime)-timeToMinutes(app.startTime))/15; //Endzeit-Startzeit- Uhrzeit wo plan beginnt
+    const appointmentSlots = (timeToMinutes(app.endTime)-timeToMinutes(app.startTime))/15; //Endzeit-Startzeit
 
-    innerTimetableCell.innerHTML = `<div class="singleApp" style="height: ${appointmentHeight * cellHeight}px;">${app.name}\n\n ${app.location}</div>`;
+    innerTimetableCell.innerHTML = `<div class="singleApp" style="height: ${appointmentSlots * cellHeight}px;">${app.name}\n\n ${app.location}</div>`;
 }
 
-function renderDouble(appointment){
-    const timetableCell = Array.from(document.querySelectorAll(`td.timetableCell[data-day='${dayKey}' data-time='${app.startTime}']`));
-    //linker slot: left = 3% rechter slot: left=48%
+function renderDouble(dayKey, app){
+    console.log("Starte renderDouble für Termin: " + app.name);
+    const timetableCells = Array.from(document.querySelectorAll(`td.timetableCell[data-day='${dayKey}']`));
+    const timetableCell = document.querySelector(`td.timetableCell[data-day="${dayKey}"][data-time="${app.startTime}"]`);
 
-    //falls in den zellen vor der eigenen startTime schon ein doubleAPP container ist dann in den linken slot schreiben
-    //bevorzugt in den rechten slot schreiben
+    const innerTimetableCell = timetableCell.querySelector('.innerTimetableCell');
+    const cellHeight = timetableCell.offsetHeight;
+    const appointmentSlots = (timeToMinutes(app.endTime)-timeToMinutes(app.startTime))/15;
+    let column = 2;
+    let leftOffset = 52; // abstand nach links in prozent
+    const appStartSlot = timeToQuarterIndex(app.startTime);
 
+    for (let i = -1; i < appStartSlot; i++) {
+        //Fake-Slot um gleichzeitiges starten von mehreren terminen abzudecken
+        if(i === -1){
+            const firstCell = timetableCells[appStartSlot].querySelector('.innerTimetableCell');
+            const firstRunningApp = firstCell.querySelector('.doubleApp');
+            if (firstRunningApp) {
+                // Falls Termin mit gleich wie anderer Startet
+                leftOffset = 3;
+                column = 1;
+            }
+        continue; // weiter zu den normalen Slots
+        }else{
+            const currentCell = timetableCells[i].querySelector('.innerTimetableCell');
+            const runningApp = currentCell.querySelector('.doubleApp');
+            if (!runningApp) continue;
+            const usedColumn = Number(runningApp.dataset.column);
+            if (usedColumn === 2){
+                const slots = Number(runningApp.dataset.slots);
+                const runningAppEndSlot = i + slots;
 
+                if (runningAppEndSlot > appStartSlot) { //Check ob schon laufender Termin schon vorbei ist, sonst in den linken slot
+                    leftOffset = 3;
+                    column = 1;
+                    break;
+                }
+            }
+        }
+    }
+
+    innerTimetableCell.innerHTML +=`<div class="doubleApp" style="height: ${appointmentSlots * cellHeight}px; left: ${leftOffset}%">${app.name}\n\n ${app.location}</div>`;
+    const allDoubleApps = innerTimetableCell.querySelectorAll(".doubleApp");
+    const doubleAPP = Array.from(allDoubleApps).find(app => {
+        // liest den linken Abstand aus dem Inline-Style
+        const leftValue = parseFloat(app.style.left); // z.B. 3 aus "3%"
+        return leftValue === leftOffset; // match mit deinem Offset
+    });
+    doubleAPP.dataset.slots = appointmentSlots;
+    doubleAPP.dataset.column = column;
 }
 
-function renderTriple(appointment){
-    //was für penner macht drei simultane termine=???????
-    //so wie oben nur einfach zählen wieviele 
+function renderTriple(dayKey, app) {
+    const timetableCells = Array.from(document.querySelectorAll(`td.timetableCell[data-day="${dayKey}"]`));
+    const timetableCell = document.querySelector(`td.timetableCell[data-day="${dayKey}"][data-time="${app.startTime}"]`);
+    const innerTimetableCell = timetableCell.querySelector('.innerTimetableCell');
+    const cellHeight = timetableCell.offsetHeight;
+    const appointmentSlots = (timeToMinutes(app.endTime) - timeToMinutes(app.startTime)) / 15;
+    const appStartSlot = timeToQuarterIndex(app.startTime);
+
+    // Spalten: 0 = links, 1 = mitte, 2 = rechts
+    const columnLeftOffsets = [3, 35, 67];
+    const columnOccupied = [false, false, false];
+
+    //Laufende termine
+    for (let i = 0; i < appStartSlot; i++) {
+        const currentCell = timetableCells[i].querySelector('.innerTimetableCell');
+        const runningApps = currentCell.querySelectorAll('.tripleApp');
+
+        runningApps.forEach(runningApp => {
+            const slots = Number(runningApp.dataset.slots);
+            const runningEndSlot = i + slots;
+            if (runningEndSlot > appStartSlot) {
+                const col = Number(runningApp.dataset.column);
+                columnOccupied[col] = true;
+            }
+        });
+    }
+
+    //Freie Spalte suchen
+    const columnIndex = columnOccupied.lastIndexOf(false);
+    if (columnIndex === -1) {
+        //console.warn("   Keine freie Spalte gefunden!");
+        return;
+    }
+
+    //Rendern des Termins
+    const leftOffset = columnLeftOffsets[columnIndex];
+    innerTimetableCell.innerHTML += `<div class="tripleApp" style="height: ${appointmentSlots * cellHeight}px; left: ${leftOffset}%"> ${app.name}<br>${app.location} </div>`;
+    const tripleApp = innerTimetableCell.querySelector('.tripleApp:last-child');
+    tripleApp.dataset.slots = appointmentSlots;
+    tripleApp.dataset.column = columnIndex;
 }

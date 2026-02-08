@@ -69,6 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                         module.renderSelectedWeek(await loadCourse());
                                     });
                                 }
+                                if (contentUrl === "kacheln/mensa.html") {
+                                    import("./mensa.js").then(async module => {
+                                        module.renderMenu();
+                                    });
+                                }
                             })
                             .catch(err => {
                                 // Bei einem Fehler, zeige eine Fehlermeldung an

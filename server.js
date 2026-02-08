@@ -250,6 +250,10 @@ app.get('/kacheln/timetable.html', requireLogin, (req, res) => {
     res.render('kacheln/timetable.html');
 });
 
+app.get('/kacheln/mensa.html', requireLogin, (req, res) => {
+    res.render('kacheln/mensa.html');
+});
+
 app.get('/scrape-dhbw', requireLogin, async (req, res) => {
     try {
         console.log("/scrape-dhbw aufgerufen", {

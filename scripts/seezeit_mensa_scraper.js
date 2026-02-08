@@ -6,12 +6,12 @@ const standorte = [
     { 
         name: 'Friedrichshafen', 
         url: 'https://seezeit.com/essen/speiseplaene/mensa-friedrichshafen/',
-        datei: './data/mensa_fn.json'
+        datei: './data/mensa_FN.json'
     },
     { 
         name: 'Ravensburg', 
         url: 'https://seezeit.com/essen/speiseplaene/mensa-ravensburg/',
-        datei: './data/mensa_rv.json'
+        datei: './data/mensa_RV.json'
     }
 ];
 

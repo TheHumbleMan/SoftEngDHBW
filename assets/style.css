@@ -360,6 +360,8 @@ td.timetableCell .singleApp{
     width: 94%;
     height: 100%;
     background-color: var(--dhbw_red);
+    box-sizing:border-box;
+    padding: 5px;
 }
 
 td.timetableCell .doubleApp {
@@ -376,6 +378,8 @@ td.timetableCell .doubleApp {
     width: 45%;
     height: 100%;
     background-color: var(--dhbw_red);
+    box-sizing:border-box;
+    padding: 5px;
 }
 
 td.timetableCell .tripleApp {
@@ -392,6 +396,8 @@ td.timetableCell .tripleApp {
     width: 28%;
     height: 100%;
     background-color: var(--dhbw_red);
+    box-sizing:border-box;
+    padding: 5px;
 }
 
 /*
@@ -411,14 +417,31 @@ td.timetableCell .innerTimetableCell {
     padding: 0;
 
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap:20px;
+    /*
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: 1fr;
-    gap: 1rem;
+    gap: 1rem;*/
 }
 
 .mensa .item{
     background: var(--dhbw_red);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    box-sizing:border-box;
+    padding: 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dhbw_white);
+    font-weight: bold;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

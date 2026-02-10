@@ -86,7 +86,7 @@ export async function renderMenu() { //maybe targetday an die renderMenu funktio
     console.log(dayArray);
     //TODO: anpassen dass wenn keine daten für ein datum vorhanden sind eine entsprechende nachricht angezeigt wird
 
-    const targetDay = new Date(2026, 1, 2); // gerade ist der 02.02. hardgecodet, klammer leer machen für aktuelles datum
+    const targetDay = new Date(2026, 1, 10); // gerade ist der 02.02. hardgecodet, klammer leer machen für aktuelles datum
     const targetDayData = getDayDataByDate(dayArray, targetDay);
 
     console.log("DayData für Datum: " + targetDay);

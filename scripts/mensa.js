@@ -92,6 +92,11 @@ export async function renderMenu() { //maybe targetday an die renderMenu funktio
     console.log("DayData für Datum: " + targetDay);
     console.log(targetDayData);
 
+    if (faculty === "FN"){
+        const mensaContainer = document.querySelector(".mensa");
+        mensaContainer.style.height = "50%";
+        mensaContainer.style.gridTemplateColumns = "repeat(2, 1fr)";
+    }
     targetDayData.gerichte.forEach(gericht => {
         const mensaContainer = document.querySelector(".mensa");
         mensaContainer.innerHTML += `<div class="item">${gericht.kategorie}\n\n ${gericht.name}</div>`;

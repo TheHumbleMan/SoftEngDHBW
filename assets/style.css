@@ -417,14 +417,9 @@ td.timetableCell .innerTimetableCell {
     padding: 0;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
     gap:20px;
-    /*
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: 1fr;
-    gap: 1rem;*/
 }
 
 .mensa .item{
@@ -440,6 +435,7 @@ td.timetableCell .innerTimetableCell {
     align-items: center;
     color: var(--dhbw_white);
     font-weight: bold;
+    font-size: large;
 }
 
 

@@ -1,0 +1,43 @@
+<section class="transport-card">
+    <header class="transport-card__header">
+        <div class="transport-card__icon">🚆</div>
+        <div class="transport-card__title-group">
+            <h3>Campus-Anreise</h3>
+            <p>Friedrichshafen Hochschulen</p>
+        </div>
+    </header>
+
+    <div class="transport-card__body">
+        <div class="field-group">
+            <label for="userAddress">Deine Start- oder Zieladresse</label>
+            <input type="text" id="userAddress" class="input-text" placeholder="Straße, Stadt...">
+        </div>
+
+        <div class="time-grid">
+            <div class="field-group">
+                <label for="routeDate">Datum</label>
+                <input type="date" id="routeDate" class="input-text">
+            </div>
+            <div class="field-group">
+                <label for="routeTime">Uhrzeit</label>
+                <input type="time" id="routeTime" class="input-text">
+            </div>
+        </div>
+
+        <div class="field-group">
+            <select id="routeMode" class="input-select">
+                <option value="dep">Abfahrt ab</option>
+                <option value="arr">Ankunft bis</option>
+            </select>
+        </div>
+
+        <div class="action-group">
+            <button type="button" id="btnToCampus" class="btn btn--to">
+                <span>📍 Zum Campus</span>
+            </button>
+            <button type="button" id="btnFromCampus" class="btn btn--from">
+                <span>🏠 Nach Hause</span>
+            </button>
+        </div>
+    </div>
+</section>

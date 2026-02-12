@@ -1,5 +1,5 @@
 //Globale Variablen
-//const faculty = loadfaculty().lower();
+let targetDay = null;
 
 //Die Buttons müssen nach dem auswählen einer anderen kachel und wieder zurückkommen neu gemacht werden
 function bindNavButtons() {
@@ -52,7 +52,7 @@ function mensadateToDate(datumString){
 }
 
 //Hilffunktion die aus dem dayArray den Tag heraussucht der das gegebene Datum hat
-//gegebenes Datum braucht das Format: 
+//gegebenes Datum braucht das Format:
 function getDayDataByDate(dayArray, date){
     const target = new Date(date);
     target.setHours(0,0,0,0);
@@ -72,11 +72,20 @@ function showNext(){
 
 function showPrevious(){
     //TODO: Logik: targetday um 1 verrigern, neu rendern
+    //aufpassen dass das Datum nicht in der Vergangenheit liegt, weil da haben wir eig. keine Daten zu
     return;
 }
 
-export async function renderMenu() { //maybe targetday an die renderMenu funktion übergeben oder so, rendern auslagern => renderMenu wird zu renderInitialMenu
+export async function renderInitialMenu() {
     bindNavButtons();
+
+    targetDay = new Date();
+
+    renderMenu();
+}
+
+async function renderMenu(){
+    //TODO: anpassen dass wenn keine daten für ein datum vorhanden sind eine entsprechender Inhalt angezeigt wird
     const faculty = await loadfaculty();
     const dayArray = await fetchMensaData(faculty);
     console.log(dayArray.map(d => mensadateToDate(d.datum)));
@@ -84,11 +93,8 @@ export async function renderMenu() { //maybe targetday an die renderMenu funktio
     console.log(" ");
     console.log("dayArray: ");
     console.log(dayArray);
-    //TODO: anpassen dass wenn keine daten für ein datum vorhanden sind eine entsprechende nachricht angezeigt wird
 
-    const targetDay = new Date(2026, 1, 10); // gerade ist der 02.02. hardgecodet, klammer leer machen für aktuelles datum
     const targetDayData = getDayDataByDate(dayArray, targetDay);
-
     console.log("DayData für Datum: " + targetDay);
     console.log(targetDayData);
 
@@ -99,6 +105,10 @@ export async function renderMenu() { //maybe targetday an die renderMenu funktio
     }
     targetDayData.gerichte.forEach(gericht => {
         const mensaContainer = document.querySelector(".mensa");
-        mensaContainer.innerHTML += `<div class="item">${gericht.kategorie}\n\n ${gericht.name}</div>`;
+        mensaContainer.innerHTML += `<div class="item">
+            <p>${gericht.kategorie}<br>${gericht.name}</p>
+            <p>Preise:<br>${gericht.preise}</p>
+            <p>Allergene:<br>${gericht.allergene}</p>
+            </div>`;
     });
 }

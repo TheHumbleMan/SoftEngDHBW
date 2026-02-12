@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 }
                                 if (contentUrl === "kacheln/mensa.html") {
                                     import("./mensa.js").then(async module => {
-                                        module.renderMenu();
+                                        module.renderInitialMenu();
                                     });
                                 }
                             })

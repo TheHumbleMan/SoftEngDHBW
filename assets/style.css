@@ -436,6 +436,12 @@ td.timetableCell .innerTimetableCell {
     color: var(--dhbw_white);
     font-weight: bold;
     font-size: large;
+    flex-direction: column;
+
+}
+
+.mensa .item .p{
+    margin: 0;
 }
 
 

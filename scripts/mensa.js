@@ -95,6 +95,15 @@ function scheduleRetry(){
     }, 15000);
 }
 
+//Datumsformatierung in das Format: Wochentag, xx.xx
+function formatTitleDate(date){
+    return date.toLocaleDateString("de-DE", {
+        weekday: "long",
+        day: "2-digit",
+        month: "2-digit"
+    });
+}
+
 async function renderMenu(){
     const faculty = await loadfaculty();
     const dayArray = await fetchMensaData(faculty);
@@ -103,6 +112,9 @@ async function renderMenu(){
     console.log(" ");
     console.log("dayArray: ");
     console.log(dayArray);
+
+    const mensaHeader = document.querySelector(".active-card-title");
+    mensaHeader.innerHTML = "Kantine: " + formatTitleDate(targetDay);
 
     const targetDayData = getDayDataByDate(dayArray, targetDay);
     console.log("DayData für Datum: " + targetDay);

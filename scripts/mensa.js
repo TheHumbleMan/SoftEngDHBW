@@ -1,5 +1,7 @@
 //Globale Variablen
 let targetDay = null;
+let retryTimeout = null;
+let retryScheduled = false;
 
 //Die Buttons müssen nach dem auswählen einer anderen kachel und wieder zurückkommen neu gemacht werden
 function bindNavButtons() {
@@ -84,8 +86,16 @@ export async function renderInitialMenu() {
     renderMenu();
 }
 
+//Hilfsfunktion die nach 15s erneut rendert (falls der scraper noch nicht fertig war)
+function scheduleRetry(){
+    if (retryTimeout !== null) return;
+    retryTimeout = setTimeout(async () => {
+        retryTimeout = null;
+        await renderMenu();
+    }, 15000);
+}
+
 async function renderMenu(){
-    //TODO: anpassen dass wenn keine daten für ein datum vorhanden sind eine entsprechender Inhalt angezeigt wird
     const faculty = await loadfaculty();
     const dayArray = await fetchMensaData(faculty);
     console.log(dayArray.map(d => mensadateToDate(d.datum)));
@@ -97,18 +107,40 @@ async function renderMenu(){
     const targetDayData = getDayDataByDate(dayArray, targetDay);
     console.log("DayData für Datum: " + targetDay);
     console.log(targetDayData);
+    const mensaContainer = document.querySelector(".mensa");
+    mensaContainer.innerHTML = "";
+    if (targetDayData != undefined){
 
-    if (faculty === "FN"){
+        if (faculty === "FN"){
+            mensaContainer.style.height = "50%";
+            mensaContainer.style.gridTemplateColumns = "repeat(2, 1fr)";
+        }
+        targetDayData.gerichte.forEach(gericht => {
+            mensaContainer.innerHTML += `<div class="item">
+                <p>${gericht.kategorie}<br>${gericht.name}</p>
+                <p>Preise:<br>${gericht.preise}</p>
+                <p>Allergene:<br>${gericht.allergene}</p>
+                </div>`;
+        });
+    }else{
         const mensaContainer = document.querySelector(".mensa");
-        mensaContainer.style.height = "50%";
-        mensaContainer.style.gridTemplateColumns = "repeat(2, 1fr)";
+            mensaContainer.style.gridTemplateColumns = "repeat(1, 1fr)";
+            mensaContainer.style.fontSize = "large";
+            mensaContainer.style.fontWeight = "bold";
+            mensaContainer.innerHTML += `<div>
+                <p>Bitte Verzeihen Sie, es konnten keine Essensdaten gefunden werden</p>
+                <p>Wir versuchen es in 15s erneut</p>
+                <p>Alternativ versuchen sie es auf der Seite der Mensa: <a href="https://seezeit.com/en/food/menus/">Seezeit<a></p>
+                </div>`;
+                if(!retryScheduled){
+                    scheduleRetry();
+                    retryScheduled = true;
+                }else{
+                    mensaContainer.innerHTML = `<div>
+                    <p>Bitte Verzeihen Sie, es konnten keine Essensdaten gefunden werden</p>
+                    <p>Das Neuladen hat nicht geholfen</p>
+                    <p>Versuchen sie es bitte auf der Seite der Mensa: <a href="https://seezeit.com/en/food/menus/">Seezeit<a></p>
+                    </div>`;
+                }
     }
-    targetDayData.gerichte.forEach(gericht => {
-        const mensaContainer = document.querySelector(".mensa");
-        mensaContainer.innerHTML += `<div class="item">
-            <p>${gericht.kategorie}<br>${gericht.name}</p>
-            <p>Preise:<br>${gericht.preise}</p>
-            <p>Allergene:<br>${gericht.allergene}</p>
-            </div>`;
-    });
 }

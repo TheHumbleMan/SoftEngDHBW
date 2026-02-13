@@ -67,14 +67,23 @@ function getDayDataByDate(dayArray, date){
     })
 }
 
-function showNext(){
-    //TODO: Logik: targetday um 1 erhöhen, neu rendern
+function showNext(date){
+    targetDay.setDate(targetDay.getDate() + 1); // targetDay um 1 Tag erhöhen
+    renderMenu(); // neu rendern
     return;
 }
 
 function showPrevious(){
-    //TODO: Logik: targetday um 1 verrigern, neu rendern
-    //aufpassen dass das Datum nicht in der Vergangenheit liegt, weil da haben wir eig. keine Daten zu
+    const today = new Date();
+    today.setHours(0,0,0,0); // Stunden nicht mit verlgeichen
+
+    const newDate = new Date(targetDay);
+    newDate.setDate(newDate.getDate() - 1);
+
+    if (newDate >= today) {
+        targetDay = newDate; // targetDay nur ändern, wenn es nicht in der Vergangenheit liegt
+        renderMenu(); // neu rendern
+    }
     return;
 }
 

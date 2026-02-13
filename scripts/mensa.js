@@ -2,6 +2,8 @@
 let targetDay = null;
 let retryTimeout = null;
 let retryScheduled = false;
+let dayArrayCache = [];
+
 
 //Die Buttons müssen nach dem auswählen einer anderen kachel und wieder zurückkommen neu gemacht werden
 function bindNavButtons() {
@@ -45,13 +47,14 @@ async function fetchMensaData(faculty) {
 
 //Hilfsfunktion, die aus dem datumsformat vom Scraper ein Date Objekt macht
 function mensadateToDate(datumString){
-    const match = datumString.match(/(\d{2})\.(\d{2})\./);
+    const match = datumString.match(/(\d{1,2})\.(\d{1,2})\./);
     if (!match) return null;
     const day = Number(match[1]);
-    const month = Number(match[2])-1;
+    const month = Number(match[2]) - 1;
     const year = new Date().getFullYear();
     return new Date(year, month, day);
 }
+
 
 //Hilffunktion die aus dem dayArray den Tag heraussucht der das gegebene Datum hat
 //gegebenes Datum braucht das Format:
@@ -67,33 +70,61 @@ function getDayDataByDate(dayArray, date){
     })
 }
 
-function showNext(date){
-    targetDay.setDate(targetDay.getDate() + 1); // targetDay um 1 Tag erhöhen
-    renderMenu(); // neu rendern
-    return;
-}
+//Funktion die sich den aktuellen Tag herausnimmt und damit dann die nächsten Tage berechnet und Anzeigt
+//Nimmt nur Tage die auch in der mensa_<Standort>.json stehen, also nur die nächsten verfügbaren Daten
 
-function showPrevious(){
-    const today = new Date();
-    today.setHours(0,0,0,0); // Stunden nicht mit verlgeichen
+function showNext() {
+    if (!dayArrayCache || dayArrayCache.length === 0) return
 
-    const newDate = new Date(targetDay);
-    newDate.setDate(newDate.getDate() - 1);
+    // Finde den Index des ersten Tages, der >= targetDay ist
+    const currentIndex = dayArrayCache.findIndex(day => {
+        const d = mensadateToDate(day.datum)
+        if (!d) return false
+        d.setHours(0,0,0,0)
+        const t = new Date(targetDay)
+        t.setHours(0,0,0,0)
+        return d.getTime() >= t.getTime()
+    })
 
-    if (newDate >= today) {
-        targetDay = newDate; // targetDay nur ändern, wenn es nicht in der Vergangenheit liegt
-        renderMenu(); // neu rendern
+    if (currentIndex === -1) return
+    if (currentIndex < dayArrayCache.length - 1) {
+        targetDay = mensadateToDate(dayArrayCache[currentIndex + 1].datum)
+        renderMenu()
     }
-    return;
 }
+
+
+
+//Funktion die sich den aktuellen Tag herausnimmt und damit dann die vorherigen Tage berechnet und Anzeigt
+//Springt nur zu Tagen vor targetDay, aber nicht vor heute.
+
+function showPrevious() {
+    if (!dayArrayCache || dayArrayCache.length === 0) return
+
+    const today = new Date()
+    today.setHours(0,0,0,0)
+
+    const validDays = dayArrayCache
+        .map(day => mensadateToDate(day.datum))
+        .filter(d => d && d.getTime() < targetDay.getTime() && d.getTime() >= today.getTime())
+
+    if (validDays.length === 0) return
+
+    // Auf den letzten Tag vor targetDay setzen
+    targetDay = validDays[validDays.length - 1]
+    renderMenu()
+}
+
 
 export async function renderInitialMenu() {
     bindNavButtons();
-
-    targetDay = new Date();
-
+    targetDay = new Date(); // heute als Start
+    const faculty = await loadfaculty();
+    const dayArray = await fetchMensaData(faculty);
+    dayArrayCache = dayArray;
     renderMenu();
 }
+
 
 //Hilfsfunktion die nach 15s erneut rendert (falls der scraper noch nicht fertig war)
 function scheduleRetry(){
@@ -116,6 +147,8 @@ function formatTitleDate(date){
 async function renderMenu(){
     const faculty = await loadfaculty();
     const dayArray = await fetchMensaData(faculty);
+    dayArrayCache = dayArray;
+
     console.log(dayArray.map(d => mensadateToDate(d.datum)));
     console.log(" ");
     console.log(" ");

@@ -1,27 +1,57 @@
 /**
- * OPNV Module v2.0 - High Fidelity Integration
+ * OPNV Module v3.0 - bwegt / EFA-BW Integration (Bodensee-Region)
  */
 
 const CAMPUS_DATA = {
-    ADRESSE: "Friedrichshafen, Hochschulen",
+    // bwegt versteht "Fallenbrunnen, Friedrichshafen" besser als komplexe Campus-Namen
+    ADRESSE: "Friedrichshafen, Hochschulen", 
     POPUP: "width=1000,height=850,top=50,left=100,scrollbars=yes"
 };
 
-const getRoute = (start, ziel) => {
-    if (!start?.trim()) return alert("Bitte Adresse eingeben.");
+const getRoute = (startInput, zielInput) => {
+    if (!startInput?.trim()) return alert("Bitte Adresse eingeben.");
 
-    /**
-     * KONZEPTIONELLER KERN:
-     * Wir entfernen alle Zeit-Parameter.
-     * Das "!4m2!4m1!3e3" ist der "Anker", der Google zwingt, 
-     * immer im ÖPNV-Tab zu starten.
-     */
-    const url = `https://www.google.de/maps/dir/${encodeURIComponent(start)}/${encodeURIComponent(ziel)}/data=!4m2!4m1!3e3`;
+    // 1. Inputs reinigen & Defaults setzen
+    let origin = startInput.trim();
+    let destination = zielInput;
 
-    window.open(url, 'RoutePopup', CAMPUS_DATA.POPUP);
+    // 2. Datum & Zeit holen
+    const dateInput = document.getElementById("routeDate")?.value; // YYYY-MM-DD
+    const timeInput = document.getElementById("routeTime")?.value; // HH:MM
+
+    // 3. Den Link bauen
+    // Wir nutzen hier direkt die EFA-Schnittstelle von bwegt.
+    // Diese akzeptiert TEXT (name_origin) statt IDs.
+    let url = "https://www.efa-bw.de/nvbw/XSLT_TRIP_REQUEST2";
+    
+    // Parameter anhängen
+    url += "?language=de";
+    url += "&command=trip"; // WICHTIG: Erzwingt die Berechnung
+    url += "&trip=multiModalitySelected=pt"; // Nur Öffis
+
+    // Start (Text statt ID)
+    url += `&name_origin=${encodeURIComponent(origin)}`;
+    url += `&type_origin=any`; // any = Adresse oder Haltestelle
+
+    // Ziel (Text statt ID)
+    url += `&name_destination=${encodeURIComponent(destination)}`;
+    url += `&type_destination=any`;
+
+    // Zeit
+    if (dateInput && timeInput) {
+        // bwegt will YYYYMMDD und HHMM
+        const dateStr = dateInput.replace(/-/g, "");
+        const timeStr = timeInput.replace(":", "");
+        url += `&itdDate=${dateStr}&itdTime=${timeStr}`;
+    }
+    // ob anfahrt oder abfahrt, abfahrt ist standard
+    const mode = document.getElementById("routeMode")?.value || "dep";
+    url += `&itdTripDateTimeDepArr=${mode}`;
+
+    window.open(url, 'RoutePopup', "width=1000,height=850");
 };
 
-// Event-Delegation
+// --- Event Listener (bleiben gleich) ---
 document.addEventListener("click", (e) => {
     const btn = e.target.closest('button');
     if (!btn) return;
@@ -32,16 +62,13 @@ document.addEventListener("click", (e) => {
     if (btn.id === "btnFromCampus") getRoute(CAMPUS_DATA.ADRESSE, address);
 });
 
-// Initialisierung: Setze heutiges Datum und aktuelle Uhrzeit als Default
+// --- Initialisierung (bleibt gleich) ---
 document.addEventListener("DOMContentLoaded", () => {
-    // Da das Widget nachgeladen wird, prüfen wir regelmäßig oder per Observer
-    const initFields = () => {
+    setTimeout(() => {
         const d = document.getElementById("routeDate");
         const t = document.getElementById("routeTime");
+        // Setze Standardwerte nur wenn leer
         if(d && !d.value) d.value = new Date().toISOString().split('T')[0];
         if(t && !t.value) t.value = new Date().toLocaleTimeString('de-DE', {hour: '2-digit', minute:'2-digit'});
-    };
-
-    // Wir triggern die Initialisierung beim Klick ins Dokument oder nach Dashboard-Load
-    setTimeout(initFields, 1000); 
+    }, 500); 
 });

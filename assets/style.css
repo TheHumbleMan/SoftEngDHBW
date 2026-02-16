@@ -444,6 +444,25 @@ td.timetableCell .innerTimetableCell {
     margin: 0;
 }
 
+.mensa-allergies {
+    padding-top: 30px;
+    justify-content: center;
+    display: flex; 
+    gap: 40px;  
+    color: var(--dhbw_dark_grey);
+}
+
+th, td {
+    border: none;
+}
+
+td:nth-child(2),
+th:nth-child(2) {
+    text-align: left;
+     padding-right: 40px;
+}
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

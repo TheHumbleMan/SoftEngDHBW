@@ -164,6 +164,7 @@ async function renderMenu(){
     const mensaContainer = document.querySelector(".mensa");
     mensaContainer.innerHTML = "";
     if (targetDayData != undefined){
+        mensaContainer.style.gridTemplateColumns = "repeat(3, 1fr)";
 
         if (faculty === "FN"){
             mensaContainer.style.height = "50%";

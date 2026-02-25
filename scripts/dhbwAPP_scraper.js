@@ -42,16 +42,6 @@ import puppeteer from "puppeteer";
 import fs from "fs";
 import { fileURLToPath } from "url";
 
-const resolveSessionCourse = (sessionCourse) => {
-    if (sessionCourse) {
-        return sessionCourse;
-    }
-    if (typeof window !== "undefined" && window?.sessionStorage) {
-        return window.sessionStorage.getItem("kurs");
-    }
-    return null;
-};
-
 const resolveKurs = (sessionCourse) => {
     if (!sessionCourse) {
         throw new Error("Kein Kurs angegeben. Übergib sessionCourse oder setze window.sessionStorage('kurs').");
@@ -66,10 +56,11 @@ const resolveKurs = (sessionCourse) => {
 };
 
 export const scrapeDhbwApp = async ({ sessionCourse, writeFile = true, outputDir = "./data/timetables" } = {}) => {
-    const resolvedSessionCourse = resolveSessionCourse(sessionCourse);
-    console.log("Ausgelesener Kurs: " + resolvedSessionCourse);
+    //const resolvedSessionCourse = resolveSessionCourse(sessionCourse);
+    //console.log("Ausgelesener Kurs: " + resolvedSessionCourse);
 
-    const kurs = resolveKurs(resolvedSessionCourse);
+    //const kurs = resolveKurs(resolvedSessionCourse);
+    const kurs = resolveKurs(sessionCourse);
     const url = `https://dhbw.app/c/${kurs}`;
 
     const browser = await puppeteer.launch();

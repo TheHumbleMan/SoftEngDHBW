@@ -4,6 +4,8 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import { scrapeDhbwApp } from './scripts/dhbwAPP_scraper.js';
+import { scrapeSeezeitAll } from './scripts/seezeit_mensa_scraper.js';
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -131,9 +133,11 @@ app.post('/auth/login', async (req, res) => {
     if (!['FN', 'RV'].includes(faculty)) {
         return res.status(400).json({ success: false, error: 'invalid', message: 'Ungültige Fakultät.' });
     }
+        
 
     const friendlyName = roleInput === 'partner' ? 'Dualer Partner' : 'Student';
     const mappedRole = roleInput === 'partner' ? 'partner' : 'student';
+
 
     req.session.authenticated = true;
     req.session.userId = roleInput; // simple identifier for this lightweight flow
@@ -144,7 +148,9 @@ app.post('/auth/login', async (req, res) => {
     req.session.faculty = faculty;
     req.session.course = courseCode;
 
+
     // Scraper automatisch nach Login starten (non-blocking)
+
     scrapeDhbwApp({
         sessionCourse: courseCode,
         outputDir: path.join(__dirname, 'data/timetables')
@@ -154,7 +160,27 @@ app.post('/auth/login', async (req, res) => {
         console.error('Scraping nach Login fehlgeschlagen:', err.message);
     });
 
+    scrapeSeezeitAll().then(() => {
+    console.log('Mensa-Update nach Login erfolgreich');
+        }).catch(err => {
+    console.error('Mensa-Update nach Login fehlgeschlagen:', err.message);  
+    });
+
     return res.json({ success: true, redirect: '/dashboard' });
+});
+
+app.get('/api/session', (req, res) => {
+    if (!req.session.authenticated) {
+        return res.status(401).json({ authenticated: false });
+    }
+
+    res.json({
+        authenticated: true,
+        username: req.session.username,
+        role: req.session.role,
+        faculty: req.session.faculty,
+        course: req.session.course
+    });
 });
 
 app.get('/auth/logout', (req, res) => {
@@ -220,6 +246,10 @@ app.get('/kacheln/partner.html', requireLogin, (req, res) => {
     res.render('kacheln/partner.html');
 });
 
+app.get('/kacheln/timetable.html', requireLogin, (req, res) => {
+    res.render('kacheln/timetable.html');
+});
+
 app.get('/scrape-dhbw', requireLogin, async (req, res) => {
     try {
         console.log("/scrape-dhbw aufgerufen", {
@@ -242,6 +272,23 @@ app.get('/scrape-dhbw', requireLogin, async (req, res) => {
         res.json({ success: true, message: 'Scraping completed' });
     } catch (err) {
         console.error('Scraping error:', err);
+        res.status(500).json({ success: false, error: err.message });
+    }
+});
+app.get('/scrape-mensa', requireLogin, async (req, res) => {
+    try {
+        console.log("Manueller Mensa-Scrape gestartet durch User:", req.session?.username);
+        
+        // Führt den Scraper für alle Standorte (FN & RV) aus
+        const daten = await scrapeSeezeitAll();
+        
+        res.json({ 
+            success: true, 
+            message: 'Mensa-Pläne für Friedrichshafen und Ravensburg wurden aktualisiert!',
+            data: daten 
+        });
+    } catch (err) {
+        console.error('Mensa Scraping Fehler:', err);
         res.status(500).json({ success: false, error: err.message });
     }
 });

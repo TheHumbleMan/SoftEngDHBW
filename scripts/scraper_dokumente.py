@@ -1,517 +1,640 @@
 #!/usr/bin/env python3
-"""
-Scraper for DHBW Ravensburg documents and downloads.
-Downloads all documents from https://www.ravensburg.dhbw.de/service-einrichtungen/dokumente-downloads
-and its subcategories, tracking changes in files and descriptions.
+"""Incremental scraper for DHBW Ravensburg documents downloads.
+
+Requirements implemented:
+- Download all documents from the documents/downloads page and tab subsections.
+- Exclude official announcements (Amtliche Bekanntmachungen / #Bekanntmachungen).
+- Persist descriptions per document in one central JSON metadata file.
+- Support repeated runs with change detection (new/updated/removed docs).
+- Keep at most one layer between top-level tab and document file.
 """
 
-import os
+from __future__ import annotations
+
+import hashlib
 import json
-import requests
-from bs4 import BeautifulSoup
-from datetime import datetime
-from urllib.parse import urljoin, urlparse
-import time
+import os
 import re
+import time
+from dataclasses import dataclass
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Dict, Iterable, List, Optional, Set, Tuple
+from urllib.parse import urljoin, urlparse
 
-import pdb
+import requests  # type: ignore[import-untyped]
+from bs4 import BeautifulSoup, Tag
+from bs4.element import AttributeValueList
 
-# Base URL for the documents page
+
 BASE_URL = "https://www.ravensburg.dhbw.de/service-einrichtungen/dokumente-downloads"
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
-DOCUMENTS_DIR = os.path.join(DATA_DIR, "documents")
-METADATA_FILE = os.path.join(DATA_DIR, "dokumente_metadata.json")
+SCRIPT_DIR = Path(__file__).resolve().parent
+DATA_DIR = (SCRIPT_DIR / ".." / "data").resolve()
+DOCUMENTS_DIR = DATA_DIR / "documents"
+METADATA_FILE = DATA_DIR / "dokumente_metadata.json"
+
+REQUEST_TIMEOUT = 45
+HEAD_TIMEOUT = 20
+REQUEST_DELAY_SECONDS = 0.12
+
+USER_AGENT = (
+	"Mozilla/5.0 (X11; Linux x86_64) "
+	"AppleWebKit/537.36 (KHTML, like Gecko) "
+	"Chrome/133.0.0.0 Safari/537.36"
+)
+
+DOCUMENT_EXTENSIONS = {
+	".pdf",
+	".doc",
+	".docx",
+	".dot",
+	".dotx",
+	".docm",
+	".xls",
+	".xlsx",
+	".xlsm",
+	".ppt",
+	".pptx",
+	".pptm",
+	".odt",
+	".ods",
+	".odp",
+	".rtf",
+	".msg",
+	".zip",
+	".rar",
+	".7z",
+	".txt",
+	".csv",
+	".png",
+	".jpg",
+	".jpeg",
+	".gif",
+	".eps",
+	".tif",
+	".tiff",
+}
+
+NON_DOCUMENT_EXTENSIONS = {".htm", ".html", ".php", ".asp", ".aspx"}
 
 
-def load_metadata():
-    """Load existing metadata from JSON file."""
-    if os.path.exists(METADATA_FILE):
-        try:
-            with open(METADATA_FILE, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except Exception as e:
-            print(f"Error loading metadata: {e}")
-            return None
-    return None
+@dataclass
+class SourceDocument:
+	entry_key: str
+	url: str
+	title: str
+	description: str
+	category_top: str
+	category_sub: str
 
 
-def save_metadata(metadata):
-    """Save metadata to JSON file."""
-    try:
-        os.makedirs(os.path.dirname(METADATA_FILE), exist_ok=True)
-        with open(METADATA_FILE, 'w', encoding='utf-8') as f:
-            json.dump(metadata, f, indent=2, ensure_ascii=False)
-        print(f"Metadata saved to {METADATA_FILE}")
-    except Exception as e:
-        print(f"Error saving metadata: {e}")
+def now_iso() -> str:
+	return datetime.now(timezone.utc).isoformat()
 
 
-def get_file_metadata(url):
-    """Get file metadata from HTTP headers without downloading."""
-    try:
-        response = requests.head(url, timeout=10, allow_redirects=True)
-        return {
-            'size': response.headers.get('Content-Length', 0),
-            'last_modified': response.headers.get('Last-Modified', ''),
-            'content_type': response.headers.get('Content-Type', '')
-        }
-    except Exception as e:
-        print(f"Error getting metadata for {url}: {e}")
-        return None
+def attr_to_text(value: object) -> str:
+	if value is None:
+		return ""
+	if isinstance(value, str):
+		return value
+	if isinstance(value, AttributeValueList):
+		return " ".join(str(item) for item in value)
+	return str(value)
 
 
-def sanitize_filename(filename):
-    """Sanitize filename to be filesystem-safe."""
-    # Remove or replace invalid characters
-    filename = re.sub(r'[<>:"/\\|?*]', '_', filename)
-    # Remove control characters
-    filename = re.sub(r'[\x00-\x1f\x7f]', '', filename)
-    # Limit length
-    name, ext = os.path.splitext(filename)
-    if len(name) > 200:
-        name = name[:200]
-    return name + ext
+def build_session() -> requests.Session:
+	session = requests.Session()
+	session.headers.update({"User-Agent": USER_AGENT})
+	return session
 
 
-def sanitize_category_name(category):
-    """Sanitize category path for use as directory name(s)."""
-    if not category:
-        return "Allgemein"
+def load_metadata() -> Dict:
+	if not METADATA_FILE.exists():
+		return {}
 
-    parts = [part.strip() for part in category.split('/') if part.strip()]
-    sanitized_parts = []
+	try:
+		with METADATA_FILE.open("r", encoding="utf-8") as handle:
+			data = json.load(handle)
+			if isinstance(data, dict):
+				return data
+	except Exception as exc:
+		print(f"Warnung: Metadaten konnten nicht geladen werden: {exc}")
 
-    for part in parts:
-        # Remove special characters per segment but keep spaces and common punctuation
-        safe_part = re.sub(r'[<>:"\\|?*]', '_', part)
-        safe_part = safe_part.strip()
-        if safe_part:
-            sanitized_parts.append(safe_part)
-
-    if not sanitized_parts:
-        return "Allgemein"
-
-    return os.path.join(*sanitized_parts)
+	return {}
 
 
-def normalize_top_category(heading_text):
-    """Map site h2 section headings to the desired top-level folder names."""
-    if not heading_text:
-        return None
-    
-    text = heading_text.lower()
-    
-    # Section markers - these explicitly switch the top-level category
-    # Be conservative - only clear section headers should trigger a category change
-    
-    if "dokumente für duale partner" in text:
-        return "Duale Partner"
-    
-    # Technik sections - multiple patterns
-    if any(pattern in text for pattern in ["studienbereich technik", "fakultät technik", 
-                                             "technik in friedrichshafen", "praxisphasen technik"]):
-        return "Dokumente der Fakultät Technik"
-    
-    # Wirtschaft sections - multiple patterns  
-    if any(pattern in text for pattern in ["studienbereich wirtschaft", "fakulät wirtschaft"]):
-        return "Dokumente der Fakultät Wirtschaft"
-    
-    # Sections that clearly belong to "Broschüren & Berichte"
-    # These are full h2 sections about brochures/reports, not subsections
-    if text in ["verein der förderer und alumni der dhbw ravensburg", 
-                "flyer der dhbw ravensburg",
-                "gesetzestexte zur hochschulwerdung"]:
-        return "Broschüren & Berichte"
-    
-    # For subsections, check if they start with keywords that indicate brochures
-    if text.startswith("dhbw ") and any(keyword in text for keyword in ["jahresbericht", "flyer", 
-                                                                          "infobroschüre", "leitbild", 
-                                                                          "struktur"]):
-        return "Broschüren & Berichte"
-    
-    # Zulassung sections that are clearly about admissions (not under Duale Partner)
-    if text in ["zulassung und immatrikulation studierender",
-                "bewerbung und zulassung"]:
-        return "Bewerbung & Zulassung"
-    
-    # Prüfungsordnung section
-    if "studien- und prüfungsordnung" == text:
-        return "Studien- und Prüfungsordnung"
-    
-    # Not a section marker - stay in current category
-    return None
+def save_metadata(metadata: Dict) -> None:
+	METADATA_FILE.parent.mkdir(parents=True, exist_ok=True)
+	with METADATA_FILE.open("w", encoding="utf-8") as handle:
+		json.dump(metadata, handle, indent=2, ensure_ascii=False)
 
 
-def download_file(url, save_path):
-    """Download a file from URL to save_path."""
-    try:
-        os.makedirs(os.path.dirname(save_path), exist_ok=True)
-        response = requests.get(url, timeout=30, stream=True)
-        response.raise_for_status()
-        
-        with open(save_path, 'wb') as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
-        
-        print(f"Downloaded: {os.path.basename(save_path)}")
-        return True
-    except Exception as e:
-        print(f"Error downloading {url}: {e}")
-        return False
+def sanitize_path_segment(value: str, fallback: str) -> str:
+	cleaned = (value or "").strip()
+	cleaned = re.sub(r"[\x00-\x1f\x7f]", "", cleaned)
+	cleaned = cleaned.replace("/", "-").replace("\\", "-")
+	cleaned = re.sub(r"[<>:\"|?*]", "_", cleaned)
+	cleaned = re.sub(r"\s+", " ", cleaned).strip(" .")
+	return cleaned or fallback
 
 
-def extract_documents_from_page(url):
-    """Extract all documents with their descriptions from the page."""
-    try:
-        print(f"Fetching page: {url}")
-        response = requests.get(url, timeout=30)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.content, 'html.parser')        
-        documents = []
-        file_extensions = (
-            r'\.(pdf|doc|docx?|dotx|docm|xlsx?|xlsm|pptx?|pptm|odt|ods|odp|rtf|msg|'
-            r'zip|rar|7z|txt|csv|png|jpg|jpe?g|gif|eps|tiff?)(\?|$)'
-        )
-        
-        # Strategy: for each h2/h3 heading, collect links until the next heading
-        # This creates a category->links mapping
-        link_categories = {}  # link href -> category name
-        
-        # Find all headings (h2 and h3) in order
-        all_elements = soup.find_all(['h2', 'h3', 'a'])
-        current_category = "Dokumente"  # Default
-        current_top = "Dokumente"
-        current_h2 = None
-        current_h3 = None
-        #with open("output.txt", "w", encoding="utf-8") as f:
-        #    f.write(str(soup))
-        #exit()
-        for element in all_elements:
-            if element.name == 'h2':
-                heading_text = element.get_text(strip=True)
-                if heading_text and len(heading_text) >= 3:
-                    # Check if this is a section marker that changes the top-level category
-                    new_top = normalize_top_category(heading_text)
-                    if new_top:
-                        # This is a section marker - set new top-level category
-                        current_top = new_top
-                        current_h2 = None
-                        current_h3 = None
-                        current_category = current_top
-                    else:
-                        # This is a regular h2 subsection under the current top-level category
-                        current_h2 = heading_text
-                        current_h3 = None  # Reset h3 when we hit a new h2
-                        current_category = f"{current_top}/{current_h2}"
-            elif element.name == 'h3':
-                heading_text = element.get_text(strip=True)
-                if heading_text and len(heading_text) >= 3:
-                    current_h3 = heading_text
-                    if current_h2:
-                        # We have both h2 and h3 - create three-level path
-                        current_category = f"{current_top}/{current_h2}/{current_h3}"
-                    else:
-                        # Only h3 under top-level
-                        current_category = f"{current_top}/{current_h3}"
-            elif element.name == 'a':
-                href = element.get('href', '')
-                if not href:
-                    continue
+def guess_filename(url: str, title: str) -> str:
+	parsed = urlparse(url)
+	name = os.path.basename(parsed.path)
+	if name:
+		return sanitize_path_segment(name, "dokument")
 
-                href_lower = href.lower()
-                if any(href_lower.startswith(prefix) for prefix in ('#', 'mailto:', 'tel:', 'javascript:')):
-                    continue
-
-                if 'fileadmin' not in href_lower:
-                    continue
-
-                if 'amtliche' in href_lower:
-                    continue
-
-                has_known_extension = re.search(file_extensions, href, re.IGNORECASE) is not None
-                has_download_hint = any(token in href_lower for token in ('download', 'view', 'inline'))
-
-                if has_known_extension or has_download_hint:
-                    link_categories[href] = current_category
-        
-        print(f"Found {len(link_categories)} document links with categories")
-        
-        # Now extract document information
-        for href, category_name in link_categories.items():
-            # Find the actual link element again to extract description
-            link = soup.find('a', href=href)
-            if not link:
-                continue
-            
-            # Make absolute URL
-            file_url = urljoin(url, href)
-            
-            # Extract filename from URL
-            parsed_url = urlparse(file_url)
-            filename = os.path.basename(parsed_url.path)
-            
-            # If no filename in URL, try to get from link text
-            if not filename or filename == '':
-                filename = sanitize_filename(link.get_text(strip=True)) + '.pdf'
-            
-            # Get title (link text)
-            title = link.get_text(strip=True)
-            
-            # Try to find description - usually in a sibling or parent element
-            description = ""
-            
-            # Look for description in various common patterns
-            # Pattern 1: Description in next sibling <p> or <div>
-            next_sibling = link.find_next_sibling(['p', 'div', 'span'])
-            if next_sibling and len(next_sibling.get_text(strip=True)) > 0:
-                desc_text = next_sibling.get_text(strip=True)
-                # Only use if it's not another link and is reasonable length
-                if not next_sibling.find('a') and len(desc_text) < 500:
-                    description = desc_text
-            
-            # Pattern 2: Description in parent's next sibling
-            if not description:
-                parent = link.find_parent(['li', 'div', 'p'])
-                if parent:
-                    next_elem = parent.find_next_sibling(['p', 'div', 'span'])
-                    if next_elem and len(next_elem.get_text(strip=True)) > 0:
-                        desc_text = next_elem.get_text(strip=True)
-                        if not next_elem.find('a') and len(desc_text) < 500:
-                            description = desc_text
-            
-            # Pattern 3: Description after link in same parent
-            if not description:
-                parent = link.find_parent(['p', 'div', 'li'])
-                if parent:
-                    # Get all text after the link within the parent
-                    link_text = link.get_text()
-                    parent_text = parent.get_text(strip=True)
-                    if link_text in parent_text:
-                        after_link = parent_text.split(link_text, 1)
-                        if len(after_link) > 1:
-                            desc_text = after_link[1].strip()
-                            if len(desc_text) > 10 and len(desc_text) < 500:
-                                description = desc_text
-            
-            # Exclude documents from 'Amtliche Dokumente' category
-            # Skip if URL contains 'Amtliche' or category contains 'Amtliche'
-            if 'amtliche' in file_url.lower() or 'amtliche' in category_name.lower():
-                continue
-            
-            documents.append({
-                'url': file_url,
-                'filename': filename,
-                'title': title if title else filename,
-                'category': category_name,
-                'description': description
-            })
-        
-        print(f"Found {len(documents)} documents")
-        return documents
-        
-    except Exception as e:
-        print(f"Error extracting documents from {url}: {e}")
-        return []
+	title_part = sanitize_path_segment(title, "dokument")
+	return f"{title_part}.bin"
 
 
-def has_file_changed(doc, old_doc):
-    """Check if file has changed by comparing HTTP metadata."""
-    if not old_doc:
-        return True  # New document
-    
-    # Get current file metadata from HTTP headers
-    current_metadata = get_file_metadata(doc['url'])
-    if not current_metadata:
-        return True  # Can't get metadata, assume changed
-    
-    # Compare size and last modified
-    old_size = old_doc.get('file_size', '')
-    old_modified = old_doc.get('last_modified', '')
-    
-    size_changed = str(current_metadata['size']) != str(old_size)
-    modified_changed = current_metadata['last_modified'] != old_modified
-    
-    return size_changed or modified_changed
+def make_entry_key(url: str, title: str, category_top: str, category_sub: str) -> str:
+	payload = "|".join([
+		url.strip(),
+		title.strip(),
+		category_top.strip(),
+		category_sub.strip(),
+	])
+	return hashlib.sha1(payload.encode("utf-8")).hexdigest()
 
 
-def has_description_changed(doc, old_doc):
-    """Check if description has changed."""
-    if not old_doc:
-        return True  # New document
-    
-    old_description = old_doc.get('description', '')
-    new_description = doc.get('description', '')
-    
-    return old_description != new_description
+def is_document_url(url: str) -> bool:
+	parsed = urlparse(url)
+	path = parsed.path.lower()
+
+	extension = os.path.splitext(path)[1]
+	if extension in NON_DOCUMENT_EXTENSIONS:
+		return False
+	if extension in DOCUMENT_EXTENSIONS:
+		return True
+
+	if "/fileadmin/" in path:
+		return True
+
+	return False
 
 
-def main():
-    """Main scraper function."""
-    print("=" * 60)
-    print("DHBW Ravensburg Document Scraper")
-    print("=" * 60)
-    print(f"Started at: {datetime.now().isoformat()}")
-    print()
-    
-    # Load existing metadata
-    old_metadata = load_metadata()
-    old_documents = {}
-    if old_metadata and 'documents' in old_metadata:
-        # Create a lookup dictionary by URL
-        for doc in old_metadata['documents']:
-            old_documents[doc['url']] = doc
-        print(f"Loaded {len(old_documents)} documents from previous run")
-    else:
-        print("No previous metadata found, starting fresh")
-    
-    print()
-    
-    # Extract all documents from the page
-    current_documents = extract_documents_from_page(BASE_URL)
-    
-    if not current_documents:
-        print("No documents found! Exiting.")
-        return
-    
-    print()
-    print("-" * 60)
-    print("Processing documents...")
-    print("-" * 60)
-    
-    # Process each document
-    new_metadata = {
-        'timestamp': datetime.now().isoformat(),
-        'source': BASE_URL,
-        'categories': list(set(doc['category'] for doc in current_documents)),
-        'documents': []
-    }
-    
-    stats = {
-        'total': len(current_documents),
-        'new': 0,
-        'file_changed': 0,
-        'description_changed': 0,
-        'unchanged': 0,
-        'downloaded': 0
-    }
-    
-    for doc in current_documents:
-        url = doc['url']
-        old_doc = old_documents.get(url)
-        
-        # Determine what changed
-        is_new = old_doc is None
-        file_changed = has_file_changed(doc, old_doc)
-        description_changed = has_description_changed(doc, old_doc)
-        
-        # Prepare file path
-        category_dir = sanitize_category_name(doc['category'])
-        safe_filename = sanitize_filename(doc['filename'])
-        local_path = os.path.join(DOCUMENTS_DIR, category_dir, safe_filename)
-        relative_path = os.path.join("documents", category_dir, safe_filename)
-        
-        # Get HTTP metadata
-        http_metadata = get_file_metadata(url)
-        
-        # Build document metadata
-        doc_metadata = {
-            'category': doc['category'],
-            'filename': safe_filename,
-            'url': url,
-            'title': doc['title'],
-            'description': doc['description'],
-            'local_path': relative_path
-        }
-        
-        if http_metadata:
-            doc_metadata['file_size'] = http_metadata['size']
-            doc_metadata['last_modified'] = http_metadata['last_modified']
-            doc_metadata['content_type'] = http_metadata['content_type']
-        
-        # Handle download and metadata updates
-        if is_new:
-            print(f"\n[NEW] {doc['title']}")
-            print(f"  Category: {doc['category']}")
-            print(f"  URL: {url}")
-            if doc['description']:
-                print(f"  Description: {doc['description'][:100]}...")
-            
-            # Download file
-            if download_file(url, local_path):
-                doc_metadata['downloaded_at'] = datetime.now().isoformat()
-                doc_metadata['description_updated_at'] = datetime.now().isoformat()
-                stats['new'] += 1
-                stats['downloaded'] += 1
-            
-        elif file_changed or description_changed:
-            changes = []
-            if file_changed:
-                changes.append("file")
-            if description_changed:
-                changes.append("description")
-            
-            print(f"\n[UPDATED] {doc['title']}")
-            print(f"  Changed: {', '.join(changes)}")
-            print(f"  Category: {doc['category']}")
-            
-            # Re-download if file changed
-            if file_changed:
-                if download_file(url, local_path):
-                    doc_metadata['downloaded_at'] = datetime.now().isoformat()
-                    stats['file_changed'] += 1
-                    stats['downloaded'] += 1
-            else:
-                # Keep old download timestamp
-                doc_metadata['downloaded_at'] = old_doc.get('downloaded_at', '')
-            
-            # Update description timestamp if changed
-            if description_changed:
-                print(f"  Old description: {old_doc.get('description', 'None')[:100]}")
-                print(f"  New description: {doc['description'][:100]}")
-                doc_metadata['description_updated_at'] = datetime.now().isoformat()
-                stats['description_changed'] += 1
-            else:
-                doc_metadata['description_updated_at'] = old_doc.get('description_updated_at', '')
-        
-        else:
-            # No changes
-            print(f"[UNCHANGED] {doc['title']}")
-            doc_metadata['downloaded_at'] = old_doc.get('downloaded_at', '')
-            doc_metadata['description_updated_at'] = old_doc.get('description_updated_at', '')
-            stats['unchanged'] += 1
-        
-        new_metadata['documents'].append(doc_metadata)
-        
-        # Small delay to be polite to the server
-        time.sleep(0.2)
-    
-    # Save updated metadata
-    save_metadata(new_metadata)
-    
-    # Print summary
-    print()
-    print("=" * 60)
-    print("Summary")
-    print("=" * 60)
-    print(f"Total documents: {stats['total']}")
-    print(f"New documents: {stats['new']}")
-    print(f"Files changed: {stats['file_changed']}")
-    print(f"Descriptions changed: {stats['description_changed']}")
-    print(f"Unchanged: {stats['unchanged']}")
-    print(f"Files downloaded: {stats['downloaded']}")
-    print()
-    print(f"Documents saved to: {DOCUMENTS_DIR}")
-    print(f"Metadata saved to: {METADATA_FILE}")
-    print(f"Completed at: {datetime.now().isoformat()}")
-    print("=" * 60)
+def extract_description(link: Tag) -> str:
+	li_parent = link.find_parent("li")
+	if li_parent:
+		desc_div = li_parent.find(class_=lambda cls: isinstance(cls, str) and "ce-uploads-description" in cls)
+		if desc_div:
+			return desc_div.get_text(" ", strip=True)
+
+	next_desc = link.find_next_sibling(class_=lambda cls: isinstance(cls, str) and "ce-uploads-description" in cls)
+	if next_desc:
+		return next_desc.get_text(" ", strip=True)
+
+	parent = link.find_parent(["div", "p", "li"])
+	if parent:
+		text = parent.get_text(" ", strip=True)
+		link_text = link.get_text(" ", strip=True)
+		if link_text and link_text in text:
+			remainder = text.split(link_text, 1)[1].strip()
+			if 3 <= len(remainder) <= 500:
+				return remainder
+
+	return ""
+
+
+def collect_tab_mapping(soup: BeautifulSoup) -> List[Tuple[str, str, bool]]:
+	mapping: List[Tuple[str, str, bool]] = []
+	for li in soup.select("ul.nav.nav-tabs li.nav-link"):
+		anchor = li.find("a")
+		if not anchor:
+			continue
+
+		tab_target = attr_to_text(anchor.get("data-href")).strip()
+		if not tab_target.startswith("#"):
+			continue
+
+		tab_id = tab_target[1:]
+		tab_label = anchor.get_text(" ", strip=True)
+		li_id = attr_to_text(li.get("id")).strip().lower()
+		label_lower = tab_label.lower()
+		is_bekanntmachung = (
+			li_id == "bekanntmachungen"
+			or "amtliche" in label_lower
+			or "bekanntmach" in label_lower
+		)
+		mapping.append((tab_id, tab_label, is_bekanntmachung))
+
+	return mapping
+
+
+def nearest_sub_heading(link: Tag, pane: Tag) -> str:
+	for previous in link.find_all_previous(["h2", "h3"]):
+		if pane not in previous.parents and previous is not pane:
+			continue
+		heading = previous.get_text(" ", strip=True)
+		if heading:
+			return heading
+	return ""
+
+
+def is_internal_documents_page(url: str) -> bool:
+	parsed = urlparse(url)
+	return (
+		parsed.netloc == "www.ravensburg.dhbw.de"
+		and parsed.path.rstrip("/") == "/service-einrichtungen/dokumente-downloads"
+	)
+
+
+def extract_documents_from_html(base_url: str, html: str) -> Tuple[List[SourceDocument], Set[str], Set[str]]:
+	soup = BeautifulSoup(html, "html.parser")
+	tab_mapping = collect_tab_mapping(soup)
+
+	all_docs: Dict[str, SourceDocument] = {}
+	expected_keys: Set[str] = set()
+	follow_links: Set[str] = set()
+
+	for tab_id, tab_label, is_bekanntmachung in tab_mapping:
+		pane = soup.find("div", id=tab_id)
+		if not isinstance(pane, Tag):
+			continue
+
+		if is_bekanntmachung:
+			continue
+
+		top_category = tab_label.strip() or "Ohne Kategorie"
+
+		for link in pane.find_all("a", href=True):
+			href = attr_to_text(link.get("href", "")).strip()
+			if not href:
+				continue
+
+			if href.startswith(("#", "mailto:", "tel:", "javascript:")):
+				continue
+
+			absolute_url = urljoin(base_url, href)
+
+			if is_internal_documents_page(absolute_url):
+				parsed_internal = urlparse(absolute_url)
+				if parsed_internal.query:
+					follow_links.add(absolute_url)
+
+			if not is_document_url(absolute_url):
+				continue
+
+			title = attr_to_text(link.get("title", "")).strip() or link.get_text(" ", strip=True)
+			if not title:
+				title = guess_filename(absolute_url, "Dokument")
+
+			sub_category = nearest_sub_heading(link, pane)
+			if sub_category.lower().startswith("amtliche bekanntmach"):
+				continue
+
+			description = extract_description(link)
+			entry_key = make_entry_key(absolute_url, title, top_category, sub_category)
+			expected_keys.add(entry_key)
+
+			all_docs[entry_key] = SourceDocument(
+				entry_key=entry_key,
+				url=absolute_url,
+				title=title,
+				description=description,
+				category_top=top_category,
+				category_sub=sub_category,
+			)
+
+	return sorted(all_docs.values(), key=lambda item: item.entry_key), expected_keys, follow_links
+
+
+def crawl_all_documents(session: requests.Session, start_url: str) -> Tuple[List[SourceDocument], Set[str]]:
+	queue: List[str] = [start_url]
+	visited: Set[str] = set()
+	all_docs: Dict[str, SourceDocument] = {}
+	expected_keys: Set[str] = set()
+
+	while queue:
+		page_url = queue.pop(0)
+		if page_url in visited:
+			continue
+
+		visited.add(page_url)
+		print(f"Analysiere Seite {len(visited)}: {page_url}")
+
+		try:
+			html = fetch_page_html(session, page_url)
+		except Exception as exc:
+			print(f"Warnung: Seite konnte nicht geladen werden ({page_url}): {exc}")
+			continue
+
+		page_docs, page_expected, page_follow = extract_documents_from_html(page_url, html)
+		for doc in page_docs:
+			all_docs[doc.entry_key] = doc
+		expected_keys.update(page_expected)
+
+		for next_url in sorted(page_follow):
+			if next_url not in visited and next_url not in queue:
+				queue.append(next_url)
+
+		time.sleep(REQUEST_DELAY_SECONDS)
+
+	return sorted(all_docs.values(), key=lambda item: item.entry_key), expected_keys
+
+
+def fetch_page_html(session: requests.Session, url: str) -> str:
+	response = session.get(url, timeout=REQUEST_TIMEOUT)
+	response.raise_for_status()
+	return response.text
+
+
+def head_metadata(session: requests.Session, url: str) -> Dict[str, str]:
+	try:
+		response = session.head(url, timeout=HEAD_TIMEOUT, allow_redirects=True)
+		response.raise_for_status()
+		headers = response.headers
+		return {
+			"content_length": headers.get("Content-Length", ""),
+			"last_modified": headers.get("Last-Modified", ""),
+			"etag": headers.get("ETag", ""),
+			"content_type": headers.get("Content-Type", ""),
+		}
+	except Exception:
+		return {
+			"content_length": "",
+			"last_modified": "",
+			"etag": "",
+			"content_type": "",
+		}
+
+
+def compute_sha256(path: Path) -> str:
+	digest = hashlib.sha256()
+	with path.open("rb") as handle:
+		for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+			digest.update(chunk)
+	return digest.hexdigest()
+
+
+def build_local_path(doc: SourceDocument, used_paths: Set[str]) -> Path:
+	top = sanitize_path_segment(doc.category_top, "Ohne Kategorie")
+	sub = sanitize_path_segment(doc.category_sub, "Allgemein") if doc.category_sub else ""
+	filename = sanitize_path_segment(guess_filename(doc.url, doc.title), "dokument.bin")
+
+	if sub:
+		relative = Path("documents") / top / sub / filename
+	else:
+		relative = Path("documents") / top / filename
+
+	candidate = relative
+	stem = candidate.stem
+	suffix = candidate.suffix
+	index = 2
+
+	while str(candidate) in used_paths:
+		new_name = f"{stem}_{index}{suffix}"
+		if sub:
+			candidate = Path("documents") / top / sub / new_name
+		else:
+			candidate = Path("documents") / top / new_name
+		index += 1
+
+	used_paths.add(str(candidate))
+	return candidate
+
+
+def download_file(session: requests.Session, url: str, destination: Path) -> Tuple[bool, str]:
+	destination.parent.mkdir(parents=True, exist_ok=True)
+
+	try:
+		with session.get(url, timeout=REQUEST_TIMEOUT, stream=True) as response:
+			response.raise_for_status()
+			content_type = (response.headers.get("Content-Type") or "").lower()
+			if "text/html" in content_type:
+				return False, "übersprungen (Content-Type text/html)"
+
+			with destination.open("wb") as handle:
+				for chunk in response.iter_content(chunk_size=64 * 1024):
+					if chunk:
+						handle.write(chunk)
+	except Exception as exc:
+		return False, str(exc)
+
+	return True, ""
+
+
+def should_redownload(doc: SourceDocument, old: Optional[Dict], local_path: Path, head: Dict[str, str]) -> bool:
+	if old is None:
+		return True
+	if not local_path.exists():
+		return True
+
+	if old.get("description", "") != doc.description:
+		return True
+	if old.get("title", "") != doc.title:
+		return True
+	if old.get("category_top", "") != doc.category_top:
+		return True
+	if old.get("category_sub", "") != doc.category_sub:
+		return True
+
+	old_length = str(old.get("content_length", ""))
+	old_modified = old.get("last_modified", "")
+	old_etag = old.get("etag", "")
+
+	if head.get("content_length", "") and head.get("content_length") != old_length:
+		return True
+	if head.get("last_modified", "") and head.get("last_modified") != old_modified:
+		return True
+	if head.get("etag", "") and head.get("etag") != old_etag:
+		return True
+
+	return False
+
+
+def remove_deleted_documents(old_by_key: Dict[str, Dict], current_keys: Set[str]) -> int:
+	removed = 0
+	for key, old in old_by_key.items():
+		if key in current_keys:
+			continue
+
+		local_rel = old.get("local_path", "")
+		if local_rel:
+			file_path = DATA_DIR / local_rel
+			if file_path.exists() and file_path.is_file():
+				try:
+					file_path.unlink()
+					removed += 1
+				except Exception as exc:
+					print(f"Warnung: Konnte entfernte Datei nicht löschen ({file_path}): {exc}")
+	return removed
+
+
+def verify_coverage(expected_keys: Set[str], metadata_docs: Iterable[Dict]) -> Tuple[Set[str], Set[str]]:
+	actual_keys = {entry.get("entry_key", "") for entry in metadata_docs if entry.get("entry_key")}
+	missing = expected_keys - actual_keys
+	extra = actual_keys - expected_keys
+	return missing, extra
+
+
+def main() -> int:
+	print("DHBW Dokumente-Scraper (inkrementell)")
+	print(f"Start: {now_iso()}")
+
+	DOCUMENTS_DIR.mkdir(parents=True, exist_ok=True)
+	session = build_session()
+
+	old_metadata = load_metadata()
+	old_docs_list = old_metadata.get("documents", []) if isinstance(old_metadata, dict) else []
+	old_by_key: Dict[str, Dict] = {}
+	for item in old_docs_list:
+		if not isinstance(item, dict):
+			continue
+		entry_key = item.get("entry_key", "")
+		if not entry_key and item.get("url"):
+			entry_key = make_entry_key(
+				item.get("url", ""),
+				item.get("title", ""),
+				item.get("category_top", ""),
+				item.get("category_sub", ""),
+			)
+		if entry_key:
+			old_by_key[entry_key] = item
+
+	print(f"Vorhandene Metadateneinträge: {len(old_by_key)}")
+	print(f"Lade Seite: {BASE_URL}")
+
+	source_documents, expected_keys = crawl_all_documents(session, BASE_URL)
+
+	print(f"Gefundene Dokumente (ohne Bekanntmachungen): {len(source_documents)}")
+
+	used_paths: Set[str] = {
+		str(entry.get("local_path"))
+		for entry in old_by_key.values()
+		if entry.get("local_path")
+	}
+
+	processed_docs: List[Dict] = []
+	stats = {
+		"new": 0,
+		"updated": 0,
+		"unchanged": 0,
+		"failed": 0,
+		"removed": 0,
+		"downloaded": 0,
+	}
+	failed_urls: List[str] = []
+
+	for index, doc in enumerate(source_documents, start=1):
+		old = old_by_key.get(doc.entry_key)
+
+		if old and old.get("local_path"):
+			relative_path = Path(old["local_path"])
+		else:
+			relative_path = build_local_path(doc, used_paths)
+
+		local_path = DATA_DIR / relative_path
+		head = head_metadata(session, doc.url)
+
+		redownload = should_redownload(doc, old, local_path, head)
+
+		document_entry = {
+			"entry_key": doc.entry_key,
+			"url": doc.url,
+			"title": doc.title,
+			"description": doc.description,
+			"category_top": doc.category_top,
+			"category_sub": doc.category_sub,
+			"filename": local_path.name,
+			"local_path": str(relative_path),
+			"content_length": head.get("content_length", ""),
+			"last_modified": head.get("last_modified", ""),
+			"etag": head.get("etag", ""),
+			"content_type": head.get("content_type", ""),
+			"last_seen": now_iso(),
+		}
+
+		if not redownload:
+			document_entry["downloaded_at"] = old.get("downloaded_at", "") if old else ""
+			document_entry["sha256"] = old.get("sha256", "") if old else ""
+			processed_docs.append(document_entry)
+			stats["unchanged"] += 1
+			print(f"[{index}/{len(source_documents)}] Unverändert: {doc.title}")
+			continue
+
+		ok, error = download_file(session, doc.url, local_path)
+		if not ok:
+			stats["failed"] += 1
+			failed_urls.append(f"{doc.url} -> {error}")
+			print(f"[{index}/{len(source_documents)}] FEHLER: {doc.title} ({error})")
+			continue
+
+		document_entry["downloaded_at"] = now_iso()
+		document_entry["sha256"] = compute_sha256(local_path)
+
+		if old is None:
+			stats["new"] += 1
+			print(f"[{index}/{len(source_documents)}] Neu: {doc.title}")
+		else:
+			stats["updated"] += 1
+			print(f"[{index}/{len(source_documents)}] Aktualisiert: {doc.title}")
+
+		stats["downloaded"] += 1
+		processed_docs.append(document_entry)
+		time.sleep(REQUEST_DELAY_SECONDS)
+
+	current_keys = {entry["entry_key"] for entry in processed_docs}
+	stats["removed"] = remove_deleted_documents(old_by_key, current_keys)
+
+	new_metadata = {
+		"updated_at": now_iso(),
+		"source": BASE_URL,
+		"document_count": len(processed_docs),
+		"documents": sorted(processed_docs, key=lambda item: item["entry_key"]),
+	}
+	save_metadata(new_metadata)
+
+	missing, extra = verify_coverage(expected_keys, processed_docs)
+
+	category_counts: Dict[str, int] = {}
+	for doc in source_documents:
+		category_counts[doc.category_top] = category_counts.get(doc.category_top, 0) + 1
+
+	print("\n" + "=" * 70)
+	print("Zusammenfassung")
+	print("=" * 70)
+	print(f"Erwartete Dokument-Einträge: {len(expected_keys)}")
+	print(f"Metadaten-Einträge: {len(processed_docs)}")
+	print(f"Neu: {stats['new']}")
+	print(f"Aktualisiert: {stats['updated']}")
+	print(f"Unverändert: {stats['unchanged']}")
+	print(f"Heruntergeladen: {stats['downloaded']}")
+	print(f"Entfernt (lokal gelöscht): {stats['removed']}")
+	print(f"Fehlgeschlagen: {stats['failed']}")
+	print(f"Coverage fehlend: {len(missing)}")
+	print(f"Coverage extra: {len(extra)}")
+	print("\nEinträge pro Top-Kategorie:")
+	for category_name in sorted(category_counts):
+		print(f"- {category_name}: {category_counts[category_name]}")
+
+	if failed_urls:
+		print("\nFehlgeschlagene Downloads:")
+		for item in failed_urls[:20]:
+			print(f"- {item}")
+		if len(failed_urls) > 20:
+			print(f"... und {len(failed_urls) - 20} weitere")
+
+	if missing:
+		print("\nFehlende Eintrags-Keys in Metadaten (erste 20):")
+		for entry_key in sorted(list(missing))[:20]:
+			print(f"- {entry_key}")
+
+	if extra:
+		print("\nZusätzliche Eintrags-Keys in Metadaten (erste 20):")
+		for entry_key in sorted(list(extra))[:20]:
+			print(f"- {entry_key}")
+
+	print(f"\nMetadaten: {METADATA_FILE}")
+	print(f"Dateien: {DOCUMENTS_DIR}")
+	print(f"Ende: {now_iso()}")
+
+	if stats["failed"] > 0 or missing:
+		return 1
+
+	return 0
 
 
 if __name__ == "__main__":
-    try:
-        main()
-    except KeyboardInterrupt:
-        print("\n\nScraper interrupted by user")
-    except Exception as e:
-        print(f"\n\nError: {e}")
-        import traceback
-        traceback.print_exc()
+	raise SystemExit(main())

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-02-25T17:16:18.625516+00:00",
+  "updated_at": "2026-02-25T21:41:09.988469+00:00",
   "source": "https://www.ravensburg.dhbw.de/service-einrichtungen/dokumente-downloads",
   "document_count": 103,
   "documents": [
@@ -16,7 +16,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:38.197639+00:00",
+      "last_seen": "2026-02-25T21:41:06.491429+00:00",
       "downloaded_at": "2026-02-25T17:15:38.400634+00:00",
       "sha256": "4929f1bf16af7ac1bed0ad303cfd87adcbf163400ca4681f1226579008d1f820"
     },
@@ -33,7 +33,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:38.557952+00:00",
+      "last_seen": "2026-02-25T21:41:06.524437+00:00",
       "downloaded_at": "2026-02-25T17:15:38.775152+00:00",
       "sha256": "4929f1bf16af7ac1bed0ad303cfd87adcbf163400ca4681f1226579008d1f820"
     },
@@ -50,7 +50,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:38.932674+00:00",
+      "last_seen": "2026-02-25T21:41:06.560655+00:00",
       "downloaded_at": "2026-02-25T17:15:39.061551+00:00",
       "sha256": "ad2748a4a57a66e9e5733c844e8c1b69a530d598e614cbfa29cf752a682ccaae"
     },
@@ -67,7 +67,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/msword",
-      "last_seen": "2026-02-25T17:15:39.218450+00:00",
+      "last_seen": "2026-02-25T21:41:06.596683+00:00",
       "downloaded_at": "2026-02-25T17:15:39.278060+00:00",
       "sha256": "f5551685081d00f7233a9c78f0faf4e5cfd325fea7da8a4fbf6949221b7628ed"
     },
@@ -84,7 +84,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:39.433950+00:00",
+      "last_seen": "2026-02-25T21:41:06.631120+00:00",
       "downloaded_at": "2026-02-25T17:15:39.502090+00:00",
       "sha256": "9584ed73744184bb4273e4e6841bc134ba51f8e45e38e8f9284f5c8f3db406a1"
     },
@@ -101,7 +101,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "last_seen": "2026-02-25T17:15:39.661222+00:00",
+      "last_seen": "2026-02-25T21:41:06.663843+00:00",
       "downloaded_at": "2026-02-25T17:15:39.730835+00:00",
       "sha256": "40252435747010b9b971d155db27d3d932431abeda5d7d7565e7f3afb01be7c0"
     },
@@ -118,7 +118,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:39.886507+00:00",
+      "last_seen": "2026-02-25T21:41:06.696931+00:00",
       "downloaded_at": "2026-02-25T17:15:39.995603+00:00",
       "sha256": "6c5be50a892d7af03c36a03b216443b37d085016d26708d5b3eb375d73ccf61d"
     },
@@ -135,7 +135,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:40.152348+00:00",
+      "last_seen": "2026-02-25T21:41:06.730710+00:00",
       "downloaded_at": "2026-02-25T17:15:40.244400+00:00",
       "sha256": "b8cfda7b7ae079a1c9c13265ad2df1a1403dea9e4ca0240493ed73903264d010"
     },
@@ -152,7 +152,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:40.399518+00:00",
+      "last_seen": "2026-02-25T21:41:06.763408+00:00",
       "downloaded_at": "2026-02-25T17:15:40.467565+00:00",
       "sha256": "2e8d29c5ecd64a84dc217ad0e46ef2adf8d3a769aab45e9098e3c9792d2106a9"
     },
@@ -169,7 +169,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "last_seen": "2026-02-25T17:15:40.625740+00:00",
+      "last_seen": "2026-02-25T21:41:06.798283+00:00",
       "downloaded_at": "2026-02-25T17:15:40.706388+00:00",
       "sha256": "4fb5e7255afbd40f3a4d3267a3d54ff684904da53771aa52ad74d4801d2ee325"
     },
@@ -186,7 +186,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:40.864201+00:00",
+      "last_seen": "2026-02-25T21:41:06.832658+00:00",
       "downloaded_at": "2026-02-25T17:15:40.911975+00:00",
       "sha256": "8a943577ca2e30773bb1897977cf63258912855bd4d7d565a572216640cbcd05"
     },
@@ -203,7 +203,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:41.069749+00:00",
+      "last_seen": "2026-02-25T21:41:06.866200+00:00",
       "downloaded_at": "2026-02-25T17:15:41.270816+00:00",
       "sha256": "81cb70e18c627d9bac49d39486a7c6cb43c3777add03a3734b570f6c56e7985d"
     },
@@ -220,7 +220,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "last_seen": "2026-02-25T17:15:41.426814+00:00",
+      "last_seen": "2026-02-25T21:41:06.898249+00:00",
       "downloaded_at": "2026-02-25T17:15:41.493608+00:00",
       "sha256": "935952de275ce9b5a969bff967fe9b42ee1c5fc0bf9dee1b7ec34c69b48c6a09"
     },
@@ -237,7 +237,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:41.651168+00:00",
+      "last_seen": "2026-02-25T21:41:06.932541+00:00",
       "downloaded_at": "2026-02-25T17:15:41.965660+00:00",
       "sha256": "7e771903a0ef86b027da1a507d4de5fe6faabee1605993672c81db39d924ab5f"
     },
@@ -254,7 +254,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:42.122353+00:00",
+      "last_seen": "2026-02-25T21:41:06.966802+00:00",
       "downloaded_at": "2026-02-25T17:15:42.373727+00:00",
       "sha256": "8809dc3b8df2f78e3c7d090899b7f0eb260ae8cdd7abab79df2883dedd16e229"
     },
@@ -271,7 +271,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:42.530666+00:00",
+      "last_seen": "2026-02-25T21:41:07.002888+00:00",
       "downloaded_at": "2026-02-25T17:15:42.566863+00:00",
       "sha256": "ba1de3a31a32fd5d173383d71c43779175220e69276a345828267dc6a8c4b3e5"
     },
@@ -288,7 +288,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:42.723898+00:00",
+      "last_seen": "2026-02-25T21:41:07.036493+00:00",
       "downloaded_at": "2026-02-25T17:15:42.846977+00:00",
       "sha256": "3021978c0364d33c636f4860679eda794e166fe0f4424aa3d5c3e33ee74bdd3a"
     },
@@ -305,7 +305,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:43.003809+00:00",
+      "last_seen": "2026-02-25T21:41:07.070090+00:00",
       "downloaded_at": "2026-02-25T17:15:43.099880+00:00",
       "sha256": "1e5e60b0afcd19a11fe3d25307b5167b633bb26374f580798126e3b9841e4649"
     },
@@ -322,7 +322,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "last_seen": "2026-02-25T17:15:43.256810+00:00",
+      "last_seen": "2026-02-25T21:41:07.103214+00:00",
       "downloaded_at": "2026-02-25T17:15:43.308980+00:00",
       "sha256": "7c1e13cb572e82152cec69c1d17277dde70f039b4a305eb710d2ea89c84ff046"
     },
@@ -339,7 +339,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:43.473627+00:00",
+      "last_seen": "2026-02-25T21:41:07.145439+00:00",
       "downloaded_at": "2026-02-25T17:15:45.067271+00:00",
       "sha256": "bc8c6b987b91a30cdd2543d2a6f8c897aa4071870e9781a2d9fc6d476c8561ec"
     },
@@ -356,7 +356,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:45.229716+00:00",
+      "last_seen": "2026-02-25T21:41:07.180030+00:00",
       "downloaded_at": "2026-02-25T17:15:45.268787+00:00",
       "sha256": "83d0cfcc64846cbfa56b98125bd98bc9b7eb14a11e3b6425d83822189eff8b35"
     },
@@ -373,7 +373,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "last_seen": "2026-02-25T17:15:45.425676+00:00",
+      "last_seen": "2026-02-25T21:41:07.215156+00:00",
       "downloaded_at": "2026-02-25T17:15:45.488795+00:00",
       "sha256": "8246cc991123ea90bd071c6009dc1ce47dc856b56683e7623665437a7b9004b7"
     },
@@ -390,7 +390,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:45.651755+00:00",
+      "last_seen": "2026-02-25T21:41:07.252065+00:00",
       "downloaded_at": "2026-02-25T17:15:46.570375+00:00",
       "sha256": "0e962c4ee0989b17ef9e5f3397c616cc6a7831b1c3bb297ce73c9f761af88150"
     },
@@ -407,7 +407,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:46.728559+00:00",
+      "last_seen": "2026-02-25T21:41:07.286194+00:00",
       "downloaded_at": "2026-02-25T17:15:46.849997+00:00",
       "sha256": "813c5755cd1e018479ca0db36cdf802f39dc3bc6b325e97a738ffd13b209b185"
     },
@@ -424,7 +424,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/msword",
-      "last_seen": "2026-02-25T17:15:47.004500+00:00",
+      "last_seen": "2026-02-25T21:41:07.317745+00:00",
       "downloaded_at": "2026-02-25T17:15:47.039292+00:00",
       "sha256": "ab84fc528cc8d2fc1761a1fb6418be0e54a29cb614363759ef4a8db2fde83365"
     },
@@ -441,7 +441,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/msword",
-      "last_seen": "2026-02-25T17:15:47.195026+00:00",
+      "last_seen": "2026-02-25T21:41:07.351275+00:00",
       "downloaded_at": "2026-02-25T17:15:47.261605+00:00",
       "sha256": "24da87a3f4953861bcbc5207c768e2de68bf2b2592db9baaf7d99a6e6a41aff6"
     },
@@ -458,7 +458,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:47.417182+00:00",
+      "last_seen": "2026-02-25T21:41:07.384501+00:00",
       "downloaded_at": "2026-02-25T17:15:47.553792+00:00",
       "sha256": "45e18ae51f7ca337c908c11fea2224ee52b575c70c57252c6c1f17699039a48f"
     },
@@ -475,7 +475,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:47.712337+00:00",
+      "last_seen": "2026-02-25T21:41:07.417837+00:00",
       "downloaded_at": "2026-02-25T17:15:48.115305+00:00",
       "sha256": "a3005f03c01f8d5c03d86f527f5580d32fb1db6c1c4945d1954b358ec38616ca"
     },
@@ -492,7 +492,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:48.272580+00:00",
+      "last_seen": "2026-02-25T21:41:07.452883+00:00",
       "downloaded_at": "2026-02-25T17:15:48.576198+00:00",
       "sha256": "0502cdeb1a613aae225c23e11e12744ff7bf5853b3b59d43f5d6687538258ebb"
     },
@@ -509,7 +509,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:48.731408+00:00",
+      "last_seen": "2026-02-25T21:41:07.483796+00:00",
       "downloaded_at": "2026-02-25T17:15:48.769635+00:00",
       "sha256": "8f979eb77b48c88018707baf62e9398d4dcb3cc67441778ed611447c05e7f80a"
     },
@@ -526,7 +526,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:48.926654+00:00",
+      "last_seen": "2026-02-25T21:41:07.516443+00:00",
       "downloaded_at": "2026-02-25T17:15:49.003659+00:00",
       "sha256": "0e9c9c36f2f190cc88035762b0e70746841301f033a046e9688b8e825efd108c"
     },
@@ -543,7 +543,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:49.161748+00:00",
+      "last_seen": "2026-02-25T21:41:07.549253+00:00",
       "downloaded_at": "2026-02-25T17:15:49.202175+00:00",
       "sha256": "9a5214f1dbb8e0c167c2ed794ae85c12392a334fd6e346c2a1f63aee63ba0acf"
     },
@@ -560,7 +560,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:49.360532+00:00",
+      "last_seen": "2026-02-25T21:41:07.583605+00:00",
       "downloaded_at": "2026-02-25T17:15:49.863297+00:00",
       "sha256": "9d3cf48b8b1ac10882a712f8497701b645ff3f6033c612b7c646bedaf8671ba8"
     },
@@ -577,7 +577,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:50.021447+00:00",
+      "last_seen": "2026-02-25T21:41:07.616478+00:00",
       "downloaded_at": "2026-02-25T17:15:50.083994+00:00",
       "sha256": "415a03aef4c6f86ddd8c07b215adaf34e39fba69b38bbea63a261cb6bd8f99e1"
     },
@@ -594,7 +594,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "image/x-eps",
-      "last_seen": "2026-02-25T17:15:50.244986+00:00",
+      "last_seen": "2026-02-25T21:41:07.650669+00:00",
       "downloaded_at": "2026-02-25T17:15:50.790830+00:00",
       "sha256": "025d55c5e61835d69e9736c15cf0a582872a32bde777a0af14d032250f4f953c"
     },
@@ -611,7 +611,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:50.951266+00:00",
+      "last_seen": "2026-02-25T21:41:07.682921+00:00",
       "downloaded_at": "2026-02-25T17:15:51.120133+00:00",
       "sha256": "4599fde187630adca59a15eac9deb933475dfcdd120ba700170a655669521456"
     },
@@ -628,7 +628,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:51.277999+00:00",
+      "last_seen": "2026-02-25T21:41:07.717579+00:00",
       "downloaded_at": "2026-02-25T17:15:51.356976+00:00",
       "sha256": "f67c336aa3ab12ba8d1f01e6caf75d2c474100a2886352863f309c5279354d7c"
     },
@@ -645,7 +645,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:51.513063+00:00",
+      "last_seen": "2026-02-25T21:41:07.752804+00:00",
       "downloaded_at": "2026-02-25T17:15:51.577205+00:00",
       "sha256": "15df9217e0b48febe34d5dc0aa07e92ebc5a68918875c2711ce2091bf9b77484"
     },
@@ -662,7 +662,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "last_seen": "2026-02-25T17:15:51.732581+00:00",
+      "last_seen": "2026-02-25T21:41:07.784974+00:00",
       "downloaded_at": "2026-02-25T17:15:51.785245+00:00",
       "sha256": "adc1f0844f38a0b77a635d1c916a22aa1c8cca94947079528ea243ebedc11431"
     },
@@ -679,7 +679,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:51.940100+00:00",
+      "last_seen": "2026-02-25T21:41:07.816752+00:00",
       "downloaded_at": "2026-02-25T17:15:52.098483+00:00",
       "sha256": "ad2748a4a57a66e9e5733c844e8c1b69a530d598e614cbfa29cf752a682ccaae"
     },
@@ -696,7 +696,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:52.254302+00:00",
+      "last_seen": "2026-02-25T21:41:07.847915+00:00",
       "downloaded_at": "2026-02-25T17:15:52.290508+00:00",
       "sha256": "489aa3cfbe597059316bda6da1fdb70f2b3f63c7e933b60820549f637c25edf3"
     },
@@ -713,7 +713,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:52.456944+00:00",
+      "last_seen": "2026-02-25T21:41:07.889578+00:00",
       "downloaded_at": "2026-02-25T17:15:55.626071+00:00",
       "sha256": "69062ba52e224e7e5008ce36fa225b9a0b6bb6c0969fab59cb7e600f4f694671"
     },
@@ -730,7 +730,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "image/png",
-      "last_seen": "2026-02-25T17:15:55.787075+00:00",
+      "last_seen": "2026-02-25T21:41:07.921766+00:00",
       "downloaded_at": "2026-02-25T17:15:55.856476+00:00",
       "sha256": "3b92a49b727c295f11ae7e261071579738d66a23bd92ca53ac03f302c02f6b8a"
     },
@@ -747,7 +747,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/msword",
-      "last_seen": "2026-02-25T17:15:56.012362+00:00",
+      "last_seen": "2026-02-25T21:41:07.956026+00:00",
       "downloaded_at": "2026-02-25T17:15:56.081878+00:00",
       "sha256": "69bbb623bc04a7d8b3084b3034ce189a97316712da3cec9d0e64476b63afc819"
     },
@@ -764,7 +764,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "last_seen": "2026-02-25T17:15:56.238027+00:00",
+      "last_seen": "2026-02-25T21:41:07.987867+00:00",
       "downloaded_at": "2026-02-25T17:15:56.291060+00:00",
       "sha256": "adc1f0844f38a0b77a635d1c916a22aa1c8cca94947079528ea243ebedc11431"
     },
@@ -781,7 +781,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:56.446638+00:00",
+      "last_seen": "2026-02-25T21:41:08.019617+00:00",
       "downloaded_at": "2026-02-25T17:15:56.624024+00:00",
       "sha256": "1bc68b616e82d7b3c9c05c0e5d295d0dc3859c4bede002901fa1dddf4debc1e1"
     },
@@ -798,7 +798,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:56.780426+00:00",
+      "last_seen": "2026-02-25T21:41:08.053730+00:00",
       "downloaded_at": "2026-02-25T17:15:57.194520+00:00",
       "sha256": "9238f3222e2c4c29654ada7c4b329243dbda21149f68f8cb1dc45d1bf93927bc"
     },
@@ -815,7 +815,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "last_seen": "2026-02-25T17:15:57.350892+00:00",
+      "last_seen": "2026-02-25T21:41:08.085702+00:00",
       "downloaded_at": "2026-02-25T17:15:57.424374+00:00",
       "sha256": "134c67aaccd1eb404acd3d6dcbb72de01af433f052ac24b65657fb9c425fefc2"
     },
@@ -832,7 +832,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:57.579813+00:00",
+      "last_seen": "2026-02-25T21:41:08.121234+00:00",
       "downloaded_at": "2026-02-25T17:15:57.642836+00:00",
       "sha256": "b5e63be6bb35736e1ad651ca10a65fa02ef54813638dae76de74e1d3b7901187"
     },
@@ -849,7 +849,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "last_seen": "2026-02-25T17:15:57.798802+00:00",
+      "last_seen": "2026-02-25T21:41:08.153545+00:00",
       "downloaded_at": "2026-02-25T17:15:57.853818+00:00",
       "sha256": "85c4c3d39ca943eb46bc7633004eb739db3339a96ce723088ef769ec0037c465"
     },
@@ -866,7 +866,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:58.010460+00:00",
+      "last_seen": "2026-02-25T21:41:08.186190+00:00",
       "downloaded_at": "2026-02-25T17:15:58.091323+00:00",
       "sha256": "635102ffc488025765634ebbdd4bd237d7bec2c0c3d3273d3ffeace7adebe5d2"
     },
@@ -883,7 +883,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:58.251104+00:00",
+      "last_seen": "2026-02-25T21:41:08.221634+00:00",
       "downloaded_at": "2026-02-25T17:15:59.205344+00:00",
       "sha256": "5c3083ef29c2d31d8bd2334643b4ff98c74a12768dbf1f17818acbd31dfaab22"
     },
@@ -900,7 +900,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:15:59.364789+00:00",
+      "last_seen": "2026-02-25T21:41:08.254558+00:00",
       "downloaded_at": "2026-02-25T17:15:59.433739+00:00",
       "sha256": "1d2ef414f0a70a1cf33e4ebb4c495cbe720831cee55d43f1102e9a53c581db0d"
     },
@@ -917,7 +917,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/msword",
-      "last_seen": "2026-02-25T17:15:59.597320+00:00",
+      "last_seen": "2026-02-25T21:41:08.288293+00:00",
       "downloaded_at": "2026-02-25T17:15:59.658470+00:00",
       "sha256": "2adaaa3682c572d20994ca3984d2a9b437f50e964011e6f9f9ffd8c114b23e00"
     },
@@ -934,7 +934,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.template",
-      "last_seen": "2026-02-25T17:15:59.813229+00:00",
+      "last_seen": "2026-02-25T21:41:08.321982+00:00",
       "downloaded_at": "2026-02-25T17:15:59.874802+00:00",
       "sha256": "d073a2dfe703f5d42d678315b70a8ecec76e441580f7f84a12be712ce3873ca9"
     },
@@ -951,7 +951,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:00.034812+00:00",
+      "last_seen": "2026-02-25T21:41:08.357565+00:00",
       "downloaded_at": "2026-02-25T17:16:01.099066+00:00",
       "sha256": "b395777eada524c0d9849bfef5adfe1051cb984dd0ff3df374d39c93240d29f6"
     },
@@ -968,7 +968,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:01.258692+00:00",
+      "last_seen": "2026-02-25T21:41:08.390061+00:00",
       "downloaded_at": "2026-02-25T17:16:01.438932+00:00",
       "sha256": "1b99ed0bc89703b878c09cca78654185321f8b9163ace405d31461ecfaf4566c"
     },
@@ -985,7 +985,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:01.596514+00:00",
+      "last_seen": "2026-02-25T21:41:08.422420+00:00",
       "downloaded_at": "2026-02-25T17:16:01.791902+00:00",
       "sha256": "638beea4e13037c299f45c79f7a5c2ab7defb3e626d62c5dbcecd309aa1b53b1"
     },
@@ -1002,7 +1002,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "image/png",
-      "last_seen": "2026-02-25T17:16:01.946582+00:00",
+      "last_seen": "2026-02-25T21:41:08.454116+00:00",
       "downloaded_at": "2026-02-25T17:16:02.008381+00:00",
       "sha256": "d689c46dac48059a3ea20be5e44db7dd1c8909b54bb616611840b5e0c64b2bf9"
     },
@@ -1019,7 +1019,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/msword",
-      "last_seen": "2026-02-25T17:16:02.163495+00:00",
+      "last_seen": "2026-02-25T21:41:08.484561+00:00",
       "downloaded_at": "2026-02-25T17:16:02.227766+00:00",
       "sha256": "49b21b79309eab1b3ccba238f96b454cab43adb84e159232b4171adb10a3d75a"
     },
@@ -1036,7 +1036,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:02.381932+00:00",
+      "last_seen": "2026-02-25T21:41:08.515430+00:00",
       "downloaded_at": "2026-02-25T17:16:02.500344+00:00",
       "sha256": "1bc68b616e82d7b3c9c05c0e5d295d0dc3859c4bede002901fa1dddf4debc1e1"
     },
@@ -1053,7 +1053,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:02.660597+00:00",
+      "last_seen": "2026-02-25T21:41:08.546923+00:00",
       "downloaded_at": "2026-02-25T17:16:02.937750+00:00",
       "sha256": "0502cdeb1a613aae225c23e11e12744ff7bf5853b3b59d43f5d6687538258ebb"
     },
@@ -1070,7 +1070,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:03.093407+00:00",
+      "last_seen": "2026-02-25T21:41:08.579843+00:00",
       "downloaded_at": "2026-02-25T17:16:03.132405+00:00",
       "sha256": "8c67d826ed1ce2dd774d205ff0dc30a840d46660f70be40cfdd1e9f27d1de881"
     },
@@ -1087,7 +1087,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:03.289847+00:00",
+      "last_seen": "2026-02-25T21:41:08.612769+00:00",
       "downloaded_at": "2026-02-25T17:16:03.701423+00:00",
       "sha256": "eb17a914e6c03a915cc09d61d724447f33316f3ac7ed31dda620a09b917f931d"
     },
@@ -1104,7 +1104,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "last_seen": "2026-02-25T17:16:03.858158+00:00",
+      "last_seen": "2026-02-25T21:41:08.644665+00:00",
       "downloaded_at": "2026-02-25T17:16:04.084995+00:00",
       "sha256": "d6a6bcc0c4a844fac14dbba7564f55bd836c3c30591808062a036af14be801ba"
     },
@@ -1121,7 +1121,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "image/x-eps",
-      "last_seen": "2026-02-25T17:16:04.241068+00:00",
+      "last_seen": "2026-02-25T21:41:08.676726+00:00",
       "downloaded_at": "2026-02-25T17:16:04.504093+00:00",
       "sha256": "1e3a59ae616c8cef431bb6fd562f07e38d008d3a94345e40bf26c18aeb566c53"
     },
@@ -1138,7 +1138,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:04.661547+00:00",
+      "last_seen": "2026-02-25T21:41:08.707978+00:00",
       "downloaded_at": "2026-02-25T17:16:04.729730+00:00",
       "sha256": "0689fe7577a8fa830f27fb3769fca2a565b4db640735e6db605b1db07c9dfc1f"
     },
@@ -1155,7 +1155,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:04.887671+00:00",
+      "last_seen": "2026-02-25T21:41:08.743670+00:00",
       "downloaded_at": "2026-02-25T17:16:05.738576+00:00",
       "sha256": "01c52aa9e4e8ad337898efd5b93fbec12ea26cba92d5681f3091a4af250abf55"
     },
@@ -1172,7 +1172,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:05.896204+00:00",
+      "last_seen": "2026-02-25T21:41:08.775254+00:00",
       "downloaded_at": "2026-02-25T17:16:05.971616+00:00",
       "sha256": "0e9c9c36f2f190cc88035762b0e70746841301f033a046e9688b8e825efd108c"
     },
@@ -1189,7 +1189,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:06.126795+00:00",
+      "last_seen": "2026-02-25T21:41:08.810036+00:00",
       "downloaded_at": "2026-02-25T17:16:06.350507+00:00",
       "sha256": "4397736f9510e23e139ef46cfb9a73752346c2afd29d7b9c9f2c41206beb732b"
     },
@@ -1206,7 +1206,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "last_seen": "2026-02-25T17:16:06.504890+00:00",
+      "last_seen": "2026-02-25T21:41:08.842360+00:00",
       "downloaded_at": "2026-02-25T17:16:06.557245+00:00",
       "sha256": "134c67aaccd1eb404acd3d6dcbb72de01af433f052ac24b65657fb9c425fefc2"
     },
@@ -1223,7 +1223,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "last_seen": "2026-02-25T17:16:06.712628+00:00",
+      "last_seen": "2026-02-25T21:41:08.874034+00:00",
       "downloaded_at": "2026-02-25T17:16:06.777663+00:00",
       "sha256": "40252435747010b9b971d155db27d3d932431abeda5d7d7565e7f3afb01be7c0"
     },
@@ -1240,7 +1240,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:06.934044+00:00",
+      "last_seen": "2026-02-25T21:41:08.906984+00:00",
       "downloaded_at": "2026-02-25T17:16:07.097547+00:00",
       "sha256": "89d072701805fa6ed019c9ccad5bed5a5d67ba727b65a21a8c564d4dbbf378d0"
     },
@@ -1257,7 +1257,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:07.257241+00:00",
+      "last_seen": "2026-02-25T21:41:08.940778+00:00",
       "downloaded_at": "2026-02-25T17:16:07.693323+00:00",
       "sha256": "255c98d62da3d01562fb279a80c73545b7c329b20641e149683df2806a1443b5"
     },
@@ -1274,7 +1274,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:07.854329+00:00",
+      "last_seen": "2026-02-25T21:41:08.974195+00:00",
       "downloaded_at": "2026-02-25T17:16:07.944039+00:00",
       "sha256": "1930a9fa70cd381a11daf4d76e75052dfec8cfa9e764ac50255f00d0343b3d6a"
     },
@@ -1291,7 +1291,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:08.099319+00:00",
+      "last_seen": "2026-02-25T21:41:09.010003+00:00",
       "downloaded_at": "2026-02-25T17:16:08.604404+00:00",
       "sha256": "9d3cf48b8b1ac10882a712f8497701b645ff3f6033c612b7c646bedaf8671ba8"
     },
@@ -1308,7 +1308,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:08.760302+00:00",
+      "last_seen": "2026-02-25T21:41:09.041499+00:00",
       "downloaded_at": "2026-02-25T17:16:08.831510+00:00",
       "sha256": "880a24c136e411a4d89e27f29f76c06d482f6ced226bf63891db8008d18ad443"
     },
@@ -1325,7 +1325,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:08.986685+00:00",
+      "last_seen": "2026-02-25T21:41:09.074741+00:00",
       "downloaded_at": "2026-02-25T17:16:09.332415+00:00",
       "sha256": "f5fd9713c753f81c3a7131a81cd6d8d61b979bc5d7c5debc85ec4bd400d1a691"
     },
@@ -1342,7 +1342,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:09.488202+00:00",
+      "last_seen": "2026-02-25T21:41:09.109221+00:00",
       "downloaded_at": "2026-02-25T17:16:09.994459+00:00",
       "sha256": "fcdeb7494314ef06c75e4019cf5500adc0b260fe889dd683890e72fed568068c"
     },
@@ -1359,7 +1359,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:10.152317+00:00",
+      "last_seen": "2026-02-25T21:41:09.141459+00:00",
       "downloaded_at": "2026-02-25T17:16:10.284075+00:00",
       "sha256": "10d24b5c62e4151efc567b64cf384bfc5c76ae0d69c7c809e1564ee0c0b711f1"
     },
@@ -1376,7 +1376,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:10.438231+00:00",
+      "last_seen": "2026-02-25T21:41:09.173947+00:00",
       "downloaded_at": "2026-02-25T17:16:10.770285+00:00",
       "sha256": "0502cdeb1a613aae225c23e11e12744ff7bf5853b3b59d43f5d6687538258ebb"
     },
@@ -1393,7 +1393,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:10.926416+00:00",
+      "last_seen": "2026-02-25T21:41:09.208190+00:00",
       "downloaded_at": "2026-02-25T17:16:11.073021+00:00",
       "sha256": "ad2748a4a57a66e9e5733c844e8c1b69a530d598e614cbfa29cf752a682ccaae"
     },
@@ -1410,7 +1410,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:11.228907+00:00",
+      "last_seen": "2026-02-25T21:41:09.240641+00:00",
       "downloaded_at": "2026-02-25T17:16:11.421953+00:00",
       "sha256": "f6bb1012e6799fa25e9714d3907927cc90d2e8057ba5bdb26dd23ae3b20acf3e"
     },
@@ -1427,7 +1427,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:11.580885+00:00",
+      "last_seen": "2026-02-25T21:41:09.272907+00:00",
       "downloaded_at": "2026-02-25T17:16:11.616994+00:00",
       "sha256": "53b5884c63795c7cc933ea9df3380964956672a8268ac658db31bb860b08f70d"
     },
@@ -1444,7 +1444,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:11.773764+00:00",
+      "last_seen": "2026-02-25T21:41:09.304405+00:00",
       "downloaded_at": "2026-02-25T17:16:11.907949+00:00",
       "sha256": "4709e5307db39bcee9a4d4c876d87dbf84f2b33312a4fb4b472e93b07596eaad"
     },
@@ -1461,7 +1461,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:12.074819+00:00",
+      "last_seen": "2026-02-25T21:41:09.340569+00:00",
       "downloaded_at": "2026-02-25T17:16:13.049766+00:00",
       "sha256": "b20492d5a6fb436adc062c3464d80a6411f81aa59972e7de1616c4b7d28f533a"
     },
@@ -1478,7 +1478,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:13.213159+00:00",
+      "last_seen": "2026-02-25T21:41:09.373994+00:00",
       "downloaded_at": "2026-02-25T17:16:13.396096+00:00",
       "sha256": "6967585317ad2d02fe88b5d68f378681b22c5174623469efc01f4c25f4d4c1c9"
     },
@@ -1495,7 +1495,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:13.556121+00:00",
+      "last_seen": "2026-02-25T21:41:09.406792+00:00",
       "downloaded_at": "2026-02-25T17:16:13.814533+00:00",
       "sha256": "bb692a4c664c8ed77600c2716e8743207b1da6479b83c85f69e170f596936ce8"
     },
@@ -1512,7 +1512,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "last_seen": "2026-02-25T17:16:13.973358+00:00",
+      "last_seen": "2026-02-25T21:41:09.438409+00:00",
       "downloaded_at": "2026-02-25T17:16:14.080197+00:00",
       "sha256": "935952de275ce9b5a969bff967fe9b42ee1c5fc0bf9dee1b7ec34c69b48c6a09"
     },
@@ -1529,7 +1529,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:14.235328+00:00",
+      "last_seen": "2026-02-25T21:41:09.470057+00:00",
       "downloaded_at": "2026-02-25T17:16:14.296211+00:00",
       "sha256": "bb27df98cb8b2021b8922f7482c3fd645074e5ce83151e5ffc04aeb7425f073f"
     },
@@ -1546,7 +1546,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:14.454549+00:00",
+      "last_seen": "2026-02-25T21:41:09.503904+00:00",
       "downloaded_at": "2026-02-25T17:16:14.970451+00:00",
       "sha256": "f3c447d99ee677ffe35ff7c78394c1b079c3963cdb3c74496114f4842caa5e19"
     },
@@ -1563,7 +1563,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:15.126745+00:00",
+      "last_seen": "2026-02-25T21:41:09.622260+00:00",
       "downloaded_at": "2026-02-25T17:16:15.215099+00:00",
       "sha256": "1e0b5fddcc16d26402d73644f737bb757fd2d45b4255b2b99aaa51e772aa883a"
     },
@@ -1580,7 +1580,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:15.373375+00:00",
+      "last_seen": "2026-02-25T21:41:09.652854+00:00",
       "downloaded_at": "2026-02-25T17:16:15.449926+00:00",
       "sha256": "aa0ecdea9ad817cbe27b4f910bd906600037be5130b77a6edb2952ee74dd5d29"
     },
@@ -1597,7 +1597,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:15.605689+00:00",
+      "last_seen": "2026-02-25T21:41:09.685187+00:00",
       "downloaded_at": "2026-02-25T17:16:15.785779+00:00",
       "sha256": "9710ee014a4fa0891bd7b0b1f4b925d0959a2cbec90c4b4b7116ad5db2877b4b"
     },
@@ -1614,7 +1614,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:15.943419+00:00",
+      "last_seen": "2026-02-25T21:41:09.719028+00:00",
       "downloaded_at": "2026-02-25T17:16:16.063414+00:00",
       "sha256": "00a78e4f89aa58ca8ed7a59e8d1ad83ed85d601a360445e586426d261e6cf1fa"
     },
@@ -1631,7 +1631,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/msword",
-      "last_seen": "2026-02-25T17:16:16.219002+00:00",
+      "last_seen": "2026-02-25T21:41:09.751019+00:00",
       "downloaded_at": "2026-02-25T17:16:16.255880+00:00",
       "sha256": "fd2f8dc15b6585f78cccf9c032de1b70936a078c5e2a9162f9d052c9ff47fd8e"
     },
@@ -1648,7 +1648,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:16.481863+00:00",
+      "last_seen": "2026-02-25T21:41:09.784713+00:00",
       "downloaded_at": "2026-02-25T17:16:16.548345+00:00",
       "sha256": "7c239b3817ef43f4cb50e4aae77d13a78b6088edb13318480be5c56459e8f517"
     },
@@ -1665,7 +1665,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:16.701874+00:00",
+      "last_seen": "2026-02-25T21:41:09.817906+00:00",
       "downloaded_at": "2026-02-25T17:16:16.840624+00:00",
       "sha256": "9710ee014a4fa0891bd7b0b1f4b925d0959a2cbec90c4b4b7116ad5db2877b4b"
     },
@@ -1682,7 +1682,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:16.994825+00:00",
+      "last_seen": "2026-02-25T21:41:09.853286+00:00",
       "downloaded_at": "2026-02-25T17:16:17.238580+00:00",
       "sha256": "26b8a2521e8e62348d63afc0496a82291539168cc24a99da9c97b915e1c4e41b"
     },
@@ -1699,7 +1699,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:17.394240+00:00",
+      "last_seen": "2026-02-25T21:41:09.888413+00:00",
       "downloaded_at": "2026-02-25T17:16:17.542697+00:00",
       "sha256": "e7bbae3a3ad34226b9dc50c679ffa1db57981b4b5ea3d93f1f9aa8efd13cf579"
     },
@@ -1716,7 +1716,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:17.700435+00:00",
+      "last_seen": "2026-02-25T21:41:09.920999+00:00",
       "downloaded_at": "2026-02-25T17:16:18.079624+00:00",
       "sha256": "a3005f03c01f8d5c03d86f527f5580d32fb1db6c1c4945d1954b358ec38616ca"
     },
@@ -1733,7 +1733,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:18.235138+00:00",
+      "last_seen": "2026-02-25T21:41:09.953302+00:00",
       "downloaded_at": "2026-02-25T17:16:18.268607+00:00",
       "sha256": "53b5884c63795c7cc933ea9df3380964956672a8268ac658db31bb860b08f70d"
     },
@@ -1750,7 +1750,7 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
-      "last_seen": "2026-02-25T17:16:18.423478+00:00",
+      "last_seen": "2026-02-25T21:41:09.988271+00:00",
       "downloaded_at": "2026-02-25T17:16:18.505038+00:00",
       "sha256": "7c1a4f17ec96f6f1113db18b8d8f4f79a33f4651028bb602c266c0682b321655"
     }

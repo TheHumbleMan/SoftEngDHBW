@@ -312,7 +312,7 @@ def crawl_all_documents(session: requests.Session, start_url: str) -> Tuple[List
 			continue
 
 		visited.add(page_url)
-		print(f"Analysiere Seite {len(visited)}: {page_url}")
+		#print(f"Analysiere Seite {len(visited)}: {page_url}")
 
 		try:
 			html = fetch_page_html(session, page_url)
@@ -470,8 +470,8 @@ def verify_coverage(expected_keys: Set[str], metadata_docs: Iterable[Dict]) -> T
 
 
 def main() -> int:
-	print("DHBW Dokumente-Scraper (inkrementell)")
-	print(f"Start: {now_iso()}")
+	print("DHBW Dokumente-Scraper")
+	print(f"Startzeitpunkt: {now_iso()}")
 
 	DOCUMENTS_DIR.mkdir(parents=True, exist_ok=True)
 	session = build_session()
@@ -592,9 +592,7 @@ def main() -> int:
 	for doc in source_documents:
 		category_counts[doc.category_top] = category_counts.get(doc.category_top, 0) + 1
 
-	print("\n" + "=" * 70)
-	print("Zusammenfassung")
-	print("=" * 70)
+	print("\nZusammenfassung:\n")
 	print(f"Erwartete Dokument-Einträge: {len(expected_keys)}")
 	print(f"Metadaten-Einträge: {len(processed_docs)}")
 	print(f"Neu: {stats['new']}")

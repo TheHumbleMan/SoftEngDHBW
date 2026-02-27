@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import request from 'supertest';
-import { app } from '../server.js'; // Passe den Pfad an, falls deine Datei anders heißt
+import { app } from '../server.js'; 
 
 // 1. Scraper-Funktionen mocken, damit keine echten Web-Requests passieren
 vi.mock('../scripts/dhbwAPP_scraper.js', () => ({
@@ -30,10 +30,9 @@ describe('Express Server API & Routes', () => {
         });
 
         it('should render the login page on GET /auth/login', async () => {
-            // Hinweis: Da wir views mocken müssten oder ejs parsen, prüfen wir nur auf Status 200.
             const res = await request(app).get('/auth/login');
             expect(res.status).toBe(200);
-            expect(res.text).toContain('<html'); // Annahme, dass HTML gerendert wird
+            expect(res.text).toContain('<html'); 
         });
 
         it('should redirect protected routes (e.g., /dashboard) to login', async () => {
@@ -146,12 +145,11 @@ describe('Express Server API & Routes', () => {
             expect(res.status).toBe(302);
             expect(res.header.location).toBe('/auth/login?success=logout');
 
-            // 2. Testen, ob wir mit dem alten Cookie noch reinkommen
+            // 2. alten cookie testen
             const verifyRes = await request(app)
                 .get('/dashboard')
-                .set('Cookie', sessionCookie); // Wir nutzen hier das alte Cookie
+                .set('Cookie', sessionCookie); // alten cookie nutzen
             
-            // 3. Da die Session serverseitig gelöscht ist, sollten wir zum Login fliegen
             expect(verifyRes.status).toBe(302);
             expect(verifyRes.header.location).toBe('/auth/login?error=session');
         });

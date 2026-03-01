@@ -1,74 +1,122 @@
 [
   {
-    "datum": "Mo. 02.02.",
+    "datum": "Mo. 23.02.",
     "gerichte": [
       {
         "kategorie": "Menü I",
-        "name": "Hackbällchen mit Tomatensauce und Petersilienkartoffeln dazu Waldfruchtpudding",
+        "name": "Hackbällchen mit Basilikumsauce und Pasta dazu Grießpudding",
         "allergene": [
           "25a",
           "28",
           "31",
           "34",
+          "1",
+          "8",
           "33"
         ],
         "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
       },
       {
         "kategorie": "Menü II",
-        "name": "drei Gemüsefrikadellen mit Tomatensauce und Petersilienkartoffeln dazu Waldfruchtpudding",
+        "name": "drei Gemüsefrikadellen mit Basilikumsauce und Pasta dazu Grießpudding",
         "allergene": [
           "25a",
           "28",
+          "1",
+          "8",
+          "31",
+          "33",
+          "34"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Di. 24.02.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Currywurst mit Sauce und Kartoffeln dazu Blattsalat",
+        "allergene": [
+          "2",
+          "3"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "Quarkstrudel mit gelbe Grütze dazu Blattsalat",
+        "allergene": [
+          "25a",
+          "28",
+          "31"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Mi. 25.02.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Geflügel Kebab mit Tzatziki , Rotkohl-Rote Beete Salat und Kräuterreis dazu Karamellpudding",
+        "allergene": [
+          "31",
+          "9"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "vier Kartoffeltaschen mit Frischkäse gefüllt , Tzatziki und Rotkohl-Rote Beete Salat dazu Karamellpudding",
+        "allergene": [
+          "31",
+          "9"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Fr. 27.02.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Rindfleisch-Maultaschen mit Gemüsebrühe mit Kartoffelsalat dazu Salat oder Dessert",
+        "allergene": [
+          "25a",
+          "25e",
+          "28",
+          "33",
+          "34"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "fünf Maultaschen mit Gemüsebrühe und Kartoffelsalat | dazu Salat oder Dessert",
+        "allergene": [
+          "25a",
+          "33",
+          "34"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Mo. 02.03.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Chili con Carne mit Reis und Kirschjoghurt",
+        "allergene": [
+          "2",
+          "25c",
           "33",
           "34",
-          "31"
-        ],
-        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
-      }
-    ]
-  },
-  {
-    "datum": "Di. 03.02.",
-    "gerichte": [
-      {
-        "kategorie": "Menü I",
-        "name": "Schweineschnitzel mit Kräutersauce und Pasta dazu Blattsalat",
-        "allergene": [
-          "25a",
-          "28",
-          "8",
-          "31",
-          "33",
-          "34"
-        ],
-        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
-      },
-      {
-        "kategorie": "Menü II",
-        "name": "Pasta mit Gemüsepfanne und Kräutersauce dazu Blattsalat",
-        "allergene": [
-          "25a",
-          "8",
-          "31",
-          "33",
-          "34"
-        ],
-        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
-      }
-    ]
-  },
-  {
-    "datum": "Mi. 04.02.",
-    "gerichte": [
-      {
-        "kategorie": "Menü I",
-        "name": "Rinderbraten mit Perlzwiebeln-Bratensauce und Semmelknödel dazu Kirschjoghurt",
-        "allergene": [
-          "3",
-          "36",
-          "25a",
-          "28",
           "1",
           "31"
         ],
@@ -76,10 +124,9 @@
       },
       {
         "kategorie": "Menü II",
-        "name": "Krautschupfnudeln mit Kirschjoghurt",
+        "name": "Chili sin Carne mit Reis und Kirschjoghurt",
         "allergene": [
-          "3",
-          "25a",
+          "25c",
           "1",
           "31"
         ],
@@ -88,178 +135,117 @@
     ]
   },
   {
-    "datum": "Fr. 06.02.",
+    "datum": "Di. 03.03.",
     "gerichte": [
       {
         "kategorie": "Menü I",
-        "name": "Geflügel Kebab mit Grillpanini und Hirtensalat dazu Dessert",
+        "name": "Hackbraten mit Schnittlauchsauce dazu Kartoffelpüree und Blattsalat",
         "allergene": [
-          "3",
-          "25a",
-          "Tomate",
-          "Gurke",
-          "Feta",
-          "6",
-          "31",
-          "36"
-        ],
-        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
-      },
-      {
-        "kategorie": "Menü II",
-        "name": "Apfelstrudel mit Vanillasauce dazu Salat oder Dessert",
-        "allergene": [
-          "1",
           "2",
           "3",
           "25a",
-          "30",
-          "31"
-        ],
-        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
-      }
-    ]
-  },
-  {
-    "datum": "Mo. 09.02.",
-    "gerichte": [
-      {
-        "kategorie": "Menü I",
-        "name": "Schweinebraten mit Zwiebelsauce und Kartoffeln dazu Kompott",
-        "allergene": [
+          "28",
+          "33",
+          "34",
           "8",
-          "34",
-          "1",
-          "3"
-        ],
-        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
-      },
-      {
-        "kategorie": "Menü II",
-        "name": "fünf Kartoffeltaschen mit Frischkäse gefüllt und Zwiebelsauce dazu Kompott",
-        "allergene": [
-          "31",
-          "34",
-          "1",
-          "3"
-        ],
-        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
-      }
-    ]
-  },
-  {
-    "datum": "Di. 10.02.",
-    "gerichte": [
-      {
-        "kategorie": "Menü I",
-        "name": "Paniertes Hähnchenschnitzel mit Paprikasauce und Spätzle dazu Vanillejoghurt",
-        "allergene": [
-          "25a",
-          "9",
-          "25d",
-          "28",
-          "1",
           "31"
         ],
         "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
       },
       {
         "kategorie": "Menü II",
-        "name": "Spätzle mit Linsenbolognese dazu Vanillejoghurt",
+        "name": "Tortelloni mit Schnittlauchsauce und geriebener Hartkäse dazu Blattsalat",
+        "allergene": [
+          "Paprika",
+          "Tomate",
+          "Zucchini",
+          "25a",
+          "8",
+          "31",
+          "33",
+          "34"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Mi. 04.03.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Piccata von der Hähnchenbrust mit Tomaten-Bärlauchsauce und Pasta dazu Pudding mit Vanillegeschmack",
         "allergene": [
           "25a",
-          "25d",
-          "28",
+          "31"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "zwei Green Oat Bratlinge mit Penne und Tomaten-Bärlauchsauce dazu Pudding mit Vanillegeschmack",
+        "allergene": [
+          "25a",
+          "25e",
+          "31"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Do. 05.03.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Schwäbisches Linsengericht mit Wiener und Spätzle dazu Blattsalat",
+        "allergene": [
+          "2",
           "3",
           "33",
           "34",
-          "1",
-          "31"
-        ],
-        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
-      }
-    ]
-  },
-  {
-    "datum": "Mi. 11.02.",
-    "gerichte": [
-      {
-        "kategorie": "Menü I",
-        "name": "Hacksteak mit Käsefüllung mit Ajvar Dip und Gemüsereis dazu Blattsalat",
-        "allergene": [
-          "25a",
-          "28",
-          "31",
-          "Karotten",
-          "Erbsen",
-          "Mais"
-        ],
-        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
-      },
-      {
-        "kategorie": "Menü II",
-        "name": "Paprikaschote mit Gemüsefüllung , Ajvar Dip und Gemüsereis dazu Blattsalat",
-        "allergene": [
-          "25a",
-          "33",
-          "34",
-          "Karotten",
-          "Erbsen",
-          "Mais"
-        ],
-        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
-      }
-    ]
-  },
-  {
-    "datum": "Do. 12.02.",
-    "gerichte": [
-      {
-        "kategorie": "Menü I",
-        "name": "Pasta mit Sauce \"Bolognese\" vom Schwein und geriebener Hartkäse dazu Blattsalat",
-        "allergene": [
-          "25a",
-          "33",
-          "34",
-          "31"
-        ],
-        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
-      },
-      {
-        "kategorie": "Menü II",
-        "name": "Pasta mit pflanzlicher Sauce Bolognese und geriebener Hartkäse dazu Blattsalat",
-        "allergene": [
-          "25a",
-          "19",
-          "25c",
-          "33",
           "36",
-          "31"
+          "25a",
+          "25d",
+          "28"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "Linsengemüsetopf mit Spätzle dazu Blattsalat",
+        "allergene": [
+          "3",
+          "33",
+          "34",
+          "36",
+          "25a",
+          "25d",
+          "28"
         ],
         "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
       }
     ]
   },
   {
-    "datum": "Fr. 13.02.",
+    "datum": "Fr. 06.03.",
     "gerichte": [
       {
         "kategorie": "Menü I",
-        "name": "Backfisch mit Remouladensauce und Kartoffelsalat dazu Salat oder Dessert",
+        "name": "Backfisch mit Remouladensauce und Petersilienkartoffeln dazu Salat oder Dessert",
         "allergene": [
           "25a",
           "26",
           "31",
           "1",
           "9",
-          "34",
-          "33"
+          "34"
         ],
         "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
       },
       {
         "kategorie": "Menü II",
-        "name": "Kaiserschmarrn mit Vanillasauce dazu Salat oder Dessert",
+        "name": "Kaiserschmarrn mit Pflaumenkompott dazu Salat oder Dessert",
         "allergene": [
           "25a",
           "28",

@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import fs from 'fs';
 import { scrapeDhbwApp } from './scripts/dhbwAPP_scraper.js';
 import { scrapeSeezeitAll } from './scripts/seezeit_mensa_scraper.js';
+import { scrapeDhbwKontakte } from './scripts/dhbw_contact_scraper.js';
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -165,6 +166,11 @@ app.post('/auth/login', async (req, res) => {
         }).catch(err => {
     console.error('Mensa-Update nach Login fehlgeschlagen:', err.message);  
     });
+
+    scrapeDhbwKontakte({
+    kursName: courseCode, // z.B. "TIT23"
+    outputDir: path.join(__dirname, 'data/kontakte')
+    }).catch(err => console.error("Kontakt-Update fehlgeschlagen:", err.message));
 
     return res.json({ success: true, redirect: '/dashboard' });
 });

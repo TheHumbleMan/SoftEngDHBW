@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node server.js",
     "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "ejs": "^3.1.10",

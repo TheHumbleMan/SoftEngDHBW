@@ -1,0 +1,24 @@
+<main class="documents-view">
+    <h2 class="active-card-title">Dokumente</h2>
+    <p>Alle verfügbaren Dokumente mit Beschreibung und Download.</p>
+
+    <div class="documents-toolbar">
+        <label for="documents-search" class="documents-search-label">Suche</label>
+        <input
+            id="documents-search"
+            type="search"
+            class="documents-search-input"
+            data-documents-search
+            placeholder="Titel, Beschreibung, Kategorie..."
+            autocomplete="off"
+        >
+        <div class="documents-toolbar-actions">
+            <button type="button" class="action-btn" data-documents-toggle>Alle aufklappen</button>
+        </div>
+        <p class="documents-result-count" data-documents-count></p>
+    </div>
+
+    <div class="documents-panel" data-documents-root>
+        <p class="documents-loading">Dokumente werden geladen...</p>
+    </div>
+</main>

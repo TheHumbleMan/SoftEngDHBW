@@ -28,6 +28,12 @@
 
         <div class="dashboard-grid">
 
+            <button class="dashboard-card" data-content="kacheln/documents.html">
+                <h2 class="card-title">Dokumente</h2>
+                <p class="card-description">Auflistung wichtiger Dokumente mit Download</p>
+                <div class="detail-content"></div>
+            </button>
+
             <!-- Studenten Kachel - nur für Studenten sichtbar -->
             <% if (currentUser && currentUser.role === 'student') { %>
             <button id=timetable class="dashboard-card" data-content="kacheln/timetable.html">
@@ -40,13 +46,6 @@
                 <h2 class="card-title">Kantine</h2>
                 <p class="card-description">Das Menü von der Seezeit-Kantine</p>
                 <div class="detail-content"></div>
-            </button>
-
-            <button class="dashboard-card" data-content="kacheln/dummy.html">
-                <h2 class="card-title">Dokumente</h2>
-                <p class="card-description">Auflistung wichtiger Dokumente</p>
-                <div class="detail-content">
-                </div>
             </button>
 
             <button class="dashboard-card" data-content="kacheln/dummy.html">
@@ -76,14 +75,6 @@
 
             <!-- Partner Kachel - nur für Duale Partner sichtbar -->
             <% if (currentUser && currentUser.role === 'partner') { %>
-
-
-            <button class="dashboard-card" data-content="kacheln/partner.html">
-                <h2 class="card-title">Dokumente</h2>
-                <p class="card-description">Auflistung wichtiger Dokumente</p>
-                <div class="detail-content">
-                </div>
-            </button>
 
             <button class="dashboard-card" data-content="kacheln/partner.html">
                 <h2 class="card-title">Ansprechpartner</h2>

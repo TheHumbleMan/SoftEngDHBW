@@ -94,6 +94,23 @@ function getCurrentUserFromSession(req) {
     };
 }
 
+function normalizeLocalPath(value) {
+    return String(value || '').replace(/\\/g, '/').replace(/^\/+/, '');
+}
+
+function walkFiles(dir, allFiles = []) {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+            walkFiles(fullPath, allFiles);
+        } else {
+            allFiles.push(fullPath);
+        }
+    }
+    return allFiles;
+}
+
 // Authentication routes
 app.get('/', async (req, res) => {
     if (req.session.authenticated) {
@@ -183,6 +200,51 @@ app.get('/api/session', (req, res) => {
     });
 });
 
+app.get('/api/documents', requireLogin, (req, res) => {
+    try {
+        const metadataPath = path.join(__dirname, 'data', 'dokumente_metadata.json');
+        const documentsRoot = path.join(__dirname, 'data', 'documents');
+
+        const metadata = fs.existsSync(metadataPath)
+            ? JSON.parse(fs.readFileSync(metadataPath, 'utf8'))
+            : { documents: [] };
+
+        const metadataDocuments = Array.isArray(metadata.documents) ? metadata.documents : [];
+        const metadataByPath = new Map(
+            metadataDocuments.map(doc => [normalizeLocalPath(doc.local_path), doc])
+        );
+
+        const filePaths = fs.existsSync(documentsRoot) ? walkFiles(documentsRoot) : [];
+
+        const documents = filePaths.map(filePath => {
+            const relativeFromDocumentsRoot = normalizeLocalPath(path.relative(documentsRoot, filePath));
+            const localPath = normalizeLocalPath(path.join('documents', relativeFromDocumentsRoot));
+            const matchingMetadata = metadataByPath.get(localPath);
+            const categoryFromPath = normalizeLocalPath(path.dirname(relativeFromDocumentsRoot));
+
+            return {
+                category: matchingMetadata?.category || (categoryFromPath === '.' ? 'Allgemein' : categoryFromPath),
+                filename: matchingMetadata?.filename || path.basename(filePath),
+                title: matchingMetadata?.title || path.basename(filePath),
+                description: matchingMetadata?.description || '',
+                local_path: matchingMetadata?.local_path || localPath
+            };
+        });
+
+        res.json({
+            documents,
+            total: documents.length,
+            metadata_total: metadataDocuments.length
+        });
+    } catch (error) {
+        console.error('Fehler beim Erstellen der Dokumentliste:', error);
+        res.status(500).json({
+            error: 'documents-load-failed',
+            message: 'Dokumentliste konnte nicht erstellt werden.'
+        });
+    }
+});
+
 app.get('/auth/logout', (req, res) => {
     req.session.destroy(() => {
         res.redirect('/auth/login?success=logout');
@@ -252,6 +314,10 @@ app.get('/kacheln/timetable.html', requireLogin, (req, res) => {
 
 app.get('/kacheln/mensa.html', requireLogin, (req, res) => {
     res.render('kacheln/mensa.html');
+});
+
+app.get('/kacheln/documents.html', requireLogin, (req, res) => {
+    res.render('kacheln/documents.html');
 });
 
 app.get('/scrape-dhbw', requireLogin, async (req, res) => {

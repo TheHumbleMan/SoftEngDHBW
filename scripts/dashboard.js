@@ -74,6 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                         module.renderInitialMenu();
                                     });
                                 }
+                                if (contentUrl === "kacheln/documents.html") {
+                                    import("./documents.js").then(module => {
+                                        module.initDocuments(detailContent);
+                                    });
+                                }
                             })
                             .catch(err => {
                                 // Bei einem Fehler, zeige eine Fehlermeldung an

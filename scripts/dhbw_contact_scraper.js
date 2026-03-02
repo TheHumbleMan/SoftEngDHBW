@@ -5,7 +5,6 @@ import path from "path";
 
 /**
  * Scrapt Kontaktpersonen basierend auf einem Suchbegriff (Kurs)
- * @param {string} kursName - Der Kursname aus der Session (z.B. "WWI2023")
  * @param {string} outputDir - Speicherort für die JSON
  */
 async function scrapeDhbwKontakte({ kursName, outputDir }) {
@@ -22,25 +21,6 @@ async function scrapeDhbwKontakte({ kursName, outputDir }) {
 
     const BASE_URL = "https://www.ravensburg.dhbw.de/dhbw-ravensburg/ansprechpersonen";
     await driver.get(BASE_URL);
-
-    // 1. Suche nach dem Kurs im Kontakt-Filter
-    // Das Suchfeld auf der DHBW Seite hat meist dieses Name-Attribut
-    const searchInputSelector = "input[name='tx_dhbw_contacts[search]']";
-    
-    try {
-      const searchBox = await driver.wait(
-        until.elementLocated(By.css(searchInputSelector)),
-        10000
-      );
-      
-      console.log(`Filtere Kontakte nach: ${kursName}...`);
-      await searchBox.sendKeys(kursName, Key.RETURN);
-      
-      // Kurze Pause für das AJAX-Update der Liste
-      await driver.sleep(2000); 
-    } catch (e) {
-      console.warn("Suchfeld nicht gefunden, fahre mit Gesamtlise fort.");
-    }
 
     // 2. Warten bis Personen-Elemente geladen sind
     const personenSelector = "div.person";
@@ -72,7 +52,7 @@ async function scrapeDhbwKontakte({ kursName, outputDir }) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
-    const fileName = `kontakte_${kursName.replace(/[^a-z0-9]/gi, '_')}.json`;
+    const fileName = `kontakte.json`;
     const filePath = path.join(outputDir, fileName);
     
     fs.writeFileSync(filePath, JSON.stringify(kontakte, null, 2), "utf-8");

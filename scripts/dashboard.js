@@ -69,6 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                         module.renderSelectedWeek(await loadCourse());
                                     });
                                 }
+                                else if (contentUrl === "kacheln/opnv.html") { 
+                                    import("./opnv.js").then(module => {
+                                        module.initDateTimeFields();
+                                    });
+                                }
                             })
                             .catch(err => {
                                 // Bei einem Fehler, zeige eine Fehlermeldung an

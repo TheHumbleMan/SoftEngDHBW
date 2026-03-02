@@ -1,11 +1,127 @@
 [
   {
+<<<<<<< HEAD
     "datum": "Mo. 02.03.",
     "gerichte": [
       {
         "kategorie": "Menü I",
         "name": "Chili con Carne mit Reis und Kirschjoghurt",
         "allergene": [
+=======
+    "datum": "Mo. 23.02.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Hackbällchen mit Basilikumsauce und Pasta dazu Grießpudding",
+        "allergene": [
+          "25a",
+          "28",
+          "31",
+          "34",
+          "1",
+          "8",
+          "33"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "drei Gemüsefrikadellen mit Basilikumsauce und Pasta dazu Grießpudding",
+        "allergene": [
+          "25a",
+          "28",
+          "1",
+          "8",
+          "31",
+          "33",
+          "34"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Di. 24.02.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Currywurst mit Sauce und Kartoffeln dazu Blattsalat",
+        "allergene": [
+          "2",
+          "3"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "Quarkstrudel mit gelbe Grütze dazu Blattsalat",
+        "allergene": [
+          "25a",
+          "28",
+          "31"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Mi. 25.02.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Geflügel Kebab mit Tzatziki , Rotkohl-Rote Beete Salat und Kräuterreis dazu Karamellpudding",
+        "allergene": [
+          "31",
+          "9"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "vier Kartoffeltaschen mit Frischkäse gefüllt , Tzatziki und Rotkohl-Rote Beete Salat dazu Karamellpudding",
+        "allergene": [
+          "31",
+          "9"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Fr. 27.02.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Rindfleisch-Maultaschen mit Gemüsebrühe mit Kartoffelsalat dazu Salat oder Dessert",
+        "allergene": [
+          "25a",
+          "25e",
+          "28",
+          "33",
+          "34"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "fünf Maultaschen mit Gemüsebrühe und Kartoffelsalat | dazu Salat oder Dessert",
+        "allergene": [
+          "25a",
+          "33",
+          "34"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Mo. 02.03.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Chili con Carne mit Reis und Kirschjoghurt",
+        "allergene": [
+>>>>>>> origin/main
           "2",
           "25c",
           "33",
@@ -133,6 +249,7 @@
           "1",
           "9",
           "34"
+<<<<<<< HEAD
         ],
         "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
       },
@@ -276,12 +393,18 @@
           "25a",
           "31",
           "33"
+=======
+>>>>>>> origin/main
         ],
         "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 8,70 € Gäste"
       },
       {
         "kategorie": "Menü II",
+<<<<<<< HEAD
         "name": "Pizza mit Tomate und Mozzarella dazu Salat oder Dessert",
+=======
+        "name": "Kaiserschmarrn mit Pflaumenkompott dazu Salat oder Dessert",
+>>>>>>> origin/main
         "allergene": [
           "25a",
           "31"

@@ -14,6 +14,7 @@ from urllib.parse import urljoin, urlparse
 import time
 import re
 
+
 import pdb
 
 # Base URL for the documents page
@@ -113,7 +114,7 @@ def normalize_top_category(heading_text):
         return "Dokumente der Fakultät Technik"
     
     # Wirtschaft sections - multiple patterns  
-    if any(pattern in text for pattern in ["studienbereich wirtschaft", "fakulät wirtschaft"]):
+    if any(pattern in text for pattern in ["studienbereich wirtschaft", "fakultät wirtschaft"]):
         return "Dokumente der Fakultät Wirtschaft"
     
     # Sections that clearly belong to "Broschüren & Berichte"
@@ -515,3 +516,4 @@ if __name__ == "__main__":
         print(f"\n\nError: {e}")
         import traceback
         traceback.print_exc()
+

@@ -250,6 +250,10 @@ app.get('/kacheln/timetable.html', requireLogin, (req, res) => {
     res.render('kacheln/timetable.html');
 });
 
+app.get('/kacheln/opnv.html', requireLogin, (req, res) => {
+    res.render('kacheln/opnv.html');
+});
+
 app.get('/scrape-dhbw', requireLogin, async (req, res) => {
     try {
         console.log("/scrape-dhbw aufgerufen", {
@@ -297,3 +301,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server läuft auf Port ${PORT}`);
 });
+
+export { app };

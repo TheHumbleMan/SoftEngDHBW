@@ -15,6 +15,8 @@ import hashlib
 import json
 import os
 import re
+import subprocess
+import sys
 import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -444,21 +446,27 @@ def should_redownload(doc: SourceDocument, old: Optional[Dict], local_path: Path
 	return False
 
 
-def remove_deleted_documents(old_by_key: Dict[str, Dict], current_keys: Set[str]) -> int:
+def remove_deleted_documents(
+	old_by_key: Dict[str, Dict],
+	current_keys: Set[str],
+	current_local_paths: Set[str],
+) -> int:
 	removed = 0
 	for key, old in old_by_key.items():
 		if key in current_keys:
 			continue
 
 		local_rel = old.get("local_path", "")
-		if local_rel:
-			file_path = DATA_DIR / local_rel
-			if file_path.exists() and file_path.is_file():
-				try:
-					file_path.unlink()
-					removed += 1
-				except Exception as exc:
-					print(f"Warnung: Konnte entfernte Datei nicht löschen ({file_path}): {exc}")
+		if not local_rel or local_rel in current_local_paths:
+			continue
+
+		file_path = DATA_DIR / local_rel
+		if file_path.exists() and file_path.is_file():
+			try:
+				file_path.unlink()
+				removed += 1
+			except Exception as exc:
+				print(f"Warnung: Konnte entfernte Datei nicht löschen ({file_path}): {exc}")
 	return removed
 
 
@@ -467,6 +475,57 @@ def verify_coverage(expected_keys: Set[str], metadata_docs: Iterable[Dict]) -> T
 	missing = expected_keys - actual_keys
 	extra = actual_keys - expected_keys
 	return missing, extra
+
+
+def send_telegram_message(message: str) -> bool:
+	telegram_script = SCRIPT_DIR / "telegram_messenger.py"
+	if not telegram_script.exists():
+		print(f"Warnung: Telegram-Skript nicht gefunden: {telegram_script}")
+		return False
+
+	try:
+		result = subprocess.run(
+			[sys.executable, str(telegram_script), message],
+			capture_output=True,
+			text=True,
+			check=False,
+		)
+	except Exception as exc:
+		print(f"Warnung: Telegram-Benachrichtigung konnte nicht gesendet werden: {exc}")
+		return False
+
+	if result.returncode != 0:
+		stderr = (result.stderr or "").strip()
+		stdout = (result.stdout or "").strip()
+		error_text = stderr or stdout or f"Exit-Code {result.returncode}"
+		print(f"Warnung: Telegram-Benachrichtigung fehlgeschlagen: {error_text}")
+		return False
+
+	return True
+
+
+def send_new_without_description_notification(items: List[Dict[str, str]]) -> bool:
+	if not items:
+		return True
+
+	max_list_items = 50
+	lines = [
+		"Neue Dokumente ohne Beschreibung wurden hinzugefügt:",
+		"",
+	]
+
+	for item in items[:max_list_items]:
+		title = item.get("title", "(ohne Titel)")
+		local_path = item.get("local_path", "(ohne Pfad)")
+		lines.append(f"- {title} | {local_path}")
+
+	remaining = len(items) - max_list_items
+	if remaining > 0:
+		lines.append("")
+		lines.append(f"... und {remaining} weitere")
+
+	message = "\n".join(lines)
+	return send_telegram_message(message)
 
 
 def main() -> int:
@@ -502,13 +561,14 @@ def main() -> int:
 
 	used_paths: Set[str] = {
 		str(entry.get("local_path"))
-		for entry in old_by_key.values()
-		if entry.get("local_path")
+		for key, entry in old_by_key.items()
+		if key in expected_keys and entry.get("local_path")
 	}
 
 	processed_docs: List[Dict] = []
 	stats = {
 		"new": 0,
+		"new_without_description": 0,
 		"updated": 0,
 		"unchanged": 0,
 		"failed": 0,
@@ -516,6 +576,7 @@ def main() -> int:
 		"downloaded": 0,
 	}
 	failed_urls: List[str] = []
+	new_docs_without_description: List[Dict[str, str]] = []
 
 	for index, doc in enumerate(source_documents, start=1):
 		old = old_by_key.get(doc.entry_key)
@@ -566,6 +627,12 @@ def main() -> int:
 
 		if old is None:
 			stats["new"] += 1
+			if not doc.description.strip():
+				stats["new_without_description"] += 1
+				new_docs_without_description.append({
+					"title": doc.title,
+					"local_path": str(relative_path),
+				})
 			print(f"[{index}/{len(source_documents)}] Neu: {doc.title}")
 		else:
 			stats["updated"] += 1
@@ -576,7 +643,12 @@ def main() -> int:
 		time.sleep(REQUEST_DELAY_SECONDS)
 
 	current_keys = {entry["entry_key"] for entry in processed_docs}
-	stats["removed"] = remove_deleted_documents(old_by_key, current_keys)
+	current_local_paths = {
+		entry.get("local_path", "")
+		for entry in processed_docs
+		if entry.get("local_path")
+	}
+	stats["removed"] = remove_deleted_documents(old_by_key, current_keys, current_local_paths)
 
 	new_metadata = {
 		"updated_at": now_iso(),
@@ -596,6 +668,7 @@ def main() -> int:
 	print(f"Erwartete Dokument-Einträge: {len(expected_keys)}")
 	print(f"Metadaten-Einträge: {len(processed_docs)}")
 	print(f"Neu: {stats['new']}")
+	print(f"Neu ohne Beschreibung: {stats['new_without_description']}")
 	print(f"Aktualisiert: {stats['updated']}")
 	print(f"Unverändert: {stats['unchanged']}")
 	print(f"Heruntergeladen: {stats['downloaded']}")
@@ -623,6 +696,13 @@ def main() -> int:
 		print("\nZusätzliche Eintrags-Keys in Metadaten (erste 20):")
 		for entry_key in sorted(list(extra))[:20]:
 			print(f"- {entry_key}")
+
+	if new_docs_without_description:
+		notification_ok = send_new_without_description_notification(new_docs_without_description)
+		if notification_ok:
+			print("\nTelegram-Benachrichtigung gesendet: Neue Dokumente ohne Beschreibung")
+		else:
+			print("\nWarnung: Telegram-Benachrichtigung für neue Dokumente ohne Beschreibung fehlgeschlagen")
 
 	print(f"\nMetadaten: {METADATA_FILE}")
 	print(f"Dateien: {DOCUMENTS_DIR}")

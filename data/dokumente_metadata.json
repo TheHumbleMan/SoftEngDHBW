@@ -1,6 +1,33 @@
 {
+  "timestamp": "2026-03-02T15:17:54.252786",
   "updated_at": "2026-03-03T11:01:22.818118+00:00",
   "source": "https://www.ravensburg.dhbw.de/service-einrichtungen/dokumente-downloads",
+  "categories": [
+    "Broschüren & Berichte/DHBW Struktur- und Entwicklungsplan",
+    "Broschüren & Berichte/DHBW Leitlinien Praxisphasen",
+    "Dokumente der Fakultät Technik/Reflexion der Praxisphasen",
+    "Broschüren & Berichte/DHBW Flyer",
+    "Dokumente der Fakultät Technik/Vorlagen Projekt-, Studien- und Bachelorarbeit",
+    "Broschüren & Berichte/DHBW Infobroschüre",
+    "Duale Partner/DHBW Partnerlogo",
+    "Broschüren & Berichte",
+    "Bewerbung & Zulassung/Allgemeine Downloads",
+    "Dokumente der Fakultät Technik/Bewertung von Projekt-, Studien- und Bachelorarbeiten",
+    "Dokumente der Fakultät Wirtschaft/Handreichungen",
+    "Broschüren & Berichte/DHBW Jahresberichte",
+    "Dokumente der Fakultät Technik/Allgemeines der Fakultät Wirtschaft",
+    "Dokumente der Fakultät Technik/Allgemeines",
+    "Bewerbung & Zulassung/Immatrikulation von Studieninteressierten aus dem Ausland",
+    "Broschüren & Berichte/Nachgraduierung",
+    "Dokumente der Fakultät Technik",
+    "Bewerbung & Zulassung/Studienbereichsübergreifende Dokumente",
+    "Duale Partner/Vertraulichkeit von studentischen Arbeiten",
+    "Duale Partner/Allgemeine Downloads",
+    "Duale Partner/Studienverträge",
+    "Dokumente der Fakultät Technik/Handreichung zur Bearbeitungszeit von Bachelor- und Projektarbeiten",
+    "Dokumente der Fakultät Wirtschaft/Allgemeines",
+    "Broschüren & Berichte/DHBW Leitbild"
+  ],
   "document_count": 103,
   "documents": [
     {
@@ -618,6 +645,7 @@
     {
       "entry_key": "49376eb6af2846cbe7676fa276617bbab5575e3f",
       "url": "https://www.ravensburg.dhbw.de/fileadmin/user_upload/Dokumente/Immatrikulation/Auslaender/Antrag_Internationale_Studienbewerber.pdf",
+      "title": "Antrag auf Gleichwertigkeit ausländischer Bildungsnachweise(PDF, 168 KB)",
       "title": "Antrag auf Gleichwertigkeit ausländischer Bildungsnachweise",
       "description": "",
       "category_top": "Bewerbung & Zulassung",
@@ -628,6 +656,17 @@
       "last_modified": "",
       "etag": "",
       "content_type": "application/pdf",
+      "downloaded_at": "2026-02-06T16:09:09.600554",
+      "description_updated_at": "2026-02-06T16:09:09.600565"
+    },
+    {
+      "category": "Bewerbung & Zulassung/Immatrikulation von Studieninteressierten aus dem Ausland",
+      "filename": "Application_International_Applicants.pdf",
+      "url": "https://www.ravensburg.dhbw.de/fileadmin/user_upload/Dokumente/Immatrikulation/Auslaender/Application_International_Applicants.pdf",
+      "title": "Application for the Assessment of Foreign Academic Credentials(PDF, 233 KB)",
+      "description": "Antrag auf Feststellung der Gleichwertigkeit ausländischer Bildungsnachweise in englischer Sprache",
+      "local_path": "documents/Bewerbung & Zulassung/Immatrikulation von Studieninteressierten aus dem Ausland/Application_International_Applicants.pdf",
+      "file_size": 0,
       "last_seen": "2026-03-03T11:01:20.441512+00:00",
       "downloaded_at": "2026-02-25T17:15:51.356976+00:00",
       "sha256": "f67c336aa3ab12ba8d1f01e6caf75d2c474100a2886352863f309c5279354d7c"

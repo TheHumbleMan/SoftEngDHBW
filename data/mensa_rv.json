@@ -183,7 +183,7 @@
       },
       {
         "kategorie": "Gemüsebeilage",
-        "name": "Rosenkohl",
+        "name": "grüne Bohnen",
         "allergene": [],
         "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
       },
@@ -256,7 +256,7 @@
       },
       {
         "kategorie": "Gemüsebeilage",
-        "name": "Karotten",
+        "name": "grüne Bohnen",
         "allergene": [],
         "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
       },
@@ -322,11 +322,8 @@
       },
       {
         "kategorie": "Sättigungsbeilage",
-        "name": "Rahmkartoffel",
-        "allergene": [
-          "28",
-          "31"
-        ],
+        "name": "Reis",
+        "allergene": [],
         "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
       },
       {

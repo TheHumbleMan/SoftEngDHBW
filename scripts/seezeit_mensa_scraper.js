@@ -113,21 +113,21 @@ export async function scrapeSeezeitAll() {
             //Schleife über alle Standorte
         for (const standort of standorte) {
             try {
-                console.log(`Scrape ${standort.name}...`);
+                //console.log(`Scrape ${standort.name}...`);
                 const daten = await scrapeSeezeit(page, standort.url);
                 
                 // Als JSON-Datei speichern
                 fs.writeFileSync(standort.datei, JSON.stringify(daten, null, 2), 'utf-8');
                 
                 allData[standort.name] = daten;
-                console.log(`${standort.name} erfolgreich aktualisiert.`);
+                //console.log(`${standort.name} erfolgreich aktualisiert.`);
             } catch (error) {
-                console.error(`Fehler bei ${standort.name}:`, error.message);
+                //console.error(`Fehler bei ${standort.name}:`, error.message);
             }
         }
     } finally {
         await browser.close();
-        console.log("--- Mensa-Scraping beendet ---");
+        //console.log("--- Mensa-Scraping beendet ---");
     }
 
     return allData;

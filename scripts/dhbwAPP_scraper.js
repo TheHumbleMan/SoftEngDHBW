@@ -67,7 +67,6 @@ export const scrapeDhbwApp = async ({ sessionCourse, writeFile = true, outputDir
         });
 
         await scrollUntilLoaded(page);
-        console.log("Seite vollständig geladen");
 
         //Leitet alle console.logs aus der puppeteer seite an die Node Konsole weiter
         page.on("console", msg => {

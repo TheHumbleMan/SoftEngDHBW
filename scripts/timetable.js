@@ -169,6 +169,10 @@ export function initDates() {
 }
 
 export async function renderSelectedWeek(course) {
+    const timetableTitle = document.getElementById("timetable-title");
+    const weekNumber = getISOWeek(selectedMonday);
+    timetableTitle.textContent = `Stundenplan - KW ${weekNumber}`;
+
     const timetableContainer = document.getElementById("timetable-container");
     timetableContainer.innerHTML = createEmptyTimetableHTML();
     
@@ -199,6 +203,24 @@ export async function renderSelectedWeek(course) {
 }
 
 //---------------------------Sandbox----------------------------------------------------------
+
+//Kalenderwoche nach Datum berechnen
+function getISOWeek(date) {
+    const target = new Date(date.valueOf());
+    const dayNumber = (date.getDay() + 6) % 7; // Montag=0, Sonntag=6
+
+    // Zum Donnerstag dieser Woche gehen
+    target.setDate(target.getDate() - dayNumber + 3);
+
+    // 1. Januar des Jahres
+    const firstThursday = new Date(target.getFullYear(), 0, 4);
+
+    // Differenz in Tagen
+    const diff = (target - firstThursday) / (1000 * 60 * 60 * 24);
+
+    // Kalenderwoche berechnen
+    return 1 + Math.floor(diff / 7);
+}
 
 function timeToQuarterIndex(timeStr) {
     const [hours, minutes] = timeStr.split(".").map(Number);

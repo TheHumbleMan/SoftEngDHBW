@@ -254,6 +254,10 @@ app.get('/kacheln/opnv.html', requireLogin, (req, res) => {
     res.render('kacheln/opnv.html');
 });
 
+app.get('/kacheln/appointments.html', requireLogin, (req, res) => {
+    res.render('kacheln/appointments.html');
+});
+
 app.get('/scrape-dhbw', requireLogin, async (req, res) => {
     try {
         console.log("/scrape-dhbw aufgerufen", {

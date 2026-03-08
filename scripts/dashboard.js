@@ -74,6 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                         module.initDateTimeFields();
                                     });
                                 }
+                                else if (contentUrl === "kacheln/appointments.html") { 
+                                    import("./appointments.js").then(async module => {
+                                        module.renderPhases(await loadCourse());
+                                    });
+                                }
                             })
                             .catch(err => {
                                 // Bei einem Fehler, zeige eine Fehlermeldung an

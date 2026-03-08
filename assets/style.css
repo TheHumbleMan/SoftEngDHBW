@@ -471,14 +471,39 @@ td.timetableCell .tripleApp {
 .btn:hover { filter: brightness(1.1); }
 .btn:active { transform: scale(0.98); }
 
-/*
-td.timetableCell .innerTimetableCell {
-    display: flex;
+/* Appointment Styles */
+
+.appointmentNavBar {
     align-items: center;
-    height: 100%;
-    width: 100%;
-    position: relative;
-}*/
+    justify-content: center;
+    height: 5%;
+}
+
+#appointment-container {
+    background: var(--container_white);
+    padding: 20px;
+    border-radius: 10px;
+    height: 95%;
+    display:flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.phase{
+    border:1px solid #ccc;
+    padding: 10px;
+    align-content: center;
+    justify-content: center;
+    border-radius:4px;
+    background:#f0f0f0;
+    flex:1;
+}
+
+.phase.current {
+    border-color: var(--dhbw_red);
+    background: #ffe5e5;
+    flex:1.5;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

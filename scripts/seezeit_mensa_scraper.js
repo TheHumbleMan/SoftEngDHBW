@@ -17,7 +17,7 @@ const standorte = [
 
 
     // Extrahiert die Daten von einer einzelnen Seite
-
+/* TODO
 const getBinaryPath = () => {
   const paths = [
     '/usr/bin/google-chrome',
@@ -27,7 +27,7 @@ const getBinaryPath = () => {
     '/usr/bin/chromium'
   ];
   return paths.find(path => fs.existsSync(path));
-};
+};*/
 
 export async function scrapeSeezeit(page, url) {
     await page.goto(url, { waitUntil: 'networkidle2' });
@@ -112,10 +112,15 @@ export async function scrapeSeezeit(page, url) {
 //Steuert den Browser und arbeitet alle Standorte ab, Wird von server.js aufgerufen.
 
 export async function scrapeSeezeitAll() {
+    /* TODO Das mach iwie Probleme
     const browser = await puppeteer.launch({ 
         headless: "new",
         executablePath: getBinaryPath() || undefined,
         args: ['--no-sandbox'] // Wichtig für Stabilität auf Servern
+    });*/
+    const browser = await puppeteer.launch({
+        headless: "new",
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     
     const allData = {};

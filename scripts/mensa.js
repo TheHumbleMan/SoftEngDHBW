@@ -145,22 +145,14 @@ function formatTitleDate(date){
 }
 
 async function renderMenu(){
+    const mensaHeader = document.querySelector(".active-card-title");
+    mensaHeader.innerHTML = "Kantine: " + formatTitleDate(targetDay);
+
     const faculty = await loadfaculty();
     const dayArray = await fetchMensaData(faculty);
     dayArrayCache = dayArray;
 
-    console.log(dayArray.map(d => mensadateToDate(d.datum)));
-    console.log(" ");
-    console.log(" ");
-    console.log("dayArray: ");
-    console.log(dayArray);
-
-    const mensaHeader = document.querySelector(".active-card-title");
-    mensaHeader.innerHTML = "Kantine: " + formatTitleDate(targetDay);
-
     const targetDayData = getDayDataByDate(dayArray, targetDay);
-    console.log("DayData für Datum: " + targetDay);
-    console.log(targetDayData);
     const mensaContainer = document.querySelector(".mensa");
     mensaContainer.innerHTML = "";
     if (targetDayData != undefined){

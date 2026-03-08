@@ -6,9 +6,9 @@ Zieht sich die Termine und Zeiten von der Seite www.dhbw.app und speichert sie i
 Solo-Testen des Scrapers:
     node dhbwAPP_scraper.js (geht nur wenn sessionCourse manuell gesetzt ist)
 
-Class für die einzelnen Tage:    "mt-3 divide-gray-500 divide-y w-11/12 sm:w-5/6 md:2-3/4 lg:w-3/6 mx-auto"
-Class für die einzelnen Termine: "rounded-xl shadow-2xl py-2 px-4 mt-4 bg-opacity-85 bg-zinc"
-Class für Termin Name:           "text-zinc-300 select-none text-lg md:text-xl" (ist ein span)
+Class für die einzelnen Tage:    ".mt-6.mx-3.max-w-3xl"
+Class für die einzelnen Termine: ".divide-y.divide-border-default"
+Class für Termin Name:           ".flex.flex-grow.relative"
 
 Datum:
     Class Calender-Icon: "tabler-icon tabler-icon-calendar-event text-zinc-300 flex-none my-auto h-5 w-5"
@@ -56,10 +56,6 @@ const resolveKurs = (sessionCourse) => {
 };
 
 export const scrapeDhbwApp = async ({ sessionCourse, writeFile = true, outputDir = "./data/timetables" } = {}) => {
-    //const resolvedSessionCourse = resolveSessionCourse(sessionCourse);
-    //console.log("Ausgelesener Kurs: " + resolvedSessionCourse);
-
-    //const kurs = resolveKurs(resolvedSessionCourse);
     const kurs = resolveKurs(sessionCourse);
     const url = `https://dhbw.app/c/${kurs}`;
 
@@ -70,38 +66,39 @@ export const scrapeDhbwApp = async ({ sessionCourse, writeFile = true, outputDir
             waitUntil: "networkidle2"
         });
 
+        await scrollUntilLoaded(page);
+
         //Leitet alle console.logs aus der puppeteer seite an die Node Konsole weiter
         page.on("console", msg => {
             console.log("BROWSER LOG:", msg.text());
         });
 
         // wartet dass die Terminzeiten gerendert sind
-        await page.waitForSelector(".flex-grow.text-zinc-300.truncate");
+        await page.waitForSelector(".flex-grow.text-text-primary");
 
         const scrapingResult = await page.evaluate(() => {
             //Sucht sich alle Tage heraus und speichert sie als Array
-            const days = document.querySelectorAll(".mt-3.divide-gray-500");
+            const days = document.querySelectorAll(".mt-6.mx-3");
 
             //Jeder Tag wird einzeln verarbeitet
             return Array.from(days).map(day => {
 
-                //Erstes Element im Tag ist der Ausgeschriebene Wochentag und Datum
-                const header = day.firstElementChild;
-                const weekday = header.innerText.trim().split(" - ")[0]; //Wochentag
-                const date = header.innerText.trim().split(" - ")[1];    //Datum
+                //Element das Ausgeschriebenen Wochentag und Datum enthält
+                const header = day.querySelector(".text-text-primary.text-xl");
+                const weekday = header.innerText.trim().split(", ")[0]; //Wochentag
+                const date = header.innerText.trim().split(", ")[1];    //Datum
 
-                //Nach dem Header kommt ein Element das alle Termine enthält
-                const dayContent = header.nextElementSibling;
+                //Element das alle Termine enthält
+                const dayContent = day.querySelector(".space-y-3");
 
                 //Aus dem Tag werden alle Termine über die Klasse rausgesucht
-                const appointmentArray = Array.from(dayContent.querySelectorAll(".rounded-xl.shadow-2xl"));
-
+                const appointmentArray = Array.from(dayContent.querySelectorAll(".divide-y"));
 
                 //Jeder Termin wird einzeln verarbeitet
                 const appointments = appointmentArray.map(appointment => {
 
                     //Holt sich den Namen des Termins
-                    const name = appointment.querySelector(".text-zinc-300.select-none")?.innerText.trim() || "Termin ohne Name";
+                    const name = appointment.querySelector(".flex.flex-grow")?.innerText.trim() || "Termin ohne Name";
 
                     //Uhrzeiten des Termins
                     const timeIcon = appointment.querySelectorAll("[class*='tabler-icon-clock-hour-']")[0];
@@ -150,6 +147,23 @@ export const scrapeDhbwApp = async ({ sessionCourse, writeFile = true, outputDir
         await browser.close();
     }
 };
+
+async function scrollUntilLoaded(page) {
+    let previousHeight;
+
+    while (true) {
+        previousHeight = await page.evaluate(() => document.body.scrollHeight);
+
+        await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+        await new Promise(r => setTimeout(r, 1500));
+
+        const newHeight = await page.evaluate(() => document.body.scrollHeight);
+
+        if (newHeight === previousHeight) {
+            break; // nichts Neues mehr geladen
+        }
+    }
+}
 
 const isDirectRun = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1];
 if (isDirectRun) {

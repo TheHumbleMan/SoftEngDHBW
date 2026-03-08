@@ -172,15 +172,15 @@ app.post('/auth/login', async (req, res) => {
         sessionCourse: courseCode,
         outputDir: path.join(__dirname, 'data/timetables')
     }).then(result => {
-        console.log('Scraping nach Login abgeschlossen:', result.kurs);
+        console.log('DHBWApp-Scraping nach Login abgeschlossen:', result.kurs);
     }).catch(err => {
-        console.error('Scraping nach Login fehlgeschlagen:', err.message);
+        console.error('DHBWApp-Scraping nach Login fehlgeschlagen:', err.message);
     });
 
     scrapeSeezeitAll().then(() => {
-    console.log('Mensa-Update nach Login erfolgreich');
+    console.log('Mensa-Scraping nach Login erfolgreich');
         }).catch(err => {
-    console.error('Mensa-Update nach Login fehlgeschlagen:', err.message);  
+    console.error('Mensa-Scraping nach Login fehlgeschlagen:', err.message);  
     });
 
     return res.json({ success: true, redirect: '/dashboard' });
@@ -320,6 +320,14 @@ app.get('/kacheln/documents.html', requireLogin, (req, res) => {
     res.render('kacheln/documents.html');
 });
 
+app.get('/kacheln/opnv.html', requireLogin, (req, res) => {
+    res.render('kacheln/opnv.html');
+});
+
+app.get('/kacheln/appointments.html', requireLogin, (req, res) => {
+    res.render('kacheln/appointments.html');
+});
+
 app.get('/scrape-dhbw', requireLogin, async (req, res) => {
     try {
         console.log("/scrape-dhbw aufgerufen", {
@@ -367,3 +375,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server läuft auf Port ${PORT}`);
 });
+
+export { app };

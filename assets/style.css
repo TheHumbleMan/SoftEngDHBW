@@ -360,8 +360,6 @@ td.timetableCell .singleApp{
     width: 94%;
     height: 100%;
     background-color: var(--dhbw_red);
-    box-sizing:border-box;
-    padding: 5px;
 }
 
 td.timetableCell .doubleApp {
@@ -378,8 +376,6 @@ td.timetableCell .doubleApp {
     width: 45%;
     height: 100%;
     background-color: var(--dhbw_red);
-    box-sizing:border-box;
-    padding: 5px;
 }
 
 td.timetableCell .tripleApp {
@@ -396,8 +392,6 @@ td.timetableCell .tripleApp {
     width: 28%;
     height: 100%;
     background-color: var(--dhbw_red);
-    box-sizing:border-box;
-    padding: 5px;
 }
 
 .transport-card {
@@ -645,12 +639,13 @@ td.timetableCell .tripleApp {
     text-decoration: underline;
 }
 
-th, td {
+.allergy-table th,
+.allergy-table td {
     border: none;
 }
 
-td:nth-child(2),
-th:nth-child(2) {
+.allergy-table td:nth-child(2),
+.allergy-table th:nth-child(2) {
     text-align: left;
      padding-right: 40px;
 }

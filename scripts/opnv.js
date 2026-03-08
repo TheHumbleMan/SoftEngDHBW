@@ -57,3 +57,4 @@ document.addEventListener("click", (e) => {
     if (btn.id === "btnToCampus") getRoute(address, CAMPUS_DATA.ADRESSE);
     if (btn.id === "btnFromCampus") getRoute(CAMPUS_DATA.ADRESSE, address);
 });
+

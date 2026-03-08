@@ -6,17 +6,28 @@ const standorte = [
     { 
         name: 'Friedrichshafen', 
         url: 'https://seezeit.com/essen/speiseplaene/mensa-friedrichshafen/',
-        datei: './data/mensa_fn.json'
+        datei: './data/mensa_FN.json'
     },
     { 
         name: 'Ravensburg', 
         url: 'https://seezeit.com/essen/speiseplaene/mensa-ravensburg/',
-        datei: './data/mensa_rv.json'
+        datei: './data/mensa_RV.json'
     }
 ];
 
 
     // Extrahiert die Daten von einer einzelnen Seite
+
+const getBinaryPath = () => {
+  const paths = [
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+    '/usr/bin/firefox',
+    '/usr/bin/chromium-browser',
+    '/usr/bin/chromium'
+  ];
+  return paths.find(path => fs.existsSync(path));
+};
 
 export async function scrapeSeezeit(page, url) {
     await page.goto(url, { waitUntil: 'networkidle2' });
@@ -103,6 +114,7 @@ export async function scrapeSeezeit(page, url) {
 export async function scrapeSeezeitAll() {
     const browser = await puppeteer.launch({ 
         headless: "new",
+        executablePath: getBinaryPath() || undefined,
         args: ['--no-sandbox'] // Wichtig für Stabilität auf Servern
     });
     

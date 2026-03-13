@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">70.17% </span>
+                <span class="strong">82.45% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>40/57</span>
+                <span class='fraction'>47/57</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">58.82% </span>
+                <span class="strong">70.58% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>20/34</span>
+                <span class='fraction'>24/34</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">61.53% </span>
+                <span class="strong">76.92% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>8/13</span>
+                <span class='fraction'>10/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.07% </span>
+                <span class="strong">86.53% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>38/52</span>
+                <span class='fraction'>45/52</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -171,16 +171,16 @@
 <a name='L106'></a><a href='#L106'>106</a>
 <a name='L107'></a><a href='#L107'>107</a>
 <a name='L108'></a><a href='#L108'>108</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -237,8 +237,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
@@ -277,17 +277,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">async function <span class="fstat-no" title="function not covered" >loadCourse(</span>) {
-    const res = <span class="cstat-no" title="statement not covered" >await fetch('/api/session');</span>
-<span class="cstat-no" title="statement not covered" >    if (!res.ok) <span class="cstat-no" title="statement not covered" >return null; </span></span>// Fehler oder nicht eingeloggt
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">async function loadCourse() {
+    const res = await fetch('/api/session');
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!res.ok) <span class="cstat-no" title="statement not covered" >return null; </span>// Fehler oder nicht eingeloggt
 &nbsp;
-    const session = <span class="cstat-no" title="statement not covered" >await res.json();</span>
+    const session = await res.json();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!session.authenticated || !session.course) {</span>
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!session.authenticated || !session.course) {
 <span class="cstat-no" title="statement not covered" >        return null;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return `${session.faculty}-${session.course}` </span>//FN-TIT24
+    return `${session.faculty}-${session.course}` //FN-TIT24
 }
 &nbsp;
 document.addEventListener('DOMContentLoaded', () =&gt; {
@@ -343,9 +343,9 @@ document.addEventListener('DOMContentLoaded', () =&gt; {
                                 detailContent.innerHTML = mainContent.innerHTML;
                                 //ausführen des stundenplan scripts
                                 if (contentUrl === "kacheln/timetable.html") {
-                                    import("./timetable.js").then(async m<span class="fstat-no" title="function not covered" >odule </span>=&gt; {
-<span class="cstat-no" title="statement not covered" >                                        module.initDates();</span>
-<span class="cstat-no" title="statement not covered" >                                        module.renderSelectedWeek(await loadCourse());</span>
+                                    import("./timetable.js").then(async module =&gt; {
+                                        module.initDates();
+                                        module.renderSelectedWeek(await loadCourse());
                                     });
                                 }
                                 if (contentUrl === "kacheln/mensa.html") {
@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-03-13T14:01:26.487Z
+                at 2026-03-13T14:06:51.272Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

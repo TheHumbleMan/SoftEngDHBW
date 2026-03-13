@@ -1,183 +1,174 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import puppeteer from 'puppeteer';
 import { scrapeDhbwApp } from '../scripts/dhbwAPP_scraper.js';
+import fs from 'fs';
 
-// 1. Mocks für externe Module definieren
+// 1. Mocks für externe Module
 vi.mock('puppeteer', () => ({
-  default: {
-    launch: vi.fn(),
-  },
+  default: { launch: vi.fn() },
 }));
 
 vi.mock('fs', () => ({
   default: {
     mkdirSync: vi.fn(),
     writeFileSync: vi.fn(),
-    existsSync: vi.fn().mockReturnValue(true), // Verhindert den Fehler in getBinaryPath
+    existsSync: vi.fn(),
   },
 }));
 
-describe('DHBW APP Scraper Full Coverage', () => {
+describe('DHBW APP Scraper - High Coverage Suite', () => {
   let browserMock, pageMock;
 
   beforeEach(() => {
     vi.clearAllMocks();
+    fs.existsSync.mockReturnValue(true);
+
+    // Hilfsfunktion für ein minimales DOM-Objekt
+    const setupMockDom = () => {
+      global.document = {
+        body: { scrollHeight: 1000 },
+        querySelectorAll: vi.fn().mockReturnValue([]),
+      };
+      global.window = { scrollTo: vi.fn() };
+    };
+
+    setupMockDom();
 
     // Mock für das Page-Objekt
     pageMock = {
       goto: vi.fn().mockResolvedValue(null),
       waitForSelector: vi.fn().mockResolvedValue(null),
       on: vi.fn(),
+      // Dieser Mock deckt jetzt sowohl scrollUntilLoaded als auch das Scraping ab
       evaluate: vi.fn().mockImplementation(async (fn, ...args) => {
         if (typeof fn === 'function') {
-          // Simulation der Browser-Umgebung für die Scraping-Logik
-          global.document = {
-            querySelectorAll: vi.fn().mockReturnValue([
-              { 
-                querySelector: vi.fn().mockImplementation((sel) => {
-                  if (sel === ".text-text-primary.text-xl") {
-                    return { innerText: "Montag, 01.01.2026" };
-                  }
-                  if (sel === ".space-y-3") {
-                    return {
-                      querySelectorAll: vi.fn().mockReturnValue([
-                        { 
-                          querySelector: vi.fn().mockImplementation((innerSel) => {
-                            if (innerSel === ".flex.flex-grow") {
-                              return { innerText: "Mathe", trim: () => "Mathe" };
-                            }
-                            if (innerSel === ".tabler-icon-home") return {};
-                            if (innerSel === ".tabler-icon-map-pin") return {};
-                            if (innerSel === ".tabler-icon-info-square-rounded") return {};
-                            return { 
-                              nextElementSibling: { innerText: "H123", trim: () => "H123" }, 
-                              innerText: "Test", 
-                              trim: () => "Test" 
-                            };
-                          }),
-                          querySelectorAll: vi.fn().mockReturnValue([
-                            { nextElementSibling: { innerText: "08:00 - 10:00 (50%)", trim: () => "08:00 - 10:00 (50%)" } }
-                          ])
-                        }
-                      ])
-                    };
-                  }
-                  return null;
-                })
-              }
-            ]),
-            body: { scrollHeight: 1000 }
-          };
-          global.window = { scrollTo: vi.fn() };
-          
-          // Führt die übergebene Funktion im Kontext der Mocks aus
+          // Falls die Funktion auf scrollHeight prüft (Scrolling logic)
+          if (fn.toString().includes('scrollHeight')) {
+            return global.document.body.scrollHeight;
+          }
+          // Falls es die Scraping-Logik ist
           return fn(...args);
         }
         return 0;
       }),
     };
 
-    // Mock für das Browser-Objekt
     browserMock = {
       newPage: vi.fn().mockResolvedValue(pageMock),
       close: vi.fn().mockResolvedValue(null),
     };
 
-    // Puppeteer Mock aktivieren
     puppeteer.launch.mockResolvedValue(browserMock);
   });
 
-  // --- Tests ---
+  // --- Tests für Pfade & Initialisierung ---
 
-  it('should cover the scraping logic and fs calls (Lines 73-136)', async () => {
-    const result = await scrapeDhbwApp({ sessionCourse: 'TINF20', writeFile: true });
-    
-    expect(result.data).toBeDefined();
-    expect(result.data[0].appointments[0].name).toBe("Mathe");
-    
-    const fs = (await import('fs')).default;
+  it('should resolve T-prefix to FN- and handle binary path fallback', async () => {
+    fs.existsSync.mockReturnValue(false); // Testet getBinaryPath Branch
+    const result = await scrapeDhbwApp({ sessionCourse: 'TINF20', writeFile: false });
+    expect(result.kurs).toBe('FN-TINF20');
+    expect(puppeteer.launch).toHaveBeenCalledWith(expect.objectContaining({
+      executablePath: undefined
+    }));
+  });
+
+  it('should resolve W-prefix to RV-', async () => {
+    const result = await scrapeDhbwApp({ sessionCourse: 'WINF20', writeFile: false });
+    expect(result.kurs).toBe('RV-WINF20');
+  });
+
+  it('should throw error for unknown course prefixes', async () => {
+    await expect(scrapeDhbwApp({ sessionCourse: 'XINF20' })).rejects.toThrow();
+  });
+
+  // --- Tests für Scraping Branches (Appointments) ---
+
+  it('should correctly parse appointments including time stripping and icons', async () => {
+    pageMock.evaluate.mockImplementation(async (fn) => {
+      if (fn.toString().includes('scrollHeight')) return 1000;
+
+      // Simulation eines gefüllten DOMs
+      global.document.querySelectorAll = vi.fn().mockReturnValue([{
+        querySelector: (sel) => {
+          if (sel === ".text-text-primary.text-xl") return { innerText: "Montag, 01.01.2026" };
+          if (sel === ".space-y-3") return {
+            querySelectorAll: () => [{
+              querySelector: (s) => {
+                if (s === ".flex.flex-grow") return { innerText: "Vorlesung" };
+                if (s.includes("tabler-icon-clock")) return { nextElementSibling: { innerText: "08:00 - 12:00 (20%)" } };
+                if (s === ".tabler-icon-home") return { nextElementSibling: { innerText: "H123" } };
+                if (s === ".tabler-icon-map-pin") return { nextElementSibling: { innerText: "Campus" } };
+                if (s === ".tabler-icon-info-square-rounded") return { nextElementSibling: { innerText: "Info" } };
+                return null;
+              },
+              querySelectorAll: () => [{ nextElementSibling: { innerText: "08:00 - 12:00 (20%)" } }]
+            }]
+          };
+        }
+      }]);
+      return fn();
+    });
+
+    const result = await scrapeDhbwApp({ sessionCourse: 'TINF20', writeFile: false });
+    const app = result.data[0].appointments[0];
+    expect(app.endTime).toBe("12:00"); // Branch: spaceIndex !== -1
+    expect(app.locationExtra).toBe("Campus");
+  });
+
+  it('should handle missing fields with default strings', async () => {
+    pageMock.evaluate.mockImplementation(async (fn) => {
+      if (fn.toString().includes('scrollHeight')) return 1000;
+
+      global.document.querySelectorAll = vi.fn().mockReturnValue([{
+        querySelector: (sel) => {
+          if (sel === ".text-text-primary.text-xl") return { innerText: "Tag, 01.01." };
+          if (sel === ".space-y-3") return { querySelectorAll: () => [{
+              querySelector: () => null, // Löst "||" Branches aus
+              querySelectorAll: () => []
+          }]};
+        }
+      }]);
+      return fn();
+    });
+
+    const result = await scrapeDhbwApp({ sessionCourse: 'TINF20', writeFile: false });
+    expect(result.data[0].appointments[0].name).toBe("Termin ohne Name");
+  });
+
+  // --- Tests für Datei-Operationen & Scroll-Logik ---
+
+  it('should create directory and write file if writeFile is true', async () => {
+    await scrapeDhbwApp({ sessionCourse: 'TINF20', writeFile: true });
+    expect(fs.mkdirSync).toHaveBeenCalled();
     expect(fs.writeFileSync).toHaveBeenCalled();
   });
 
-  it("should throw error when no course is provided", async () => {
-    await expect(
-      scrapeDhbwApp({})
-    ).rejects.toThrow("Kein Kurs angegeben");
+  it('should skip file writing if writeFile is false', async () => {
+    await scrapeDhbwApp({ sessionCourse: 'TINF20', writeFile: false });
+    expect(fs.writeFileSync).not.toHaveBeenCalled();
   });
 
-  it('should cover the direct run block logic (Lines 170-177)', async () => {
-    process.env.DHBW_KURS = 'TINF20';
-    const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
-    
-    const result = await scrapeDhbwApp({ sessionCourse: process.env.DHBW_KURS });
-    
-    // Simuliert den Fortschritts-Log
-    console.log("Scraping abgeschlossen:", result.kurs);
-    
-    expect(consoleSpy).toHaveBeenCalledWith(
-      expect.stringContaining("Scraping abgeschlossen"), 
-      expect.stringContaining("FN-TINF20")
-    );
-    
-    consoleSpy.mockRestore();
-  });
-
-  it('should cover the scroll logic (Lines 153-168)', async () => {
-    let callCount = 0;
+  it('should terminate scroll loop when height remains constant', async () => {
+    let heights = [1000, 1500, 1500]; // Zweiter und dritter Call gleich -> Loop Ende
+    let count = 0;
     pageMock.evaluate.mockImplementation(async (fn) => {
-      // Unterscheidung zwischen Scroll-Check und Scraping
-      if (typeof fn === 'function' && fn.toString().includes('scrollHeight')) {
-        callCount++;
-        // Simuliert, dass die Seite beim dritten Mal "fertig" gescrollt ist
-        return callCount > 2 ? 2000 : 1000 + callCount;
-      }
+      if (fn.toString().includes('scrollHeight')) return heights[count++];
       return [];
     });
 
     await scrapeDhbwApp({ sessionCourse: 'TINF20', writeFile: false });
-    expect(pageMock.evaluate).toHaveBeenCalled();
+    expect(count).toBeGreaterThan(1);
   });
 
-  describe("Additional Coverage Tests", () => {
-    it("should forward browser console logs", async () => {
-      let consoleHandler;
-      pageMock.on.mockImplementation((event, handler) => {
-        if (event === "console") consoleHandler = handler;
-      });
+  it('should forward browser logs', async () => {
+    let logHandler;
+    pageMock.on.mockImplementation((evt, cb) => { if (evt === 'console') logHandler = cb; });
+    const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
 
-      await scrapeDhbwApp({ sessionCourse: "TINF20", writeFile: false });
+    await scrapeDhbwApp({ sessionCourse: 'TINF20', writeFile: false });
+    logHandler({ text: () => "Browser Msg" });
 
-      const consoleSpy = vi.spyOn(console, "log").mockImplementation(() => {});
-      consoleHandler({ text: () => "Browser Test Log" });
-
-      expect(consoleSpy).toHaveBeenCalledWith("BROWSER LOG:", "Browser Test Log");
-      consoleSpy.mockRestore();
-    });
-
-    it("should wait for timetable selector", async () => {
-      await scrapeDhbwApp({ sessionCourse: "TINF20", writeFile: false });
-      expect(pageMock.waitForSelector).toHaveBeenCalledWith(".flex-grow.text-text-primary");
-    });
-
-    it("should strip percentage from running lecture end time", async () => {
-      // Manueller Override für diesen speziellen Testfall
-      pageMock.evaluate.mockResolvedValue([
-        {
-          weekday: "Montag",
-          date: "01.01.2026",
-          appointments: [{
-            name: "Mathe",
-            startTime: "10.00",
-            endTime: "11.30",
-            location: "H101",
-            locationExtra: null,
-            info: null
-          }]
-        }
-      ]);
-
-      const result = await scrapeDhbwApp({ sessionCourse: "TINF20", writeFile: false });
-      expect(result.data[0].appointments[0].endTime).toBe("11.30");
-    });
+    expect(consoleSpy).toHaveBeenCalledWith("BROWSER LOG:", "Browser Msg");
+    consoleSpy.mockRestore();
   });
 });

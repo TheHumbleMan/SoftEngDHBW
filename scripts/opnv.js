@@ -2,7 +2,7 @@
  * OPNV Module v3.0 - bwegt / EFA-BW Integration
  */
 
-const CAMPUS_DATA = {
+export const CAMPUS_DATA = {
     ADRESSE: "Friedrichshafen, Hochschulen",
     POPUP: "width=1000,height=850,top=50,left=100,scrollbars=yes"
 };
@@ -22,7 +22,7 @@ export const initDateTimeFields = () => {
     if (!tInput.value) tInput.value = localISO.slice(11, 16); // HH:mm
 };
 
-const getRoute = (startInput, zielInput) => {
+export const getRoute = (startInput, zielInput) => {
     if (!startInput?.trim()) return alert("Bitte Adresse eingeben.");
 
     const origin = startInput.trim();

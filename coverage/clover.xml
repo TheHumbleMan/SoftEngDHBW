@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1773395159658" clover="3.2.0">
-  <project timestamp="1773395159659" name="All files">
+<coverage generated="1773395339064" clover="3.2.0">
+  <project timestamp="1773395339064" name="All files">
     <metrics statements="667" coveredstatements="598" conditionals="284" coveredconditionals="186" methods="131" coveredmethods="110" elements="1082" coveredelements="894" complexity="0" loc="667" ncloc="667" packages="2" files="7" classes="7"/>
     <package name="SoftEngDHBW">
       <metrics statements="160" coveredstatements="117" conditionals="75" coveredconditionals="39" methods="38" coveredmethods="24"/>

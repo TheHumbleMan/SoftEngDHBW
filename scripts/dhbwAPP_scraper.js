@@ -55,11 +55,27 @@ const resolveKurs = (sessionCourse) => {
     throw new Error(`Unbekanntes Kurs-Präfix: ${sessionCourse}`);
 };
 
+const getBinaryPath = () => {
+  const paths = [
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+    '/usr/bin/chromium-browser',
+    '/usr/bin/chromium',
+    '/usr/bin/firefox'
+  ];
+  return paths.find(path => fs.existsSync(path));
+};
+
 export const scrapeDhbwApp = async ({ sessionCourse, writeFile = true, outputDir = "./data/timetables" } = {}) => {
     const kurs = resolveKurs(sessionCourse);
     const url = `https://dhbw.app/c/${kurs}`;
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ 
+        headless: "new",
+        executablePath: getBinaryPath() || undefined,
+        args: ['--no-sandbox'] // Wichtig für Stabilität auf Servern
+    });
+    
     try {
         const page = await browser.newPage();
         await page.goto(url, {

@@ -256,6 +256,10 @@ app.get('/kacheln/timetable.html', requireLogin, (req, res) => {
     res.render('kacheln/timetable.html');
 });
 
+app.get('/kacheln/ansprechperson.html', requireLogin, (req, res) => {
+    res.render('kacheln/ansprechperson.html');
+});
+
 app.get('/scrape-dhbw', requireLogin, async (req, res) => {
     try {
         console.log("/scrape-dhbw aufgerufen", {

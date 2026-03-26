@@ -4,48 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DHBW Kontakte</title>
-    <style>
-        :root { --dhbw-red: #e2001a; }
-        body { font-family: sans-serif; background-color: #f4f4f9; padding: 20px; text-align: center; }
-        
-        /* Spinner Styling */
-        .loader {
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid var(--dhbw-red);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            display: inline-block;
-            margin-top: 50px;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
-        .hidden { display: none; }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
-            max-width: 1200px;
-            margin: 30px auto;
-            text-align: left;
-        }
-
-        /* Karte ohne Bild-Container */
-        .card { 
-            background: white; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-            border-left: 5px solid var(--dhbw-red); /* Akzentleiste statt Bild */
-        }
-        .p-3 { padding: 15px; }
-        .name { color: var(--dhbw-red); font-weight: bold; margin-bottom: 5px; font-size: 1.1em; }
-        .info { font-size: 0.85em; margin-bottom: 5px; color: #333; line-height: 1.4; }
-        .info b { color: #555; }
-        a { color: var(--dhbw-red); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+    <link rel="stylesheet" href="assets/style_ansprechpartner.css">
 </head>
 <body>
 
@@ -58,54 +17,6 @@
 
     <div id="contact-container" class="contact-grid hidden"></div>
 
-    <script>
-        const jsonUrl = '/data/kontakte/kontakte.json';
-        let checkCount = 0;
-
-        async function loadContacts() {
-           const statusText = document.getElementById('status-text');
-    try {
-        const response = await fetch('/data/kontakte/kontakte.json');
-        alert("Server antwortet mit Status: " + response.status); // POP-UP TEST
-        
-        const data = await response.json();
-        alert("Daten geladen! Anzahl: " + data.length);
-        renderCards(data);
-    } catch (error) {
-        statusText.innerHTML = "KRITISCHER FEHLER: " + error.message;
-        console.error(error);
-    }
-        }
-
-        function renderCards(data) {
-            const container = document.getElementById('contact-container');
-            const loadingArea = document.getElementById('loading-area');
-            
-            container.innerHTML = '';
-            
-            data.forEach(p => {
-                // Nur anzeigen, wenn mindestens ein Name oder eine Mail vorhanden ist
-                if(!p.name && !p.email) return; 
-                
-                const card = `
-                    <div class="card">
-                        <div class="p-3">
-                            <div class="name">${p.name || 'Mitarbeiter/in'}</div>
-                            <div class="info"><b>Funktion:</b> ${p.funktion || '-'}</div>
-                            <div class="info"><b>Tel:</b> ${p.telefon || 'Keine Angabe'}</div>
-                            <div class="info"><b>Email:</b> <a href="mailto:${p.email}">${p.email || '-'}</a></div>
-                            <div class="info"><b>Raum:</b> ${p.adresse || '-'}</div>
-                        </div>
-                    </div>
-                `;
-                container.innerHTML += card;
-            });
-
-            loadingArea.classList.add('hidden');
-            container.classList.remove('hidden');
-        }
-
-        loadContacts();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

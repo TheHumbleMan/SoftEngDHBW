@@ -14,11 +14,10 @@ async function scrapeDhbwKontakte({ kursName, outputDir }) {
     const options = new firefox.Options();
     options.addArguments("--headless"); // Wichtig für Server-Betrieb
 
-    options.setBinary("/usr/bin/firefox");
-    driver = await new Builder()
-      .forBrowser("firefox")
-      .setFirefoxOptions(options)
-      .build();
+   driver = await new Builder()
+  .forBrowser("firefox")
+  .setFirefoxOptions(options)
+  .build();
 
     const BASE_URL = "https://www.ravensburg.dhbw.de/dhbw-ravensburg/ansprechpersonen";
     await driver.get(BASE_URL);

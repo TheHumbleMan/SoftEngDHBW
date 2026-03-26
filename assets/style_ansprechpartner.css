@@ -1,0 +1,75 @@
+:root { 
+    --dhbw-red: #e2001a; 
+}
+
+body { 
+    font-family: sans-serif; 
+    background-color: #f4f4f9; 
+    padding: 20px; 
+    text-align: center; 
+}
+
+/* Spinner Styling */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--dhbw-red);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+@keyframes spin { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+
+.hidden { 
+    display: none; 
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+/* Karte ohne Bild-Container */
+.card { 
+    background: white; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+    border-left: 5px solid var(--dhbw-red); 
+}
+
+.p-3 { padding: 15px; }
+
+.name { 
+    color: var(--dhbw-red); 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+    font-size: 1.1em; 
+}
+
+.info { 
+    font-size: 0.85em; 
+    margin-bottom: 5px; 
+    color: #333; 
+    line-height: 1.4; 
+}
+
+.info b { color: #555; }
+
+a { 
+    color: var(--dhbw-red); 
+    text-decoration: none; 
+}
+
+a:hover { 
+    text-decoration: underline; 
+}

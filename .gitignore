@@ -1,3 +1,8 @@
 node_modules/
 data/timetables/
 data/documents
+data/mensa_FN.json
+data/mensa_RV.json
+scripts/config_msgr.json
+*pycache*/
+.coverage

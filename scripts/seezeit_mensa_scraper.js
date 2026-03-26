@@ -6,17 +6,28 @@ const standorte = [
     { 
         name: 'Friedrichshafen', 
         url: 'https://seezeit.com/essen/speiseplaene/mensa-friedrichshafen/',
-        datei: './data/mensa_fn.json'
+        datei: './data/mensa_FN.json'
     },
     { 
         name: 'Ravensburg', 
         url: 'https://seezeit.com/essen/speiseplaene/mensa-ravensburg/',
-        datei: './data/mensa_rv.json'
+        datei: './data/mensa_RV.json'
     }
 ];
 
 
     // Extrahiert die Daten von einer einzelnen Seite
+
+const getBinaryPath = () => {
+  const paths = [
+    '/usr/bin/google-chrome',
+    '/usr/bin/google-chrome-stable',
+    '/usr/bin/chromium-browser',
+    '/usr/bin/chromium',
+    '/usr/bin/firefox'
+  ];
+  return paths.find(path => fs.existsSync(path));
+};
 
 export async function scrapeSeezeit(page, url) {
     await page.goto(url, { waitUntil: 'networkidle2' });
@@ -101,8 +112,10 @@ export async function scrapeSeezeit(page, url) {
 //Steuert den Browser und arbeitet alle Standorte ab, Wird von server.js aufgerufen.
 
 export async function scrapeSeezeitAll() {
+    
     const browser = await puppeteer.launch({ 
         headless: "new",
+        executablePath: getBinaryPath() || undefined,
         args: ['--no-sandbox'] // Wichtig für Stabilität auf Servern
     });
     
@@ -113,21 +126,21 @@ export async function scrapeSeezeitAll() {
             //Schleife über alle Standorte
         for (const standort of standorte) {
             try {
-                console.log(`Scrape ${standort.name}...`);
+                //console.log(`Scrape ${standort.name}...`);
                 const daten = await scrapeSeezeit(page, standort.url);
                 
                 // Als JSON-Datei speichern
                 fs.writeFileSync(standort.datei, JSON.stringify(daten, null, 2), 'utf-8');
                 
                 allData[standort.name] = daten;
-                console.log(`${standort.name} erfolgreich aktualisiert.`);
+                //console.log(`${standort.name} erfolgreich aktualisiert.`);
             } catch (error) {
-                console.error(`Fehler bei ${standort.name}:`, error.message);
+                //console.error(`Fehler bei ${standort.name}:`, error.message);
             }
         }
     } finally {
         await browser.close();
-        console.log("--- Mensa-Scraping beendet ---");
+        //console.log("--- Mensa-Scraping beendet ---");
     }
 
     return allData;

@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "vitest",
+    "coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
     "test:run": "vitest run"
   },
@@ -14,12 +15,20 @@
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "express-session": "^1.17.3",
+<<<<<<< HEAD
     "puppeteer": "^24.36.1",
     "selenium-webdriver": "^4.41.0"
+=======
+    "pupeteer": "^0.0.1",
+    "puppeteer": "^24.36.1"
+>>>>>>> main
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^4.0.18",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
     "jsdom": "^28.1.0",
+    "supertest": "^7.2.2",
     "vitest": "^4.0.18"
   },
   "directories": {

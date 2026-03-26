@@ -69,6 +69,26 @@ document.addEventListener('DOMContentLoaded', () => {
                                         module.renderSelectedWeek(await loadCourse());
                                     });
                                 }
+                                if (contentUrl === "kacheln/mensa.html") {
+                                    import("./mensa.js").then(async module => {
+                                        module.renderInitialMenu();
+                                    });
+                                }
+                                if (contentUrl === "kacheln/documents.html") {
+                                    import("./documents.js").then(module => {
+                                        module.initDocuments(detailContent);
+                                    });
+                                }
+                                else if (contentUrl === "kacheln/opnv.html") { 
+                                    import("./opnv.js").then(module => {
+                                        module.initDateTimeFields();
+                                    });
+                                }
+                                else if (contentUrl === "kacheln/appointments.html") { 
+                                    import("./appointments.js").then(async module => {
+                                        module.renderPhases(await loadCourse());
+                                    });
+                                }
                             })
                             .catch(err => {
                                 // Bei einem Fehler, zeige eine Fehlermeldung an

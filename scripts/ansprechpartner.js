@@ -1,3 +1,4 @@
+document.body.innerHTML += '<div style="position:fixed;top:0;left:0;background:red;color:white;z-index:9999;padding:10px;">SCRIPT IST AKTIV!</div>';
 const JSON_URL = '/data/kontakte/kontakte.json';
 
 async function loadContacts() {
@@ -55,4 +56,8 @@ function renderCards(data) {
 }
 
 // Start der App
-document.addEventListener('DOMContentLoaded', loadContacts);
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadContacts);
+} else {
+    loadContacts();
+}

@@ -1,0 +1,4754 @@
+[
+  {
+    "name": "Stefan Angele",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 167",
+    "email": "angele@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 13, Raum N116, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Angele_Stefan.jpg"
+  },
+  {
+    "name": "Franz-Joseph Arnold",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 225",
+    "email": "arnold@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H307, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Arnold_Franz-Josef.jpg"
+  },
+  {
+    "name": "Thomas Asche",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2783",
+    "email": "asche@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 128, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Asche_Thomas.jpg"
+  },
+  {
+    "name": "Franziska Baar",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2737",
+    "email": "baar@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 014, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Baar_Franziska.jpg"
+  },
+  {
+    "name": "Michael Bächle",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2730",
+    "email": "baechle@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 203, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Baechle_Michael.jpg"
+  },
+  {
+    "name": "Oliver Bährle",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2101 (Büro) / +49 (0)751 18999 - 2745 (Studio)",
+    "email": "baehrle@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 012, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Baehrle_Oliver.jpg"
+  },
+  {
+    "name": "Eric Balogh",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 416",
+    "email": "balogh@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H305, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Portrait_Balogh_Web.jpg"
+  },
+  {
+    "name": "Patrick Bastian",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2198",
+    "email": "bastian@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 510, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Bastian_Patrick.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2759",
+    "email": "bauer.ma@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 217a, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Thomas Bauer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2186",
+    "email": "bauer@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 202, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Bauer_Thomas.jpg"
+  },
+  {
+    "name": "Markus Bäuml",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 246",
+    "email": "baeuml@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E201, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RVFN_Mitarbeiter_Baeuml-Markus.jpg"
+  },
+  {
+    "name": "Stephanie Bendig",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2707",
+    "email": "bendig@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 111, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Stephanie_Bendig.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 114",
+    "email": "berchtold@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H135b, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2715",
+    "email": "bernhardt.j@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 35, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Simone Besemer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2747",
+    "email": "besemer@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 008, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Besemer_Simone.jpg"
+  },
+  {
+    "name": "Wolfgang Bihler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2961",
+    "email": "bihler@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 706, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Bihler_Wolfgang.jpg"
+  },
+  {
+    "name": "Klaus Birk",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2154",
+    "email": "birk@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 1. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Birk_Klaus.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2748",
+    "email": "bittner@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 116, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Jan Bixenmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2122",
+    "email": "bixenmann@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_Mitarbeiter_Bixenmann_DSC01159-1.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2801",
+    "email": "blochinger@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 009, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Jürgen Brath",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 251",
+    "email": "brath@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H324, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Brath_Juergen.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2962",
+    "email": "brauchle@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 705, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 -2754",
+    "email": "braun.s@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 35, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Christian Braunagel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": null,
+    "email": "braunagel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E201, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Christian_Braunagel.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2121",
+    "email": "brauner@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 302, 88212 Ravensburg;  Marktstraße 28, Raum 705, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Carsten Brehm",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2106",
+    "email": "brehm@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 134, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Brehm_Carsten.jpg"
+  },
+  {
+    "name": "Anja Brittner-Widmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2145",
+    "email": "brittnerwidmann@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 148, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Brittner-Widmann_Anja.jpg"
+  },
+  {
+    "name": "Kristin Brüning",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2723",
+    "email": "bruening@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 115, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Bruening_Kristin.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 243",
+    "email": "buckreus@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E206, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Andrea Bürk",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2115",
+    "email": "studieninfo@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 113, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Buerk_Andrea.jpg"
+  },
+  {
+    "name": "Andrea Bürk",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2768",
+    "email": "buerk@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 113, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Buerk_Andrea.jpg"
+  },
+  {
+    "name": "Regina Capelli",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2175",
+    "email": "capelli@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 15, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Capelli_Regina.png"
+  },
+  {
+    "name": "Petra Cillar",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2763",
+    "email": "vfa@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 503a, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_VFA_Cillar_Petra.jpg"
+  },
+  {
+    "name": "Giuliano Colucci",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 109",
+    "email": "Colucci@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H016, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Colucci_Guliano_2025_z.jpg"
+  },
+  {
+    "name": "Stephan Daurer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2757",
+    "email": "daurer@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 301, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Daurer_Stephan.jpg"
+  },
+  {
+    "name": "Michaela David",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 231",
+    "email": "david.m@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H114, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/David_Michaela_2025_z.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2727",
+    "email": "david@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum U04, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Sabine Deschler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2722",
+    "email": "deschler@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 127, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Deschler_Sabine.jpg"
+  },
+  {
+    "name": "Ernst Deuer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2129",
+    "email": "deuer@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 710, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Deuer_Ernst.jpg"
+  },
+  {
+    "name": "Melanie Deutmeyer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2193",
+    "email": "deutmeyer@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 007, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Deutmeyer_Melanie.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2956",
+    "email": "diehm@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 203, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Thomas Dietmüller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 524",
+    "email": "dietmueller@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E013, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dietmueller_Thomas.jpg"
+  },
+  {
+    "name": "Cornelia Dietrich",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2749",
+    "email": "dietrich@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 221, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dietrich_Cornelia.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49751189992190",
+    "email": "dingeldey@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 217, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Thomas Dobbelstein",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2107",
+    "email": "dobbelstein@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 703, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dobbelstein_Thomas.jpg"
+  },
+  {
+    "name": "Sven Döring",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2945",
+    "email": "doering.s@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 504, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_DoeringSven_web.jpg"
+  },
+  {
+    "name": "Herbert Dreher",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2763 (Büro VFA)",
+    "email": "vfa@dhbw-ravensburg.de",
+    "adresse": null,
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dreher_Herbert.jpg"
+  },
+  {
+    "name": "Dragan Dulic",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 133",
+    "email": "dulic@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H016, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dulic_Dragan.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 100",
+    "email": "dunz@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H110, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2725",
+    "email": "duscha@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum U06, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Silvia Eichhorn",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2105",
+    "email": "eichhorn@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 18, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Eichhorn_Silvia.jpg"
+  },
+  {
+    "name": "Melanie Elamri",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2715",
+    "email": "elamri@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 35, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Elamri_Melanie.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2104",
+    "email": "elmas@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 505, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 311",
+    "email": "engelking@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H033, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Julia (derzeit nicht im Hause) Finger",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 240",
+    "email": "finger@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H113, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Finger_Julia.jpg"
+  },
+  {
+    "name": "Philipp Finkbeiner",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2738",
+    "email": "finkbeiner@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 3. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Finkbeiner_Philipp.jpg"
+  },
+  {
+    "name": "Peter Fischer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2156",
+    "email": "p.fischer@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 104, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Fischer_Peter.jpg"
+  },
+  {
+    "name": "Stefan Fischer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2157",
+    "email": "fischer@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 504, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Fischer_Stefan.jpg"
+  },
+  {
+    "name": "Anja Fischer-Voigt",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2111",
+    "email": "fischervoigt@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 124, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Fischer-Voigt_Anja.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 250",
+    "email": "fox@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H323a, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 139",
+    "email": "t.frank@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H327, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2791",
+    "email": "b.franke@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 007, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Jasmin Fricker",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2989",
+    "email": "fricker@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 102, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Fricker_Jasmin.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2178",
+    "email": "fritz@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 020, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+491 7541 2077 105",
+    "email": "froehlich.a@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H301, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Wolfgang Fuchs",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2116",
+    "email": "fuchs@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 134, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Fuchs_Wolfgang.jpg"
+  },
+  {
+    "name": "Simon Gallus",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2965",
+    "email": "gallus@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 1. OG, 88212 Ravensburg (Büro);  Marienplatz 2, Raum 011, 88212 Ravensburg (Multicast-Studio)",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Gallus_Simon.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "075412077153",
+    "email": "gangavarapu@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 14, RITZ, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "075412077177",
+    "email": "georgescu@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 14, RITZ, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 515",
+    "email": "geringer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H330, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 458",
+    "email": "gieger@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2143",
+    "email": "gindele@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 144, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2763",
+    "email": "vfa@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 503a, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "07541 2077 530",
+    "email": "granic@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H035, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Markus Grieb",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 452",
+    "email": "grieb@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H005b, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Grieb_Markus.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2199",
+    "email": "gross@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 217b, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Maria Grübel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2711",
+    "email": "gruebel@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 112, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Gruebel_Maria.jpg"
+  },
+  {
+    "name": "Alexander Grüning",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 418",
+    "email": "gruening@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H328, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterportrait_gruening.gif"
+  },
+  {
+    "name": "Joachim Güntzel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2784",
+    "email": "guentzel@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 713, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Guentzel_Joachim.jpg"
+  },
+  {
+    "name": "Benedikt Hackl",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2151",
+    "email": "hackl@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 223, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hackl_Benedikt.jpg"
+  },
+  {
+    "name": "Cornelia Hafner",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2139",
+    "email": "c.hafner@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 143, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hafner_Cornelia.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2787",
+    "email": "hagemeyer@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 510, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 457",
+    "email": "happ@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H118, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Jeanette (derzeit nicht im Hause) Haßler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2298",
+    "email": "hassler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 117, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hassler_Jeanette.jpg"
+  },
+  {
+    "name": "Philipp Hasselbach",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 417",
+    "email": "hasselbach@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H320, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Hasselbach_Web_266x351px.jpg"
+  },
+  {
+    "name": "Mathias Hassenstein",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2951",
+    "email": "hassenstein@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 1. OG, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Dokumente_Bilder_Contentbereich/Mediendesign/dhbw_rv_mediendesign_hassenstein.jpg"
+  },
+  {
+    "name": "Anne Hautog",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2764",
+    "email": "hautog@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 140, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hautog_Anne.jpg"
+  },
+  {
+    "name": "Andrea Hecker",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2163",
+    "email": "a.hecker@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 3. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Andrea_Hecker_WEB.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2797",
+    "email": "hecker@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Regina Hegele",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 120",
+    "email": "hegele@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H120, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Hegele_Regina.jpg"
+  },
+  {
+    "name": "Isabell Hejna",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2171",
+    "email": "hejna@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 102, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Hejna_Isabel_2025_z.jpg"
+  },
+  {
+    "name": "Maike Helberg",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 108",
+    "email": "helberg@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H137, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Helberg_Maike.jpg"
+  },
+  {
+    "name": "Andrea Hennig",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2188",
+    "email": "hennig@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 1. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hennig_Andrea.jpg"
+  },
+  {
+    "name": "Anna Hensler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2185",
+    "email": "a.hensler@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 15, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hensler_Anna.jpg"
+  },
+  {
+    "name": "Katharina Hey",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2168",
+    "email": "hey@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hey_Katharina.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2708",
+    "email": "hieke@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 8, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Klaus Hildebrand",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2113",
+    "email": "hildebrand@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 216, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hildebrand_Klaus.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2799",
+    "email": "hilgers@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 227, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Bettina Hinderhofer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2955",
+    "email": "hinderhofer@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 121, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hinderhofer_Bettina.jpg"
+  },
+  {
+    "name": "Isolde Hoch",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 101",
+    "email": "hoch@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H108, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Hoch_Isolde_2025_z.jpg"
+  },
+  {
+    "name": "Axel Hoff",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 412",
+    "email": "hoff@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H306, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hoff_Axel.jpg"
+  },
+  {
+    "name": "Christine Holder",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2770",
+    "email": "holder@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 142, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Holder_Christine.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2141",
+    "email": "holstein.an@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E102, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Gunter Holzer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2762",
+    "email": "holzer@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 216, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Holzer_Gunter.jpg"
+  },
+  {
+    "name": "Heike Hölzle",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 510",
+    "email": "hoelzle@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H035, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RVFN_Mitarbeiter_Heike_Hoelzle.jpg"
+  },
+  {
+    "name": "Gregor Hopf",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2794",
+    "email": "hopf@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 224, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hopf_Gregor.jpg"
+  },
+  {
+    "name": "Annabell Huber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2298",
+    "email": "huber.ann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H105a, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_Mitarbeiter_Huber_DSC01196.jpg"
+  },
+  {
+    "name": "Eray Ipek",
+    "funktion": "Mitarbeiter/in",
+    "telefon": null,
+    "email": "ipek@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 13, N013, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Ipek_Eray_2025_z.jpg"
+  },
+  {
+    "name": "Khamis Jakob",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 255",
+    "email": "jakob@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum 326, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Jakob_Khamis.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2715",
+    "email": "jehle@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 35, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Herbert Joos",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 165",
+    "email": "joos@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 13, Raum N023, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Joos_Herbert.jpg"
+  },
+  {
+    "name": "Andreas Judt",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 411",
+    "email": "judt@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H312, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Judt_Andreas.jpg"
+  },
+  {
+    "name": "Christina Kerber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2616",
+    "email": "kerber@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 118, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Kerber_Christina.jpg"
+  },
+  {
+    "name": "Thorsten Kever",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 213",
+    "email": "kever@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum H017, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kever_Thorsten.jpg"
+  },
+  {
+    "name": "Thomas Kibler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 241",
+    "email": "kibler@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H011, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kibler_Thomas.jpg"
+  },
+  {
+    "name": "Daniela Kiechle",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2146",
+    "email": "kiechle@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 121, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kiechle_Daniela.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 265",
+    "email": "kiesecker@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 13, Raum N115, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Paul Kirchberg",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2786",
+    "email": "kirchberg@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 303, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kirchberg_Paul.jpg"
+  },
+  {
+    "name": "Udo Klaiber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2753",
+    "email": "u.klaiber@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 003, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Klaiber_Udo.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2179",
+    "email": "knitz@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 111, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Karin Knor",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2184",
+    "email": "knor@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 15, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Knor_Karin.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 106",
+    "email": "koecher@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H136, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Bishnu Prasad Koirala",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 516",
+    "email": "koirala@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 13, Raum N013, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Koirala_Bishnu_Prasad.jpg"
+  },
+  {
+    "name": "Melisa Köker",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "075118999 - 2169",
+    "email": "Koeker@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 3. OG, 88212 Ravensburg  Marktstraße 28, 7. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Melisa_Koeker_WEB.jpg"
+  },
+  {
+    "name": "Rainer Krafft",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 262",
+    "email": "krafft@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H325, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Krafft_Rainer.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 453",
+    "email": "kraemer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H005a, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Petra Kroflin",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2181",
+    "email": "kroflin@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 303, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kroflin_Petra.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2110",
+    "email": "krumm@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 225, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Jens Kuntzemüller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2789",
+    "email": "kuntzemueller@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 110, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kuntzemueller_Jens.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2167",
+    "email": "kurt@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 102, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 123",
+    "email": "latty@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E102, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 123",
+    "email": "latty@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H013, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Hardy Lau",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 415",
+    "email": "lau@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H307, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Lau_Hardy.jpg"
+  },
+  {
+    "name": "Judith Layec",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 120",
+    "email": "layec@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H120, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Layec_Judith.jpg"
+  },
+  {
+    "name": "Frank Lehmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2716",
+    "email": "lehmann@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 201, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Lehmann_Frank.jpg"
+  },
+  {
+    "name": "Florian Leitner-Fischer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 242",
+    "email": "leitner-fischer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E202, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Leitner-Fischer_Florian.png"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2142",
+    "email": "lembach@dhbw-ravensburg.de",
+    "adresse": "Marktstr. 28, Raum 3.06c, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2778",
+    "email": "liebrich@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 505, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2953",
+    "email": "liedtke@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 103, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Elisabeth Ligendza",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2147",
+    "email": "ligendza@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 008, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ligendza_Elisabeth.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": null,
+    "email": "lipp@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H113, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "075412077214",
+    "email": "locherer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 14, RITZ, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2776",
+    "email": "loiseau@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 204, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Alissa Lucha",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2721",
+    "email": "lucha@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 126, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Lucha_Alissa.jpg"
+  },
+  {
+    "name": "Holger Lund",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2153",
+    "email": "lund@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 1. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Lund_Holger.jpg"
+  },
+  {
+    "name": "Ingela Lundin",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2752",
+    "email": "lundin@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 15, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Lundin_Ingela.jpg"
+  },
+  {
+    "name": "Stefan Luppold",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2134",
+    "email": "luppold@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 102, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Luppold_Stefan.jpg"
+  },
+  {
+    "name": "Roman Macha",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2763 (Büro VFA)",
+    "email": "macha@dhbw-ravensburg.de",
+    "adresse": null,
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_VFA_Macha_Roman.jpg"
+  },
+  {
+    "name": "Jana Maier",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2173",
+    "email": "maier.ja@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 121, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Maier_Jana.jpg"
+  },
+  {
+    "name": "Lisanne Majovski",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2842",
+    "email": "majovski@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 124, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Majovski_Lisanne.jpg"
+  },
+  {
+    "name": "Jilan Manla Mohamad",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 102",
+    "email": "manla@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Jilan_Manla-Mohamad.png"
+  },
+  {
+    "name": "Thomas Mannchen",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 451",
+    "email": "mannchen@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H012, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mannchen_Thomas.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 118",
+    "email": "martin@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H118, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Petra März",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077-420",
+    "email": "maerz@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H112, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Petra_Maerz.jpg"
+  },
+  {
+    "name": "Claudia Mayer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2731",
+    "email": "mayer@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 202, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mayer_Claudia.jpg"
+  },
+  {
+    "name": "Claudia McCann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 118",
+    "email": "mccann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H118, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_McCann_Claudia.jpg"
+  },
+  {
+    "name": "Conny Mehlmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "075412077131",
+    "email": "mehlmann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum H035, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Conny_Mehlmann.jpg"
+  },
+  {
+    "name": "Jessica Merle",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2967",
+    "email": "merle@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 102, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Merle_Jessica.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 170",
+    "email": "messmer.m@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 14, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Peter Miez-Mangold",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2941",
+    "email": "miez-mangold@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 711, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Miez-Mangold_Peter.jpg"
+  },
+  {
+    "name": "Inga Mohr",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2947",
+    "email": "mohr.i@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 134, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mohr_Inga.jpg"
+  },
+  {
+    "name": "Christoph Moser",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2958",
+    "email": "c.moser@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 225, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Moser_Christoph.jpg"
+  },
+  {
+    "name": "Herbert Moser",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2130",
+    "email": "h.moser@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 3. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Moser_Herbert.jpg"
+  },
+  {
+    "name": "Pia Moser",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 107",
+    "email": "p.moser@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H136, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Pia_Moser.jpg"
+  },
+  {
+    "name": "Bodo Möslein-Tröppner",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2785",
+    "email": "moesleintroeppner@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 209, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Moeslein-Troeppner-Bodo.jpg"
+  },
+  {
+    "name": "Birgit Müller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2610",
+    "email": "mueller.bi@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 106, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mueller_Birgit.jpg"
+  },
+  {
+    "name": "Iris Müller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 115",
+    "email": "mueller.iris@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H111, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Mueller_Iris.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2165",
+    "email": "mueller.mar@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 112, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 119",
+    "email": "n.mueller@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H117, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Wolfgang Müller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 317",
+    "email": "w.mueller@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H401, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mueller_Wolfgang.jpg"
+  },
+  {
+    "name": "Gabriele Münzer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 104",
+    "email": "muenzer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H119, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Muenzer_Gabriele_2025_z.jpg"
+  },
+  {
+    "name": "Karoline Mutschler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2777",
+    "email": "mutschler@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 141, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mutschler_Karoline.jpg"
+  },
+  {
+    "name": "Christoph Neef",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2782",
+    "email": "neef@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 709, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Neef_Christoph.jpg"
+  },
+  {
+    "name": "Stephanie Neth",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2719",
+    "email": "neth@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 108, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Neth_Stephanie.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 312",
+    "email": "nickel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E111, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2736",
+    "email": "niederhofer@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 301, 88212 Ravensburg;  Rudolfstraße 11, Raum 208, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Uwe Nölte",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2152",
+    "email": "noelte@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 109, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Noelte_Uwe.jpg"
+  },
+  {
+    "name": "Jutta Nübel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2182",
+    "email": "nuebel.j@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 703, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Nuebel_Jutta_2025_z.jpg"
+  },
+  {
+    "name": "Michaela Nübling",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2120",
+    "email": "nuebling@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 150, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Nuebling_Michaela.jpg"
+  },
+  {
+    "name": "Marc Nutzmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 511",
+    "email": "nutzmann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H032, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Nutzmann_Marc.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2741",
+    "email": "a.ottler@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 306b, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Simon Ottler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2712",
+    "email": "ottler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 114, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ottler_Simon.jpg"
+  },
+  {
+    "name": "Pietro Pagliarulo",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 421",
+    "email": "pagliarulo@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H211, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Pagliarulo_Web.jpg"
+  },
+  {
+    "name": "Marion Parisek",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2966",
+    "email": "parisek@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 102, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_Mitarbeiter_Parisek_DSC01172.jpg"
+  },
+  {
+    "name": "Anna Pogrzeba",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2180",
+    "email": "pogrzeba@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 302, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Pogrzeba_Anna.jpg"
+  },
+  {
+    "name": "Michael Poisel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 166",
+    "email": "poisel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 13, Raum N116, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Poisel_Michael.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 258",
+    "email": "proprenter@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H323b, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Holger Purol",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 531",
+    "email": "purol@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E110, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Purol_Holger.jpg"
+  },
+  {
+    "name": "Petra Radke",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2103",
+    "email": "radke@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 123, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Radke_Petra.jpg"
+  },
+  {
+    "name": "Bernd Radtke",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2792",
+    "email": "b.radtke@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 207, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW-RV-Radkte-WEB_01.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 173",
+    "email": "ranabhatt@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 14, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Markus Rathgeb",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2133",
+    "email": "rathgeb@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 3. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Rathgeb_Markus.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2733",
+    "email": "rauter@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 217b, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Iwona Regulski",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 220",
+    "email": "regulski@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H114, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Iwona_Regulski.jpg"
+  },
+  {
+    "name": "Konrad Reif",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 212",
+    "email": "reif@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H010, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Reif_Konrad.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+491 7541 2077 454",
+    "email": "renn@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 104, RITZ, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Andreas Reutter",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2160",
+    "email": "reutter@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 008, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Reutter_Andreas.jpg"
+  },
+  {
+    "name": "Jochen Rieber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 245",
+    "email": "rieber@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H009, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Rieber_Jochen.png"
+  },
+  {
+    "name": "Manfred Rief",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 316",
+    "email": "rief@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H308, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Rief_Manfred.jpg"
+  },
+  {
+    "name": "Bernd Rieger",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2138",
+    "email": "rieger@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 504a, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Rieger_Bernd.jpg"
+  },
+  {
+    "name": "Chiara Riegger",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2771",
+    "email": "riegger@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 109 , 88214 Ravensburg  Marktstraße 28, Raum 301, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Riegger_Chiara.jpg"
+  },
+  {
+    "name": "Dominic Rimpler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2726",
+    "email": "rimpler@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 401, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Rimpler_Dominic.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 230",
+    "email": "rizzo.s@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H112, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2197",
+    "email": "roehl.k@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 1.42, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2739",
+    "email": "roehl@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 102, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Steffen Ronft",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "0751189992943",
+    "email": "ronft@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 209, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Steffen_Ronft.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2793",
+    "email": "rossmann@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 221, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "0751189992174",
+    "email": "rothenhaeusler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 101, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Wilhelm Ruckdeschel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 252",
+    "email": "ruckdeschel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H320, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ruckdeschel_Wilhelm.jpg"
+  },
+  {
+    "name": "Lars Ruhbach",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 521",
+    "email": "ruhbach@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E011, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ruhbach_Lars.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 176",
+    "email": "sardarabady@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 14, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 351",
+    "email": "sauer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E110a, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Stephan Sauter",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 253",
+    "email": "sauter@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H323c, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Sauter_Stephan.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2166",
+    "email": "schaefer.li@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 223",
+    "email": "schandl@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H302, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Markus Schatz",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 532",
+    "email": "schatz.m@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E110b, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/2021-08-13-MarkusSchatz.jpg"
+  },
+  {
+    "name": "Manfred Schertler-Rock",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2108",
+    "email": "schertlerrock@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 209, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schertler_Rock_Manfred.jpg"
+  },
+  {
+    "name": "Tanja Scheunemann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2729",
+    "email": "scheunemann@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 111, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Maier_Tanja.jpg"
+  },
+  {
+    "name": "Thomas Schieber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2724",
+    "email": "schieber@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 15, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schieber_Thomas.jpg"
+  },
+  {
+    "name": "Andreas Schilling",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2957",
+    "email": "schilling@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 206, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schilling_Andreas.jpg"
+  },
+  {
+    "name": "Simon Schmid",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2971",
+    "email": "Schmid.Si@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 209b, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_SimonSchmid.jpg"
+  },
+  {
+    "name": "Corinne Schmidt",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 410",
+    "email": "schmidt@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H112, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schmidt_Corinne.jpg"
+  },
+  {
+    "name": "Alena Schmidt-Weihrich",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 2944",
+    "email": "schmidtweihrich@dhbw-ravensburg.de",
+    "adresse": "Marktstr. 13/15, Raum 401, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW-Schmidt-Weihrich.jpg"
+  },
+  {
+    "name": "Jürgen Schneider",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 413",
+    "email": "schneider.jue@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H303, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schneider_Juergen.JPG"
+  },
+  {
+    "name": "Regine Schneider",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2775",
+    "email": "r.schneider@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 139, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schneider_Regine.jpg"
+  },
+  {
+    "name": "Bettina Schorr",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2960",
+    "email": "schorr@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 120, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schorr_Bettina.jpg"
+  },
+  {
+    "name": "Karin Schraff",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 310",
+    "email": "schraff@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H034, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schraff_Karin.jpg"
+  },
+  {
+    "name": "Alexandra Schumm",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2798",
+    "email": "schumm@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 118, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schumm_Alexandra.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2114",
+    "email": "schuetz.a@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 217a, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Heike Schwadorf",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2117",
+    "email": "schwadorf@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 126, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schwadorf_Heike.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2136",
+    "email": "schwenke@dhbw-ravensburg.de",
+    "adresse": "Rudolfstr. 19, Raum 222, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Thomas Seemann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 254",
+    "email": "seemann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H325, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Seemann_Thomas.jpg"
+  },
+  {
+    "name": "Stephanie Sonntag",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 2946",
+    "email": "sonntag.s@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW-RV-Stephanie-Sonntag.jpg"
+  },
+  {
+    "name": "Christoph Spandl",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 414",
+    "email": "spandl@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H304, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Spandl_Christoph.jpg"
+  },
+  {
+    "name": "Jan Specht",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2192",
+    "email": "specht@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 134, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Specht_Jan.jpg"
+  },
+  {
+    "name": "Heike Stahl",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2952",
+    "email": "stahl@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 708, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Stahl_Heike.jpg"
+  },
+  {
+    "name": "Denise (derzeit nicht im Hause) Staudacher",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2713",
+    "email": "staudacher@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 120, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Staudacher_Denise.jpg"
+  },
+  {
+    "name": "Torsten Stefan",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2183",
+    "email": "stefan@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 306b, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Stefan_Torsten.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2213",
+    "email": "steib.s@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 504a , 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Almut Steinbach",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2177",
+    "email": "steinbach@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 126, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Steinbach_Almut.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2119",
+    "email": "steinbichler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 220, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Stephanie Strauß",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2124",
+    "email": "strauss@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 216, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Strauss_Stefanie.jpg"
+  },
+  {
+    "name": "Michael Streich",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2109",
+    "email": "streich@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 105, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Streich_Michael-.png"
+  },
+  {
+    "name": "Nicole Stuepp",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2172",
+    "email": "stuepp@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E002, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Stuepp_Nicole.jpg"
+  },
+  {
+    "name": "Günther Suchy",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2790",
+    "email": "suchy@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 003, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Suchy_Guenther.jpg"
+  },
+  {
+    "name": "Ulrike Tennagen",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2176",
+    "email": "tennagen@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 020, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Tennagen_Ulrike.jpg"
+  },
+  {
+    "name": "Friedrich Then Bergh",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2796",
+    "email": "thenbergh@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 125, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Then_Bergh_Friedrich.jpg"
+  },
+  {
+    "name": "Sabine Thomas-Grundhoff",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2715",
+    "email": "thomas@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 35, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Thomas-Grundhoff_Sabine.jpg"
+  },
+  {
+    "name": "Jens Timmermann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 263",
+    "email": "timmermann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H018, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Timmermann_Jens.jpg"
+  },
+  {
+    "name": "Luise Trilsbach",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2713",
+    "email": "trilsbach@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 120, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_Mitarbeiter_Trilsbach_DSC01209.jpg"
+  },
+  {
+    "name": "Ulrike Troll",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2118; +49 (0)751 18999 - 2162",
+    "email": "troll@dhbw-ravensburg.de; ulrike.troll@cas.dhbw.de",
+    "adresse": "Weinbergstraße 17, Raum 226, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Troll_Ulrike.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2112",
+    "email": "trumpp@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 003, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 109",
+    "email": "vieweger@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2158",
+    "email": "vonbank@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 101, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Nadine Wachtler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2720",
+    "email": "wachtler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 117, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Wachtler_Nadine.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2970",
+    "email": "wagner@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 211/212, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 266",
+    "email": "waldvogel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E112, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Robert Watty",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2710",
+    "email": "watty@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 110, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_Mitarbeiter_Watty_DSC01188.jpg"
+  },
+  {
+    "name": "Jonas Weber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2942",
+    "email": "weber.j@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 124, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Weber_Jonas.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+491 7541 2077 459",
+    "email": "wichmann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 14, RITZ, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Torsten Widmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2125",
+    "email": "widmann@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 215, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Widmann_Torsten.jpg"
+  },
+  {
+    "name": "Sabine Wiggenhauser",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 117",
+    "email": "wiggenhauser@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H105b, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RVFN_Sabine_Wiggenhauser.jpg"
+  },
+  {
+    "name": "Beate Wilhelm",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2727",
+    "email": "wilhelm@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 102, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Wilhelm_Beate.jpg"
+  },
+  {
+    "name": "Alexander Wipfler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 244",
+    "email": "wipfler@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H009, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Wipfler_Alexander.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2879",
+    "email": "wucherer@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 118, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Daniel Würtenberger",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2140",
+    "email": "wuertenberger@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 504, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Wuertenberger_Daniel_2025_z.jpg"
+  },
+  {
+    "name": "Mustafa Yilmaz",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 312",
+    "email": "yilmaz@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E012, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RVFN_Mitarbeiter_Mustafa_Yilmaz.jpg"
+  },
+  {
+    "name": "Martin Zaefferer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2758",
+    "email": "zaefferer@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 206, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Martin_Zaefferer.png"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 116",
+    "email": "zaunmueller@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E111, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Stefan Zink",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2718",
+    "email": "zink@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 714, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Zink_Stefan.jpg"
+  },
+  {
+    "name": "Hilmar zum Buttel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2788",
+    "email": "zumbuttel@dhbw-ravensburg.de",
+    "adresse": "Rudolfstr. 19, Raum 227, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_zumButtel_Hilmar.jpg"
+  },
+  {
+    "name": "Franz-Joseph Arnold",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 225",
+    "email": "arnold@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H307, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Arnold_Franz-Josef.jpg"
+  },
+  {
+    "name": "Eric Balogh",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 416",
+    "email": "balogh@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H305, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Portrait_Balogh_Web.jpg"
+  },
+  {
+    "name": "Markus Bäuml",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 246",
+    "email": "baeuml@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E201, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RVFN_Mitarbeiter_Baeuml-Markus.jpg"
+  },
+  {
+    "name": "Jürgen Brath",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 251",
+    "email": "brath@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H324, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Brath_Juergen.jpg"
+  },
+  {
+    "name": "Christian Braunagel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": null,
+    "email": "braunagel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E201, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Christian_Braunagel.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 243",
+    "email": "buckreus@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E206, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Michaela David",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 231",
+    "email": "david.m@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H114, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/David_Michaela_2025_z.jpg"
+  },
+  {
+    "name": "Thomas Dietmüller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 524",
+    "email": "dietmueller@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E013, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dietmueller_Thomas.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 100",
+    "email": "dunz@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H110, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 311",
+    "email": "engelking@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H033, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Julia (derzeit nicht im Hause) Finger",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 240",
+    "email": "finger@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H113, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Finger_Julia.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 250",
+    "email": "fox@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H323a, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 139",
+    "email": "t.frank@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H327, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 515",
+    "email": "geringer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H330, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 458",
+    "email": "gieger@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "07541 2077 530",
+    "email": "granic@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H035, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Markus Grieb",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 452",
+    "email": "grieb@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H005b, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Grieb_Markus.jpg"
+  },
+  {
+    "name": "Alexander Grüning",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 418",
+    "email": "gruening@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H328, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterportrait_gruening.gif"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 457",
+    "email": "happ@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H118, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Philipp Hasselbach",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 417",
+    "email": "hasselbach@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H320, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Hasselbach_Web_266x351px.jpg"
+  },
+  {
+    "name": "Isolde Hoch",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 101",
+    "email": "hoch@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H108, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Hoch_Isolde_2025_z.jpg"
+  },
+  {
+    "name": "Axel Hoff",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 412",
+    "email": "hoff@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H306, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hoff_Axel.jpg"
+  },
+  {
+    "name": "Heike Hölzle",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 510",
+    "email": "hoelzle@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H035, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RVFN_Mitarbeiter_Heike_Hoelzle.jpg"
+  },
+  {
+    "name": "Khamis Jakob",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 255",
+    "email": "jakob@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum 326, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Jakob_Khamis.jpg"
+  },
+  {
+    "name": "Andreas Judt",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 411",
+    "email": "judt@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H312, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Judt_Andreas.jpg"
+  },
+  {
+    "name": "Thorsten Kever",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 213",
+    "email": "kever@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum H017, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kever_Thorsten.jpg"
+  },
+  {
+    "name": "Thomas Kibler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 241",
+    "email": "kibler@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H011, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kibler_Thomas.jpg"
+  },
+  {
+    "name": "Bishnu Prasad Koirala",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 516",
+    "email": "koirala@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 13, Raum N013, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Koirala_Bishnu_Prasad.jpg"
+  },
+  {
+    "name": "Rainer Krafft",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 262",
+    "email": "krafft@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H325, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Krafft_Rainer.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 453",
+    "email": "kraemer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H005a, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 123",
+    "email": "latty@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E102, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 123",
+    "email": "latty@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H013, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Hardy Lau",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 415",
+    "email": "lau@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H307, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Lau_Hardy.jpg"
+  },
+  {
+    "name": "Florian Leitner-Fischer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 242",
+    "email": "leitner-fischer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E202, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Leitner-Fischer_Florian.png"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": null,
+    "email": "lipp@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H113, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Thomas Mannchen",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 451",
+    "email": "mannchen@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H012, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mannchen_Thomas.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 118",
+    "email": "martin@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H118, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Petra März",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077-420",
+    "email": "maerz@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H112, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Petra_Maerz.jpg"
+  },
+  {
+    "name": "Claudia McCann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 118",
+    "email": "mccann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H118, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_McCann_Claudia.jpg"
+  },
+  {
+    "name": "Conny Mehlmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "075412077131",
+    "email": "mehlmann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum H035, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Conny_Mehlmann.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 170",
+    "email": "messmer.m@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 14, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Iris Müller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 115",
+    "email": "mueller.iris@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H111, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Mueller_Iris.jpg"
+  },
+  {
+    "name": "Wolfgang Müller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 317",
+    "email": "w.mueller@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H401, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mueller_Wolfgang.jpg"
+  },
+  {
+    "name": "Gabriele Münzer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 104",
+    "email": "muenzer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H119, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Muenzer_Gabriele_2025_z.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 312",
+    "email": "nickel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E111, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Marc Nutzmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 511",
+    "email": "nutzmann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H032, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Nutzmann_Marc.jpg"
+  },
+  {
+    "name": "Pietro Pagliarulo",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 421",
+    "email": "pagliarulo@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H211, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Pagliarulo_Web.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 258",
+    "email": "proprenter@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H323b, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Holger Purol",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 531",
+    "email": "purol@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E110, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Purol_Holger.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 173",
+    "email": "ranabhatt@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 14, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Iwona Regulski",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 220",
+    "email": "regulski@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H114, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Iwona_Regulski.jpg"
+  },
+  {
+    "name": "Konrad Reif",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 212",
+    "email": "reif@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H010, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Reif_Konrad.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+491 7541 2077 454",
+    "email": "renn@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 104, RITZ, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Jochen Rieber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 245",
+    "email": "rieber@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H009, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Rieber_Jochen.png"
+  },
+  {
+    "name": "Manfred Rief",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 316",
+    "email": "rief@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H308, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Rief_Manfred.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 230",
+    "email": "rizzo.s@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H112, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Wilhelm Ruckdeschel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 252",
+    "email": "ruckdeschel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H320, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ruckdeschel_Wilhelm.jpg"
+  },
+  {
+    "name": "Lars Ruhbach",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 521",
+    "email": "ruhbach@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E011, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ruhbach_Lars.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 176",
+    "email": "sardarabady@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 14, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 351",
+    "email": "sauer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E110a, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Stephan Sauter",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 253",
+    "email": "sauter@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H323c, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Sauter_Stephan.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 223",
+    "email": "schandl@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H302, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Markus Schatz",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 532",
+    "email": "schatz.m@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E110b, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/2021-08-13-MarkusSchatz.jpg"
+  },
+  {
+    "name": "Corinne Schmidt",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 410",
+    "email": "schmidt@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H112, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schmidt_Corinne.jpg"
+  },
+  {
+    "name": "Jürgen Schneider",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 413",
+    "email": "schneider.jue@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H303, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schneider_Juergen.JPG"
+  },
+  {
+    "name": "Karin Schraff",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 310",
+    "email": "schraff@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H034, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schraff_Karin.jpg"
+  },
+  {
+    "name": "Thomas Seemann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 254",
+    "email": "seemann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H325, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Seemann_Thomas.jpg"
+  },
+  {
+    "name": "Christoph Spandl",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 414",
+    "email": "spandl@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H304, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Spandl_Christoph.jpg"
+  },
+  {
+    "name": "Jens Timmermann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 263",
+    "email": "timmermann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H018, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Timmermann_Jens.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 266",
+    "email": "waldvogel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E112, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+491 7541 2077 459",
+    "email": "wichmann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 14, RITZ, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Alexander Wipfler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 244",
+    "email": "wipfler@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H009, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Wipfler_Alexander.jpg"
+  },
+  {
+    "name": "Mustafa Yilmaz",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 312",
+    "email": "yilmaz@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E012, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RVFN_Mitarbeiter_Mustafa_Yilmaz.jpg"
+  },
+  {
+    "name": "Thomas Asche",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2783",
+    "email": "asche@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 128, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Asche_Thomas.jpg"
+  },
+  {
+    "name": "Michael Bächle",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2730",
+    "email": "baechle@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 203, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Baechle_Michael.jpg"
+  },
+  {
+    "name": "Thomas Bauer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2186",
+    "email": "bauer@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 202, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Bauer_Thomas.jpg"
+  },
+  {
+    "name": "Simone Besemer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2747",
+    "email": "besemer@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 008, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Besemer_Simone.jpg"
+  },
+  {
+    "name": "Wolfgang Bihler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2961",
+    "email": "bihler@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 706, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Bihler_Wolfgang.jpg"
+  },
+  {
+    "name": "Klaus Birk",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2154",
+    "email": "birk@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 1. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Birk_Klaus.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2801",
+    "email": "blochinger@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 009, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2962",
+    "email": "brauchle@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 705, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2121",
+    "email": "brauner@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 302, 88212 Ravensburg;  Marktstraße 28, Raum 705, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Carsten Brehm",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2106",
+    "email": "brehm@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 134, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Brehm_Carsten.jpg"
+  },
+  {
+    "name": "Anja Brittner-Widmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2145",
+    "email": "brittnerwidmann@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 148, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Brittner-Widmann_Anja.jpg"
+  },
+  {
+    "name": "Stephan Daurer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2757",
+    "email": "daurer@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 301, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Daurer_Stephan.jpg"
+  },
+  {
+    "name": "Sabine Deschler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2722",
+    "email": "deschler@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 127, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Deschler_Sabine.jpg"
+  },
+  {
+    "name": "Ernst Deuer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2129",
+    "email": "deuer@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 710, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Deuer_Ernst.jpg"
+  },
+  {
+    "name": "Melanie Deutmeyer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2193",
+    "email": "deutmeyer@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 007, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Deutmeyer_Melanie.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2956",
+    "email": "diehm@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 203, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49751189992190",
+    "email": "dingeldey@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 217, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Thomas Dobbelstein",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2107",
+    "email": "dobbelstein@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 703, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dobbelstein_Thomas.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2104",
+    "email": "elmas@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 505, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Philipp Finkbeiner",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2738",
+    "email": "finkbeiner@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 3. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Finkbeiner_Philipp.jpg"
+  },
+  {
+    "name": "Peter Fischer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2156",
+    "email": "p.fischer@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 104, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Fischer_Peter.jpg"
+  },
+  {
+    "name": "Stefan Fischer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2157",
+    "email": "fischer@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 504, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Fischer_Stefan.jpg"
+  },
+  {
+    "name": "Anja Fischer-Voigt",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2111",
+    "email": "fischervoigt@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 124, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Fischer-Voigt_Anja.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2791",
+    "email": "b.franke@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 007, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2178",
+    "email": "fritz@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 020, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Wolfgang Fuchs",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2116",
+    "email": "fuchs@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 134, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Fuchs_Wolfgang.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2143",
+    "email": "gindele@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 144, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2763",
+    "email": "vfa@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 503a, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Joachim Güntzel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2784",
+    "email": "guentzel@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 713, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Guentzel_Joachim.jpg"
+  },
+  {
+    "name": "Benedikt Hackl",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2151",
+    "email": "hackl@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 223, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hackl_Benedikt.jpg"
+  },
+  {
+    "name": "Cornelia Hafner",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2139",
+    "email": "c.hafner@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 143, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hafner_Cornelia.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2787",
+    "email": "hagemeyer@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 510, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Mathias Hassenstein",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2951",
+    "email": "hassenstein@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 1. OG, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Dokumente_Bilder_Contentbereich/Mediendesign/dhbw_rv_mediendesign_hassenstein.jpg"
+  },
+  {
+    "name": "Anne Hautog",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2764",
+    "email": "hautog@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 140, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hautog_Anne.jpg"
+  },
+  {
+    "name": "Andrea Hecker",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2163",
+    "email": "a.hecker@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 3. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Andrea_Hecker_WEB.jpg"
+  },
+  {
+    "name": "Andrea Hennig",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2188",
+    "email": "hennig@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 1. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hennig_Andrea.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2799",
+    "email": "hilgers@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 227, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Christine Holder",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2770",
+    "email": "holder@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 142, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Holder_Christine.jpg"
+  },
+  {
+    "name": "Gregor Hopf",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2794",
+    "email": "hopf@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 224, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hopf_Gregor.jpg"
+  },
+  {
+    "name": "Paul Kirchberg",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2786",
+    "email": "kirchberg@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 303, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kirchberg_Paul.jpg"
+  },
+  {
+    "name": "Udo Klaiber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2753",
+    "email": "u.klaiber@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 003, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Klaiber_Udo.jpg"
+  },
+  {
+    "name": "Melisa Köker",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "075118999 - 2169",
+    "email": "Koeker@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 3. OG, 88212 Ravensburg  Marktstraße 28, 7. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Melisa_Koeker_WEB.jpg"
+  },
+  {
+    "name": "Petra Kroflin",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2181",
+    "email": "kroflin@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 303, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kroflin_Petra.jpg"
+  },
+  {
+    "name": "Jens Kuntzemüller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2789",
+    "email": "kuntzemueller@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 110, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kuntzemueller_Jens.jpg"
+  },
+  {
+    "name": "Frank Lehmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2716",
+    "email": "lehmann@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 201, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Lehmann_Frank.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2778",
+    "email": "liebrich@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 505, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2953",
+    "email": "liedtke@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 103, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2776",
+    "email": "loiseau@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 204, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Alissa Lucha",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2721",
+    "email": "lucha@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 126, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Lucha_Alissa.jpg"
+  },
+  {
+    "name": "Holger Lund",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2153",
+    "email": "lund@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 1. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Lund_Holger.jpg"
+  },
+  {
+    "name": "Stefan Luppold",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2134",
+    "email": "luppold@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 102, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Luppold_Stefan.jpg"
+  },
+  {
+    "name": "Lisanne Majovski",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2842",
+    "email": "majovski@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 124, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Majovski_Lisanne.jpg"
+  },
+  {
+    "name": "Claudia Mayer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2731",
+    "email": "mayer@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 202, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mayer_Claudia.jpg"
+  },
+  {
+    "name": "Inga Mohr",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2947",
+    "email": "mohr.i@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 134, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mohr_Inga.jpg"
+  },
+  {
+    "name": "Christoph Moser",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2958",
+    "email": "c.moser@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 225, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Moser_Christoph.jpg"
+  },
+  {
+    "name": "Herbert Moser",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2130",
+    "email": "h.moser@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 3. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Moser_Herbert.jpg"
+  },
+  {
+    "name": "Bodo Möslein-Tröppner",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2785",
+    "email": "moesleintroeppner@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 209, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Moeslein-Troeppner-Bodo.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2165",
+    "email": "mueller.mar@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 112, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Karoline Mutschler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2777",
+    "email": "mutschler@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 141, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mutschler_Karoline.jpg"
+  },
+  {
+    "name": "Christoph Neef",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2782",
+    "email": "neef@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 709, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Neef_Christoph.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2736",
+    "email": "niederhofer@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 301, 88212 Ravensburg;  Rudolfstraße 11, Raum 208, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Uwe Nölte",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2152",
+    "email": "noelte@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 109, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Noelte_Uwe.jpg"
+  },
+  {
+    "name": "Jutta Nübel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2182",
+    "email": "nuebel.j@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 703, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Nuebel_Jutta_2025_z.jpg"
+  },
+  {
+    "name": "Michaela Nübling",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2120",
+    "email": "nuebling@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 150, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Nuebling_Michaela.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2741",
+    "email": "a.ottler@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 306b, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Simon Ottler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2712",
+    "email": "ottler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 114, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ottler_Simon.jpg"
+  },
+  {
+    "name": "Anna Pogrzeba",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2180",
+    "email": "pogrzeba@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 302, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Pogrzeba_Anna.jpg"
+  },
+  {
+    "name": "Petra Radke",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2103",
+    "email": "radke@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 123, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Radke_Petra.jpg"
+  },
+  {
+    "name": "Bernd Radtke",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2792",
+    "email": "b.radtke@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 207, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW-RV-Radkte-WEB_01.jpg"
+  },
+  {
+    "name": "Markus Rathgeb",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2133",
+    "email": "rathgeb@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 3. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Rathgeb_Markus.jpg"
+  },
+  {
+    "name": "Bernd Rieger",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2138",
+    "email": "rieger@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 504a, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Rieger_Bernd.jpg"
+  },
+  {
+    "name": "Chiara Riegger",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2771",
+    "email": "riegger@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 109 , 88214 Ravensburg  Marktstraße 28, Raum 301, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Riegger_Chiara.jpg"
+  },
+  {
+    "name": "Steffen Ronft",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "0751189992943",
+    "email": "ronft@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 209, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Steffen_Ronft.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2793",
+    "email": "rossmann@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 221, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Manfred Schertler-Rock",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2108",
+    "email": "schertlerrock@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 209, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schertler_Rock_Manfred.jpg"
+  },
+  {
+    "name": "Andreas Schilling",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2957",
+    "email": "schilling@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 206, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schilling_Andreas.jpg"
+  },
+  {
+    "name": "Alena Schmidt-Weihrich",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 2944",
+    "email": "schmidtweihrich@dhbw-ravensburg.de",
+    "adresse": "Marktstr. 13/15, Raum 401, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW-Schmidt-Weihrich.jpg"
+  },
+  {
+    "name": "Regine Schneider",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2775",
+    "email": "r.schneider@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 139, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schneider_Regine.jpg"
+  },
+  {
+    "name": "Heike Schwadorf",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2117",
+    "email": "schwadorf@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 126, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schwadorf_Heike.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2136",
+    "email": "schwenke@dhbw-ravensburg.de",
+    "adresse": "Rudolfstr. 19, Raum 222, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Stephanie Sonntag",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 2946",
+    "email": "sonntag.s@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW-RV-Stephanie-Sonntag.jpg"
+  },
+  {
+    "name": "Jan Specht",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2192",
+    "email": "specht@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 134, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Specht_Jan.jpg"
+  },
+  {
+    "name": "Heike Stahl",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2952",
+    "email": "stahl@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 708, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Stahl_Heike.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2213",
+    "email": "steib.s@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 504a , 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Almut Steinbach",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2177",
+    "email": "steinbach@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 126, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Steinbach_Almut.jpg"
+  },
+  {
+    "name": "Stephanie Strauß",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2124",
+    "email": "strauss@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 216, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Strauss_Stefanie.jpg"
+  },
+  {
+    "name": "Michael Streich",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2109",
+    "email": "streich@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 11, Raum 105, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Streich_Michael-.png"
+  },
+  {
+    "name": "Günther Suchy",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2790",
+    "email": "suchy@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 003, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Suchy_Guenther.jpg"
+  },
+  {
+    "name": "Ulrike Tennagen",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2176",
+    "email": "tennagen@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 020, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Tennagen_Ulrike.jpg"
+  },
+  {
+    "name": "Friedrich Then Bergh",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2796",
+    "email": "thenbergh@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 125, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Then_Bergh_Friedrich.jpg"
+  },
+  {
+    "name": "Ulrike Troll",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2118; +49 (0)751 18999 - 2162",
+    "email": "troll@dhbw-ravensburg.de; ulrike.troll@cas.dhbw.de",
+    "adresse": "Weinbergstraße 17, Raum 226, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Troll_Ulrike.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2112",
+    "email": "trumpp@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 003, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Jonas Weber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2942",
+    "email": "weber.j@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 124, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Weber_Jonas.jpg"
+  },
+  {
+    "name": "Torsten Widmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2125",
+    "email": "widmann@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 215, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Widmann_Torsten.jpg"
+  },
+  {
+    "name": "Daniel Würtenberger",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2140",
+    "email": "wuertenberger@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 504, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Wuertenberger_Daniel_2025_z.jpg"
+  },
+  {
+    "name": "Martin Zaefferer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2758",
+    "email": "zaefferer@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 206, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Martin_Zaefferer.png"
+  },
+  {
+    "name": "Stefan Zink",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2718",
+    "email": "zink@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 714, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Zink_Stefan.jpg"
+  },
+  {
+    "name": "Hilmar zum Buttel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2788",
+    "email": "zumbuttel@dhbw-ravensburg.de",
+    "adresse": "Rudolfstr. 19, Raum 227, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_zumButtel_Hilmar.jpg"
+  },
+  {
+    "name": "Petra Cillar",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2763",
+    "email": "vfa@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 503a, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_VFA_Cillar_Petra.jpg"
+  },
+  {
+    "name": "Herbert Dreher",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2763 (Büro VFA)",
+    "email": "vfa@dhbw-ravensburg.de",
+    "adresse": null,
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dreher_Herbert.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2763",
+    "email": "vfa@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 503a, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Roman Macha",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2763 (Büro VFA)",
+    "email": "macha@dhbw-ravensburg.de",
+    "adresse": null,
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_VFA_Macha_Roman.jpg"
+  },
+  {
+    "name": "Franziska Baar",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2737",
+    "email": "baar@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 014, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Baar_Franziska.jpg"
+  },
+  {
+    "name": "Oliver Bährle",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2101 (Büro) / +49 (0)751 18999 - 2745 (Studio)",
+    "email": "baehrle@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 012, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Baehrle_Oliver.jpg"
+  },
+  {
+    "name": "Klaus Birk",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2154",
+    "email": "birk@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 1. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Birk_Klaus.jpg"
+  },
+  {
+    "name": "Christian Braunagel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": null,
+    "email": "braunagel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E201, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Christian_Braunagel.jpg"
+  },
+  {
+    "name": "Stephan Daurer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2757",
+    "email": "daurer@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 301, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Daurer_Stephan.jpg"
+  },
+  {
+    "name": "Ernst Deuer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2129",
+    "email": "deuer@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 710, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Deuer_Ernst.jpg"
+  },
+  {
+    "name": "Thomas Dietmüller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 524",
+    "email": "dietmueller@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E013, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dietmueller_Thomas.jpg"
+  },
+  {
+    "name": "Philipp Finkbeiner",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2738",
+    "email": "finkbeiner@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 3. OG, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Finkbeiner_Philipp.jpg"
+  },
+  {
+    "name": "Simon Gallus",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2965",
+    "email": "gallus@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 13/15, 1. OG, 88212 Ravensburg (Büro);  Marienplatz 2, Raum 011, 88212 Ravensburg (Multicast-Studio)",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Gallus_Simon.jpg"
+  },
+  {
+    "name": "Thorsten Kever",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 213",
+    "email": "kever@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum H017, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kever_Thorsten.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2179",
+    "email": "knitz@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 111, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 453",
+    "email": "kraemer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H005a, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Jens Kuntzemüller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2789",
+    "email": "kuntzemueller@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 110, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kuntzemueller_Jens.jpg"
+  },
+  {
+    "name": "Lisanne Majovski",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2842",
+    "email": "majovski@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 124, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Majovski_Lisanne.jpg"
+  },
+  {
+    "name": "Michaela Nübling",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2120",
+    "email": "nuebling@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 150, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Nuebling_Michaela.jpg"
+  },
+  {
+    "name": "Marc Nutzmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 511",
+    "email": "nutzmann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H032, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Nutzmann_Marc.jpg"
+  },
+  {
+    "name": "Simon Ottler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2712",
+    "email": "ottler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 114, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ottler_Simon.jpg"
+  },
+  {
+    "name": "Holger Purol",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 531",
+    "email": "purol@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E110, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Purol_Holger.jpg"
+  },
+  {
+    "name": "Petra Radke",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2103",
+    "email": "radke@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 123, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Radke_Petra.jpg"
+  },
+  {
+    "name": "Wilhelm Ruckdeschel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 252",
+    "email": "ruckdeschel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H320, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ruckdeschel_Wilhelm.jpg"
+  },
+  {
+    "name": "Lars Ruhbach",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 521",
+    "email": "ruhbach@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E011, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ruhbach_Lars.jpg"
+  },
+  {
+    "name": "Simon Schmid",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2971",
+    "email": "Schmid.Si@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 209b, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_SimonSchmid.jpg"
+  },
+  {
+    "name": "Torsten Stefan",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2183",
+    "email": "stefan@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 306b, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Stefan_Torsten.jpg"
+  },
+  {
+    "name": "Jonas Weber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2942",
+    "email": "weber.j@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 124, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Weber_Jonas.jpg"
+  },
+  {
+    "name": "Hilmar zum Buttel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2788",
+    "email": "zumbuttel@dhbw-ravensburg.de",
+    "adresse": "Rudolfstr. 19, Raum 227, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_zumButtel_Hilmar.jpg"
+  },
+  {
+    "name": "Cornelia Dietrich",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2749",
+    "email": "dietrich@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 221, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dietrich_Cornelia.jpg"
+  },
+  {
+    "name": "Anne Hautog",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2764",
+    "email": "hautog@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 140, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hautog_Anne.jpg"
+  },
+  {
+    "name": "Regina Hegele",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 120",
+    "email": "hegele@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H120, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Hegele_Regina.jpg"
+  },
+  {
+    "name": "Maike Helberg",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 108",
+    "email": "helberg@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H137, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Helberg_Maike.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2708",
+    "email": "hieke@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 8, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Isolde Hoch",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 101",
+    "email": "hoch@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H108, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Hoch_Isolde_2025_z.jpg"
+  },
+  {
+    "name": "Axel Hoff",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 412",
+    "email": "hoff@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H306, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hoff_Axel.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 106",
+    "email": "koecher@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H136, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Judith Layec",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 120",
+    "email": "layec@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H120, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Layec_Judith.jpg"
+  },
+  {
+    "name": "Pia Moser",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 107",
+    "email": "p.moser@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H136, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Pia_Moser.jpg"
+  },
+  {
+    "name": "Iris Müller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 115",
+    "email": "mueller.iris@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H111, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Mueller_Iris.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2741",
+    "email": "a.ottler@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 306b, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2733",
+    "email": "rauter@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 217b, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Dominic Rimpler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2726",
+    "email": "rimpler@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 401, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Rimpler_Dominic.jpg"
+  },
+  {
+    "name": "Tanja Scheunemann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2729",
+    "email": "scheunemann@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 111, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Maier_Tanja.jpg"
+  },
+  {
+    "name": "Alexandra Schumm",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2798",
+    "email": "schumm@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 118, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schumm_Alexandra.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2136",
+    "email": "schwenke@dhbw-ravensburg.de",
+    "adresse": "Rudolfstr. 19, Raum 222, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Torsten Stefan",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2183",
+    "email": "stefan@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 306b, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Stefan_Torsten.jpg"
+  },
+  {
+    "name": "Ulrike Tennagen",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2176",
+    "email": "tennagen@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 020, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Tennagen_Ulrike.jpg"
+  },
+  {
+    "name": "Friedrich Then Bergh",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2796",
+    "email": "thenbergh@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 125, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Then_Bergh_Friedrich.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 109",
+    "email": "vieweger@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Nadine Wachtler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2720",
+    "email": "wachtler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 117, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Wachtler_Nadine.jpg"
+  },
+  {
+    "name": "Alexander Wipfler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 244",
+    "email": "wipfler@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H009, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Wipfler_Alexander.jpg"
+  },
+  {
+    "name": "Stephanie Bendig",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2707",
+    "email": "bendig@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 111, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Stephanie_Bendig.jpg"
+  },
+  {
+    "name": "Melanie Deutmeyer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2193",
+    "email": "deutmeyer@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 007, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Deutmeyer_Melanie.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 100",
+    "email": "dunz@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H110, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Maria Grübel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2711",
+    "email": "gruebel@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 112, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Gruebel_Maria.jpg"
+  },
+  {
+    "name": "Isolde Hoch",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 101",
+    "email": "hoch@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H108, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Hoch_Isolde_2025_z.jpg"
+  },
+  {
+    "name": "Christina Kerber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2616",
+    "email": "kerber@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 118, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Kerber_Christina.jpg"
+  },
+  {
+    "name": "Florian Leitner-Fischer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 242",
+    "email": "leitner-fischer@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E202, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Leitner-Fischer_Florian.png"
+  },
+  {
+    "name": "Birgit Müller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2610",
+    "email": "mueller.bi@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 106, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mueller_Birgit.jpg"
+  },
+  {
+    "name": "Stephanie Neth",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2719",
+    "email": "neth@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 108, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Neth_Stephanie.jpg"
+  },
+  {
+    "name": "Simon Ottler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2712",
+    "email": "ottler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 114, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ottler_Simon.jpg"
+  },
+  {
+    "name": "Andreas Reutter",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2160",
+    "email": "reutter@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 008, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Reutter_Andreas.jpg"
+  },
+  {
+    "name": "Robert Watty",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2710",
+    "email": "watty@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 110, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_Mitarbeiter_Watty_DSC01188.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2748",
+    "email": "bittner@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 116, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Jan Bixenmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2122",
+    "email": "bixenmann@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_Mitarbeiter_Bixenmann_DSC01159-1.jpg"
+  },
+  {
+    "name": "Giuliano Colucci",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 109",
+    "email": "Colucci@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H016, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Colucci_Guliano_2025_z.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2727",
+    "email": "david@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum U04, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Dragan Dulic",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 133",
+    "email": "dulic@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H016, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dulic_Dragan.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2725",
+    "email": "duscha@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum U06, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Jasmin Fricker",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2989",
+    "email": "fricker@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 102, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Fricker_Jasmin.jpg"
+  },
+  {
+    "name": "Jeanette (derzeit nicht im Hause) Haßler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2298",
+    "email": "hassler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 117, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hassler_Jeanette.jpg"
+  },
+  {
+    "name": "Anne Hautog",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2764",
+    "email": "hautog@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 140, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hautog_Anne.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2797",
+    "email": "hecker@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Isabell Hejna",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2171",
+    "email": "hejna@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 102, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/Hejna_Isabel_2025_z.jpg"
+  },
+  {
+    "name": "Annabell Huber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2298",
+    "email": "huber.ann@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H105a, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_Mitarbeiter_Huber_DSC01196.jpg"
+  },
+  {
+    "name": "Christina Kerber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2616",
+    "email": "kerber@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 118, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Kerber_Christina.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2179",
+    "email": "knitz@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 111, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2167",
+    "email": "kurt@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 102, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Jilan Manla Mohamad",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 102",
+    "email": "manla@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Jilan_Manla-Mohamad.png"
+  },
+  {
+    "name": "Jessica Merle",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2967",
+    "email": "merle@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 102, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Merle_Jessica.jpg"
+  },
+  {
+    "name": "Birgit Müller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2610",
+    "email": "mueller.bi@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 106, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Mueller_Birgit.jpg"
+  },
+  {
+    "name": "Iris Müller",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 115",
+    "email": "mueller.iris@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H111, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Mueller_Iris.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 119",
+    "email": "n.mueller@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H117, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Marion Parisek",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2966",
+    "email": "parisek@dhbw-ravensburg.de",
+    "adresse": "Oberamteigasse 4, Raum 102, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_Mitarbeiter_Parisek_DSC01172.jpg"
+  },
+  {
+    "name": "Dominic Rimpler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2726",
+    "email": "rimpler@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 401, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Rimpler_Dominic.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2739",
+    "email": "roehl@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 102, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "0751189992174",
+    "email": "rothenhaeusler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 101, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2166",
+    "email": "schaefer.li@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Bettina Schorr",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2960",
+    "email": "schorr@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 120, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schorr_Bettina.jpg"
+  },
+  {
+    "name": "Alexandra Schumm",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2798",
+    "email": "schumm@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 118, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schumm_Alexandra.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 109",
+    "email": "vieweger@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2158",
+    "email": "vonbank@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 101, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Nadine Wachtler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2720",
+    "email": "wachtler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 117, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Wachtler_Nadine.jpg"
+  },
+  {
+    "name": "Sabine Wiggenhauser",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 117",
+    "email": "wiggenhauser@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H105b, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RVFN_Sabine_Wiggenhauser.jpg"
+  },
+  {
+    "name": "Beate Wilhelm",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2727",
+    "email": "wilhelm@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 102, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Wilhelm_Beate.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2879",
+    "email": "wucherer@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 118, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Stefan Angele",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 167",
+    "email": "angele@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 13, Raum N116, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Angele_Stefan.jpg"
+  },
+  {
+    "name": "Patrick Bastian",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2198",
+    "email": "bastian@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 510, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Bastian_Patrick.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2759",
+    "email": "bauer.ma@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 217a, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 114",
+    "email": "berchtold@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H135b, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2715",
+    "email": "bernhardt.j@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 35, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Jan Bixenmann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2122",
+    "email": "bixenmann@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_Mitarbeiter_Bixenmann_DSC01159-1.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 -2754",
+    "email": "braun.s@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 35, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Kristin Brüning",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2723",
+    "email": "bruening@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 115, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Bruening_Kristin.jpg"
+  },
+  {
+    "name": "Andrea Bürk",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2115",
+    "email": "studieninfo@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 113, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Buerk_Andrea.jpg"
+  },
+  {
+    "name": "Andrea Bürk",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2768",
+    "email": "buerk@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 113, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Buerk_Andrea.jpg"
+  },
+  {
+    "name": "Regina Capelli",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2175",
+    "email": "capelli@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 15, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Capelli_Regina.png"
+  },
+  {
+    "name": "Sabine Deschler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2722",
+    "email": "deschler@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 127, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Deschler_Sabine.jpg"
+  },
+  {
+    "name": "Cornelia Dietrich",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2749",
+    "email": "dietrich@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 221, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Dietrich_Cornelia.jpg"
+  },
+  {
+    "name": "Silvia Eichhorn",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2105",
+    "email": "eichhorn@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 18, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Eichhorn_Silvia.jpg"
+  },
+  {
+    "name": "Melanie Elamri",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2715",
+    "email": "elamri@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 35, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Elamri_Melanie.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+491 7541 2077 105",
+    "email": "froehlich.a@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H301, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2199",
+    "email": "gross@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 217b, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Regina Hegele",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 120",
+    "email": "hegele@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H120, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Hegele_Regina.jpg"
+  },
+  {
+    "name": "Maike Helberg",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 108",
+    "email": "helberg@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H137, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Helberg_Maike.jpg"
+  },
+  {
+    "name": "Anna Hensler",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2185",
+    "email": "a.hensler@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 15, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hensler_Anna.jpg"
+  },
+  {
+    "name": "Katharina Hey",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2168",
+    "email": "hey@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hey_Katharina.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2708",
+    "email": "hieke@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 8, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Klaus Hildebrand",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2113",
+    "email": "hildebrand@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 216, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hildebrand_Klaus.jpg"
+  },
+  {
+    "name": "Bettina Hinderhofer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2955",
+    "email": "hinderhofer@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 121, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Hinderhofer_Bettina.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2141",
+    "email": "holstein.an@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E102, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Gunter Holzer",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2762",
+    "email": "holzer@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 216, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Holzer_Gunter.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2715",
+    "email": "jehle@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 35, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Herbert Joos",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 165",
+    "email": "joos@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 13, Raum N023, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Joos_Herbert.jpg"
+  },
+  {
+    "name": "Daniela Kiechle",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2146",
+    "email": "kiechle@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 121, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Kiechle_Daniela.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 265",
+    "email": "kiesecker@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 13, Raum N115, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Karin Knor",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2184",
+    "email": "knor@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 15, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Knor_Karin.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 106",
+    "email": "koecher@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H136, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 123",
+    "email": "latty@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum E102, 88045 Friedrichshafen",
+    "bild": null
+  },
+  {
+    "name": "Judith Layec",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 120",
+    "email": "layec@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H120, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiterin_Layec_Judith.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2142",
+    "email": "lembach@dhbw-ravensburg.de",
+    "adresse": "Marktstr. 28, Raum 3.06c, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Elisabeth Ligendza",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2147",
+    "email": "ligendza@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 008, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Ligendza_Elisabeth.jpg"
+  },
+  {
+    "name": "Ingela Lundin",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2752",
+    "email": "lundin@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 15, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Lundin_Ingela.jpg"
+  },
+  {
+    "name": "Jana Maier",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2173",
+    "email": "maier.ja@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 121, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Maier_Jana.jpg"
+  },
+  {
+    "name": "Peter Miez-Mangold",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2941",
+    "email": "miez-mangold@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 711, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Miez-Mangold_Peter.jpg"
+  },
+  {
+    "name": "Pia Moser",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 107",
+    "email": "p.moser@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 2, Raum H136, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Pia_Moser.jpg"
+  },
+  {
+    "name": "Stephanie Neth",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2719",
+    "email": "neth@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 108, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Neth_Stephanie.jpg"
+  },
+  {
+    "name": "Michael Poisel",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 166",
+    "email": "poisel@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 13, Raum N116, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Poisel_Michael.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2733",
+    "email": "rauter@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 217b, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Tanja Scheunemann",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2729",
+    "email": "scheunemann@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 111, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Maier_Tanja.jpg"
+  },
+  {
+    "name": "Thomas Schieber",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2724",
+    "email": "schieber@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 15, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Schieber_Thomas.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2114",
+    "email": "schuetz.a@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 217a, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Denise (derzeit nicht im Hause) Staudacher",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2713",
+    "email": "staudacher@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 120, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Staudacher_Denise.jpg"
+  },
+  {
+    "name": "Torsten Stefan",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2183",
+    "email": "stefan@dhbw-ravensburg.de",
+    "adresse": "Marktstraße 28, Raum 306b, 88212 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Stefan_Torsten.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2119",
+    "email": "steinbichler@dhbw-ravensburg.de",
+    "adresse": "Marienplatz 2, Raum 220, 88212 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": "Nicole Stuepp",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2172",
+    "email": "stuepp@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E002, 88045 Friedrichshafen",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Stuepp_Nicole.jpg"
+  },
+  {
+    "name": "Sabine Thomas-Grundhoff",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2715",
+    "email": "thomas@dhbw-ravensburg.de",
+    "adresse": "Rudolfstraße 19, Raum 35, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Thomas-Grundhoff_Sabine.jpg"
+  },
+  {
+    "name": "Luise Trilsbach",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2713",
+    "email": "trilsbach@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 120, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_Mitarbeiter_Trilsbach_DSC01209.jpg"
+  },
+  {
+    "name": "Ulrike Troll",
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2118; +49 (0)751 18999 - 2162",
+    "email": "troll@dhbw-ravensburg.de; ulrike.troll@cas.dhbw.de",
+    "adresse": "Weinbergstraße 17, Raum 226, 88214 Ravensburg",
+    "bild": "https://www.ravensburg.dhbw.de/fileadmin/Ravensburg/Bilder/Portraits_Mitarbeiter/DHBW_RV_Mitarbeiter_Troll_Ulrike.jpg"
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)751 18999 - 2970",
+    "email": "wagner@dhbw-ravensburg.de",
+    "adresse": "Weinbergstraße 17, Raum 211/212, 88214 Ravensburg",
+    "bild": null
+  },
+  {
+    "name": null,
+    "funktion": "Mitarbeiter/in",
+    "telefon": "+49 (0)7541 2077 - 116",
+    "email": "zaunmueller@dhbw-ravensburg.de",
+    "adresse": "Fallenbrunnen 1, Raum E111, 88045 Friedrichshafen",
+    "bild": null
+  }
+]

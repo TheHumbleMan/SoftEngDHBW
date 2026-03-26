@@ -25,5 +25,19 @@
     "jsdom": "^28.1.0",
     "supertest": "^7.2.2",
     "vitest": "^4.0.18"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheHumbleMan/SoftEngDHBW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheHumbleMan/SoftEngDHBW/issues"
+  },
+  "homepage": "https://github.com/TheHumbleMan/SoftEngDHBW#readme"
 }

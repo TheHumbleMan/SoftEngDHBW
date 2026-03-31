@@ -30,7 +30,8 @@ const phasesByYear = {
 
 function getStudyYear(courseCode) {
   // extrahiere Jahr aus Code, z.B. Tit24 -> 24 -> 2024
-  const startYear = 2000 + parseInt(courseCode.match(/\d+/)[0], 10);
+  // oder bei mehreren Zahlen (wie WBK125) nur die letzten zwei Ziffern
+  const startYear = 2000 + parseInt(courseCode.match(/(\d{2})$/)[1], 10);
 
   const today = new Date();
   let yearOffset = today.getFullYear() - startYear;

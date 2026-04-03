@@ -3,7 +3,7 @@ let selectedMonday;
 let lastMonday;
 let nextMonday;
 let allDays = [];
-const startHour = 8;
+let startHour = 8; // Standard Startzeit, wird später ggf. angepasst
 const endHour = 19;
 const stepMinutes = 15;
 const slotsPerHour = 60 / stepMinutes;
@@ -169,40 +169,48 @@ export function initDates() {
 }
 
 export async function renderSelectedWeek(course) {
+    startHour = 8;
     const timetableTitle = document.getElementById("timetable-title");
     const weekNumber = getISOWeek(selectedMonday);
     timetableTitle.textContent = `Stundenplan - KW ${weekNumber}`;
 
     const timetableContainer = document.getElementById("timetable-container");
-    timetableContainer.innerHTML = createEmptyTimetableHTML();
     
     //Alle Tage aus der JSON in Variable speichern
     allDays = await fetchTimetableData(course);
     if (allDays.length !== 0){
         //Spezifische Tage der ausgesuchten Woche finden
-        const monday = findDayData(allDays, selectedMonday);
-        const tuesday = findDayData(allDays, addDays(selectedMonday, 1));
-        const wednesday = findDayData(allDays, addDays(selectedMonday, 2));
-        const thursday = findDayData(allDays, addDays(selectedMonday, 3));
-        const friday = findDayData(allDays, addDays(selectedMonday, 4));
+        let weekArray = [];
+        weekArray[0] = findDayData(allDays, selectedMonday);
+        weekArray[1] = findDayData(allDays, addDays(selectedMonday, 1));
+        weekArray[2] = findDayData(allDays, addDays(selectedMonday, 2));
+        weekArray[3] = findDayData(allDays, addDays(selectedMonday, 3));
+        weekArray[4] = findDayData(allDays, addDays(selectedMonday, 4));
+        
+
+        for (let i = 0; i < 5; i++) {
+            if(weekArray[i]){
+                weekArray[i].appointments.forEach(app => {
+                    if (timeToMinutes(app.startTime) < timeToMinutes(`${startHour}.00`)) {
+                        startHour = Number(app.startTime.split(".")[0]);
+                        console.log(`Angepasste Startzeit: ${startHour} Uhr`);
+                    }
+                });
+            }
+        }
+        timetableContainer.innerHTML = createEmptyTimetableHTML();
 
         //Termine der spezifischen Tage in den Stundenplan setzen
-        if (monday) {renderDayAppointments("mon", monday.appointments);}
-
-        if (tuesday) {renderDayAppointments("tue", tuesday.appointments);}
-
-        if (wednesday) {renderDayAppointments("wed", wednesday.appointments);}
-
-        if (thursday) {renderDayAppointments("thu", thursday.appointments);}
-
-        if (friday) {renderDayAppointments("fri", friday.appointments);}
+        if (weekArray[0]) {renderDayAppointments("mon", weekArray[0].appointments);}
+        if (weekArray[1]) {renderDayAppointments("tue", weekArray[1].appointments);}
+        if (weekArray[2]) {renderDayAppointments("wed", weekArray[2].appointments);}
+        if (weekArray[3]) {renderDayAppointments("thu", weekArray[3].appointments);}
+        if (weekArray[4]) {renderDayAppointments("fri", weekArray[4].appointments);}
 
     } else{
         timetableContainer.innerHTML = "ein spannender inhalt";
     }
 }
-
-//---------------------------Sandbox----------------------------------------------------------
 
 //Kalenderwoche nach Datum berechnen
 function getISOWeek(date) {
@@ -272,7 +280,6 @@ function renderSingle(dayKey, app){
 }
 
 function renderDouble(dayKey, app){
-    console.log("Starte renderDouble für Termin: " + app.name);
     const timetableCells = Array.from(document.querySelectorAll(`td.timetableCell[data-day='${dayKey}']`));
     const timetableCell = document.querySelector(`td.timetableCell[data-day="${dayKey}"][data-time="${app.startTime}"]`);
 

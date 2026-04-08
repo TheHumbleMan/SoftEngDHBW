@@ -70,10 +70,17 @@ export const scrapeDhbwApp = async ({ sessionCourse, writeFile = true, outputDir
     const kurs = resolveKurs(sessionCourse);
     const url = `https://dhbw.app/c/${kurs}`;
 
+    /* @Robert, zumindest bei mir geht es nur auf die weise wie es jetzt ist, können wir das maybe anpassen
+        dass wir ne abfrage machen die unterscheiden kann obs aufm raspi läuft oder nicht?
     const browser = await puppeteer.launch({ 
         headless: "new",
         executablePath: getBinaryPath() || undefined,
         args: ['--no-sandbox'] // Wichtig für Stabilität auf Servern
+    });*/
+
+    const browser = await puppeteer.launch({
+        headless: "new",
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     
     try {

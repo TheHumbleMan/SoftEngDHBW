@@ -3,13 +3,13 @@ import fs from "fs";
 
 // Konfiguration der Standorte
 const standorte = [
-    { 
-        name: 'Friedrichshafen', 
+    {
+        name: 'Friedrichshafen',
         url: 'https://seezeit.com/essen/speiseplaene/mensa-friedrichshafen/',
         datei: './data/mensa_FN.json'
     },
-    { 
-        name: 'Ravensburg', 
+    {
+        name: 'Ravensburg',
         url: 'https://seezeit.com/essen/speiseplaene/mensa-ravensburg/',
         datei: './data/mensa_RV.json'
     }

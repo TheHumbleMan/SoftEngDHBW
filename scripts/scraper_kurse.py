@@ -17,7 +17,7 @@ from datetime import datetime
 import time
 
 
-def scrape_course_names(url):
+def scrapeCourseNames(url):
     """
     Scrapet Kursnamen von einer DHBW.app Website mit Selenium.
     
@@ -89,7 +89,7 @@ def scrape_course_names(url):
             driver.quit()
 
 
-def save_to_txt(course_names, filename="kurse.txt"):
+def saveToTxt(course_names, filename="kurse.txt"):
     """
     Speichert Kursnamen in einer Textdatei.
     
@@ -118,7 +118,7 @@ def save_to_txt(course_names, filename="kurse.txt"):
         return False
 
 
-def save_to_json(course_names, filename="kurse.json", site_code=""):
+def saveToJson(course_names, filename="kurse.json", site_code=""):
     """
     Speichert Kursnamen in einer JSON-Datei.
     
@@ -167,7 +167,7 @@ def main():
     total_courses = 0
     
     for url in urls:
-        site_code, course_names = scrape_course_names(url)
+        site_code, course_names = scrapeCourseNames(url)
         if course_names:
             all_courses[site_code] = course_names
             total_courses += len(course_names)
@@ -190,13 +190,13 @@ def main():
         # Speichere einzeln
         for site, courses in all_courses.items():
             # filename = f"data/kurse_{site.lower()}.txt"
-            # save_to_txt(courses, filename)
+            # saveToTxt(courses, filename)
             filename_json = f"../data/kurse_{site.lower()}.json"
-            save_to_json(courses, filename_json, site)
+            saveToJson(courses, filename_json, site)
         
         # Speichere kombinierte Liste
-        # save_to_txt(combined_courses, "data/kurse_all.txt")
-        # save_to_json(combined_courses, "data/kurse_all.json", "ALL")
+        # saveToTxt(combined_courses, "data/kurse_all.txt")
+        # saveToJson(combined_courses, "data/kurse_all.json", "ALL")
         
         print("\nScraping erfolgreich abgeschlossen!")
     else:

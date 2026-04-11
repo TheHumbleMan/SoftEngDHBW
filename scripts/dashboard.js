@@ -63,28 +63,28 @@ document.addEventListener('DOMContentLoaded', () => {
                                  // Setze den extrahierten Inhalt in den Detail-Bereich
                                 detailContent.innerHTML = mainContent.innerHTML;
                                 //ausführen des stundenplan scripts
-                                if (contentUrl === "kacheln/timetable.html") {
+                                if (contentUrl === "views/timetable.html") {
                                     import("./timetable.js").then(async module => {
                                         module.initDates();
                                         module.renderSelectedWeek(await loadCourse());
                                     });
                                 }
-                                if (contentUrl === "kacheln/mensa.html") {
+                                if (contentUrl === "views/mensa.html") {
                                     import("./mensa.js").then(async module => {
                                         module.renderInitialMenu();
                                     });
                                 }
-                                if (contentUrl === "kacheln/documents.html") {
+                                if (contentUrl === "views/documents.html") {
                                     import("./documents.js").then(module => {
                                         module.initDocuments(detailContent);
                                     });
                                 }
-                                else if (contentUrl === "kacheln/opnv.html") { 
+                                else if (contentUrl === "views/opnv.html") { 
                                     import("./opnv.js").then(module => {
                                         module.initDateTimeFields();
                                     });
                                 }
-                                else if (contentUrl === "kacheln/appointments.html") { 
+                                else if (contentUrl === "views/appointments.html") { 
                                     import("./appointments.js").then(async module => {
                                         module.renderPhases(await loadCourse());
                                     });

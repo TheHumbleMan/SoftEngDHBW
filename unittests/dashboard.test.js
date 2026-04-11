@@ -23,10 +23,10 @@ describe('Dashboard Test', () => {
     // DOM aufbauen
     document.body.innerHTML = `
       <div class="dashboard-grid">
-        <div class="dashboard-card" data-content="kacheln/timetable.html">
+        <div class="dashboard-card" data-content="views/timetable.html">
           <div class="detail-content"></div>
         </div>
-        <div class="dashboard-card" data-content="kacheln/mensa.html">
+        <div class="dashboard-card" data-content="views/mensa.html">
           <div class="detail-content"></div>
         </div>
         <div class="dashboard-card">
@@ -65,13 +65,13 @@ describe('Dashboard Test', () => {
     await import('../scripts/dashboard.js');
     document.dispatchEvent(new Event('DOMContentLoaded'));
 
-    const card = document.querySelector('[data-content="kacheln/timetable.html"]');
+    const card = document.querySelector('[data-content="views/timetable.html"]');
     card.click();
 
     await new Promise(resolve => setTimeout(resolve, 0));
 
     const detailContent = card.querySelector('.detail-content');
-    expect(fetch).toHaveBeenCalledWith('kacheln/timetable.html');
+    expect(fetch).toHaveBeenCalledWith('views/timetable.html');
     expect(detailContent.innerHTML).toContain('Stundenplan Inhalt');
   });
 
@@ -84,13 +84,13 @@ describe('Dashboard Test', () => {
     await import('../scripts/dashboard.js');
     document.dispatchEvent(new Event('DOMContentLoaded'));
 
-    const card = document.querySelector('[data-content="kacheln/mensa.html"]');
+    const card = document.querySelector('[data-content="views/mensa.html"]');
     card.click();
 
     await new Promise(resolve => setTimeout(resolve, 0));
 
     const detailContent = card.querySelector('.detail-content');
-    expect(fetch).toHaveBeenCalledWith('kacheln/mensa.html');
+    expect(fetch).toHaveBeenCalledWith('views/mensa.html');
     expect(detailContent.innerHTML).toContain('Mensa Inhalt');
   });
 
@@ -98,7 +98,7 @@ describe('Dashboard Test', () => {
     await import('../scripts/dashboard.js');
     document.dispatchEvent(new Event('DOMContentLoaded'));
 
-    const card = document.querySelector('[data-content="kacheln/timetable.html"]');
+    const card = document.querySelector('[data-content="views/timetable.html"]');
     const grid = document.querySelector('.dashboard-grid');
 
     card.classList.add('active');
@@ -127,7 +127,7 @@ describe('Dashboard Test', () => {
     await import('../scripts/dashboard.js');
     document.dispatchEvent(new Event('DOMContentLoaded'));
 
-    const card = document.querySelector('[data-content="kacheln/timetable.html"]');
+    const card = document.querySelector('[data-content="views/timetable.html"]');
     card.click();
 
     await new Promise(resolve => setTimeout(resolve, 0));

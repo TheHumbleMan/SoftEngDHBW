@@ -26,7 +26,6 @@ from urllib.parse import urljoin, urlparse
 
 import requests  # type: ignore[import-untyped]
 from bs4 import BeautifulSoup, Tag
-from bs4.element import AttributeValueList
 
 
 BASE_URL = "https://www.ravensburg.dhbw.de/service-einrichtungen/dokumente-downloads"
@@ -95,13 +94,14 @@ def now_iso() -> str:
 
 
 def attr_to_text(value: object) -> str:
-	if value is None:
-		return ""
-	if isinstance(value, str):
-		return value
-	if isinstance(value, AttributeValueList):
-		return " ".join(str(item) for item in value)
-	return str(value)
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value
+    # Ersetze AttributeValueList durch einen Check auf list
+    if isinstance(value, list):
+        return " ".join(str(item) for item in value)
+    return str(value)
 
 
 def build_session() -> requests.Session:

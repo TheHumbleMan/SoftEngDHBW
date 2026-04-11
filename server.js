@@ -121,7 +121,7 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/auth/login', async (req, res) => {
-    res.render('auth/login.html', {
+    res.render('views/login.html', {
         error: req.query.error,
         success: req.query.success
     });
@@ -302,40 +302,40 @@ app.get('/auth/:page.html', (req, res, next) => {
     res.redirect(`/auth/${req.params.page}`);
 });
 
-app.get('/kacheln/dummy.html', (req, res) => {
-    res.render('kacheln/dummy.html');
+app.get('/views/dummy.html', (req, res) => {
+    res.render('views/dummy.html');
 });
 
-app.get('/kacheln/student.html', requireLogin, (req, res) => {
-    res.render('kacheln/student.html');
+app.get('/views/student.html', requireLogin, (req, res) => {
+    res.render('views/student.html');
 });
 
-app.get('/kacheln/partner.html', requireLogin, (req, res) => {
-    res.render('kacheln/partner.html');
+app.get('/views/partner.html', requireLogin, (req, res) => {
+    res.render('views/partner.html');
 });
 
-app.get('/kacheln/timetable.html', requireLogin, (req, res) => {
-    res.render('kacheln/timetable.html');
+app.get('/views/timetable.html', requireLogin, (req, res) => {
+    res.render('views/timetable.html');
 });
 
-app.get('/kacheln/mensa.html', requireLogin, (req, res) => {
-    res.render('kacheln/mensa.html');
+app.get('/views/mensa.html', requireLogin, (req, res) => {
+    res.render('views/mensa.html');
 });
 
-app.get('/kacheln/documents.html', requireLogin, (req, res) => {
-    res.render('kacheln/documents.html');
+app.get('/views/documents.html', requireLogin, (req, res) => {
+    res.render('views/documents.html');
 });
 
-app.get('/kacheln/opnv.html', requireLogin, (req, res) => {
-    res.render('kacheln/opnv.html');
+app.get('/views/opnv.html', requireLogin, (req, res) => {
+    res.render('views/opnv.html');
 });
 
-app.get('/kacheln/appointments.html', requireLogin, (req, res) => {
-    res.render('kacheln/appointments.html');
+app.get('/views/appointments.html', requireLogin, (req, res) => {
+    res.render('views/appointments.html');
 });
 
-app.get('/kacheln/ansprechpartner.html', requireLogin, (req, res) => {
-    res.render('kacheln/ansprechpartner.html');
+app.get('/views/ansprechpartner.html', requireLogin, (req, res) => {
+    res.render('views/ansprechpartner.html');
 });
 
 app.get('/scrape-dhbw', requireLogin, async (req, res) => {

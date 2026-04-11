@@ -1,5 +1,5 @@
 import { Builder, By, until, Key } from "selenium-webdriver";
-import firefox from "selenium-webdriver/firefox.js"; // Nutzt Firefox wie das Python-Skript
+import firefox from "selenium-webdriver/firefox.js"; // Nutzt Firefox
 import fs from "fs";
 import path from "path";
 

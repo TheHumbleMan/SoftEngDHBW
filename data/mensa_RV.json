@@ -161,10 +161,9 @@
       },
       {
         "kategorie": "KombinierBar",
-        "name": "Hacksteak mit Käsefüllung und dunkler Soße",
+        "name": "Piccata von der Hähnchenbrust | dunkler Soße",
         "allergene": [
           "25a",
-          "28",
           "31"
         ],
         "preise": "2,40 € Studierende | 3,60 € Mitarbeiter | 4,90 € Gäste"
@@ -362,9 +361,8 @@
       },
       {
         "kategorie": "Dessert",
-        "name": "Grießquark mit roter Grütze",
+        "name": "Vanillepudding",
         "allergene": [
-          "25a",
           "31"
         ],
         "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"

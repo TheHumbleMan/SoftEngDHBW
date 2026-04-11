@@ -51,23 +51,23 @@
     "gerichte": [
       {
         "kategorie": "Menü I",
-        "name": "Rindfleisch-Maultaschen mit Gemüsebrühe und Kartoffelsalat dazu Salat oder Dessert",
+        "name": "Rindfleisch-Maultaschen mit Tomaten-Gemüse Sauce und Feta dazu Salat oder Dessert",
         "allergene": [
           "25a",
           "25e",
           "28",
           "33",
-          "34"
+          "31"
         ],
         "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 6.00 € Schüler & Z.U. | 8,70 € Gäste"
       },
       {
         "kategorie": "Menü II",
-        "name": "fünf Maultaschen mit Gemüsebrühe und Kartoffelsalat dazu Salat oder Dessert",
+        "name": "fünf Maultaschen mit Tomaten-Gemüse Sauce und Feta dazu Salat oder Dessert",
         "allergene": [
           "25a",
           "33",
-          "34"
+          "31"
         ],
         "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 5.50 € Schüler & Z.U. | 8,20 € Gäste"
       }

@@ -31,7 +31,7 @@ describe('Express Server API & Routes', () => {
         it('should redirect / to /auth/login when not authenticated', async () => {
             const res = await request(app).get('/');
             expect(res.status).toBe(302);
-            expect(res.header.location).toBe('/auth/login');
+            expect(res.header.location).toBe('/views/login');
         });
 
         it('should render the login page on GET /auth/login', async () => {
@@ -43,7 +43,7 @@ describe('Express Server API & Routes', () => {
         it('should redirect protected routes (e.g., /dashboard) to login', async () => {
             const res = await request(app).get('/dashboard');
             expect(res.status).toBe(302);
-            expect(res.header.location).toBe('/auth/login?error=session');
+            expect(res.header.location).toBe('/views/login?error=session');
         });
 
         it('should return 401 for /api/session when not logged in', async () => {
@@ -192,7 +192,7 @@ describe('Express Server API & Routes', () => {
 
             const res = await request(app).get('/dashboard').set('Cookie', cookie);
             expect(res.status).toBe(302);
-            expect(res.header.location).toBe('/auth/login?error=session');
+            expect(res.header.location).toBe('/views/login?error=session');
             
             vi.useRealTimers();
         });
@@ -215,7 +215,7 @@ describe('Express Server API & Routes', () => {
             expect(res.status).toBe(302);
             expect(res.header.location).toBe('/dashboard');
 
-            res = await request(app).get('/views/login.html');
+            res = await request(app).get('/auth/login.html');
             expect(res.status).toBe(302);
         });
 

@@ -51,11 +51,100 @@
     "gerichte": [
       {
         "kategorie": "Menü I",
-        "name": "Rindfleisch-Maultaschen mit Gemüsebrühe und Kartoffelsalat dazu Salat oder Dessert",
+        "name": "Rindfleisch-Maultaschen mit Tomaten-Gemüse Sauce und Feta dazu Salat oder Dessert",
         "allergene": [
           "25a",
           "25e",
           "28",
+          "33",
+          "31"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 6.00 € Schüler & Z.U. | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "fünf Maultaschen mit Tomaten-Gemüse Sauce und Feta dazu Salat oder Dessert",
+        "allergene": [
+          "25a",
+          "33",
+          "31"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 5.50 € Schüler & Z.U. | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Mo. 13.04.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Chili con Carne mit Reis und Kirschjoghurt",
+        "allergene": [
+          "2",
+          "25c",
+          "33",
+          "34",
+          "1",
+          "31"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 6.00 € Schüler & Z.U. | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "Chili sin Carne mit Reis und Kirschjoghurt",
+        "allergene": [
+          "25c",
+          "1",
+          "31"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 5.50 € Schüler & Z.U. | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Di. 14.04.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Hackbraten mit Schnittlauchsauce und Spinatknödel dazu Blattsalat",
+        "allergene": [
+          "2",
+          "3",
+          "25a",
+          "28",
+          "33",
+          "34",
+          "8",
+          "31"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 6.00 € Schüler & Z.U. | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "Tortelloni mit Schnittlauchsauce und geriebener Hartkäse dazu Blattsalat",
+        "allergene": [
+          "Paprika",
+          "Tomate",
+          "Zucchini",
+          "25a",
+          "8",
+          "31",
+          "33",
+          "34"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 5.50 € Schüler & Z.U. | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Mi. 15.04.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Piccata von der Hähnchenbrust mit Tomaten-Basilikumsauce und Pasta dazu Pudding mit Vanillegeschmack",
+        "allergene": [
+          "25a",
+          "31",
           "33",
           "34"
         ],
@@ -63,11 +152,74 @@
       },
       {
         "kategorie": "Menü II",
-        "name": "fünf Maultaschen mit Gemüsebrühe und Kartoffelsalat dazu Salat oder Dessert",
+        "name": "Pasta mit Tomaten-Basilikumsauce und geriebener Hartkäse dazu Pudding mit Vanillegeschmack",
         "allergene": [
           "25a",
           "33",
+          "34",
+          "31"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 5.50 € Schüler & Z.U. | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Do. 16.04.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Schwäbisches Linsengericht mit Wiener und Spätzle dazu Blattsalat",
+        "allergene": [
+          "2",
+          "3",
+          "33",
+          "34",
+          "36",
+          "25a",
+          "25d",
+          "28"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 6.00 € Schüler & Z.U. | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "Linsengemüsetopf mit Spätzle dazu Blattsalat",
+        "allergene": [
+          "3",
+          "33",
+          "34",
+          "36",
+          "25a",
+          "25d",
+          "28"
+        ],
+        "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 5.50 € Schüler & Z.U. | 8,20 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Fr. 17.04.",
+    "gerichte": [
+      {
+        "kategorie": "Menü I",
+        "name": "Backfisch mit Remouladensauce und Petersilienkartoffeln dazu Salat oder Dessert",
+        "allergene": [
+          "25a",
+          "26",
+          "31",
+          "1",
+          "9",
           "34"
+        ],
+        "preise": "4,70 € Studierende | 5,70 € Mitarbeiter | 6.00 € Schüler & Z.U. | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "Menü II",
+        "name": "Kaiserschmarrn mit Pflaumenkompott dazu Salat oder Dessert",
+        "allergene": [
+          "25a",
+          "28",
+          "31"
         ],
         "preise": "4,20 € Studierende | 5,20 € Mitarbeiter | 5.50 € Schüler & Z.U. | 8,20 € Gäste"
       }

@@ -1,272 +1,30 @@
 [
   {
-    "datum": "Mo. 30.03.",
-    "gerichte": [
-      {
-        "kategorie": "Seezeit-Teller",
-        "name": "gebratene Süßkartoffel-Gnocchi mit Tomatensugo, Spinat und Salbei dazu Salat oder Dessert",
-        "allergene": [],
-        "preise": "4,40 € Studierende | 5,90 € Mitarbeiter | 8,70 € Gäste"
-      },
-      {
-        "kategorie": "KombinierBar",
-        "name": "Seelachs-Filetstücke in Backteig mit Remouladensauce",
-        "allergene": [
-          "25a",
-          "26",
-          "31",
-          "34",
-          "1",
-          "9"
-        ],
-        "preise": "2,40 € Studierende | 3,60 € Mitarbeiter | 4,90 € Gäste"
-      },
-      {
-        "kategorie": "Sättigungsbeilage",
-        "name": "Kartoffelsalat",
-        "allergene": [
-          "33",
-          "34"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Gemüsebeilage",
-        "name": "Kaisergemüse",
-        "allergene": [],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Salatbeilage",
-        "name": "Blattsalat mit Balsamicodressing",
-        "allergene": [
-          "34",
-          "36"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Salatbeilage",
-        "name": "Karottensalat",
-        "allergene": [],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Dessert",
-        "name": "Waldfruchtjoghurt",
-        "allergene": [
-          "31"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      }
-    ]
-  },
-  {
-    "datum": "Di. 31.03.",
-    "gerichte": [
-      {
-        "kategorie": "Seezeit-Teller",
-        "name": "Schweineschnitzel mit Ketchup und Pommes frites dazu Salat oder Dessert",
-        "allergene": [
-          "25a",
-          "9"
-        ],
-        "preise": "4,40 € Studierende | 5,90 € Mitarbeiter | 8,70 € Gäste"
-      },
-      {
-        "kategorie": "KombinierBar",
-        "name": "Falafel | Rahmsauce",
-        "allergene": [
-          "25e"
-        ],
-        "preise": "2,20 € Studierende | 3,30 € Mitarbeiter | 4,40 € Gäste"
-      },
-      {
-        "kategorie": "Sättigungsbeilage",
-        "name": "Pommes frites",
-        "allergene": [],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Gemüsebeilage",
-        "name": "Frühlingsgemüse",
-        "allergene": [
-          "Karotten",
-          "Kohlrabi",
-          "Erbsen"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Salatbeilage",
-        "name": "Blattsalat mit Frenchdressing",
-        "allergene": [
-          "3",
-          "30",
-          "34",
-          "36"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Salatbeilage",
-        "name": "Rohkostsalat",
-        "allergene": [
-          "Gurke",
-          "Karotte",
-          "Radieschen",
-          "3",
-          "36"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Dessert",
-        "name": "Kirschquark mit Schokostreusel",
-        "allergene": [
-          "30",
-          "31",
-          "32c"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      }
-    ]
-  },
-  {
-    "datum": "Mi. 01.04.",
-    "gerichte": [
-      {
-        "kategorie": "Seezeit-Teller",
-        "name": "Hirtentasche | Basmatireis | Blattsalat mit Balsamicodressing | Ananasjoghurt | Rohkostsalat",
-        "allergene": [
-          "Spinat",
-          "Käse",
-          "25a",
-          "28",
-          "31",
-          "34",
-          "36",
-          "Paprika",
-          "Mais",
-          "Gurke",
-          "3"
-        ],
-        "preise": "4,40 € Studierende | 5,90 € Mitarbeiter | 8,70 € Gäste"
-      },
-      {
-        "kategorie": "Sättigungsbeilage",
-        "name": "Reis",
-        "allergene": [],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Gemüsebeilage",
-        "name": "Zucchini-Maisgemüse",
-        "allergene": [],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Salatbeilage",
-        "name": "Blattsalat mit Balsamicodressing",
-        "allergene": [
-          "34",
-          "36"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Salatbeilage",
-        "name": "Rohkostsalat",
-        "allergene": [
-          "Paprika",
-          "Mais",
-          "Gurke",
-          "3",
-          "36"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Dessert",
-        "name": "Ananasjoghurt",
-        "allergene": [
-          "31"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      }
-    ]
-  },
-  {
-    "datum": "Do. 02.04.",
-    "gerichte": [
-      {
-        "kategorie": "Seezeit-Teller",
-        "name": "Gebackener Camembert mit Preiselbeeren und Pommes frites dazu Salat oder Dessert",
-        "allergene": [
-          "25a",
-          "31"
-        ],
-        "preise": "4,40 € Studierende | 5,90 € Mitarbeiter | 8,70 € Gäste"
-      },
-      {
-        "kategorie": "Gemüsebeilage",
-        "name": "Mischgemüse",
-        "allergene": [],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Salatbeilage",
-        "name": "Blattsalat mit Frenchdressing",
-        "allergene": [
-          "3",
-          "30",
-          "34",
-          "36"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Salatbeilage",
-        "name": "Rohkostsalat",
-        "allergene": [
-          "Gurke",
-          "Karotte",
-          "Radieschen",
-          "3",
-          "36"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      },
-      {
-        "kategorie": "Dessert",
-        "name": "Griechischer Joghurt mit Honig",
-        "allergene": [
-          "31"
-        ],
-        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
-      }
-    ]
-  },
-  {
     "datum": "Di. 07.04.",
     "gerichte": [
       {
         "kategorie": "Seezeit-Teller",
-        "name": "Cordon bleu vom Schwein mit Champignon-Rahmgemüse und Spätzle dazu Salat oder Dessert",
+        "name": "Piccata von der Hähnchenbrust | Champignon-Rahmgemüse | Spätzle | Coleslaw Salat | Blattsalat mit Kräuterdressing | Himbeerquark",
         "allergene": [
-          "2",
-          "3",
           "25a",
           "31",
           "25d",
-          "28"
+          "28",
+          "Weißkraut",
+          "Karotte",
+          "3",
+          "34",
+          "36"
         ],
         "preise": "4,40 € Studierende | 5,90 € Mitarbeiter | 8,70 € Gäste"
       },
       {
         "kategorie": "KombinierBar",
-        "name": "Vegane Currywurst",
-        "allergene": [],
+        "name": "Gebackener Camembert mit Preiselbeeren",
+        "allergene": [
+          "25a",
+          "31"
+        ],
         "preise": "2,20 € Studierende | 3,30 € Mitarbeiter | 4,40 € Gäste"
       },
       {
@@ -403,10 +161,9 @@
       },
       {
         "kategorie": "KombinierBar",
-        "name": "Hacksteak mit Käsefüllung und dunkler Soße",
+        "name": "Piccata von der Hähnchenbrust | dunkler Soße",
         "allergene": [
           "25a",
-          "28",
           "31"
         ],
         "preise": "2,40 € Studierende | 3,60 € Mitarbeiter | 4,90 € Gäste"
@@ -451,10 +208,9 @@
       },
       {
         "kategorie": "Dessert",
-        "name": "Bayrisch Creme mit roter Grütze",
+        "name": "Rote Grütze mit Vanillesauce",
         "allergene": [
-          "28",
-          "31"
+          "25e"
         ],
         "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
       }
@@ -525,6 +281,376 @@
       {
         "kategorie": "Dessert",
         "name": "Erdbeerjoghurt",
+        "allergene": [
+          "31"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Mo. 13.04.",
+    "gerichte": [
+      {
+        "kategorie": "Seezeit-Teller",
+        "name": "Schwäbisches Linsengericht mit Spätzle dazu Salat oder Dessert",
+        "allergene": [
+          "Lauch",
+          "Karotte",
+          "Sellerie",
+          "3",
+          "25a",
+          "33",
+          "34",
+          "36"
+        ],
+        "preise": "4,40 € Studierende | 5,90 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "KombinierBar",
+        "name": "Geflügel Masala",
+        "allergene": [
+          "27",
+          "38"
+        ],
+        "preise": "2,40 € Studierende | 3,60 € Mitarbeiter | 4,90 € Gäste"
+      },
+      {
+        "kategorie": "Sättigungsbeilage",
+        "name": "Mie-Nudeln",
+        "allergene": [
+          "25a",
+          "28"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Gemüsebeilage",
+        "name": "Asiatisches Gemüse",
+        "allergene": [
+          "1",
+          "2",
+          "4",
+          "25a",
+          "30"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Salatbeilage",
+        "name": "Blattsalat mit dunklem Balsamicodressing",
+        "allergene": [
+          "1",
+          "34",
+          "36"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Salatbeilage",
+        "name": "Rohkostsalat",
+        "allergene": [
+          "Karotten",
+          "Zucchini",
+          "Rettich",
+          "3",
+          "34",
+          "36"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Dessert",
+        "name": "Vanillepudding",
+        "allergene": [
+          "31"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Di. 14.04.",
+    "gerichte": [
+      {
+        "kategorie": "Seezeit-Teller",
+        "name": "Bio-Pasta mit Bio-Rindfleisch Bolognese und geriebener Hartkäse dazu Salat oder Dessert",
+        "allergene": [
+          "25a",
+          "19",
+          "33",
+          "36",
+          "31"
+        ],
+        "preise": "4,40 € Studierende | 5,90 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "KombinierBar",
+        "name": "Blumenkohl-Käsemedaillon mit Thymiansauce",
+        "allergene": [
+          "25a",
+          "31",
+          "33"
+        ],
+        "preise": "2,20 € Studierende | 3,30 € Mitarbeiter | 4,40 € Gäste"
+      },
+      {
+        "kategorie": "Sättigungsbeilage",
+        "name": "Spätzle",
+        "allergene": [
+          "25a"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Gemüsebeilage",
+        "name": "Frühlingsgemüse",
+        "allergene": [
+          "Karotten",
+          "Kohlrabi",
+          "Erbsen"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Salatbeilage",
+        "name": "Blattsalat mit Kräuter-Joghurt-Dressing",
+        "allergene": [
+          "3",
+          "31",
+          "36"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Salatbeilage",
+        "name": "Coleslaw Salat",
+        "allergene": [
+          "Weißkraut",
+          "Karotte",
+          "3",
+          "34",
+          "36"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Dessert",
+        "name": "Stracciatellajoghurt",
+        "allergene": [
+          "31"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Mi. 15.04.",
+    "gerichte": [
+      {
+        "kategorie": "Seezeit-Teller",
+        "name": "Süßkartoffel-Erdnuss Curry mit Kräuterreis dazu Salat oder Dessert",
+        "allergene": [
+          "1",
+          "2",
+          "4",
+          "25a",
+          "29",
+          "30"
+        ],
+        "preise": "4,40 € Studierende | 5,90 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "KombinierBar",
+        "name": "geschmortes Schweinesteak mit Zwiebelsauce",
+        "allergene": [
+          "25a",
+          "34"
+        ],
+        "preise": "2,40 € Studierende | 3,60 € Mitarbeiter | 4,90 € Gäste"
+      },
+      {
+        "kategorie": "Sättigungsbeilage",
+        "name": "Pommes frites",
+        "allergene": [],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Gemüsebeilage",
+        "name": "Erbsen",
+        "allergene": [],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Salatbeilage",
+        "name": "Blattsalat mit dunklem Balsamicodressing",
+        "allergene": [
+          "1",
+          "34",
+          "36"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Salatbeilage",
+        "name": "Rohkostsalat",
+        "allergene": [
+          "Karotten",
+          "Zucchini",
+          "Rettich",
+          "3",
+          "34",
+          "36"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Dessert",
+        "name": "Haferjoghurt mit Apfelpudding",
+        "allergene": [
+          "25e",
+          "32a"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Do. 16.04.",
+    "gerichte": [
+      {
+        "kategorie": "Seezeit-Teller",
+        "name": "Fischstäbchen mit Remouladensauce und Kartoffel-Gurken-Salat dazu Salat oder Dessert",
+        "allergene": [
+          "25a",
+          "26",
+          "1",
+          "9",
+          "34",
+          "33"
+        ],
+        "preise": "4,40 € Studierende | 5,90 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "KombinierBar",
+        "name": "Gemüse-Reis-Bällchen mit Sauce all arrabbiata",
+        "allergene": [],
+        "preise": "2,20 € Studierende | 3,30 € Mitarbeiter | 4,40 € Gäste"
+      },
+      {
+        "kategorie": "Sättigungsbeilage",
+        "name": "Rosmarinkartoffeln",
+        "allergene": [],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Gemüsebeilage",
+        "name": "Karotten",
+        "allergene": [],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Salatbeilage",
+        "name": "Blattsalat mit Kräuter-Joghurt-Dressing",
+        "allergene": [
+          "3",
+          "31",
+          "36"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Salatbeilage",
+        "name": "Rohkoststalat",
+        "allergene": [
+          "Gurke",
+          "Kidneybohnen",
+          "Mais",
+          "3",
+          "34",
+          "36"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Dessert",
+        "name": "Heidelbeerjoghurt",
+        "allergene": [
+          "31"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      }
+    ]
+  },
+  {
+    "datum": "Fr. 17.04.",
+    "gerichte": [
+      {
+        "kategorie": "Seezeit-Teller",
+        "name": "fünf Rosmarinröstis mit Schnittlauch-Tomatenquark und Salatgarnitur dazu Salat oder Dessert",
+        "allergene": [
+          "31",
+          "Karotten",
+          "Zucchini",
+          "Rettich",
+          "3",
+          "34",
+          "36"
+        ],
+        "preise": "4,40 € Studierende | 5,90 € Mitarbeiter | 8,70 € Gäste"
+      },
+      {
+        "kategorie": "KombinierBar",
+        "name": "zwei Frikadellen mit Paprikasauce",
+        "allergene": [
+          "25a",
+          "28",
+          "9"
+        ],
+        "preise": "2,40 € Studierende | 3,60 € Mitarbeiter | 4,90 € Gäste"
+      },
+      {
+        "kategorie": "Sättigungsbeilage",
+        "name": "Rahmkartoffel",
+        "allergene": [
+          "28",
+          "31"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Gemüsebeilage",
+        "name": "Mandelbrokkoli",
+        "allergene": [
+          "32a"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Salatbeilage",
+        "name": "Blattsalat mit dunklem Balsamicodressing",
+        "allergene": [
+          "1",
+          "34",
+          "36"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Salatbeilage",
+        "name": "Rohkostsalat",
+        "allergene": [
+          "Weißkraut",
+          "Jalapenos",
+          "Gurke",
+          "3",
+          "36"
+        ],
+        "preise": "0,90 € Studierende | 1,00 € Mitarbeiter | 1,30 € Gäste"
+      },
+      {
+        "kategorie": "Dessert",
+        "name": "Pfirsich-Aprikosenpudding | Waldfruchtpudding",
         "allergene": [
           "31"
         ],

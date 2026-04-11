@@ -3,20 +3,19 @@ import fs from "fs";
 
 // Konfiguration der Standorte
 const standorte = [
-    { 
-        name: 'Friedrichshafen', 
+    {
+        name: 'Friedrichshafen',
         url: 'https://seezeit.com/essen/speiseplaene/mensa-friedrichshafen/',
         datei: './data/mensa_FN.json'
     },
-    { 
-        name: 'Ravensburg', 
+    {
+        name: 'Ravensburg',
         url: 'https://seezeit.com/essen/speiseplaene/mensa-ravensburg/',
         datei: './data/mensa_RV.json'
     }
 ];
 
-
-    // Extrahiert die Daten von einer einzelnen Seite
+// Extrahiert die Daten von einer einzelnen Seite
 
 const getBinaryPath = () => {
   const paths = [
@@ -112,6 +111,7 @@ export async function scrapeSeezeit(page, url) {
 //Steuert den Browser und arbeitet alle Standorte ab, Wird von server.js aufgerufen.
 
 export async function scrapeSeezeitAll() {
+    
     
     const browser = await puppeteer.launch({ 
         headless: "new",

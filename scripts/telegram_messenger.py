@@ -30,9 +30,9 @@ class TelegramMessenger:
         self.bot_token = None
         self.chat_id = None
         # Die Konfiguration wird direkt beim Start geladen
-        self.load_config()
+        self.loadConfig()
     
-    def load_config(self):
+    def loadConfig(self):
         """Lädt die Konfiguration aus der config_msgr.json Datei"""
         try:
             # Die Datei liegt neben dem Skript und wird relativ dazu gesucht
@@ -58,7 +58,7 @@ class TelegramMessenger:
             print(f"Konfigurationsfehler: {e}")
             sys.exit(1)
     
-    def send_message(self, message, parse_mode="HTML"):
+    def sendMessage(self, message, parse_mode="HTML"):
         """
         Sendet eine Nachricht über Telegram
         
@@ -102,7 +102,7 @@ class TelegramMessenger:
             print("FEHLER - Fehler beim Dekodieren der API-Antwort")
             return False
     
-    def send_status_message(self, title, status, details=""):
+    def sendStatusMessage(self, title, status, details=""):
         """
         Sendet eine formatierte Status-Nachricht
         
@@ -133,9 +133,9 @@ class TelegramMessenger:
         if details:
             message += f"\nDetails:\n{details}"
         
-        return self.send_message(message)
+        return self.sendMessage(message)
     
-    def test_connection(self):
+    def testConnection(self):
         """
         Testet die Verbindung zum Telegram Bot
         
@@ -178,7 +178,7 @@ def main():
     
     if sys.argv[1] == "--test":
         # Verbindungsprüfung ohne eigentliche Nachricht
-        messenger.test_connection()
+        messenger.testConnection()
     elif sys.argv[1] == "--status":
         # Statusmeldungen bekommen eine feste Struktur aus Titel, Status und Details
         if len(sys.argv) < 4:
@@ -189,11 +189,11 @@ def main():
         status = sys.argv[3]
         details = sys.argv[4] if len(sys.argv) > 4 else ""
         
-        messenger.send_status_message(title, status, details)
+        messenger.sendStatusMessage(title, status, details)
     else:
         # Alle übrigen Argumente werden zu einer einfachen Nachricht zusammengesetzt
         message = " ".join(sys.argv[1:])
-        messenger.send_message(message)
+        messenger.sendMessage(message)
 
 if __name__ == "__main__":
     main()

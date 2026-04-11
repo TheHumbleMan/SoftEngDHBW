@@ -66,11 +66,11 @@ app.use('/pics', express.static(path.join(__dirname, 'pics'), {
 function requireLogin(req, res, next) {
     const { authenticated, loginTime, sessionTimeout } = req.session;
     if (!authenticated) {
-        return res.redirect('/views/login?error=session');
+        return res.redirect('/auth/login?error=session');
     }
     if (sessionTimeout && loginTime && Date.now() - loginTime > sessionTimeout * 1000) {
         req.session.destroy(() => {
-            res.redirect('/views/login?error=session');
+            res.redirect('/auth/login?error=session');
         });
         return;
     }
@@ -79,7 +79,7 @@ function requireLogin(req, res, next) {
 
 function requirePartner(req, res, next) {
     if (!req.session.authenticated || req.session.role !== 'partner') {
-        return res.redirect('/views/login?error=access');
+        return res.redirect('/auth/login?error=access');
     }
     next();
 }
@@ -117,11 +117,11 @@ app.get('/', async (req, res) => {
     if (req.session.authenticated) {
         return res.redirect('/dashboard');
     }
-    return res.redirect('/views/login');
+    return res.redirect('/auth/login');
 });
 
 app.get('/auth/login', async (req, res) => {
-    res.render('views/login.html', {
+    res.render('views/login', {
         error: req.query.error,
         success: req.query.success
     });
@@ -253,7 +253,7 @@ app.get('/api/documents', requireLogin, (req, res) => {
 
 app.get('/auth/logout', (req, res) => {
     req.session.destroy(() => {
-        res.redirect('/views/login?success=logout');
+        res.redirect('/auth/login?success=logout');
     });
 });
 
@@ -299,7 +299,7 @@ app.get('/debug-session', requireLogin, async (req, res) => {
 app.get('/dashboard.html', (req, res) => res.redirect('/dashboard'));
 
 app.get('/auth/:page.html', (req, res, next) => {
-    res.redirect(`/views/${req.params.page}`);
+    res.redirect(`/auth/${req.params.page}`);
 });
 
 app.get('/views/dummy.html', (req, res) => {

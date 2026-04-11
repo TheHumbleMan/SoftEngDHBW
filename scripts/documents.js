@@ -147,14 +147,14 @@ export async function initDocuments(rootElement = document) {
     container.innerHTML = '<p class="documents-loading">Dokumente werden geladen...</p>';
 
     try {
-        let categoriesExpanded = false;
+        let categories_expanded = false;
 
         const updateToggleLabel = () => {
             if (!toggleButton) {
                 return;
             }
             // Der Buttontext folgt dem aktuellen Gesamtzustand der Kategorien
-            toggleButton.textContent = categoriesExpanded ? 'Alle einklappen' : 'Alle aufklappen';
+            toggleButton.textContent = categories_expanded ? 'Alle einklappen' : 'Alle aufklappen';
         };
 
         const setAllCategoriesExpanded = (expanded) => {
@@ -163,7 +163,7 @@ export async function initDocuments(rootElement = document) {
             categoryNodes.forEach(node => {
                 node.open = expanded;
             });
-            categoriesExpanded = expanded;
+            categories_expanded = expanded;
             updateToggleLabel();
         };
 
@@ -203,7 +203,7 @@ export async function initDocuments(rootElement = document) {
             // Der Filter treibt zuerst den Kategorienbaum und danach die eigentliche Darstellung an
             const treeRoot = createTree(filteredDocuments);
             renderTreeNode(container, treeRoot);
-            setAllCategoriesExpanded(categoriesExpanded);
+            setAllCategoriesExpanded(categories_expanded);
         };
 
         renderDocuments();
@@ -218,7 +218,7 @@ export async function initDocuments(rootElement = document) {
         if (toggleButton) {
             // Der Toggle-Button schaltet alle Kategorien auf einen Schlag um
             toggleButton.addEventListener('click', () => {
-                setAllCategoriesExpanded(!categoriesExpanded);
+                setAllCategoriesExpanded(!categories_expanded);
             });
         }
     } catch (error) {

@@ -93,7 +93,7 @@ class SourceDocument:
 	category_sub: str
 
 
-def now_iso() -> str:
+def nowIso() -> str:
 	"""
 	Gibt den aktuellen Zeitpunkt als ISO-8601 String in UTC zurück
 
@@ -103,7 +103,7 @@ def now_iso() -> str:
 	return datetime.now(timezone.utc).isoformat()
 
 
-def attr_to_text(value: object) -> str:
+def attributeToText(value: object) -> str:
 	"""
 	Normalisiert ein Attribut aus BeautifulSoup zu einem String
 
@@ -123,7 +123,7 @@ def attr_to_text(value: object) -> str:
 	return str(value)
 
 
-def build_session() -> requests.Session:
+def buildSession() -> requests.Session:
 	"""
 	Erstellt eine Requests-Session mit vordefiniertem User-Agent
 
@@ -135,7 +135,7 @@ def build_session() -> requests.Session:
 	return session
 
 
-def load_metadata() -> Dict:
+def loadMetadata() -> Dict:
 	"""
 	Lädt die bestehende Metadaten-Datei aus dem Dateisystem
 
@@ -156,7 +156,7 @@ def load_metadata() -> Dict:
 	return {}
 
 
-def save_metadata(metadata: Dict) -> None:
+def saveMetadata(metadata: Dict) -> None:
 	"""
 	Speichert Metadaten als JSON in die zentrale Metadaten-Datei
 
@@ -171,7 +171,7 @@ def save_metadata(metadata: Dict) -> None:
 		json.dump(metadata, handle, indent=2, ensure_ascii=False)
 
 
-def sanitize_path_segment(value: str, fallback: str) -> str:
+def sanitizePathSegment(value: str, fallback: str) -> str:
 	"""
 	Bereinigt einen Text, damit er sicher als Pfadsegment nutzbar ist
 
@@ -190,7 +190,7 @@ def sanitize_path_segment(value: str, fallback: str) -> str:
 	return cleaned or fallback
 
 
-def guess_filename(url: str, title: str) -> str:
+def guessFilename(url: str, title: str) -> str:
 	"""
 	Leitet einen Dateinamen aus URL oder Titel ab
 
@@ -204,13 +204,13 @@ def guess_filename(url: str, title: str) -> str:
 	parsed = urlparse(url)
 	name = os.path.basename(parsed.path)
 	if name:
-		return sanitize_path_segment(name, "dokument")
+		return sanitizePathSegment(name, "dokument")
 
-	title_part = sanitize_path_segment(title, "dokument")
+	title_part = sanitizePathSegment(title, "dokument")
 	return f"{title_part}.bin"
 
 
-def make_entry_key(url: str, title: str, category_top: str, category_sub: str) -> str:
+def makeEntryKey(url: str, title: str, category_top: str, category_sub: str) -> str:
 	"""
 	Erzeugt einen stabilen Schlüssel für einen Dokumenteintrag
 
@@ -232,7 +232,7 @@ def make_entry_key(url: str, title: str, category_top: str, category_sub: str) -
 	return hashlib.sha1(payload.encode("utf-8")).hexdigest()
 
 
-def is_document_url(url: str) -> bool:
+def isDocumentUrl(url: str) -> bool:
 	"""
 	Prüft, ob eine URL wahrscheinlich auf ein Dokument zeigt
 
@@ -258,7 +258,7 @@ def is_document_url(url: str) -> bool:
 	return False
 
 
-def extract_description(link: Tag) -> str:
+def extractDescription(link: Tag) -> str:
 	"""
 	Extrahiert eine mögliche Beschreibung rund um einen Dokumentlink
 
@@ -293,7 +293,7 @@ def extract_description(link: Tag) -> str:
 	return ""
 
 
-def collect_tab_mapping(soup: BeautifulSoup) -> List[Tuple[str, str, bool]]:
+def collectTabMapping(soup: BeautifulSoup) -> List[Tuple[str, str, bool]]:
 	"""
 	Liest die Tab-Struktur aus und markiert Bekanntmachungs-Tabs
 
@@ -310,13 +310,13 @@ def collect_tab_mapping(soup: BeautifulSoup) -> List[Tuple[str, str, bool]]:
 		if not anchor:
 			continue
 
-		tab_target = attr_to_text(anchor.get("data-href")).strip()
+		tab_target = attributeToText(anchor.get("data-href")).strip()
 		if not tab_target.startswith("#"):
 			continue
 
 		tab_id = tab_target[1:]
 		tab_label = anchor.get_text(" ", strip=True)
-		li_id = attr_to_text(li.get("id")).strip().lower()
+		li_id = attributeToText(li.get("id")).strip().lower()
 		label_lower = tab_label.lower()
 		is_bekanntmachung = (
 			li_id == "bekanntmachungen"
@@ -329,7 +329,7 @@ def collect_tab_mapping(soup: BeautifulSoup) -> List[Tuple[str, str, bool]]:
 	return mapping
 
 
-def nearest_sub_heading(link: Tag, pane: Tag) -> str:
+def nearestSubHeading(link: Tag, pane: Tag) -> str:
 	"""
 	Sucht die nächstgelegene vorherige Zwischenüberschrift für einen Link
 
@@ -349,7 +349,7 @@ def nearest_sub_heading(link: Tag, pane: Tag) -> str:
 	return ""
 
 
-def is_internal_documents_page(url: str) -> bool:
+def isInternalDocumentsPage(url: str) -> bool:
 	"""
 	Prüft, ob eine URL auf die interne Dokumentenseite verweist
 
@@ -366,7 +366,7 @@ def is_internal_documents_page(url: str) -> bool:
 	)
 
 
-def extract_documents_from_html(base_url: str, html: str) -> Tuple[List[SourceDocument], Set[str], Set[str]]:
+def extractDocumentsFromHtml(base_url: str, html: str) -> Tuple[List[SourceDocument], Set[str], Set[str]]:
 	"""
 	Extrahiert Dokumenteinträge und Folge-Links aus dem HTML einer Seite
 
@@ -379,7 +379,7 @@ def extract_documents_from_html(base_url: str, html: str) -> Tuple[List[SourceDo
 			Gefundene Dokumente, erwartete Entry-Keys und zu crawelnde Folge-Links
 	"""
 	soup = BeautifulSoup(html, "html.parser")
-	tab_mapping = collect_tab_mapping(soup)
+	tab_mapping = collectTabMapping(soup)
 
 	all_docs: Dict[str, SourceDocument] = {}
 	expected_keys: Set[str] = set()
@@ -397,7 +397,7 @@ def extract_documents_from_html(base_url: str, html: str) -> Tuple[List[SourceDo
 		top_category = tab_label.strip() or "Ohne Kategorie"
 
 		for link in pane.find_all("a", href=True):
-			href = attr_to_text(link.get("href", "")).strip()
+			href = attributeToText(link.get("href", "")).strip()
 			if not href:
 				continue
 
@@ -406,28 +406,28 @@ def extract_documents_from_html(base_url: str, html: str) -> Tuple[List[SourceDo
 
 			absolute_url = urljoin(base_url, href)
 
-			if is_internal_documents_page(absolute_url):
+			if isInternalDocumentsPage(absolute_url):
 				parsed_internal = urlparse(absolute_url)
 				# Nur Seiten mit Query-Parametern werden als Unterseiten weiterverfolgt
 				if parsed_internal.query:
 					follow_links.add(absolute_url)
 
-			if not is_document_url(absolute_url):
+			if not isDocumentUrl(absolute_url):
 				continue
 
 			# Titel wird bevorzugt aus dem Attribut gelesen, sonst aus dem Linktext
-			title = attr_to_text(link.get("title", "")).strip() or link.get_text(" ", strip=True)
+			title = attributeToText(link.get("title", "")).strip() or link.get_text(" ", strip=True)
 			if not title:
-				title = guess_filename(absolute_url, "Dokument")
+				title = guessFilename(absolute_url, "Dokument")
 
 			# Die Überschrift oberhalb des Links wird als Unterkategorie verwendet
-			sub_category = nearest_sub_heading(link, pane)
+			sub_category = nearestSubHeading(link, pane)
 			if sub_category.lower().startswith("amtliche bekanntmach"):
 				continue
 
 			# Beschreibung und Eintragsschlüssel werden aus den gesammelten Daten gebaut
-			description = extract_description(link)
-			entry_key = make_entry_key(absolute_url, title, top_category, sub_category)
+			description = extractDescription(link)
+			entry_key = makeEntryKey(absolute_url, title, top_category, sub_category)
 			expected_keys.add(entry_key)
 
 			all_docs[entry_key] = SourceDocument(
@@ -442,7 +442,7 @@ def extract_documents_from_html(base_url: str, html: str) -> Tuple[List[SourceDo
 	return sorted(all_docs.values(), key=lambda item: item.entry_key), expected_keys, follow_links
 
 
-def crawl_all_documents(session: requests.Session, start_url: str) -> Tuple[List[SourceDocument], Set[str]]:
+def crawlAllDocuments(session: requests.Session, start_url: str) -> Tuple[List[SourceDocument], Set[str]]:
 	"""
 	Durchläuft die Dokumentenseiten rekursiv und sammelt alle Einträge
 
@@ -467,12 +467,12 @@ def crawl_all_documents(session: requests.Session, start_url: str) -> Tuple[List
 		visited.add(page_url)
 
 		try:
-			html = fetch_page_html(session, page_url)
+			html = fetchPageHtml(session, page_url)
 		except Exception as exc:
 			print(f"Warnung: Seite konnte nicht geladen werden ({page_url}): {exc}")
 			continue
 
-		page_docs, page_expected, page_follow = extract_documents_from_html(page_url, html)
+		page_docs, page_expected, page_follow = extractDocumentsFromHtml(page_url, html)
 		for doc in page_docs:
 			all_docs[doc.entry_key] = doc
 		expected_keys.update(page_expected)
@@ -487,7 +487,7 @@ def crawl_all_documents(session: requests.Session, start_url: str) -> Tuple[List
 	return sorted(all_docs.values(), key=lambda item: item.entry_key), expected_keys
 
 
-def fetch_page_html(session: requests.Session, url: str) -> str:
+def fetchPageHtml(session: requests.Session, url: str) -> str:
 	"""
 	Lädt den HTML-Quelltext einer Seite per GET-Anfrage
 
@@ -504,7 +504,7 @@ def fetch_page_html(session: requests.Session, url: str) -> str:
 	return response.text
 
 
-def head_metadata(session: requests.Session, url: str) -> Dict[str, str]:
+def headMetadata(session: requests.Session, url: str) -> Dict[str, str]:
 	"""
 	Liest Datei-Metadaten einer URL über eine HEAD-Anfrage
 
@@ -536,7 +536,7 @@ def head_metadata(session: requests.Session, url: str) -> Dict[str, str]:
 		}
 
 
-def compute_sha256(path: Path) -> str:
+def computeSha256(path: Path) -> str:
 	"""
 	Berechnet die SHA256-Prüfsumme einer lokalen Datei
 
@@ -554,7 +554,7 @@ def compute_sha256(path: Path) -> str:
 	return digest.hexdigest()
 
 
-def build_local_path(doc: SourceDocument, used_paths: Set[str]) -> Path:
+def buildLocalPath(doc: SourceDocument, used_paths: Set[str]) -> Path:
 	"""
 	Erzeugt einen lokalen, konfliktfreien Zielpfad für ein Dokument
 
@@ -565,9 +565,9 @@ def build_local_path(doc: SourceDocument, used_paths: Set[str]) -> Path:
 	Returns:
 		Path: Relativer Zielpfad unterhalb des data-Ordners
 	"""
-	top = sanitize_path_segment(doc.category_top, "Ohne Kategorie")
-	sub = sanitize_path_segment(doc.category_sub, "Allgemein") if doc.category_sub else ""
-	filename = sanitize_path_segment(guess_filename(doc.url, doc.title), "dokument.bin")
+	top = sanitizePathSegment(doc.category_top, "Ohne Kategorie")
+	sub = sanitizePathSegment(doc.category_sub, "Allgemein") if doc.category_sub else ""
+	filename = sanitizePathSegment(guessFilename(doc.url, doc.title), "dokument.bin")
 
 	if sub:
 		relative = Path("documents") / top / sub / filename
@@ -592,7 +592,7 @@ def build_local_path(doc: SourceDocument, used_paths: Set[str]) -> Path:
 	return candidate
 
 
-def download_file(session: requests.Session, url: str, destination: Path) -> Tuple[bool, str]:
+def downloadFile(session: requests.Session, url: str, destination: Path) -> Tuple[bool, str]:
 	"""
 	Lädt eine Datei herunter und speichert sie lokal ab
 
@@ -625,7 +625,7 @@ def download_file(session: requests.Session, url: str, destination: Path) -> Tup
 	return True, ""
 
 
-def should_redownload(doc: SourceDocument, old: Optional[Dict], local_path: Path, head: Dict[str, str]) -> bool:
+def shouldRedownload(doc: SourceDocument, old: Optional[Dict], local_path: Path, head: Dict[str, str]) -> bool:
 	"""
 	Entscheidet, ob ein Dokument erneut heruntergeladen werden muss
 
@@ -667,7 +667,7 @@ def should_redownload(doc: SourceDocument, old: Optional[Dict], local_path: Path
 	return False
 
 
-def remove_deleted_documents(
+def removeDeletedDocuments(
 	old_by_key: Dict[str, Dict],
 	current_keys: Set[str],
 	current_local_paths: Set[str],
@@ -703,7 +703,7 @@ def remove_deleted_documents(
 	return removed
 
 
-def verify_coverage(expected_keys: Set[str], metadata_docs: Iterable[Dict]) -> Tuple[Set[str], Set[str]]:
+def verifyCoverage(expected_keys: Set[str], metadata_docs: Iterable[Dict]) -> Tuple[Set[str], Set[str]]:
 	"""
 	Vergleicht erwartete Keys mit den Keys in den finalen Metadaten
 
@@ -798,13 +798,13 @@ def main() -> int:
 		int: 0 bei Erfolg, 1 bei Fehlern oder fehlender Coverage
 	"""
 	print("DHBW Dokumente-Scraper")
-	print(f"Startzeitpunkt: {now_iso()}")
+	print(f"Startzeitpunkt: {nowIso()}")
 
 	DOCUMENTS_DIR.mkdir(parents=True, exist_ok=True)
-	session = build_session()
+	session = buildSession()
 
 	# Vorhandene Metadaten werden geladen um Änderungen inkrementell zu erkennen
-	old_metadata = load_metadata()
+	old_metadata = loadMetadata()
 	old_docs_list = old_metadata.get("documents", []) if isinstance(old_metadata, dict) else []
 	old_by_key: Dict[str, Dict] = {}
 	for item in old_docs_list:
@@ -813,7 +813,7 @@ def main() -> int:
 		entry_key = item.get("entry_key", "")
 		if not entry_key and item.get("url"):
 			# Alte Einträge bekommen bei Bedarf denselben Schlüssel wie neue Einträge
-			entry_key = make_entry_key(
+			entry_key = makeEntryKey(
 				item.get("url", ""),
 				item.get("title", ""),
 				item.get("category_top", ""),
@@ -825,7 +825,7 @@ def main() -> int:
 	print(f"Vorhandene Metadateneinträge: {len(old_by_key)}")
 	print(f"Lade Seite: {BASE_URL}")
 
-	source_documents, expected_keys = crawl_all_documents(session, BASE_URL)
+	source_documents, expected_keys = crawlAllDocuments(session, BASE_URL)
 
 	print(f"Gefundene Dokumente (ohne Bekanntmachungen): {len(source_documents)}")
 
@@ -856,13 +856,13 @@ def main() -> int:
 			relative_path = Path(old["local_path"])
 		else:
 			# Neue Einträge bekommen einen stabilen, konfliktfreien Zielpfad
-			relative_path = build_local_path(doc, used_paths)
+			relative_path = buildLocalPath(doc, used_paths)
 
 		local_path = DATA_DIR / relative_path
-		head = head_metadata(session, doc.url)
+		head = headMetadata(session, doc.url)
 
 		# HEAD-Daten dienen als billiger Änderungsindikator vor einem Voll-Download
-		redownload = should_redownload(doc, old, local_path, head)
+		redownload = shouldRedownload(doc, old, local_path, head)
 
 		# Alle Metadaten für den Eintrag werden in einem Dictionary gesammelt
 		document_entry = {
@@ -878,7 +878,7 @@ def main() -> int:
 			"last_modified": head.get("last_modified", ""),
 			"etag": head.get("etag", ""),
 			"content_type": head.get("content_type", ""),
-			"last_seen": now_iso(),
+			"last_seen": nowIso(),
 		}
 
 		if not redownload:
@@ -891,15 +891,15 @@ def main() -> int:
 			continue
 
 		# Bei Änderungen wird die Datei neu geladen und lokal überschrieben
-		ok, error = download_file(session, doc.url, local_path)
+		ok, error = downloadFile(session, doc.url, local_path)
 		if not ok:
 			stats["failed"] += 1
 			failed_urls.append(f"{doc.url} -> {error}")
 			print(f"[{index}/{len(source_documents)}] FEHLER: {doc.title} ({error})")
 			continue
 
-		document_entry["downloaded_at"] = now_iso()
-		document_entry["sha256"] = compute_sha256(local_path)
+		document_entry["downloaded_at"] = nowIso()
+		document_entry["sha256"] = computeSha256(local_path)
 
 		if old is None:
 			# Neue Dokumente werden separat gezählt und ggf. gemeldet
@@ -927,19 +927,19 @@ def main() -> int:
 		if entry.get("local_path")
 	}
 	# Verwaiste lokale Dateien werden entfernt wenn der Eintrag nicht mehr existiert
-	stats["removed"] = remove_deleted_documents(old_by_key, current_keys, current_local_paths)
+	stats["removed"] = removeDeletedDocuments(old_by_key, current_keys, current_local_paths)
 
 	# Die neue Metadaten-Datei spiegelt den kompletten aktuellen Stand wider
 	new_metadata = {
-		"updated_at": now_iso(),
+		"updated_at": nowIso(),
 		"source": BASE_URL,
 		"document_count": len(processed_docs),
 		"documents": sorted(processed_docs, key=lambda item: item["entry_key"]),
 	}
-	save_metadata(new_metadata)
+	saveMetadata(new_metadata)
 
 	# Coverage prüft ob Crawling und Metadaten dieselben Einträge sehen
-	missing, extra = verify_coverage(expected_keys, processed_docs)
+	missing, extra = verifyCoverage(expected_keys, processed_docs)
 
 	category_counts: Dict[str, int] = {}
 	for doc in source_documents:
@@ -987,7 +987,7 @@ def main() -> int:
 
 	print(f"\nMetadaten: {METADATA_FILE}")
 	print(f"Dateien: {DOCUMENTS_DIR}")
-	print(f"Ende: {now_iso()}")
+	print(f"Ende: {nowIso()}")
 
 	if stats["failed"] > 0 or missing:
 		return 1

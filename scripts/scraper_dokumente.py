@@ -89,28 +89,27 @@ class SourceDocument:
 	category_sub: str
 
 
-def now_iso() -> str:
+def nowIso() -> str:
 	return datetime.now(timezone.utc).isoformat()
 
 
-def attr_to_text(value: object) -> str:
-    if value is None:
-        return ""
-    if isinstance(value, str):
-        return value
-    # Ersetze AttributeValueList durch einen Check auf list
-    if isinstance(value, list):
-        return " ".join(str(item) for item in value)
-    return str(value)
+def attributeToText(value: object) -> str:
+	if value is None:
+		return ""
+	if isinstance(value, str):
+		return value
+	if isinstance(value, List):
+		return " ".join(str(item) for item in value)
+	return str(value)
 
 
-def build_session() -> requests.Session:
+def buildSession() -> requests.Session:
 	session = requests.Session()
 	session.headers.update({"User-Agent": USER_AGENT})
 	return session
 
 
-def load_metadata() -> Dict:
+def loadMetadata() -> Dict:
 	if not METADATA_FILE.exists():
 		return {}
 
@@ -125,13 +124,13 @@ def load_metadata() -> Dict:
 	return {}
 
 
-def save_metadata(metadata: Dict) -> None:
+def saveMetadata(metadata: Dict) -> None:
 	METADATA_FILE.parent.mkdir(parents=True, exist_ok=True)
 	with METADATA_FILE.open("w", encoding="utf-8") as handle:
 		json.dump(metadata, handle, indent=2, ensure_ascii=False)
 
 
-def sanitize_path_segment(value: str, fallback: str) -> str:
+def sanitizePathSegment(value: str, fallback: str) -> str:
 	cleaned = (value or "").strip()
 	cleaned = re.sub(r"[\x00-\x1f\x7f]", "", cleaned)
 	cleaned = cleaned.replace("/", "-").replace("\\", "-")
@@ -140,17 +139,17 @@ def sanitize_path_segment(value: str, fallback: str) -> str:
 	return cleaned or fallback
 
 
-def guess_filename(url: str, title: str) -> str:
+def guessFilename(url: str, title: str) -> str:
 	parsed = urlparse(url)
 	name = os.path.basename(parsed.path)
 	if name:
-		return sanitize_path_segment(name, "dokument")
+		return sanitizePathSegment(name, "dokument")
 
-	title_part = sanitize_path_segment(title, "dokument")
+	title_part = sanitizePathSegment(title, "dokument")
 	return f"{title_part}.bin"
 
 
-def make_entry_key(url: str, title: str, category_top: str, category_sub: str) -> str:
+def makeEntryKey(url: str, title: str, category_top: str, category_sub: str) -> str:
 	payload = "|".join([
 		url.strip(),
 		title.strip(),
@@ -160,7 +159,7 @@ def make_entry_key(url: str, title: str, category_top: str, category_sub: str) -
 	return hashlib.sha1(payload.encode("utf-8")).hexdigest()
 
 
-def is_document_url(url: str) -> bool:
+def isDocumentUrl(url: str) -> bool:
 	parsed = urlparse(url)
 	path = parsed.path.lower()
 
@@ -176,7 +175,7 @@ def is_document_url(url: str) -> bool:
 	return False
 
 
-def extract_description(link: Tag) -> str:
+def extractDescription(link: Tag) -> str:
 	li_parent = link.find_parent("li")
 	if li_parent:
 		desc_div = li_parent.find(class_=lambda cls: isinstance(cls, str) and "ce-uploads-description" in cls)
@@ -199,20 +198,20 @@ def extract_description(link: Tag) -> str:
 	return ""
 
 
-def collect_tab_mapping(soup: BeautifulSoup) -> List[Tuple[str, str, bool]]:
+def collectTabMapping(soup: BeautifulSoup) -> List[Tuple[str, str, bool]]:
 	mapping: List[Tuple[str, str, bool]] = []
 	for li in soup.select("ul.nav.nav-tabs li.nav-link"):
 		anchor = li.find("a")
 		if not anchor:
 			continue
 
-		tab_target = attr_to_text(anchor.get("data-href")).strip()
+		tab_target = attributeToText(anchor.get("data-href")).strip()
 		if not tab_target.startswith("#"):
 			continue
 
 		tab_id = tab_target[1:]
 		tab_label = anchor.get_text(" ", strip=True)
-		li_id = attr_to_text(li.get("id")).strip().lower()
+		li_id = attributeToText(li.get("id")).strip().lower()
 		label_lower = tab_label.lower()
 		is_bekanntmachung = (
 			li_id == "bekanntmachungen"
@@ -224,7 +223,7 @@ def collect_tab_mapping(soup: BeautifulSoup) -> List[Tuple[str, str, bool]]:
 	return mapping
 
 
-def nearest_sub_heading(link: Tag, pane: Tag) -> str:
+def nearestSubHeading(link: Tag, pane: Tag) -> str:
 	for previous in link.find_all_previous(["h2", "h3"]):
 		if pane not in previous.parents and previous is not pane:
 			continue
@@ -234,7 +233,7 @@ def nearest_sub_heading(link: Tag, pane: Tag) -> str:
 	return ""
 
 
-def is_internal_documents_page(url: str) -> bool:
+def isInternalDocumentsPage(url: str) -> bool:
 	parsed = urlparse(url)
 	return (
 		parsed.netloc == "www.ravensburg.dhbw.de"
@@ -242,9 +241,9 @@ def is_internal_documents_page(url: str) -> bool:
 	)
 
 
-def extract_documents_from_html(base_url: str, html: str) -> Tuple[List[SourceDocument], Set[str], Set[str]]:
+def extractDocumentsFromHtml(base_url: str, html: str) -> Tuple[List[SourceDocument], Set[str], Set[str]]:
 	soup = BeautifulSoup(html, "html.parser")
-	tab_mapping = collect_tab_mapping(soup)
+	tab_mapping = collectTabMapping(soup)
 
 	all_docs: Dict[str, SourceDocument] = {}
 	expected_keys: Set[str] = set()
@@ -261,7 +260,7 @@ def extract_documents_from_html(base_url: str, html: str) -> Tuple[List[SourceDo
 		top_category = tab_label.strip() or "Ohne Kategorie"
 
 		for link in pane.find_all("a", href=True):
-			href = attr_to_text(link.get("href", "")).strip()
+			href = attributeToText(link.get("href", "")).strip()
 			if not href:
 				continue
 
@@ -270,24 +269,24 @@ def extract_documents_from_html(base_url: str, html: str) -> Tuple[List[SourceDo
 
 			absolute_url = urljoin(base_url, href)
 
-			if is_internal_documents_page(absolute_url):
+			if isInternalDocumentsPage(absolute_url):
 				parsed_internal = urlparse(absolute_url)
 				if parsed_internal.query:
 					follow_links.add(absolute_url)
 
-			if not is_document_url(absolute_url):
+			if not isDocumentUrl(absolute_url):
 				continue
 
-			title = attr_to_text(link.get("title", "")).strip() or link.get_text(" ", strip=True)
+			title = attributeToText(link.get("title", "")).strip() or link.get_text(" ", strip=True)
 			if not title:
-				title = guess_filename(absolute_url, "Dokument")
+				title = guessFilename(absolute_url, "Dokument")
 
-			sub_category = nearest_sub_heading(link, pane)
+			sub_category = nearestSubHeading(link, pane)
 			if sub_category.lower().startswith("amtliche bekanntmach"):
 				continue
 
-			description = extract_description(link)
-			entry_key = make_entry_key(absolute_url, title, top_category, sub_category)
+			description = extractDescription(link)
+			entry_key = makeEntryKey(absolute_url, title, top_category, sub_category)
 			expected_keys.add(entry_key)
 
 			all_docs[entry_key] = SourceDocument(
@@ -302,7 +301,7 @@ def extract_documents_from_html(base_url: str, html: str) -> Tuple[List[SourceDo
 	return sorted(all_docs.values(), key=lambda item: item.entry_key), expected_keys, follow_links
 
 
-def crawl_all_documents(session: requests.Session, start_url: str) -> Tuple[List[SourceDocument], Set[str]]:
+def crawlAllDocuments(session: requests.Session, start_url: str) -> Tuple[List[SourceDocument], Set[str]]:
 	queue: List[str] = [start_url]
 	visited: Set[str] = set()
 	all_docs: Dict[str, SourceDocument] = {}
@@ -317,12 +316,12 @@ def crawl_all_documents(session: requests.Session, start_url: str) -> Tuple[List
 		#print(f"Analysiere Seite {len(visited)}: {page_url}")
 
 		try:
-			html = fetch_page_html(session, page_url)
+			html = fetchPageHtml(session, page_url)
 		except Exception as exc:
 			print(f"Warnung: Seite konnte nicht geladen werden ({page_url}): {exc}")
 			continue
 
-		page_docs, page_expected, page_follow = extract_documents_from_html(page_url, html)
+		page_docs, page_expected, page_follow = extractDocumentsFromHtml(page_url, html)
 		for doc in page_docs:
 			all_docs[doc.entry_key] = doc
 		expected_keys.update(page_expected)
@@ -336,13 +335,13 @@ def crawl_all_documents(session: requests.Session, start_url: str) -> Tuple[List
 	return sorted(all_docs.values(), key=lambda item: item.entry_key), expected_keys
 
 
-def fetch_page_html(session: requests.Session, url: str) -> str:
+def fetchPageHtml(session: requests.Session, url: str) -> str:
 	response = session.get(url, timeout=REQUEST_TIMEOUT)
 	response.raise_for_status()
 	return response.text
 
 
-def head_metadata(session: requests.Session, url: str) -> Dict[str, str]:
+def headMetadata(session: requests.Session, url: str) -> Dict[str, str]:
 	try:
 		response = session.head(url, timeout=HEAD_TIMEOUT, allow_redirects=True)
 		response.raise_for_status()
@@ -362,7 +361,7 @@ def head_metadata(session: requests.Session, url: str) -> Dict[str, str]:
 		}
 
 
-def compute_sha256(path: Path) -> str:
+def computeSha256(path: Path) -> str:
 	digest = hashlib.sha256()
 	with path.open("rb") as handle:
 		for chunk in iter(lambda: handle.read(1024 * 1024), b""):
@@ -370,10 +369,10 @@ def compute_sha256(path: Path) -> str:
 	return digest.hexdigest()
 
 
-def build_local_path(doc: SourceDocument, used_paths: Set[str]) -> Path:
-	top = sanitize_path_segment(doc.category_top, "Ohne Kategorie")
-	sub = sanitize_path_segment(doc.category_sub, "Allgemein") if doc.category_sub else ""
-	filename = sanitize_path_segment(guess_filename(doc.url, doc.title), "dokument.bin")
+def buildLocalPath(doc: SourceDocument, used_paths: Set[str]) -> Path:
+	top = sanitizePathSegment(doc.category_top, "Ohne Kategorie")
+	sub = sanitizePathSegment(doc.category_sub, "Allgemein") if doc.category_sub else ""
+	filename = sanitizePathSegment(guessFilename(doc.url, doc.title), "dokument.bin")
 
 	if sub:
 		relative = Path("documents") / top / sub / filename
@@ -397,7 +396,7 @@ def build_local_path(doc: SourceDocument, used_paths: Set[str]) -> Path:
 	return candidate
 
 
-def download_file(session: requests.Session, url: str, destination: Path) -> Tuple[bool, str]:
+def downloadFile(session: requests.Session, url: str, destination: Path) -> Tuple[bool, str]:
 	destination.parent.mkdir(parents=True, exist_ok=True)
 
 	try:
@@ -417,7 +416,7 @@ def download_file(session: requests.Session, url: str, destination: Path) -> Tup
 	return True, ""
 
 
-def should_redownload(doc: SourceDocument, old: Optional[Dict], local_path: Path, head: Dict[str, str]) -> bool:
+def shouldRedownload(doc: SourceDocument, old: Optional[Dict], local_path: Path, head: Dict[str, str]) -> bool:
 	if old is None:
 		return True
 	if not local_path.exists():
@@ -446,7 +445,7 @@ def should_redownload(doc: SourceDocument, old: Optional[Dict], local_path: Path
 	return False
 
 
-def remove_deleted_documents(
+def removeDeletedDocuments(
 	old_by_key: Dict[str, Dict],
 	current_keys: Set[str],
 	current_local_paths: Set[str],
@@ -470,7 +469,7 @@ def remove_deleted_documents(
 	return removed
 
 
-def verify_coverage(expected_keys: Set[str], metadata_docs: Iterable[Dict]) -> Tuple[Set[str], Set[str]]:
+def verifyCoverage(expected_keys: Set[str], metadata_docs: Iterable[Dict]) -> Tuple[Set[str], Set[str]]:
 	actual_keys = {entry.get("entry_key", "") for entry in metadata_docs if entry.get("entry_key")}
 	missing = expected_keys - actual_keys
 	extra = actual_keys - expected_keys
@@ -530,12 +529,12 @@ def send_new_without_description_notification(items: List[Dict[str, str]]) -> bo
 
 def main() -> int:
 	print("DHBW Dokumente-Scraper")
-	print(f"Startzeitpunkt: {now_iso()}")
+	print(f"Startzeitpunkt: {nowIso()}")
 
 	DOCUMENTS_DIR.mkdir(parents=True, exist_ok=True)
-	session = build_session()
+	session = buildSession()
 
-	old_metadata = load_metadata()
+	old_metadata = loadMetadata()
 	old_docs_list = old_metadata.get("documents", []) if isinstance(old_metadata, dict) else []
 	old_by_key: Dict[str, Dict] = {}
 	for item in old_docs_list:
@@ -543,7 +542,7 @@ def main() -> int:
 			continue
 		entry_key = item.get("entry_key", "")
 		if not entry_key and item.get("url"):
-			entry_key = make_entry_key(
+			entry_key = makeEntryKey(
 				item.get("url", ""),
 				item.get("title", ""),
 				item.get("category_top", ""),
@@ -555,7 +554,7 @@ def main() -> int:
 	print(f"Vorhandene Metadateneinträge: {len(old_by_key)}")
 	print(f"Lade Seite: {BASE_URL}")
 
-	source_documents, expected_keys = crawl_all_documents(session, BASE_URL)
+	source_documents, expected_keys = crawlAllDocuments(session, BASE_URL)
 
 	print(f"Gefundene Dokumente (ohne Bekanntmachungen): {len(source_documents)}")
 
@@ -584,12 +583,12 @@ def main() -> int:
 		if old and old.get("local_path"):
 			relative_path = Path(old["local_path"])
 		else:
-			relative_path = build_local_path(doc, used_paths)
+			relative_path = buildLocalPath(doc, used_paths)
 
 		local_path = DATA_DIR / relative_path
-		head = head_metadata(session, doc.url)
+		head = headMetadata(session, doc.url)
 
-		redownload = should_redownload(doc, old, local_path, head)
+		redownload = shouldRedownload(doc, old, local_path, head)
 
 		document_entry = {
 			"entry_key": doc.entry_key,
@@ -604,7 +603,7 @@ def main() -> int:
 			"last_modified": head.get("last_modified", ""),
 			"etag": head.get("etag", ""),
 			"content_type": head.get("content_type", ""),
-			"last_seen": now_iso(),
+			"last_seen": nowIso(),
 		}
 
 		if not redownload:
@@ -615,15 +614,15 @@ def main() -> int:
 			print(f"[{index}/{len(source_documents)}] Unverändert: {doc.title}")
 			continue
 
-		ok, error = download_file(session, doc.url, local_path)
+		ok, error = downloadFile(session, doc.url, local_path)
 		if not ok:
 			stats["failed"] += 1
 			failed_urls.append(f"{doc.url} -> {error}")
 			print(f"[{index}/{len(source_documents)}] FEHLER: {doc.title} ({error})")
 			continue
 
-		document_entry["downloaded_at"] = now_iso()
-		document_entry["sha256"] = compute_sha256(local_path)
+		document_entry["downloaded_at"] = nowIso()
+		document_entry["sha256"] = computeSha256(local_path)
 
 		if old is None:
 			stats["new"] += 1
@@ -648,17 +647,17 @@ def main() -> int:
 		for entry in processed_docs
 		if entry.get("local_path")
 	}
-	stats["removed"] = remove_deleted_documents(old_by_key, current_keys, current_local_paths)
+	stats["removed"] = removeDeletedDocuments(old_by_key, current_keys, current_local_paths)
 
 	new_metadata = {
-		"updated_at": now_iso(),
+		"updated_at": nowIso(),
 		"source": BASE_URL,
 		"document_count": len(processed_docs),
 		"documents": sorted(processed_docs, key=lambda item: item["entry_key"]),
 	}
-	save_metadata(new_metadata)
+	saveMetadata(new_metadata)
 
-	missing, extra = verify_coverage(expected_keys, processed_docs)
+	missing, extra = verifyCoverage(expected_keys, processed_docs)
 
 	category_counts: Dict[str, int] = {}
 	for doc in source_documents:
@@ -706,7 +705,7 @@ def main() -> int:
 
 	print(f"\nMetadaten: {METADATA_FILE}")
 	print(f"Dateien: {DOCUMENTS_DIR}")
-	print(f"Ende: {now_iso()}")
+	print(f"Ende: {nowIso()}")
 
 	if stats["failed"] > 0 or missing:
 		return 1

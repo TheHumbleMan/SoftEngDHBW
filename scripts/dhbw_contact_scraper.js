@@ -1,10 +1,10 @@
 import { Builder, By, until, Key } from "selenium-webdriver";
-import firefox from "selenium-webdriver/firefox.js"; // Nutzt Firefox wie dein Python-Skript
+import firefox from "selenium-webdriver/firefox.js"; // Nutzt Firefox
 import fs from "fs";
 import path from "path";
 
 /**
- * Scrapt Kontaktpersonen basierend auf einem Suchbegriff (Kurs)
+ * Scraped Kontaktpersonen basierend auf einem Suchbegriff (Kurs)
  * @param {string} outputDir - Speicherort für die JSON
  */
 async function scrapeDhbwKontakte({ kursName, outputDir }) {
@@ -27,7 +27,7 @@ async function scrapeDhbwKontakte({ kursName, outputDir }) {
     await driver.wait(until.elementLocated(By.css(personenSelector)), 10000);
     const elements = await driver.findElements(By.css(personenSelector));
 
-    // 3. Daten extrahieren (Effizient via executeScript)
+    // 3. Daten extrahieren
     const kontakte = await driver.executeScript(`
       const nodes = document.querySelectorAll('div.person');
       return Array.from(nodes).map(node => {

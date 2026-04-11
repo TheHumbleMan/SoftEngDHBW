@@ -325,7 +325,7 @@ h1 { margin-bottom: 30px; font-size: 2em; }
         width: 200px;
     }
 
-.activeCardNavBar {
+.active-card-navbar {
     display: grid;
     align-items: center;
     grid-template-columns:
@@ -334,18 +334,18 @@ h1 { margin-bottom: 30px; font-size: 2em; }
 }
 
 
-td.timetableCell{
+td.timetable-cell{
     margin: 0;
     padding: 0;
     position: relative;
 }
 
-td.innerTimetableCell{
+td.inner-timetable-cell{
     position: absolute;
     height: 100%;
 }
 
-td.timetableCell .singleApp{
+td.timetable-cell .singleApp{
     color: var(--dhbw_white);
     font-weight: bold;
     -moz-hyphens: auto;
@@ -362,7 +362,7 @@ td.timetableCell .singleApp{
     background-color: var(--dhbw_red);
 }
 
-td.timetableCell .doubleApp {
+td.timetable-cell .doubleApp {
     color: var(--dhbw_white);
     font-weight: bold;
     -moz-hyphens: auto;
@@ -378,7 +378,7 @@ td.timetableCell .doubleApp {
     background-color: var(--dhbw_red);
 }
 
-td.timetableCell .tripleApp {
+td.timetable-cell .tripleApp {
     color: var(--dhbw_white);
     font-weight: bold;
     -moz-hyphens: auto;
@@ -473,7 +473,7 @@ td.timetableCell .tripleApp {
 
 /* Appointment Styles */
 
-.appointmentNavBar {
+.appointment-navbar {
     align-items: center;
     justify-content: center;
     height: 5%;

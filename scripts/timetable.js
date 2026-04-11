@@ -119,8 +119,8 @@ function createEmptyTimetableHTML() {
 
             // Tages-Zellen
             days.forEach(d => {
-                html += `<td data-day="${d.key}" data-time="${displayTime}" class="timetableCell">
-                <div class="innerTimetableCell"></div>
+                html += `<td data-day="${d.key}" data-time="${displayTime}" class="timetable-cell">
+                <div class="inner-timetable-cell"></div>
                 </td>`;
             });
             html += `</tr>`;
@@ -271,8 +271,8 @@ function renderDayAppointments(dayKey, appointments){
 }
 
 function renderSingle(dayKey, app){
-    const timetableCell = document.querySelector(`td.timetableCell[data-day="${dayKey}"][data-time="${app.startTime}"]`);
-    const innerTimetableCell = timetableCell.querySelector('.innerTimetableCell');
+    const timetableCell = document.querySelector(`td.timetable-cell[data-day="${dayKey}"][data-time="${app.startTime}"]`);
+    const innerTimetableCell = timetableCell.querySelector('.inner-timetable-cell');
     const cellHeight = timetableCell.offsetHeight;
     const appointmentSlots = (timeToMinutes(app.endTime)-timeToMinutes(app.startTime))/15; //Endzeit-Startzeit
 
@@ -280,10 +280,10 @@ function renderSingle(dayKey, app){
 }
 
 function renderDouble(dayKey, app){
-    const timetableCells = Array.from(document.querySelectorAll(`td.timetableCell[data-day='${dayKey}']`));
-    const timetableCell = document.querySelector(`td.timetableCell[data-day="${dayKey}"][data-time="${app.startTime}"]`);
+    const timetableCells = Array.from(document.querySelectorAll(`td.timetable-cell[data-day='${dayKey}']`));
+    const timetableCell = document.querySelector(`td.timetable-cell[data-day="${dayKey}"][data-time="${app.startTime}"]`);
 
-    const innerTimetableCell = timetableCell.querySelector('.innerTimetableCell');
+    const innerTimetableCell = timetableCell.querySelector('.inner-timetable-cell');
     const cellHeight = timetableCell.offsetHeight;
     const appointmentSlots = (timeToMinutes(app.endTime)-timeToMinutes(app.startTime))/15;
     let column = 2;
@@ -293,7 +293,7 @@ function renderDouble(dayKey, app){
     for (let i = -1; i < appStartSlot; i++) {
         //Fake-Slot um gleichzeitiges starten von mehreren terminen abzudecken
         if(i === -1){
-            const firstCell = timetableCells[appStartSlot].querySelector('.innerTimetableCell');
+            const firstCell = timetableCells[appStartSlot].querySelector('.inner-timetable-cell');
             const firstRunningApp = firstCell.querySelector('.doubleApp');
             if (firstRunningApp) {
                 // Falls Termin mit gleich wie anderer Startet
@@ -302,7 +302,7 @@ function renderDouble(dayKey, app){
             }
         continue; // weiter zu den normalen Slots
         }else{
-            const currentCell = timetableCells[i].querySelector('.innerTimetableCell');
+            const currentCell = timetableCells[i].querySelector('.inner-timetable-cell');
             const runningApp = currentCell.querySelector('.doubleApp');
             if (!runningApp) continue;
             const usedColumn = Number(runningApp.dataset.column);
@@ -331,9 +331,9 @@ function renderDouble(dayKey, app){
 }
 
 function renderTriple(dayKey, app) {
-    const timetableCells = Array.from(document.querySelectorAll(`td.timetableCell[data-day="${dayKey}"]`));
-    const timetableCell = document.querySelector(`td.timetableCell[data-day="${dayKey}"][data-time="${app.startTime}"]`);
-    const innerTimetableCell = timetableCell.querySelector('.innerTimetableCell');
+    const timetableCells = Array.from(document.querySelectorAll(`td.timetable-cell[data-day="${dayKey}"]`));
+    const timetableCell = document.querySelector(`td.timetable-cell[data-day="${dayKey}"][data-time="${app.startTime}"]`);
+    const innerTimetableCell = timetableCell.querySelector('.inner-timetable-cell');
     const cellHeight = timetableCell.offsetHeight;
     const appointmentSlots = (timeToMinutes(app.endTime) - timeToMinutes(app.startTime)) / 15;
     const appStartSlot = timeToQuarterIndex(app.startTime);

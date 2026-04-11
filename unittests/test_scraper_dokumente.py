@@ -60,7 +60,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 	def test_attr_to_text_variants(self):
 		self.assertEqual(scraper.attr_to_text(None), "")
 		self.assertEqual(scraper.attr_to_text("x"), "x")
-		self.assertEqual(scraper.attr_to_text(["a", "b"]), "['a', 'b']")
+		self.assertEqual(scraper.attr_to_text(["a", "b"]), "a b")
 		soup = scraper.BeautifulSoup("<div class='a b'></div>", "html.parser")
 		class_attr = soup.find("div").get("class")
 		self.assertEqual(scraper.attr_to_text(class_attr), "a b")

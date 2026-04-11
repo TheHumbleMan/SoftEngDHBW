@@ -34,12 +34,12 @@ function getStudyYear(courseCode) {
   const startYear = 2000 + parseInt(courseCode.match(/(\d{2})$/)[1], 10);
 
   const today = new Date();
-  let yearOffset = today.getFullYear() - startYear;
+  let year_offset = today.getFullYear() - startYear;
 
   // Wenn es vor September ist, ist man noch im "alten" Studienjahr
-  if (today.getMonth() < 8) yearOffset--;
+  if (today.getMonth() < 8) year_offset--;
 
-  return yearOffset + 1; // Studienjahr 1-basiert
+  return year_offset + 1; // Studienjahr 1-basiert
 }
 
 function getDateOfISOWeek(week, year) {
@@ -71,11 +71,11 @@ export async function renderPhases(courseCode) {
   const month = new Date().getMonth();
 
   // Studienjahr: wenn heute vor September ist, dann beginnt aktuelles Studienjahr letzten September
-  let yearOfFirstSeptember = currentYear;
-  if (month < 8) yearOfFirstSeptember--; // Monate 0-7 -> Jan-Aug
+  let year_of_first_september = currentYear;
+  if (month < 8) year_of_first_september--; // Monate 0-7 -> Jan-Aug
 
   // Jahr für das aktuelle Studienjahr
-  const studyYearStart = yearOfFirstSeptember;
+  const studyYearStart = year_of_first_september;
   const studyYearEnd = studyYearStart + 1;
 
   phases.forEach(p => {

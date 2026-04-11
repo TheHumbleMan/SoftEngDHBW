@@ -127,15 +127,15 @@ export const scrapeDhbwApp = async ({ sessionCourse, writeFile = true, outputDir
                     const timeIcon = appointment.querySelectorAll("[class*='tabler-icon-clock-hour-']")[0];
                     const timeElement = timeIcon ? timeIcon.nextElementSibling : null;
                     const time = timeElement?.innerText.trim() || "Zeit nicht vorhanden";
-                    let startTime = "Startzeit nicht verfügbar";
-                    let endTime = "Endzeit nicht verfügbar";
+                    let start_time = "Startzeit nicht verfügbar";
+                    let end_time = "Endzeit nicht verfügbar";
                     if (time !== "Zeit nicht vorhanden") {
                         const time_array = time.split(" - ");
-                        startTime = time_array[0];
+                        start_time = time_array[0];
                         const endTime_dummy = time_array[1];
                         //Falls die Vorlesung gerade läuft muss die Prozentzahl abgeschnitten werden
                         const spaceIndex = endTime_dummy.indexOf(" ");
-                        endTime = spaceIndex === -1 ? endTime_dummy : endTime_dummy.slice(0, spaceIndex);
+                        end_time = spaceIndex === -1 ? endTime_dummy : endTime_dummy.slice(0, spaceIndex);
                     }
 
                     //Raum des Termins
@@ -153,7 +153,7 @@ export const scrapeDhbwApp = async ({ sessionCourse, writeFile = true, outputDir
                     const infoElement = infoIcon ? infoIcon.nextElementSibling : null;
                     const info = infoElement?.innerText.trim() || null;
 
-                    return {name, startTime, endTime, location, locationExtra, info};
+                    return {name, start_time, end_time, location, locationExtra, info};
                 });
 
                 return {weekday, date, appointments};
@@ -172,17 +172,17 @@ export const scrapeDhbwApp = async ({ sessionCourse, writeFile = true, outputDir
 };
 
 async function scrollUntilLoaded(page) {
-    let previousHeight;
+    let previous_height;
 
     while (true) {
-        previousHeight = await page.evaluate(() => document.body.scrollHeight);
+        previous_height = await page.evaluate(() => document.body.scrollHeight);
 
         await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
         await new Promise(r => setTimeout(r, 1500));
 
         const newHeight = await page.evaluate(() => document.body.scrollHeight);
 
-        if (newHeight === previousHeight) {
+        if (newHeight === previous_height) {
             break; // nichts Neues mehr geladen
         }
     }

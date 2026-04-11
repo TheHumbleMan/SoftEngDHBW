@@ -7,57 +7,69 @@ from unittest.mock import MagicMock, patch
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
+	# Importpfad erweitern dass scripts.scraper_dokumente auch beim direkten Teststart gefunden wird
 	sys.path.insert(0, str(PROJECT_ROOT))
 
 import scripts.scraper_dokumente as scraper
 
 
+# Kleine Response-Attrappe für Download-, HEAD- und HTML-Tests
 class _FakeResponse:
 	def __init__(self, text="", headers=None, chunks=None, raise_error: Exception | None = None):
+		# text für HTML-Tests, headers für HEAD/GET Metadaten, chunks für Datei-Streaming
 		self.text = text
 		self.headers = headers or {}
 		self._chunks = chunks or []
 		self._raise_error = raise_error
 
 	def raise_for_status(self):
+		# Simuliert HTTP-Fehler bei Bedarf
 		if self._raise_error:
 			raise self._raise_error
 
 	def iter_content(self, chunk_size=8192):
+		# Liefert die vorbereiteten Chunks wie requests.iter_content
 		for chunk in self._chunks:
 			yield chunk
 
 	def __enter__(self):
+		# Ermöglicht Nutzung mit "with" wie bei echten requests Responses
 		return self
 
 	def __exit__(self, exc_type, exc_val, exc_tb):
 		return False
 
 
+# Session-Attrappe mit steuerbarem Verhalten für GET und HEAD
 class _FakeSession:
 	def __init__(self, get_response=None, head_response=None, get_error: Exception | None = None, head_error: Exception | None = None):
+		# Antworten und Fehler können pro HTTP-Methode getrennt injiziert werden
 		self._get_response = get_response
 		self._head_response = head_response
 		self._get_error = get_error
 		self._head_error = head_error
 
 	def get(self, url, **kwargs):
+		# Gibt entweder eine Response zurück oder wirft den gewünschten Fehler
 		if self._get_error:
 			raise self._get_error
 		return self._get_response
 
 	def head(self, url, **kwargs):
+		# HEAD wird analog zu GET simuliert
 		if self._head_error:
 			raise self._head_error
 		return self._head_response
 
 
 class ScraperDokumenteTests(unittest.TestCase):
+	# Basistests für Zeitformat und einfache Hilfsfunktionen
 	def test_now_iso_is_valid_datetime(self):
 		parsed = datetime.fromisoformat(scraper.now_iso())
 		self.assertIsNotNone(parsed.tzinfo)
 
 	def test_attr_to_text_variants(self):
+		# Deckt None, String, Listenattribute und echte BeautifulSoup-Klassenliste ab
 		self.assertEqual(scraper.attr_to_text(None), "")
 		self.assertEqual(scraper.attr_to_text("x"), "x")
 		self.assertEqual(scraper.attr_to_text(["a", "b"]), "a b")
@@ -70,9 +82,11 @@ class ScraperDokumenteTests(unittest.TestCase):
 		self.assertIn("User-Agent", session.headers)
 		self.assertIn("Mozilla", session.headers["User-Agent"])
 
+	# Tests für Metadaten-Einlesen und Speichern
 	def test_load_metadata_returns_empty_if_missing(self):
 		with tempfile.TemporaryDirectory() as tmp:
 			original = scraper.METADATA_FILE
+			# METADATA_FILE temporär auf nicht existente Datei setzen
 			scraper.METADATA_FILE = Path(tmp) / "missing.json"
 			try:
 				self.assertEqual(scraper.load_metadata(), {})
@@ -82,6 +96,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 	def test_save_and_load_metadata_roundtrip(self):
 		with tempfile.TemporaryDirectory() as tmp:
 			original = scraper.METADATA_FILE
+			# Schreibt und liest denselben Datensatz gegen ein isoliertes Testfile
 			scraper.METADATA_FILE = Path(tmp) / "meta.json"
 			data = {"a": 1, "b": "x"}
 			try:
@@ -102,6 +117,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 			finally:
 				scraper.METADATA_FILE = original
 
+	# Schlüssel- und Pfadlogik für stabile Dateiverwaltung
 	def test_make_entry_key_is_stable(self):
 		key1 = scraper.make_entry_key(
 			"https://example.org/a.pdf",
@@ -118,6 +134,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 		self.assertEqual(key1, key2)
 
 	def test_make_entry_key_changes_on_field_change(self):
+		# Schon eine geänderte URL muss zu einem neuen Schlüssel führen
 		base = scraper.make_entry_key("https://example.org/a.pdf", "Titel", "Top", "Sub")
 		changed = scraper.make_entry_key("https://example.org/b.pdf", "Titel", "Top", "Sub")
 		self.assertNotEqual(base, changed)
@@ -136,6 +153,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 		name = scraper.guess_filename("https://example.org/path/", "Mein Titel")
 		self.assertEqual(name, "Mein Titel.bin")
 
+	# URL- und Tab-Erkennung für den HTML-Crawl
 	def test_is_document_url_by_extension(self):
 		self.assertTrue(scraper.is_document_url("https://example.org/x.docx"))
 		self.assertFalse(scraper.is_document_url("https://example.org/x.html"))
@@ -158,6 +176,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 		self.assertEqual(mapping[1], ("t2", "Amtliche Hinweise", True))
 
 	def test_collect_tab_mapping_skips_invalid_tabs(self):
+		# Tabs ohne Link oder ohne #target dürfen nicht in der Mapping-Liste landen
 		soup = scraper.BeautifulSoup(
 			"""
 			<ul class='nav nav-tabs'>
@@ -185,7 +204,9 @@ class ScraperDokumenteTests(unittest.TestCase):
 		self.assertTrue(scraper.is_internal_documents_page("https://www.ravensburg.dhbw.de/service-einrichtungen/dokumente-downloads"))
 		self.assertFalse(scraper.is_internal_documents_page("https://example.org/service-einrichtungen/dokumente-downloads"))
 
+	# Entscheidungslogik wann Dateien neu geladen werden
 	def test_build_local_path_collision(self):
+		# Prüft, ob bei Namenskollisionen das erwartete _2 Suffix gesetzt wird
 		doc = scraper.SourceDocument(
 			entry_key="k",
 			url="https://example.org/file.pdf",
@@ -212,6 +233,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 
 	def test_should_redownload_if_metadata_changed(self):
 		with tempfile.TemporaryDirectory() as tmp:
+			# Gleiche Datei vorhanden aber Titel geändert, daher muss neu geladen werden
 			local = Path(tmp) / "a.pdf"
 			local.write_bytes(b"abc")
 			doc = scraper.SourceDocument("k", "https://e.org/a.pdf", "Titel Neu", "", "Top", "Sub")
@@ -228,6 +250,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 
 	def test_should_redownload_if_head_changes(self):
 		with tempfile.TemporaryDirectory() as tmp:
+			# Unveränderte lokalen Metadaten aber geänderte HEAD-Daten erzwingen Re-Download
 			local = Path(tmp) / "a.pdf"
 			local.write_bytes(b"abc")
 			doc = scraper.SourceDocument("k", "https://e.org/a.pdf", "Titel", "", "Top", "Sub")
@@ -260,9 +283,11 @@ class ScraperDokumenteTests(unittest.TestCase):
 			head = {"content_length": "3", "last_modified": "old", "etag": "old-etag"}
 			self.assertFalse(scraper.should_redownload(doc, old, local, head))
 
+	# Aufräumlogik für Dateien die im aktuellen Crawl nicht mehr vorkommen
 	def test_remove_deleted_documents_deletes_only_non_current_paths(self):
 		with tempfile.TemporaryDirectory() as tmp:
 			original_data_dir = scraper.DATA_DIR
+			# DATA_DIR auf Testordner umbiegen um echte Projektdateien nicht zu beeinflussen
 			scraper.DATA_DIR = Path(tmp)
 			try:
 				old_by_key = {
@@ -279,6 +304,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 					p.parent.mkdir(parents=True, exist_ok=True)
 					p.write_bytes(b"x")
 
+				# reused.pdf bleibt erhalten weil dieser Pfad bereits von einem aktuellen Eintrag verwendet wird
 				current_keys = {"still_key", "new_reusing"}
 				current_local_paths = {"documents/A/still_key.pdf", "documents/A/reused.pdf"}
 
@@ -302,7 +328,9 @@ class ScraperDokumenteTests(unittest.TestCase):
 			finally:
 				scraper.DATA_DIR = original_data_dir
 
+	# HTML-Extraktionstests für Dokumente, Beschreibungen und Follow-Links
 	def test_extract_documents_from_html_filters_bekanntmachung_and_builds_follow_links(self):
+		# Simuliert zwei Tabs wobei nur der nicht-Bekanntmachungen-Tab ausgewertet werden darf
 		html = """
 		<html>
 		  <ul class=\"nav nav-tabs\">
@@ -333,6 +361,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 		)
 
 	def test_extract_documents_from_html_description_from_li_and_skip_special_links(self):
+		# Beschreibung aus LI-Block lesen und Spezial-Links wie ignorieren
 		html = """
 		<html>
 		  <ul class='nav nav-tabs'>
@@ -375,12 +404,14 @@ class ScraperDokumenteTests(unittest.TestCase):
 		)
 		self.assertEqual(docs[0].description, "Beschreibung C")
 
+	# HTTP-nahe Hilfsfunktionen für GET, HEAD und Datei-Hash
 	def test_fetch_page_html_success(self):
 		response = _FakeResponse(text="<html>x</html>")
 		session = _FakeSession(get_response=response)
 		self.assertEqual(scraper.fetch_page_html(session, "https://example.org"), "<html>x</html>")
 
 	def test_head_metadata_success_and_failure(self):
+		# Erfolgsfall liefert Headerfelder, Fehlerfall liefert strukturierte Leerwerte
 		ok_response = _FakeResponse(headers={
 			"Content-Length": "100",
 			"Last-Modified": "Mon",
@@ -403,7 +434,9 @@ class ScraperDokumenteTests(unittest.TestCase):
 			digest = scraper.compute_sha256(file_path)
 			self.assertEqual(digest, "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad")
 
+	# Download-Verhalten für Erfolgs-, Skip- und Fehlerfälle
 	def test_download_file_success(self):
+		# Chunks werden in richtiger Reihenfolge in die Zieldatei geschrieben
 		chunks = [b"ab", b"cd"]
 		response = _FakeResponse(headers={"Content-Type": "application/pdf"}, chunks=chunks)
 		session = _FakeSession(get_response=response)
@@ -431,6 +464,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 			self.assertFalse(ok)
 			self.assertIn("network", error)
 
+	# Coverage- und Benachrichtigungslogik
 	def test_verify_coverage(self):
 		expected = {"a", "b"}
 		metadata_docs = [{"entry_key": "a"}, {"entry_key": "c"}]
@@ -450,6 +484,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 	def test_send_telegram_message_success(self):
 		with tempfile.TemporaryDirectory() as tmp:
 			script_dir = Path(tmp)
+			# Minimales Dummy-Skript reicht weil subprocess.run selbst gemockt wird
 			(script_dir / "telegram_messenger.py").write_text("print('ok')", encoding="utf-8")
 			original_script_dir = scraper.SCRIPT_DIR
 			scraper.SCRIPT_DIR = script_dir
@@ -477,6 +512,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 		self.assertTrue(scraper.send_new_without_description_notification([]))
 
 	def test_send_new_without_description_notification_truncates(self):
+		# Ab 55 Einträgen muss die Nachricht auf 50 Einträge plus "... und 5 weitere" gekürzt werden
 		items = [{"title": f"T{i}", "local_path": f"p{i}"} for i in range(55)]
 		with patch("scripts.scraper_dokumente.send_telegram_message") as send_mock:
 			send_mock.return_value = True
@@ -486,6 +522,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 			message = send_mock.call_args[0][0]
 			self.assertIn("... und 5 weitere", message)
 
+	# Crawl-Steuerung mit simulierten Folgeseiten und Fehlerpfaden
 	def test_crawl_all_documents_collects_docs_and_follows_links(self):
 		session = object()
 		start = "https://www.ravensburg.dhbw.de/service-einrichtungen/dokumente-downloads"
@@ -493,9 +530,11 @@ class ScraperDokumenteTests(unittest.TestCase):
 		doc2 = scraper.SourceDocument("k2", "u2", "t2", "d2", "c2", "s2")
 
 		def fake_fetch(_session, page_url):
+			# Der HTML-Inhalt ist hier irrelevant, es geht nur um den Ablauf der Queue
 			return f"html:{page_url}"
 
 		def fake_extract(page_url, html):
+			# Die Startseite liefert einen Follow-Link, die zweite Seite beendet den Crawl
 			if page_url == start:
 				return [doc1], {"k1"}, {start + "?x=1"}
 			return [doc2], {"k2"}, set()
@@ -518,6 +557,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 		self.assertEqual(docs, [])
 		self.assertEqual(keys, set())
 
+	# End-to-End-nahe Main-Tests mit stark gemockter IO und Netzwerklast
 	def test_main_success_flow(self):
 		with tempfile.TemporaryDirectory() as tmp:
 			base = Path(tmp)
@@ -539,10 +579,12 @@ class ScraperDokumenteTests(unittest.TestCase):
 			original_documents_dir = scraper.DOCUMENTS_DIR
 			original_metadata_file = scraper.METADATA_FILE
 			try:
+				# Produktionspfade auf ein temporäres Testverzeichnis umbiegen
 				scraper.DATA_DIR = data_dir
 				scraper.DOCUMENTS_DIR = documents_dir
 				scraper.METADATA_FILE = metadata_file
 
+				# Der komplette Workflow wird kontrolliert gemockt um nur die Main-Orchestrierung zu prüfen
 				with patch("scripts.scraper_dokumente.build_session", return_value=object()), \
 					 patch("scripts.scraper_dokumente.load_metadata", return_value={"documents": []}), \
 					 patch("scripts.scraper_dokumente.crawl_all_documents", return_value=([doc], {"k-new"})), \
@@ -582,6 +624,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 			original_documents_dir = scraper.DOCUMENTS_DIR
 			original_metadata_file = scraper.METADATA_FILE
 			try:
+				# expected_keys enthält absichtlich einen fehlenden Key dass main mit Fehlercode endet
 				scraper.DATA_DIR = data_dir
 				scraper.DOCUMENTS_DIR = documents_dir
 				scraper.METADATA_FILE = metadata_file
@@ -616,6 +659,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 
 	def test_should_redownload_on_category_or_etag_change(self):
 		with tempfile.TemporaryDirectory() as tmp:
+			# Erst Kategorieänderung prüfen dann separat ETag-Änderung bei sonst identischen Metadaten
 			local = Path(tmp) / "a.pdf"
 			local.write_bytes(b"abc")
 			doc = scraper.SourceDocument("k", "https://e.org/a.pdf", "Titel", "desc", "Top2", "Sub")
@@ -676,6 +720,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 			doc_fail = scraper.SourceDocument("k-fail", "https://example.org/fail.pdf", "Fail", "desc", "Top", "Sub")
 
 			old_metadata = {
+				# Enthält absichtlich auch einen ungültigen Eintrag für den Robustheitsfall
 				"documents": [
 					"invalid",
 					{
@@ -694,6 +739,7 @@ class ScraperDokumenteTests(unittest.TestCase):
 			original_documents_dir = scraper.DOCUMENTS_DIR
 			original_metadata_file = scraper.METADATA_FILE
 			try:
+				# Erster Eintrag bleibt unverändert, zweiter schlägt beim Download fehl daher Exit-Code 1
 				scraper.DATA_DIR = data_dir
 				scraper.DOCUMENTS_DIR = documents_dir
 				scraper.METADATA_FILE = metadata_file

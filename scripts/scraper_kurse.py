@@ -2,7 +2,16 @@
 """
 Web Scraper für DHBW Kursnamen
 Durchsucht https://dhbw.app/RV und https://dhbw.app/FN nach Kursnamen (z.B. TIT24) und speichert diese in Dateien.
-Muss einmal jährlich am Anfang des Studienjahres entweder durch einen Cronjob oder manuell ausgeführt werden um die Kurslisten zu aktualisieren.
+
+Muss einmal jährlich am Anfang des Studienjahres durch das System auf dem es läuft ausgeführt werden (ähnlich dem scraper_dokumente.py),
+um die Kurslisten zu aktualisieren.
+Der scraper kann natürlich (wie bei dem scraper_dokumente.py) jederzeit manuell ausgeführt werden.
+
+Es kann sein, dass die Seite dhbw.app angepasst wird,
+was in den letzten Monaten auch schon während der Entwicklung passiert ist, 
+und der Scraper dann nicht mehr funktioniert und an die neue Seite angepasst werden muss.
+Die Änderungen an der Seite müssen dabei nicht einmal visuell erkennbar sein,
+da der scraper bzw. das scraping-framework, in diesem fall selenium, den "Code im Hintergrund" betrachtet. 
 """
 
 from selenium import webdriver
